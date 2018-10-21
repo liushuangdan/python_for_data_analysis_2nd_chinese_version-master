@@ -1,0 +1,1607 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第04章NumPy基础：数组和矢量计算 | README</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../内容/第05章pandas入门.html" />
+    
+    
+    <link rel="prev" href="../内容/第03章Python的数据结构、函数和文件.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4"
+        data-chapter-title="第04章NumPy基础：数组和矢量计算"
+        data-filepath="内容/第04章NumPy基础：数组和矢量计算.md"
+        data-basepath=".."
+        data-revision="Sun Oct 21 2018 22:59:25 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        序言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="内容/第01章准备工作.html">
+            
+                
+                    <a href="../内容/第01章准备工作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第01章准备工作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+            
+                
+                    <a href="../内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第02章Python语法基础，IPython和JupyterNotebooks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="内容/第03章Python的数据结构、函数和文件.html">
+            
+                
+                    <a href="../内容/第03章Python的数据结构、函数和文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第03章Python的数据结构、函数和文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4" data-path="内容/第04章NumPy基础：数组和矢量计算.html">
+            
+                
+                    <a href="../内容/第04章NumPy基础：数组和矢量计算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第04章NumPy基础：数组和矢量计算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="内容/第05章pandas入门.html">
+            
+                
+                    <a href="../内容/第05章pandas入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第05章pandas入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="内容/第06章数据加载、存储与文件格式.html">
+            
+                
+                    <a href="../内容/第06章数据加载、存储与文件格式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第06章数据加载、存储与文件格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="内容/第07章数据清洗和准备.html">
+            
+                
+                    <a href="../内容/第07章数据清洗和准备.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第07章数据清洗和准备
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="内容/第08章数据规整：聚合、合并和重塑.html">
+            
+                
+                    <a href="../内容/第08章数据规整：聚合、合并和重塑.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第08章数据规整：聚合、合并和重塑
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="内容/第09章绘图和可视化.html">
+            
+                
+                    <a href="../内容/第09章绘图和可视化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        第09章绘图和可视化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="内容/第10章数据聚合与分组运算.html">
+            
+                
+                    <a href="../内容/第10章数据聚合与分组运算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        第10章数据聚合与分组运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="内容/第11章时间序列.html">
+            
+                
+                    <a href="../内容/第11章时间序列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        第11章时间序列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="内容/第12章pandas高级应用.html">
+            
+                
+                    <a href="../内容/第12章pandas高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        第12章pandas高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="内容/第13章Python建模库介绍.html">
+            
+                
+                    <a href="../内容/第13章Python建模库介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        第13章Python建模库介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="内容/第14章数据分析案例.html">
+            
+                
+                    <a href="../内容/第14章数据分析案例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        第14章数据分析案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="内容/附录ANumPy高级应用.html">
+            
+                
+                    <a href="../内容/附录ANumPy高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        附录ANumPy高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="内容/附录B更多关于IPython的内容（完）.html">
+            
+                
+                    <a href="../内容/附录B更多关于IPython的内容（完）.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        附录B更多关于IPython的内容（完）
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >README</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p>NumPy&#xFF08;Numerical Python&#x7684;&#x7B80;&#x79F0;&#xFF09;&#x662F;Python&#x6570;&#x503C;&#x8BA1;&#x7B97;&#x6700;&#x91CD;&#x8981;&#x7684;&#x57FA;&#x7840;&#x5305;&#x3002;&#x5927;&#x591A;&#x6570;&#x63D0;&#x4F9B;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x7684;&#x5305;&#x90FD;&#x662F;&#x7528;NumPy&#x7684;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x6784;&#x5EFA;&#x57FA;&#x7840;&#x3002;</p>
+<p>NumPy&#x7684;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>ndarray&#xFF0C;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x77E2;&#x91CF;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x548C;&#x590D;&#x6742;&#x5E7F;&#x64AD;&#x80FD;&#x529B;&#x7684;&#x5FEB;&#x901F;&#x4E14;&#x8282;&#x7701;&#x7A7A;&#x95F4;&#x7684;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x3002;</li>
+<li>&#x7528;&#x4E8E;&#x5BF9;&#x6574;&#x7EC4;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5FEB;&#x901F;&#x8FD0;&#x7B97;&#x7684;&#x6807;&#x51C6;&#x6570;&#x5B66;&#x51FD;&#x6570;&#xFF08;&#x65E0;&#x9700;&#x7F16;&#x5199;&#x5FAA;&#x73AF;&#xFF09;&#x3002;</li>
+<li>&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x78C1;&#x76D8;&#x6570;&#x636E;&#x7684;&#x5DE5;&#x5177;&#x4EE5;&#x53CA;&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x6587;&#x4EF6;&#x7684;&#x5DE5;&#x5177;&#x3002;</li>
+<li>&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x3001;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x4EE5;&#x53CA;&#x5085;&#x91CC;&#x53F6;&#x53D8;&#x6362;&#x529F;&#x80FD;&#x3002;</li>
+<li>&#x7528;&#x4E8E;&#x96C6;&#x6210;&#x7531;C&#x3001;C++&#x3001;Fortran&#x7B49;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x7684;A C API&#x3002;</li>
+</ul>
+<p>&#x7531;&#x4E8E;NumPy&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684;C API&#xFF0C;&#x56E0;&#x6B64;&#x5F88;&#x5BB9;&#x6613;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x7531;&#x4F4E;&#x7EA7;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x5916;&#x90E8;&#x5E93;&#xFF0C;&#x5916;&#x90E8;&#x5E93;&#x4E5F;&#x80FD;&#x4EE5;NumPy&#x6570;&#x7EC4;&#x7684;&#x5F62;&#x5F0F;&#x5C06;&#x6570;&#x636E;&#x8FD4;&#x56DE;&#x7ED9;Python&#x3002;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x4F7F;Python&#x6210;&#x4E3A;&#x4E00;&#x79CD;&#x5305;&#x88C5;C/C++/Fortran&#x5386;&#x53F2;&#x4EE3;&#x7801;&#x5E93;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x5E76;&#x4F7F;&#x88AB;&#x5305;&#x88C5;&#x5E93;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x7684;&#x3001;&#x6613;&#x7528;&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
+<p>NumPy&#x672C;&#x8EAB;&#x5E76;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x591A;&#x4E48;&#x9AD8;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x5206;&#x6790;&#x529F;&#x80FD;&#xFF0C;&#x7406;&#x89E3;NumPy&#x6570;&#x7EC4;&#x4EE5;&#x53CA;&#x9762;&#x5411;&#x6570;&#x7EC4;&#x7684;&#x8BA1;&#x7B97;&#x5C06;&#x6709;&#x52A9;&#x4E8E;&#x4F60;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x5730;&#x4F7F;&#x7528;&#x8BF8;&#x5982;pandas&#x4E4B;&#x7C7B;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x56E0;&#x4E3A;NumPy&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x9898;&#x76EE;&#xFF0C;&#x6211;&#x4F1A;&#x5728;&#x9644;&#x5F55;A&#x4E2D;&#x4ECB;&#x7ECD;&#x66F4;&#x591A;NumPy&#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x5E7F;&#x64AD;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5927;&#x90E8;&#x5206;&#x6570;&#x636E;&#x5206;&#x6790;&#x5E94;&#x7528;&#x800C;&#x8A00;&#xFF0C;&#x6211;&#x6700;&#x5173;&#x6CE8;&#x7684;&#x529F;&#x80FD;&#x4E3B;&#x8981;&#x96C6;&#x4E2D;&#x5728;&#xFF1A;</p>
+<ul>
+<li>&#x7528;&#x4E8E;&#x6570;&#x636E;&#x6574;&#x7406;&#x548C;&#x6E05;&#x7406;&#x3001;&#x5B50;&#x96C6;&#x6784;&#x9020;&#x548C;&#x8FC7;&#x6EE4;&#x3001;&#x8F6C;&#x6362;&#x7B49;&#x5FEB;&#x901F;&#x7684;&#x77E2;&#x91CF;&#x5316;&#x6570;&#x7EC4;&#x8FD0;&#x7B97;&#x3002;</li>
+<li>&#x5E38;&#x7528;&#x7684;&#x6570;&#x7EC4;&#x7B97;&#x6CD5;&#xFF0C;&#x5982;&#x6392;&#x5E8F;&#x3001;&#x552F;&#x4E00;&#x5316;&#x3001;&#x96C6;&#x5408;&#x8FD0;&#x7B97;&#x7B49;&#x3002;</li>
+<li>&#x9AD8;&#x6548;&#x7684;&#x63CF;&#x8FF0;&#x7EDF;&#x8BA1;&#x548C;&#x6570;&#x636E;&#x805A;&#x5408;/&#x6458;&#x8981;&#x8FD0;&#x7B97;&#x3002;</li>
+<li>&#x7528;&#x4E8E;&#x5F02;&#x6784;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5408;&#x5E76;/&#x8FDE;&#x63A5;&#x8FD0;&#x7B97;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x9F50;&#x548C;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x8FD0;&#x7B97;&#x3002;</li>
+<li>&#x5C06;&#x6761;&#x4EF6;&#x903B;&#x8F91;&#x8868;&#x8FF0;&#x4E3A;&#x6570;&#x7EC4;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x5E26;&#x6709;if-elif-else&#x5206;&#x652F;&#x7684;&#x5FAA;&#x73AF;&#xFF09;&#x3002;</li>
+<li>&#x6570;&#x636E;&#x7684;&#x5206;&#x7EC4;&#x8FD0;&#x7B97;&#xFF08;&#x805A;&#x5408;&#x3001;&#x8F6C;&#x6362;&#x3001;&#x51FD;&#x6570;&#x5E94;&#x7528;&#x7B49;&#xFF09;&#x3002;&#x3002;</li>
+</ul>
+<p>&#x867D;&#x7136;NumPy&#x63D0;&#x4F9B;&#x4E86;&#x901A;&#x7528;&#x7684;&#x6570;&#x503C;&#x6570;&#x636E;&#x5904;&#x7406;&#x7684;&#x8BA1;&#x7B97;&#x57FA;&#x7840;&#xFF0C;&#x4F46;&#x5927;&#x591A;&#x6570;&#x8BFB;&#x8005;&#x53EF;&#x80FD;&#x8FD8;&#x662F;&#x60F3;&#x5C06;pandas&#x4F5C;&#x4E3A;&#x7EDF;&#x8BA1;&#x548C;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5904;&#x7406;&#x8868;&#x683C;&#x6570;&#x636E;&#x65F6;&#x3002;pandas&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;NumPy&#x6240;&#x6CA1;&#x6709;&#x7684;&#x9886;&#x57DF;&#x7279;&#x5B9A;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5904;&#x7406;&#x7B49;&#x3002;</p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;Python&#x7684;&#x9762;&#x5411;&#x6570;&#x7EC4;&#x8BA1;&#x7B97;&#x53EF;&#x4EE5;&#x8FFD;&#x6EAF;&#x5230;1995&#x5E74;&#xFF0C;Jim Hugunin&#x521B;&#x5EFA;&#x4E86;Numeric&#x5E93;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x7684;10&#x5E74;&#xFF0C;&#x8BB8;&#x591A;&#x79D1;&#x5B66;&#x7F16;&#x7A0B;&#x793E;&#x533A;&#x7EB7;&#x7EB7;&#x5F00;&#x59CB;&#x4F7F;&#x7528;Python&#x7684;&#x6570;&#x7EC4;&#x7F16;&#x7A0B;&#xFF0C;&#x4F46;&#x662F;&#x8FDB;&#x5165;21&#x4E16;&#x7EAA;&#xFF0C;&#x5E93;&#x7684;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x53D8;&#x5F97;&#x788E;&#x7247;&#x5316;&#x4E86;&#x3002;2005&#x5E74;&#xFF0C;Travis Oliphant&#x4ECE;Numeric&#x548C;Numarray&#x9879;&#x76EE;&#x6574;&#x4E86;&#x51FA;&#x4E86;NumPy&#x9879;&#x76EE;&#xFF0C;&#x8FDB;&#x800C;&#x6240;&#x6709;&#x793E;&#x533A;&#x90FD;&#x96C6;&#x5408;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x4E0B;&#x3002;</p>
+</blockquote>
+<p>NumPy&#x4E4B;&#x4E8E;&#x6570;&#x503C;&#x8BA1;&#x7B97;&#x7279;&#x522B;&#x91CD;&#x8981;&#x7684;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x5904;&#x7406;&#x5927;&#x6570;&#x7EC4;&#x7684;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>NumPy&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x5185;&#x5B58;&#x5757;&#x4E2D;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x72EC;&#x7ACB;&#x4E8E;&#x5176;&#x4ED6;Python&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x3002;NumPy&#x7684;C&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x7B97;&#x6CD5;&#x5E93;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x5185;&#x5B58;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x6216;&#x5176;&#x5B83;&#x524D;&#x671F;&#x5DE5;&#x4F5C;&#x3002;&#x6BD4;&#x8D77;Python&#x7684;&#x5185;&#x7F6E;&#x5E8F;&#x5217;&#xFF0C;NumPy&#x6570;&#x7EC4;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x66F4;&#x5C11;&#x3002;</li>
+<li>NumPy&#x53EF;&#x4EE5;&#x5728;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#x4E0A;&#x6267;&#x884C;&#x590D;&#x6742;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;Python&#x7684;for&#x5FAA;&#x73AF;&#x3002;</li>
+</ul>
+<p>&#x8981;&#x641E;&#x660E;&#x767D;&#x5177;&#x4F53;&#x7684;&#x6027;&#x80FD;&#x5DEE;&#x8DDD;&#xFF0C;&#x8003;&#x5BDF;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E00;&#x767E;&#x4E07;&#x6574;&#x6570;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x548C;&#x4E00;&#x4E2A;&#x7B49;&#x4EF7;&#x7684;Python&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">7</span>]: <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+In [<span class="hljs-number">8</span>]: my_arr = np.arange(<span class="hljs-number">1000000</span>)
+
+In [<span class="hljs-number">9</span>]: my_list = list(range(<span class="hljs-number">1000000</span>))
+</code></pre>
+<p>&#x5404;&#x4E2A;&#x5E8F;&#x5217;&#x5206;&#x522B;&#x4E58;&#x4EE5;2&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">10</span>]: %time <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>): my_arr2 = my_arr * <span class="hljs-number">2</span>
+CPU times: user <span class="hljs-number">20</span> ms, sys: <span class="hljs-number">50</span> ms, total: <span class="hljs-number">70</span> ms
+Wall time: <span class="hljs-number">72.4</span> ms
+
+In [<span class="hljs-number">11</span>]: %time <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>): my_list2 = [x * <span class="hljs-number">2</span> <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> my_list]
+CPU times: user <span class="hljs-number">760</span> ms, sys: <span class="hljs-number">290</span> ms, total: <span class="hljs-number">1.05</span> s
+Wall time: <span class="hljs-number">1.05</span> s
+</code></pre>
+<p>&#x57FA;&#x4E8E;NumPy&#x7684;&#x7B97;&#x6CD5;&#x8981;&#x6BD4;&#x7EAF;Python&#x5FEB;10&#x5230;100&#x500D;&#xFF08;&#x751A;&#x81F3;&#x66F4;&#x5FEB;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x66F4;&#x5C11;&#x3002;</p>
+<h1 id="41-numpy&#x7684;ndarray&#xFF1A;&#x4E00;&#x79CD;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;">4.1 NumPy&#x7684;ndarray&#xFF1A;&#x4E00;&#x79CD;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;</h1>
+<p>NumPy&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x70B9;&#x5C31;&#x662F;&#x5176;N&#x7EF4;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#xFF08;&#x5373;ndarray&#xFF09;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x800C;&#x7075;&#x6D3B;&#x7684;&#x5927;&#x6570;&#x636E;&#x96C6;&#x5BB9;&#x5668;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x79CD;&#x6570;&#x7EC4;&#x5BF9;&#x6574;&#x5757;&#x6570;&#x636E;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#xFF0C;&#x5176;&#x8BED;&#x6CD5;&#x8DDF;&#x6807;&#x91CF;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x8FD0;&#x7B97;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x8981;&#x660E;&#x767D;Python&#x662F;&#x5982;&#x4F55;&#x5229;&#x7528;&#x4E0E;&#x6807;&#x91CF;&#x503C;&#x7C7B;&#x4F3C;&#x7684;&#x8BED;&#x6CD5;&#x8FDB;&#x884C;&#x6279;&#x6B21;&#x8BA1;&#x7B97;&#xFF0C;&#x6211;&#x5148;&#x5F15;&#x5165;NumPy&#xFF0C;&#x7136;&#x540E;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x968F;&#x673A;&#x6570;&#x636E;&#x7684;&#x5C0F;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">12</span>]: <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-comment"># Generate some random data</span>
+In [<span class="hljs-number">13</span>]: data = np.random.randn(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+In [<span class="hljs-number">14</span>]: data
+Out[<span class="hljs-number">14</span>]: 
+array([[-<span class="hljs-number">0.2047</span>,  <span class="hljs-number">0.4789</span>, -<span class="hljs-number">0.5194</span>],
+       [-<span class="hljs-number">0.5557</span>,  <span class="hljs-number">1.9658</span>,  <span class="hljs-number">1.3934</span>]])
+</code></pre>
+<p>&#x7136;&#x540E;&#x8FDB;&#x884C;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">15</span>]: data * <span class="hljs-number">10</span>
+Out[<span class="hljs-number">15</span>]: 
+array([[ -<span class="hljs-number">2.0471</span>,   <span class="hljs-number">4.7894</span>,  -<span class="hljs-number">5.1944</span>],
+       [ -<span class="hljs-number">5.5573</span>,  <span class="hljs-number">19.6578</span>,  <span class="hljs-number">13.9341</span>]])
+
+In [<span class="hljs-number">16</span>]: data + data
+Out[<span class="hljs-number">16</span>]: 
+array([[-<span class="hljs-number">0.4094</span>,  <span class="hljs-number">0.9579</span>, -<span class="hljs-number">1.0389</span>],
+       [-<span class="hljs-number">1.1115</span>,  <span class="hljs-number">3.9316</span>,  <span class="hljs-number">2.7868</span>]])
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x4E58;&#x4EE5;10&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x4E0E;&#x81EA;&#x8EAB;&#x76F8;&#x52A0;&#x3002;</p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x5728;&#x672C;&#x7AE0;&#x53CA;&#x5168;&#x4E66;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684;NumPy&#x60EF;&#x7528;&#x6CD5;<code>import numpy as np</code>&#x3002;&#x4F60;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;<code>from numpy import *</code>&#xFF0C;&#x4F46;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x4E48;&#x505A;&#x3002;<code>numpy</code>&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5F88;&#x5927;&#xFF0C;&#x5305;&#x542B;&#x8BB8;&#x591A;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x7684;&#x540D;&#x5B57;&#x4E0E;Python&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x91CD;&#x540D;&#xFF08;&#x6BD4;&#x5982;min&#x548C;max&#xFF09;&#x3002;</p>
+</blockquote>
+<p>ndarray&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x540C;&#x6784;&#x6570;&#x636E;&#x591A;&#x7EF4;&#x5BB9;&#x5668;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x5FC5;&#x987B;&#x662F;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x3002;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x90FD;&#x6709;&#x4E00;&#x4E2A;shape&#xFF08;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x5404;&#x7EF4;&#x5EA6;&#x5927;&#x5C0F;&#x7684;&#x5143;&#x7EC4;&#xFF09;&#x548C;&#x4E00;&#x4E2A;dtype&#xFF08;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BF4;&#x660E;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">17</span>]: data.shape
+Out[<span class="hljs-number">17</span>]: (<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+In [<span class="hljs-number">18</span>]: data.dtype
+Out[<span class="hljs-number">18</span>]: dtype(<span class="hljs-string">&apos;float64&apos;</span>)
+</code></pre>
+<p>&#x672C;&#x7AE0;&#x5C06;&#x4F1A;&#x4ECB;&#x7ECD;NumPy&#x6570;&#x7EC4;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x672C;&#x4E66;&#x540E;&#x9762;&#x5404;&#x7AE0;&#x7684;&#x7406;&#x89E3;&#x57FA;&#x672C;&#x591F;&#x7528;&#x3002;&#x867D;&#x7136;&#x5927;&#x591A;&#x6570;&#x6570;&#x636E;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x4E0D;&#x9700;&#x8981;&#x6DF1;&#x5165;&#x7406;&#x89E3;NumPy&#xFF0C;&#x4F46;&#x662F;&#x7CBE;&#x901A;&#x9762;&#x5411;&#x6570;&#x7EC4;&#x7684;&#x7F16;&#x7A0B;&#x548C;&#x601D;&#x7EF4;&#x65B9;&#x5F0F;&#x662F;&#x6210;&#x4E3A;Python&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x725B;&#x4EBA;&#x7684;&#x4E00;&#x5927;&#x5173;&#x952E;&#x6B65;&#x9AA4;&#x3002;</p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x5F53;&#x4F60;&#x5728;&#x672C;&#x4E66;&#x4E2D;&#x770B;&#x5230;&#x201C;&#x6570;&#x7EC4;&#x201D;&#x3001;&#x201C;NumPy&#x6570;&#x7EC4;&#x201D;&#x3001;&quot;ndarray&quot;&#x65F6;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x90FD;&#x6307;&#x7684;&#x662F;&#x540C;&#x4E00;&#x6837;&#x4E1C;&#x897F;&#xFF0C;&#x5373;ndarray&#x5BF9;&#x8C61;&#x3002;</p>
+</blockquote>
+<h2 id="&#x521B;&#x5EFA;ndarray">&#x521B;&#x5EFA;ndarray</h2>
+<p>&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#x6700;&#x7B80;&#x5355;&#x7684;&#x529E;&#x6CD5;&#x5C31;&#x662F;&#x4F7F;&#x7528;array&#x51FD;&#x6570;&#x3002;&#x5B83;&#x63A5;&#x53D7;&#x4E00;&#x5207;&#x5E8F;&#x5217;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x62EC;&#x5176;&#x4ED6;&#x6570;&#x7EC4;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x542B;&#x6709;&#x4F20;&#x5165;&#x6570;&#x636E;&#x7684;NumPy&#x6570;&#x7EC4;&#x3002;&#x4EE5;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x8F6C;&#x6362;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">19</span>]: data1 = [<span class="hljs-number">6</span>, <span class="hljs-number">7.5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
+
+In [<span class="hljs-number">20</span>]: arr1 = np.array(data1)
+
+In [<span class="hljs-number">21</span>]: arr1
+Out[<span class="hljs-number">21</span>]: array([ <span class="hljs-number">6.</span> ,  <span class="hljs-number">7.5</span>,  <span class="hljs-number">8.</span> ,  <span class="hljs-number">0.</span> ,  <span class="hljs-number">1.</span> ])
+</code></pre>
+<p>&#x5D4C;&#x5957;&#x5E8F;&#x5217;&#xFF08;&#x6BD4;&#x5982;&#x7531;&#x4E00;&#x7EC4;&#x7B49;&#x957F;&#x5217;&#x8868;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;&#xFF09;&#x5C06;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">22</span>]: data2 = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]]
+
+In [<span class="hljs-number">23</span>]: arr2 = np.array(data2)
+
+In [<span class="hljs-number">24</span>]: arr2
+Out[<span class="hljs-number">24</span>]: 
+array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>],
+       [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]])
+</code></pre>
+<p>&#x56E0;&#x4E3A;data2&#x662F;&#x5217;&#x8868;&#x7684;&#x5217;&#x8868;&#xFF0C;NumPy&#x6570;&#x7EC4;arr2&#x7684;&#x4E24;&#x4E2A;&#x7EF4;&#x5EA6;&#x7684;shape&#x662F;&#x4ECE;data2&#x5F15;&#x5165;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x5C5E;&#x6027;ndim&#x548C;shape&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">25</span>]: arr2.ndim
+Out[<span class="hljs-number">25</span>]: <span class="hljs-number">2</span>
+
+In [<span class="hljs-number">26</span>]: arr2.shape
+Out[<span class="hljs-number">26</span>]: (<span class="hljs-number">2</span>, <span class="hljs-number">4</span>)
+</code></pre>
+<p>&#x9664;&#x975E;&#x7279;&#x522B;&#x8BF4;&#x660E;&#xFF08;&#x7A0D;&#x540E;&#x5C06;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF09;&#xFF0C;np.array&#x4F1A;&#x5C1D;&#x8BD5;&#x4E3A;&#x65B0;&#x5EFA;&#x7684;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x63A8;&#x65AD;&#x51FA;&#x4E00;&#x4E2A;&#x8F83;&#x4E3A;&#x5408;&#x9002;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;dtype&#x5BF9;&#x8C61;&#x4E2D;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">27</span>]: arr1.dtype
+Out[<span class="hljs-number">27</span>]: dtype(<span class="hljs-string">&apos;float64&apos;</span>)
+
+In [<span class="hljs-number">28</span>]: arr2.dtype
+Out[<span class="hljs-number">28</span>]: dtype(<span class="hljs-string">&apos;int64&apos;</span>)
+</code></pre>
+<p>&#x9664;np.array&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x65B0;&#x5EFA;&#x6570;&#x7EC4;&#x3002;&#x6BD4;&#x5982;&#xFF0C;zeros&#x548C;ones&#x5206;&#x522B;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x6216;&#x5F62;&#x72B6;&#x7684;&#x5168;0&#x6216;&#x5168;1&#x6570;&#x7EC4;&#x3002;empty&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5177;&#x4F53;&#x503C;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x8981;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x53EA;&#x9700;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x5F62;&#x72B6;&#x7684;&#x5143;&#x7EC4;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">29</span>]: np.zeros(<span class="hljs-number">10</span>)
+Out[<span class="hljs-number">29</span>]: array([ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>])
+
+In [<span class="hljs-number">30</span>]: np.zeros((<span class="hljs-number">3</span>, <span class="hljs-number">6</span>))
+Out[<span class="hljs-number">30</span>]: 
+array([[ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+       [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+       [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>]])
+
+In [<span class="hljs-number">31</span>]: np.empty((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>))
+Out[<span class="hljs-number">31</span>]: 
+array([[[ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+        [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+        [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>]],
+       [[ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+        [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+        [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>]]])
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x8BA4;&#x4E3A;np.empty&#x4F1A;&#x8FD4;&#x56DE;&#x5168;0&#x6570;&#x7EC4;&#x7684;&#x60F3;&#x6CD5;&#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x3002;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x5982;&#x524D;&#x6240;&#x793A;&#xFF09;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x4E9B;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5783;&#x573E;&#x503C;&#x3002;</p>
+</blockquote>
+<p>arange&#x662F;Python&#x5185;&#x7F6E;&#x51FD;&#x6570;range&#x7684;&#x6570;&#x7EC4;&#x7248;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">32</span>]: np.arange(<span class="hljs-number">15</span>)
+Out[<span class="hljs-number">32</span>]: array([ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">4</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">7</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>])
+</code></pre>
+<p>&#x8868;4-1&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x6570;&#x7EC4;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x3002;&#x7531;&#x4E8E;NumPy&#x5173;&#x6CE8;&#x7684;&#x662F;&#x6570;&#x503C;&#x8BA1;&#x7B97;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7279;&#x522B;&#x6307;&#x5B9A;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x57FA;&#x672C;&#x90FD;&#x662F;float64&#xFF08;&#x6D6E;&#x70B9;&#x6570;&#xFF09;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-78ab11f67e7077a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;4-1 &#x6570;&#x7EC4;&#x521B;&#x5EFA;&#x51FD;&#x6570;"></p>
+<h2 id="ndarray&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;">ndarray&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<p>dtype&#xFF08;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x542B;&#x6709;ndarray&#x5C06;&#x4E00;&#x5757;&#x5185;&#x5B58;&#x89E3;&#x91CA;&#x4E3A;&#x7279;&#x5B9A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6240;&#x9700;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">33</span>]: arr1 = np.array([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], dtype=np.float64)
+
+In [<span class="hljs-number">34</span>]: arr2 = np.array([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], dtype=np.int32)
+
+In [<span class="hljs-number">35</span>]: arr1.dtype
+Out[<span class="hljs-number">35</span>]: dtype(<span class="hljs-string">&apos;float64&apos;</span>)
+
+In [<span class="hljs-number">36</span>]: arr2.dtype
+Out[<span class="hljs-number">36</span>]: dtype(<span class="hljs-string">&apos;int32&apos;</span>)
+</code></pre>
+<p>dtype&#x662F;NumPy&#x7075;&#x6D3B;&#x4EA4;&#x4E92;&#x5176;&#x5B83;&#x7CFB;&#x7EDF;&#x7684;&#x6E90;&#x6CC9;&#x4E4B;&#x4E00;&#x3002;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x4EEC;&#x76F4;&#x63A5;&#x6620;&#x5C04;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x673A;&#x5668;&#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x201C;&#x8BFB;&#x5199;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x6D41;&#x201D;&#x4EE5;&#x53CA;&#x201C;&#x96C6;&#x6210;&#x4F4E;&#x7EA7;&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#xFF08;&#x5982;C&#x3001;Fortran&#xFF09;&#x201D;&#x7B49;&#x5DE5;&#x4F5C;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x3002;&#x6570;&#x503C;&#x578B;dtype&#x7684;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x76F8;&#x540C;&#xFF1A;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x540D;&#xFF08;&#x5982;float&#x6216;int&#xFF09;&#xFF0C;&#x540E;&#x9762;&#x8DDF;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x5404;&#x5143;&#x7D20;&#x4F4D;&#x957F;&#x7684;&#x6570;&#x5B57;&#x3002;&#x6807;&#x51C6;&#x7684;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x503C;&#xFF08;&#x5373;Python&#x4E2D;&#x7684;float&#x5BF9;&#x8C61;&#xFF09;&#x9700;&#x8981;&#x5360;&#x7528;8&#x5B57;&#x8282;&#xFF08;&#x5373;64&#x4F4D;&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8BE5;&#x7C7B;&#x578B;&#x5728;NumPy&#x4E2D;&#x5C31;&#x8BB0;&#x4F5C;float64&#x3002;&#x8868;4-2&#x5217;&#x51FA;&#x4E86;NumPy&#x6240;&#x652F;&#x6301;&#x7684;&#x5168;&#x90E8;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x8BB0;&#x4E0D;&#x4F4F;&#x8FD9;&#x4E9B;NumPy&#x7684;dtype&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x65B0;&#x624B;&#x66F4;&#x662F;&#x5982;&#x6B64;&#x3002;&#x901A;&#x5E38;&#x53EA;&#x9700;&#x8981;&#x77E5;&#x9053;&#x4F60;&#x6240;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x7684;&#x5927;&#x81F4;&#x7C7B;&#x578B;&#x662F;&#x6D6E;&#x70B9;&#x6570;&#x3001;&#x590D;&#x6570;&#x3001;&#x6574;&#x6570;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD8;&#x662F;&#x666E;&#x901A;&#x7684;Python&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#x3002;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x63A7;&#x5236;&#x6570;&#x636E;&#x5728;&#x5185;&#x5B58;&#x548C;&#x78C1;&#x76D8;&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x65F6;&#xFF08;&#x5C24;&#x5176;&#x662F;&#x5BF9;&#x5927;&#x6570;&#x636E;&#x96C6;&#xFF09;&#xFF0C;&#x90A3;&#x5C31;&#x5F97;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x63A7;&#x5236;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x3002;</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-2f2d7406a8bc076c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-5cc31115615737b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;ndarray&#x7684;astype&#x65B9;&#x6CD5;&#x660E;&#x786E;&#x5730;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4ECE;&#x4E00;&#x4E2A;dtype&#x8F6C;&#x6362;&#x6210;&#x53E6;&#x4E00;&#x4E2A;dtype&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">37</span>]: arr = np.array([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+
+In [<span class="hljs-number">38</span>]: arr.dtype
+Out[<span class="hljs-number">38</span>]: dtype(<span class="hljs-string">&apos;int64&apos;</span>)
+
+In [<span class="hljs-number">39</span>]: float_arr = arr.astype(np.float64)
+
+In [<span class="hljs-number">40</span>]: float_arr.dtype
+Out[<span class="hljs-number">40</span>]: dtype(<span class="hljs-string">&apos;float64&apos;</span>)
+</code></pre>
+<p>&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6574;&#x6570;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x4E86;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x5982;&#x679C;&#x5C06;&#x6D6E;&#x70B9;&#x6570;&#x8F6C;&#x6362;&#x6210;&#x6574;&#x6570;&#xFF0C;&#x5219;&#x5C0F;&#x6570;&#x90E8;&#x5206;&#x5C06;&#x4F1A;&#x88AB;&#x622A;&#x53D6;&#x5220;&#x9664;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">41</span>]: arr = np.array([<span class="hljs-number">3.7</span>, -<span class="hljs-number">1.2</span>, -<span class="hljs-number">2.6</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">12.9</span>, <span class="hljs-number">10.1</span>])
+
+In [<span class="hljs-number">42</span>]: arr
+Out[<span class="hljs-number">42</span>]: array([  <span class="hljs-number">3.7</span>,  -<span class="hljs-number">1.2</span>,  -<span class="hljs-number">2.6</span>,   <span class="hljs-number">0.5</span>,  <span class="hljs-number">12.9</span>,  <span class="hljs-number">10.1</span>])
+
+In [<span class="hljs-number">43</span>]: arr.astype(np.int32)
+Out[<span class="hljs-number">43</span>]: array([ <span class="hljs-number">3</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">2</span>,  <span class="hljs-number">0</span>, <span class="hljs-number">12</span>, <span class="hljs-number">10</span>], dtype=int32)
+</code></pre>
+<p>&#x5982;&#x679C;&#x67D0;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x8868;&#x793A;&#x7684;&#x5168;&#x662F;&#x6570;&#x5B57;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;astype&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x503C;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">44</span>]: numeric_strings = np.array([<span class="hljs-string">&apos;1.25&apos;</span>, <span class="hljs-string">&apos;-9.6&apos;</span>, <span class="hljs-string">&apos;42&apos;</span>], dtype=np.string_)
+
+In [<span class="hljs-number">45</span>]: numeric_strings.astype(float)
+Out[<span class="hljs-number">45</span>]: array([  <span class="hljs-number">1.25</span>,  -<span class="hljs-number">9.6</span> ,  <span class="hljs-number">42.</span>  ])
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4F7F;&#x7528;numpy.string_&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x5C0F;&#x5FC3;&#xFF0C;&#x56E0;&#x4E3A;NumPy&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x636E;&#x662F;&#x5927;&#x5C0F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x53D1;&#x751F;&#x622A;&#x53D6;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x53D1;&#x51FA;&#x8B66;&#x544A;&#x3002;pandas&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x975E;&#x6570;&#x503C;&#x6570;&#x636E;&#x7684;&#x4FBF;&#x5229;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B;&#x56E0;&#x4E3A;&#x67D0;&#x79CD;&#x539F;&#x56E0;&#x800C;&#x5931;&#x8D25;&#x4E86;&#xFF08;&#x6BD4;&#x5982;&#x67D0;&#x4E2A;&#x4E0D;&#x80FD;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;float64&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#xFF0C;&#x5C31;&#x4F1A;&#x5F15;&#x53D1;&#x4E00;&#x4E2A;ValueError&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x6BD4;&#x8F83;&#x61D2;&#xFF0C;&#x5199;&#x7684;&#x662F;float&#x800C;&#x4E0D;&#x662F;np.float64&#xFF1B;NumPy&#x5F88;&#x806A;&#x660E;&#xFF0C;&#x5B83;&#x4F1A;&#x5C06;Python&#x7C7B;&#x578B;&#x6620;&#x5C04;&#x5230;&#x7B49;&#x4EF7;&#x7684;dtype&#x4E0A;&#x3002;</p>
+<p>&#x6570;&#x7EC4;&#x7684;dtype&#x8FD8;&#x6709;&#x53E6;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">46</span>]: int_array = np.arange(<span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">47</span>]: calibers = np.array([<span class="hljs-number">.22</span>, <span class="hljs-number">.270</span>, <span class="hljs-number">.357</span>, <span class="hljs-number">.380</span>, <span class="hljs-number">.44</span>, <span class="hljs-number">.50</span>], dtype=np.float64)
+
+In [<span class="hljs-number">48</span>]: int_array.astype(calibers.dtype)
+Out[<span class="hljs-number">48</span>]: array([ <span class="hljs-number">0.</span>,  <span class="hljs-number">1.</span>,  <span class="hljs-number">2.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">4.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">6.</span>,  <span class="hljs-number">7.</span>,  <span class="hljs-number">8.</span>,  <span class="hljs-number">9.</span>])
+</code></pre>
+<p>&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x7B80;&#x6D01;&#x7684;&#x7C7B;&#x578B;&#x4EE3;&#x7801;&#x6765;&#x8868;&#x793A;dtype&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">49</span>]: empty_uint32 = np.empty(<span class="hljs-number">8</span>, dtype=<span class="hljs-string">&apos;u4&apos;</span>)
+
+In [<span class="hljs-number">50</span>]: empty_uint32
+Out[<span class="hljs-number">50</span>]: 
+array([         <span class="hljs-number">0</span>, <span class="hljs-number">1075314688</span>,          <span class="hljs-number">0</span>, <span class="hljs-number">1075707904</span>,          <span class="hljs-number">0</span>,
+       <span class="hljs-number">1075838976</span>,          <span class="hljs-number">0</span>, <span class="hljs-number">1072693248</span>], dtype=uint32)
+</code></pre>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x8C03;&#x7528;astype&#x603B;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#xFF08;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x5907;&#x4EFD;&#xFF09;&#xFF0C;&#x5373;&#x4F7F;&#x65B0;&#x7684;dtype&#x4E0E;&#x65E7;&#x7684;dtype&#x76F8;&#x540C;&#x3002;</p>
+</blockquote>
+<h2 id="numpy&#x6570;&#x7EC4;&#x7684;&#x8FD0;&#x7B97;">NumPy&#x6570;&#x7EC4;&#x7684;&#x8FD0;&#x7B97;</h2>
+<p>&#x6570;&#x7EC4;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F7F;&#x4F60;&#x4E0D;&#x7528;&#x7F16;&#x5199;&#x5FAA;&#x73AF;&#x5373;&#x53EF;&#x5BF9;&#x6570;&#x636E;&#x6267;&#x884C;&#x6279;&#x91CF;&#x8FD0;&#x7B97;&#x3002;NumPy&#x7528;&#x6237;&#x79F0;&#x5176;&#x4E3A;&#x77E2;&#x91CF;&#x5316;&#xFF08;vectorization&#xFF09;&#x3002;&#x5927;&#x5C0F;&#x76F8;&#x7B49;&#x7684;&#x6570;&#x7EC4;&#x4E4B;&#x95F4;&#x7684;&#x4EFB;&#x4F55;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x90FD;&#x4F1A;&#x5C06;&#x8FD0;&#x7B97;&#x5E94;&#x7528;&#x5230;&#x5143;&#x7D20;&#x7EA7;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">51</span>]: arr = np.array([[<span class="hljs-number">1.</span>, <span class="hljs-number">2.</span>, <span class="hljs-number">3.</span>], [<span class="hljs-number">4.</span>, <span class="hljs-number">5.</span>, <span class="hljs-number">6.</span>]])
+
+In [<span class="hljs-number">52</span>]: arr
+Out[<span class="hljs-number">52</span>]: 
+array([[ <span class="hljs-number">1.</span>,  <span class="hljs-number">2.</span>,  <span class="hljs-number">3.</span>],
+       [ <span class="hljs-number">4.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">6.</span>]])
+
+In [<span class="hljs-number">53</span>]: arr * arr
+Out[<span class="hljs-number">53</span>]: 
+array([[  <span class="hljs-number">1.</span>,   <span class="hljs-number">4.</span>,   <span class="hljs-number">9.</span>],
+       [ <span class="hljs-number">16.</span>,  <span class="hljs-number">25.</span>,  <span class="hljs-number">36.</span>]])
+
+In [<span class="hljs-number">54</span>]: arr - arr
+Out[<span class="hljs-number">54</span>]: 
+array([[ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+       [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>]])
+</code></pre>
+<p>&#x6570;&#x7EC4;&#x4E0E;&#x6807;&#x91CF;&#x7684;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x4F1A;&#x5C06;&#x6807;&#x91CF;&#x503C;&#x4F20;&#x64AD;&#x5230;&#x5404;&#x4E2A;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">55</span>]: <span class="hljs-number">1</span> / arr
+Out[<span class="hljs-number">55</span>]: 
+array([[ <span class="hljs-number">1.</span>    ,  <span class="hljs-number">0.5</span>   ,  <span class="hljs-number">0.3333</span>],
+       [ <span class="hljs-number">0.25</span>  ,  <span class="hljs-number">0.2</span>   ,  <span class="hljs-number">0.1667</span>]])
+
+In [<span class="hljs-number">56</span>]: arr ** <span class="hljs-number">0.5</span>
+Out[<span class="hljs-number">56</span>]: 
+array([[ <span class="hljs-number">1.</span>    ,  <span class="hljs-number">1.4142</span>,  <span class="hljs-number">1.7321</span>],
+       [ <span class="hljs-number">2.</span>    ,  <span class="hljs-number">2.2361</span>,  <span class="hljs-number">2.4495</span>]])
+</code></pre>
+<p>&#x5927;&#x5C0F;&#x76F8;&#x540C;&#x7684;&#x6570;&#x7EC4;&#x4E4B;&#x95F4;&#x7684;&#x6BD4;&#x8F83;&#x4F1A;&#x751F;&#x6210;&#x5E03;&#x5C14;&#x503C;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">57</span>]: arr2 = np.array([[<span class="hljs-number">0.</span>, <span class="hljs-number">4.</span>, <span class="hljs-number">1.</span>], [<span class="hljs-number">7.</span>, <span class="hljs-number">2.</span>, <span class="hljs-number">12.</span>]])
+
+In [<span class="hljs-number">58</span>]: arr2
+Out[<span class="hljs-number">58</span>]: 
+array([[  <span class="hljs-number">0.</span>,   <span class="hljs-number">4.</span>,   <span class="hljs-number">1.</span>],
+       [  <span class="hljs-number">7.</span>,   <span class="hljs-number">2.</span>,  <span class="hljs-number">12.</span>]])
+
+In [<span class="hljs-number">59</span>]: arr2 &gt; arr
+Out[<span class="hljs-number">59</span>]:
+array([[<span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>],
+       [ <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>]], dtype=bool)
+</code></pre>
+<p>&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x7684;&#x6570;&#x7EC4;&#x4E4B;&#x95F4;&#x7684;&#x8FD0;&#x7B97;&#x53EB;&#x505A;&#x5E7F;&#x64AD;&#xFF08;broadcasting&#xFF09;&#xFF0C;&#x5C06;&#x5728;&#x9644;&#x5F55;A&#x4E2D;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x8BE6;&#x7EC6;&#x8BA8;&#x8BBA;&#x3002;&#x672C;&#x4E66;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x5E7F;&#x64AD;&#x673A;&#x5236;&#x6709;&#x591A;&#x6DF1;&#x7684;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="&#x57FA;&#x672C;&#x7684;&#x7D22;&#x5F15;&#x548C;&#x5207;&#x7247;">&#x57FA;&#x672C;&#x7684;&#x7D22;&#x5F15;&#x548C;&#x5207;&#x7247;</h2>
+<p>NumPy&#x6570;&#x7EC4;&#x7684;&#x7D22;&#x5F15;&#x662F;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#x4E30;&#x5BCC;&#x7684;&#x4E3B;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x9009;&#x53D6;&#x6570;&#x636E;&#x5B50;&#x96C6;&#x6216;&#x5355;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x5F88;&#x591A;&#x3002;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x5F88;&#x7B80;&#x5355;&#x3002;&#x4ECE;&#x8868;&#x9762;&#x4E0A;&#x770B;&#xFF0C;&#x5B83;&#x4EEC;&#x8DDF;Python&#x5217;&#x8868;&#x7684;&#x529F;&#x80FD;&#x5DEE;&#x4E0D;&#x591A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">60</span>]: arr = np.arange(<span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">61</span>]: arr
+Out[<span class="hljs-number">61</span>]: array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+
+In [<span class="hljs-number">62</span>]: arr[<span class="hljs-number">5</span>]
+Out[<span class="hljs-number">62</span>]: <span class="hljs-number">5</span>
+
+In [<span class="hljs-number">63</span>]: arr[<span class="hljs-number">5</span>:<span class="hljs-number">8</span>]
+Out[<span class="hljs-number">63</span>]: array([<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>])
+
+In [<span class="hljs-number">64</span>]: arr[<span class="hljs-number">5</span>:<span class="hljs-number">8</span>] = <span class="hljs-number">12</span>
+
+In [<span class="hljs-number">65</span>]: arr
+Out[<span class="hljs-number">65</span>]: array([ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">4</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF0C;&#x5F53;&#x4F60;&#x5C06;&#x4E00;&#x4E2A;&#x6807;&#x91CF;&#x503C;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x65F6;&#xFF08;&#x5982;arr[5:8]=12&#xFF09;&#xFF0C;&#x8BE5;&#x503C;&#x4F1A;&#x81EA;&#x52A8;&#x4F20;&#x64AD;&#xFF08;&#x4E5F;&#x5C31;&#x8BF4;&#x540E;&#x9762;&#x5C06;&#x4F1A;&#x8BB2;&#x5230;&#x7684;&#x201C;&#x5E7F;&#x64AD;&#x201D;&#xFF09;&#x5230;&#x6574;&#x4E2A;&#x9009;&#x533A;&#x3002;&#x8DDF;&#x5217;&#x8868;&#x6700;&#x91CD;&#x8981;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x6570;&#x7EC4;&#x5207;&#x7247;&#x662F;&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x7684;&#x89C6;&#x56FE;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x88AB;&#x590D;&#x5236;&#xFF0C;&#x89C6;&#x56FE;&#x4E0A;&#x7684;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x90FD;&#x4F1A;&#x76F4;&#x63A5;&#x53CD;&#x6620;&#x5230;&#x6E90;&#x6570;&#x7EC4;&#x4E0A;&#x3002;</p>
+<p>&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#xFF0C;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;arr&#x7684;&#x5207;&#x7247;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">66</span>]: arr_slice = arr[<span class="hljs-number">5</span>:<span class="hljs-number">8</span>]
+
+In [<span class="hljs-number">67</span>]: arr_slice
+Out[<span class="hljs-number">67</span>]: array([<span class="hljs-number">12</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>])
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x5F53;&#x6211;&#x4FEE;&#x7A3F;arr_slice&#x4E2D;&#x7684;&#x503C;&#xFF0C;&#x53D8;&#x52A8;&#x4E5F;&#x4F1A;&#x4F53;&#x73B0;&#x5728;&#x539F;&#x59CB;&#x6570;&#x7EC4;arr&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">68</span>]: arr_slice[<span class="hljs-number">1</span>] = <span class="hljs-number">12345</span>
+
+In [<span class="hljs-number">69</span>]: arr
+Out[<span class="hljs-number">69</span>]: array([    <span class="hljs-number">0</span>,     <span class="hljs-number">1</span>,     <span class="hljs-number">2</span>,     <span class="hljs-number">3</span>,     <span class="hljs-number">4</span>,    <span class="hljs-number">12</span>, <span class="hljs-number">12345</span>,    <span class="hljs-number">12</span>,     <span class="hljs-number">8</span>,   
+  <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x5207;&#x7247;[ : ]&#x4F1A;&#x7ED9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x503C;&#x8D4B;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">70</span>]: arr_slice[:] = <span class="hljs-number">64</span>
+
+In [<span class="hljs-number">71</span>]: arr
+Out[<span class="hljs-number">71</span>]: array([ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">4</span>, <span class="hljs-number">64</span>, <span class="hljs-number">64</span>, <span class="hljs-number">64</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x521A;&#x5F00;&#x59CB;&#x63A5;&#x89E6;NumPy&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BF9;&#x6B64;&#x611F;&#x5230;&#x60CA;&#x8BB6;&#xFF08;&#x5C24;&#x5176;&#x662F;&#x5F53;&#x4F60;&#x66FE;&#x7ECF;&#x7528;&#x8FC7;&#x5176;&#x4ED6;&#x70ED;&#x8877;&#x4E8E;&#x590D;&#x5236;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF09;&#x3002;&#x7531;&#x4E8E;NumPy&#x7684;&#x8BBE;&#x8BA1;&#x76EE;&#x7684;&#x662F;&#x5904;&#x7406;&#x5927;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x60F3;&#x8C61;&#x4E00;&#x4E0B;&#xFF0C;&#x5047;&#x5982;NumPy&#x575A;&#x6301;&#x8981;&#x5C06;&#x6570;&#x636E;&#x590D;&#x5236;&#x6765;&#x590D;&#x5236;&#x53BB;&#x7684;&#x8BDD;&#x4F1A;&#x4EA7;&#x751F;&#x4F55;&#x7B49;&#x7684;&#x6027;&#x80FD;&#x548C;&#x5185;&#x5B58;&#x95EE;&#x9898;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5F97;&#x5230;&#x7684;&#x662F;ndarray&#x5207;&#x7247;&#x7684;&#x4E00;&#x4EFD;&#x526F;&#x672C;&#x800C;&#x975E;&#x89C6;&#x56FE;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x660E;&#x786E;&#x5730;&#x8FDB;&#x884C;&#x590D;&#x5236;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;<code>arr[5:8].copy()</code>&#x3002;</p>
+</blockquote>
+<p>&#x5BF9;&#x4E8E;&#x9AD8;&#x7EF4;&#x5EA6;&#x6570;&#x7EC4;&#xFF0C;&#x80FD;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x66F4;&#x591A;&#x3002;&#x5728;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x5404;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x4E0D;&#x518D;&#x662F;&#x6807;&#x91CF;&#x800C;&#x662F;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">72</span>]: arr2d = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]])
+
+In [<span class="hljs-number">73</span>]: arr2d[<span class="hljs-number">2</span>]
+Out[<span class="hljs-number">73</span>]: array([<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x5404;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x8BBF;&#x95EE;&#xFF0C;&#x4F46;&#x8FD9;&#x6837;&#x9700;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x6709;&#x70B9;&#x591A;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x4EE5;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x7684;&#x7D22;&#x5F15;&#x5217;&#x8868;&#x6765;&#x9009;&#x53D6;&#x5355;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4E0B;&#x9762;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">74</span>]: arr2d[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>]
+Out[<span class="hljs-number">74</span>]: <span class="hljs-number">3</span>
+
+In [<span class="hljs-number">75</span>]: arr2d[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>]
+Out[<span class="hljs-number">75</span>]: <span class="hljs-number">3</span>
+</code></pre>
+<p>&#x56FE;4-1&#x8BF4;&#x660E;&#x4E86;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x7D22;&#x5F15;&#x65B9;&#x5F0F;&#x3002;&#x8F74;0&#x4F5C;&#x4E3A;&#x884C;&#xFF0C;&#x8F74;1&#x4F5C;&#x4E3A;&#x5217;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-0a641536f73f560e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;4-1 NumPy&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x7D22;&#x5F15;"></p>
+<p>&#x5728;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x7701;&#x7565;&#x4E86;&#x540E;&#x9762;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x7EF4;&#x5EA6;&#x4F4E;&#x4E00;&#x70B9;&#x7684;ndarray&#xFF08;&#x5B83;&#x542B;&#x6709;&#x9AD8;&#x4E00;&#x7EA7;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;2&#xD7;2&#xD7;3&#x6570;&#x7EC4;arr3d&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">76</span>]: arr3d = np.array([[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]], [[<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>], [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>]]])
+
+In [<span class="hljs-number">77</span>]: arr3d
+Out[<span class="hljs-number">77</span>]: 
+array([[[ <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],
+        [ <span class="hljs-number">4</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>]],
+       [[ <span class="hljs-number">7</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>],
+        [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>]]])
+</code></pre>
+<p>arr3d[0]&#x662F;&#x4E00;&#x4E2A;2&#xD7;3&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">78</span>]: arr3d[<span class="hljs-number">0</span>]
+Out[<span class="hljs-number">78</span>]: 
+array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>],
+       [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]])
+</code></pre>
+<p>&#x6807;&#x91CF;&#x503C;&#x548C;&#x6570;&#x7EC4;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x8D4B;&#x503C;&#x7ED9;arr3d[0]&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">79</span>]: old_values = arr3d[<span class="hljs-number">0</span>].copy()
+
+In [<span class="hljs-number">80</span>]: arr3d[<span class="hljs-number">0</span>] = <span class="hljs-number">42</span>
+
+In [<span class="hljs-number">81</span>]: arr3d
+Out[<span class="hljs-number">81</span>]: 
+array([[[<span class="hljs-number">42</span>, <span class="hljs-number">42</span>, <span class="hljs-number">42</span>],
+        [<span class="hljs-number">42</span>, <span class="hljs-number">42</span>, <span class="hljs-number">42</span>]],
+       [[ <span class="hljs-number">7</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>],
+        [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>]]])
+
+In [<span class="hljs-number">82</span>]: arr3d[<span class="hljs-number">0</span>] = old_values
+
+In [<span class="hljs-number">83</span>]: arr3d
+Out[<span class="hljs-number">83</span>]: 
+array([[[ <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],
+        [ <span class="hljs-number">4</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>]],
+       [[ <span class="hljs-number">7</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>],
+        [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>]]])
+</code></pre>
+<p>&#x76F8;&#x4F3C;&#x7684;&#xFF0C;arr3d[1,0]&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7D22;&#x5F15;&#x4EE5;(1,0)&#x5F00;&#x5934;&#x7684;&#x90A3;&#x4E9B;&#x503C;&#xFF08;&#x4EE5;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">84</span>]: arr3d[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>]
+Out[<span class="hljs-number">84</span>]: array([<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x867D;&#x7136;&#x662F;&#x7528;&#x4E24;&#x6B65;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x7684;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">85</span>]: x = arr3d[<span class="hljs-number">1</span>]
+
+In [<span class="hljs-number">86</span>]: x
+Out[<span class="hljs-number">86</span>]: 
+array([[ <span class="hljs-number">7</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>],
+       [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>]])
+
+In [<span class="hljs-number">87</span>]: x[<span class="hljs-number">0</span>]
+Out[<span class="hljs-number">87</span>]: array([<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x9009;&#x53D6;&#x6570;&#x7EC4;&#x5B50;&#x96C6;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x90FD;&#x662F;&#x89C6;&#x56FE;&#x3002;</p>
+<h2 id="&#x5207;&#x7247;&#x7D22;&#x5F15;">&#x5207;&#x7247;&#x7D22;&#x5F15;</h2>
+<p>ndarray&#x7684;&#x5207;&#x7247;&#x8BED;&#x6CD5;&#x8DDF;Python&#x5217;&#x8868;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x7EF4;&#x5BF9;&#x8C61;&#x5DEE;&#x4E0D;&#x591A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">88</span>]: arr
+Out[<span class="hljs-number">88</span>]: array([ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">4</span>, <span class="hljs-number">64</span>, <span class="hljs-number">64</span>, <span class="hljs-number">64</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>])
+
+In [<span class="hljs-number">89</span>]: arr[<span class="hljs-number">1</span>:<span class="hljs-number">6</span>]
+Out[<span class="hljs-number">89</span>]: array([ <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">4</span>, <span class="hljs-number">64</span>])
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x4E4B;&#x524D;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;arr2d&#xFF0C;&#x5176;&#x5207;&#x7247;&#x65B9;&#x5F0F;&#x7A0D;&#x663E;&#x4E0D;&#x540C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">90</span>]: arr2d
+Out[<span class="hljs-number">90</span>]: 
+array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>],
+       [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>],
+       [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]])
+
+In [<span class="hljs-number">91</span>]: arr2d[:<span class="hljs-number">2</span>]
+Out[<span class="hljs-number">91</span>]: 
+array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>],
+       [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]])
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5B83;&#x662F;&#x6CBF;&#x7740;&#x7B2C;0&#x8F74;&#xFF08;&#x5373;&#x7B2C;&#x4E00;&#x4E2A;&#x8F74;&#xFF09;&#x5207;&#x7247;&#x7684;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5207;&#x7247;&#x662F;&#x6CBF;&#x7740;&#x4E00;&#x4E2A;&#x8F74;&#x5411;&#x9009;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x3002;&#x8868;&#x8FBE;&#x5F0F;arr2d[:2]&#x53EF;&#x4EE5;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x201C;&#x9009;&#x53D6;arr2d&#x7684;&#x524D;&#x4E24;&#x884C;&#x201D;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x4F20;&#x5165;&#x591A;&#x4E2A;&#x5207;&#x7247;&#xFF0C;&#x5C31;&#x50CF;&#x4F20;&#x5165;&#x591A;&#x4E2A;&#x7D22;&#x5F15;&#x90A3;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">92</span>]: arr2d[:<span class="hljs-number">2</span>, <span class="hljs-number">1</span>:]
+Out[<span class="hljs-number">92</span>]: 
+array([[<span class="hljs-number">2</span>, <span class="hljs-number">3</span>],
+       [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>]])
+</code></pre>
+<p>&#x50CF;&#x8FD9;&#x6837;&#x8FDB;&#x884C;&#x5207;&#x7247;&#x65F6;&#xFF0C;&#x53EA;&#x80FD;&#x5F97;&#x5230;&#x76F8;&#x540C;&#x7EF4;&#x6570;&#x7684;&#x6570;&#x7EC4;&#x89C6;&#x56FE;&#x3002;&#x901A;&#x8FC7;&#x5C06;&#x6574;&#x6570;&#x7D22;&#x5F15;&#x548C;&#x5207;&#x7247;&#x6DF7;&#x5408;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4F4E;&#x7EF4;&#x5EA6;&#x7684;&#x5207;&#x7247;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x9009;&#x53D6;&#x7B2C;&#x4E8C;&#x884C;&#x7684;&#x524D;&#x4E24;&#x5217;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">93</span>]: arr2d[<span class="hljs-number">1</span>, :<span class="hljs-number">2</span>]
+Out[<span class="hljs-number">93</span>]: array([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+</code></pre>
+<p>&#x76F8;&#x4F3C;&#x7684;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7B2C;&#x4E09;&#x5217;&#x7684;&#x524D;&#x4E24;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">94</span>]: arr2d[:<span class="hljs-number">2</span>, <span class="hljs-number">2</span>]
+Out[<span class="hljs-number">94</span>]: array([<span class="hljs-number">3</span>, <span class="hljs-number">6</span>])
+</code></pre>
+<p>&#x56FE;4-2&#x5BF9;&#x6B64;&#x8FDB;&#x884C;&#x4E86;&#x8BF4;&#x660E;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x201C;&#x53EA;&#x6709;&#x5192;&#x53F7;&#x201D;&#x8868;&#x793A;&#x9009;&#x53D6;&#x6574;&#x4E2A;&#x8F74;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x53EA;&#x5BF9;&#x9AD8;&#x7EF4;&#x8F74;&#x8FDB;&#x884C;&#x5207;&#x7247;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">95</span>]: arr2d[:, :<span class="hljs-number">1</span>]
+Out[<span class="hljs-number">95</span>]: 
+array([[<span class="hljs-number">1</span>],
+       [<span class="hljs-number">4</span>],
+       [<span class="hljs-number">7</span>]])
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-9da32d2f4629c304.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;4-2 &#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x5207;&#x7247;"></p>
+<p>&#x81EA;&#x7136;&#xFF0C;&#x5BF9;&#x5207;&#x7247;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x4E5F;&#x4F1A;&#x88AB;&#x6269;&#x6563;&#x5230;&#x6574;&#x4E2A;&#x9009;&#x533A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">96</span>]: arr2d[:<span class="hljs-number">2</span>, <span class="hljs-number">1</span>:] = <span class="hljs-number">0</span>
+
+In [<span class="hljs-number">97</span>]: arr2d
+Out[<span class="hljs-number">97</span>]: 
+array([[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+       [<span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+       [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]])
+</code></pre>
+<h2 id="&#x5E03;&#x5C14;&#x578B;&#x7D22;&#x5F15;">&#x5E03;&#x5C14;&#x578B;&#x7D22;&#x5F15;</h2>
+<p>&#x6765;&#x770B;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x6570;&#x7EC4;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x59D3;&#x540D;&#x7684;&#x6570;&#x7EC4;&#xFF08;&#x542B;&#x6709;&#x91CD;&#x590D;&#x9879;&#xFF09;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x5C06;&#x4F7F;&#x7528;numpy.random&#x4E2D;&#x7684;randn&#x51FD;&#x6570;&#x751F;&#x6210;&#x4E00;&#x4E9B;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">98</span>]: names = np.array([<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>, <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>])
+
+In [<span class="hljs-number">99</span>]: data = np.random.randn(<span class="hljs-number">7</span>, <span class="hljs-number">4</span>)
+
+In [<span class="hljs-number">100</span>]: names
+Out[<span class="hljs-number">100</span>]: 
+array([<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>, <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>],
+      dtype=<span class="hljs-string">&apos;&lt;U4&apos;</span>)
+
+In [<span class="hljs-number">101</span>]: data
+Out[<span class="hljs-number">101</span>]: 
+array([[ <span class="hljs-number">0.0929</span>,  <span class="hljs-number">0.2817</span>,  <span class="hljs-number">0.769</span> ,  <span class="hljs-number">1.2464</span>],
+       [ <span class="hljs-number">1.0072</span>, -<span class="hljs-number">1.2962</span>,  <span class="hljs-number">0.275</span> ,  <span class="hljs-number">0.2289</span>],
+       [ <span class="hljs-number">1.3529</span>,  <span class="hljs-number">0.8864</span>, -<span class="hljs-number">2.0016</span>, -<span class="hljs-number">0.3718</span>],
+       [ <span class="hljs-number">1.669</span> , -<span class="hljs-number">0.4386</span>, -<span class="hljs-number">0.5397</span>,  <span class="hljs-number">0.477</span> ],
+       [ <span class="hljs-number">3.2489</span>, -<span class="hljs-number">1.0212</span>, -<span class="hljs-number">0.5771</span>,  <span class="hljs-number">0.1241</span>],
+       [ <span class="hljs-number">0.3026</span>,  <span class="hljs-number">0.5238</span>,  <span class="hljs-number">0.0009</span>,  <span class="hljs-number">1.3438</span>],
+       [-<span class="hljs-number">0.7135</span>, -<span class="hljs-number">0.8312</span>, -<span class="hljs-number">2.3702</span>, -<span class="hljs-number">1.8608</span>]])
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x6BCF;&#x4E2A;&#x540D;&#x5B57;&#x90FD;&#x5BF9;&#x5E94;data&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4E00;&#x884C;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x9009;&#x51FA;&#x5BF9;&#x5E94;&#x4E8E;&#x540D;&#x5B57;&quot;Bob&quot;&#x7684;&#x6240;&#x6709;&#x884C;&#x3002;&#x8DDF;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x4E00;&#x6837;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#xFF08;&#x5982;==&#xFF09;&#x4E5F;&#x662F;&#x77E2;&#x91CF;&#x5316;&#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;names&#x548C;&#x5B57;&#x7B26;&#x4E32;&quot;Bob&quot;&#x7684;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x5C06;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">102</span>]: names == <span class="hljs-string">&apos;Bob&apos;</span>
+Out[<span class="hljs-number">102</span>]: array([ <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>], dtype=bool)
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x53EF;&#x7528;&#x4E8E;&#x6570;&#x7EC4;&#x7D22;&#x5F15;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">103</span>]: data[names == <span class="hljs-string">&apos;Bob&apos;</span>]
+Out[<span class="hljs-number">103</span>]: 
+array([[ <span class="hljs-number">0.0929</span>,  <span class="hljs-number">0.2817</span>,  <span class="hljs-number">0.769</span> ,  <span class="hljs-number">1.2464</span>],
+       [ <span class="hljs-number">1.669</span> , -<span class="hljs-number">0.4386</span>, -<span class="hljs-number">0.5397</span>,  <span class="hljs-number">0.477</span> ]])
+</code></pre>
+<p>&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x5FC5;&#x987B;&#x8DDF;&#x88AB;&#x7D22;&#x5F15;&#x7684;&#x8F74;&#x957F;&#x5EA6;&#x4E00;&#x81F4;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x8DDF;&#x5207;&#x7247;&#x3001;&#x6574;&#x6570;&#xFF08;&#x6216;&#x6574;&#x6570;&#x5E8F;&#x5217;&#xFF0C;&#x7A0D;&#x540E;&#x5C06;&#x5BF9;&#x6B64;&#x8FDB;&#x884C;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#xFF09;&#x6DF7;&#x5408;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">103</span>]: data[names == <span class="hljs-string">&apos;Bob&apos;</span>]
+Out[<span class="hljs-number">103</span>]: 
+array([[ <span class="hljs-number">0.0929</span>,  <span class="hljs-number">0.2817</span>,  <span class="hljs-number">0.769</span> ,  <span class="hljs-number">1.2464</span>],
+       [ <span class="hljs-number">1.669</span> , -<span class="hljs-number">0.4386</span>, -<span class="hljs-number">0.5397</span>,  <span class="hljs-number">0.477</span> ]])
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x5BF9;&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x9009;&#x62E9;&#x5C31;&#x4F1A;&#x51FA;&#x9519;&#xFF0C;&#x56E0;&#x6B64;&#x4E00;&#x5B9A;&#x8981;&#x5C0F;&#x5FC3;&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x9009;&#x53D6;&#x4E86;<code>names == &apos;Bob&apos;</code>&#x7684;&#x884C;&#xFF0C;&#x5E76;&#x7D22;&#x5F15;&#x4E86;&#x5217;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">104</span>]: data[names == <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-number">2</span>:]
+Out[<span class="hljs-number">104</span>]: 
+array([[ <span class="hljs-number">0.769</span> ,  <span class="hljs-number">1.2464</span>],
+       [-<span class="hljs-number">0.5397</span>,  <span class="hljs-number">0.477</span> ]])
+
+In [<span class="hljs-number">105</span>]: data[names == <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-number">3</span>]
+Out[<span class="hljs-number">105</span>]: array([ <span class="hljs-number">1.2464</span>,  <span class="hljs-number">0.477</span> ])
+</code></pre>
+<p>&#x8981;&#x9009;&#x62E9;&#x9664;&quot;Bob&quot;&#x4EE5;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x503C;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0D;&#x7B49;&#x4E8E;&#x7B26;&#x53F7;&#xFF08;!=&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;~&#x5BF9;&#x6761;&#x4EF6;&#x8FDB;&#x884C;&#x5426;&#x5B9A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">106</span>]: names != <span class="hljs-string">&apos;Bob&apos;</span>
+Out[<span class="hljs-number">106</span>]: array([<span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>], dtype=bool)
+
+In [<span class="hljs-number">107</span>]: data[~(names == <span class="hljs-string">&apos;Bob&apos;</span>)]
+Out[<span class="hljs-number">107</span>]:
+array([[ <span class="hljs-number">1.0072</span>, -<span class="hljs-number">1.2962</span>,  <span class="hljs-number">0.275</span> ,  <span class="hljs-number">0.2289</span>],
+       [ <span class="hljs-number">1.3529</span>,  <span class="hljs-number">0.8864</span>, -<span class="hljs-number">2.0016</span>, -<span class="hljs-number">0.3718</span>],
+       [ <span class="hljs-number">3.2489</span>, -<span class="hljs-number">1.0212</span>, -<span class="hljs-number">0.5771</span>,  <span class="hljs-number">0.1241</span>],
+       [ <span class="hljs-number">0.3026</span>,  <span class="hljs-number">0.5238</span>,  <span class="hljs-number">0.0009</span>,  <span class="hljs-number">1.3438</span>],
+       [-<span class="hljs-number">0.7135</span>, -<span class="hljs-number">0.8312</span>, -<span class="hljs-number">2.3702</span>, -<span class="hljs-number">1.8608</span>]])
+</code></pre>
+<p>~&#x64CD;&#x4F5C;&#x7B26;&#x7528;&#x6765;&#x53CD;&#x8F6C;&#x6761;&#x4EF6;&#x5F88;&#x597D;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">108</span>]: cond = names == <span class="hljs-string">&apos;Bob&apos;</span>
+
+In [<span class="hljs-number">109</span>]: data[~cond]
+Out[<span class="hljs-number">109</span>]: 
+array([[ <span class="hljs-number">1.0072</span>, -<span class="hljs-number">1.2962</span>,  <span class="hljs-number">0.275</span> ,  <span class="hljs-number">0.2289</span>],
+       [ <span class="hljs-number">1.3529</span>,  <span class="hljs-number">0.8864</span>, -<span class="hljs-number">2.0016</span>, -<span class="hljs-number">0.3718</span>],
+       [ <span class="hljs-number">3.2489</span>, -<span class="hljs-number">1.0212</span>, -<span class="hljs-number">0.5771</span>,  <span class="hljs-number">0.1241</span>],
+       [ <span class="hljs-number">0.3026</span>,  <span class="hljs-number">0.5238</span>,  <span class="hljs-number">0.0009</span>,  <span class="hljs-number">1.3438</span>],
+       [-<span class="hljs-number">0.7135</span>, -<span class="hljs-number">0.8312</span>, -<span class="hljs-number">2.3702</span>, -<span class="hljs-number">1.8608</span>]])
+</code></pre>
+<p>&#x9009;&#x53D6;&#x8FD9;&#x4E09;&#x4E2A;&#x540D;&#x5B57;&#x4E2D;&#x7684;&#x4E24;&#x4E2A;&#x9700;&#x8981;&#x7EC4;&#x5408;&#x5E94;&#x7528;&#x591A;&#x4E2A;&#x5E03;&#x5C14;&#x6761;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&amp;&#xFF08;&#x548C;&#xFF09;&#x3001;|&#xFF08;&#x6216;&#xFF09;&#x4E4B;&#x7C7B;&#x7684;&#x5E03;&#x5C14;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">110</span>]: mask = (names == <span class="hljs-string">&apos;Bob&apos;</span>) | (names == <span class="hljs-string">&apos;Will&apos;</span>)
+
+In [<span class="hljs-number">111</span>]: mask
+Out[<span class="hljs-number">111</span>]: array([ <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>], dtype=bool)
+
+In [<span class="hljs-number">112</span>]: data[mask]
+Out[<span class="hljs-number">112</span>]: 
+array([[ <span class="hljs-number">0.0929</span>,  <span class="hljs-number">0.2817</span>,  <span class="hljs-number">0.769</span> ,  <span class="hljs-number">1.2464</span>],
+       [ <span class="hljs-number">1.3529</span>,  <span class="hljs-number">0.8864</span>, -<span class="hljs-number">2.0016</span>, -<span class="hljs-number">0.3718</span>],
+       [ <span class="hljs-number">1.669</span> , -<span class="hljs-number">0.4386</span>, -<span class="hljs-number">0.5397</span>,  <span class="hljs-number">0.477</span> ],
+       [ <span class="hljs-number">3.2489</span>, -<span class="hljs-number">1.0212</span>, -<span class="hljs-number">0.5771</span>,  <span class="hljs-number">0.1241</span>]])
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x5E03;&#x5C14;&#x578B;&#x7D22;&#x5F15;&#x9009;&#x53D6;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x603B;&#x662F;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x7684;&#x526F;&#x672C;&#xFF0C;&#x5373;&#x4F7F;&#x8FD4;&#x56DE;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#x6570;&#x7EC4;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;Python&#x5173;&#x952E;&#x5B57;and&#x548C;or&#x5728;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x4E2D;&#x65E0;&#x6548;&#x3002;&#x8981;&#x4F7F;&#x7528;&amp;&#x4E0E;|&#x3002;</p>
+</blockquote>
+<p>&#x901A;&#x8FC7;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x8BBE;&#x7F6E;&#x503C;&#x662F;&#x4E00;&#x79CD;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x7684;&#x624B;&#x6BB5;&#x3002;&#x4E3A;&#x4E86;&#x5C06;data&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8D1F;&#x503C;&#x90FD;&#x8BBE;&#x7F6E;&#x4E3A;0&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">113</span>]: data[data &lt; <span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+
+In [<span class="hljs-number">114</span>]: data
+Out[<span class="hljs-number">114</span>]: 
+array([[ <span class="hljs-number">0.0929</span>,  <span class="hljs-number">0.2817</span>,  <span class="hljs-number">0.769</span> ,  <span class="hljs-number">1.2464</span>],
+       [ <span class="hljs-number">1.0072</span>,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.275</span> ,  <span class="hljs-number">0.2289</span>],
+       [ <span class="hljs-number">1.3529</span>,  <span class="hljs-number">0.8864</span>,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ],
+       [ <span class="hljs-number">1.669</span> ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.477</span> ],
+       [ <span class="hljs-number">3.2489</span>,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.1241</span>],
+       [ <span class="hljs-number">0.3026</span>,  <span class="hljs-number">0.5238</span>,  <span class="hljs-number">0.0009</span>,  <span class="hljs-number">1.3438</span>],
+       [ <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ]])
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x7EF4;&#x5E03;&#x5C14;&#x6570;&#x7EC4;&#x8BBE;&#x7F6E;&#x6574;&#x884C;&#x6216;&#x5217;&#x7684;&#x503C;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">115</span>]: data[names != <span class="hljs-string">&apos;Joe&apos;</span>] = <span class="hljs-number">7</span>
+
+In [<span class="hljs-number">116</span>]: data
+Out[<span class="hljs-number">116</span>]: 
+array([[ <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ],
+       [ <span class="hljs-number">1.0072</span>,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.275</span> ,  <span class="hljs-number">0.2289</span>],
+       [ <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ],
+       [ <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ],
+       [ <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ,  <span class="hljs-number">7.</span>    ],
+       [ <span class="hljs-number">0.3026</span>,  <span class="hljs-number">0.5238</span>,  <span class="hljs-number">0.0009</span>,  <span class="hljs-number">1.3438</span>],
+       [ <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ]])
+</code></pre>
+<p>&#x540E;&#x9762;&#x4F1A;&#x770B;&#x5230;&#xFF0C;&#x8FD9;&#x7C7B;&#x4E8C;&#x7EF4;&#x6570;&#x636E;&#x7684;&#x64CD;&#x4F5C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;pandas&#x65B9;&#x4FBF;&#x7684;&#x6765;&#x505A;&#x3002;</p>
+<h2 id="&#x82B1;&#x5F0F;&#x7D22;&#x5F15;">&#x82B1;&#x5F0F;&#x7D22;&#x5F15;</h2>
+<p>&#x82B1;&#x5F0F;&#x7D22;&#x5F15;&#xFF08;Fancy indexing&#xFF09;&#x662F;&#x4E00;&#x4E2A;NumPy&#x672F;&#x8BED;&#xFF0C;&#x5B83;&#x6307;&#x7684;&#x662F;&#x5229;&#x7528;&#x6574;&#x6570;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;8&#xD7;4&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">117</span>]: arr = np.empty((<span class="hljs-number">8</span>, <span class="hljs-number">4</span>))
+
+In [<span class="hljs-number">118</span>]: <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
+   .....:     arr[i] = i
+
+In [<span class="hljs-number">119</span>]: arr
+Out[<span class="hljs-number">119</span>]: 
+array([[ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+       [ <span class="hljs-number">1.</span>,  <span class="hljs-number">1.</span>,  <span class="hljs-number">1.</span>,  <span class="hljs-number">1.</span>],
+       [ <span class="hljs-number">2.</span>,  <span class="hljs-number">2.</span>,  <span class="hljs-number">2.</span>,  <span class="hljs-number">2.</span>],
+       [ <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>],
+       [ <span class="hljs-number">4.</span>,  <span class="hljs-number">4.</span>,  <span class="hljs-number">4.</span>,  <span class="hljs-number">4.</span>],
+       [ <span class="hljs-number">5.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">5.</span>],
+       [ <span class="hljs-number">6.</span>,  <span class="hljs-number">6.</span>,  <span class="hljs-number">6.</span>,  <span class="hljs-number">6.</span>],
+       [ <span class="hljs-number">7.</span>,  <span class="hljs-number">7.</span>,  <span class="hljs-number">7.</span>,  <span class="hljs-number">7.</span>]])
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x4EE5;&#x7279;&#x5B9A;&#x987A;&#x5E8F;&#x9009;&#x53D6;&#x884C;&#x5B50;&#x96C6;&#xFF0C;&#x53EA;&#x9700;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x987A;&#x5E8F;&#x7684;&#x6574;&#x6570;&#x5217;&#x8868;&#x6216;ndarray&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">120</span>]: arr[[<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>]]
+Out[<span class="hljs-number">120</span>]: 
+array([[ <span class="hljs-number">4.</span>,  <span class="hljs-number">4.</span>,  <span class="hljs-number">4.</span>,  <span class="hljs-number">4.</span>],
+       [ <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>],
+       [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+       [ <span class="hljs-number">6.</span>,  <span class="hljs-number">6.</span>,  <span class="hljs-number">6.</span>,  <span class="hljs-number">6.</span>]])
+</code></pre>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x786E;&#x5B9E;&#x8FBE;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x8981;&#x6C42;&#x4E86;&#xFF01;&#x4F7F;&#x7528;&#x8D1F;&#x6570;&#x7D22;&#x5F15;&#x5C06;&#x4F1A;&#x4ECE;&#x672B;&#x5C3E;&#x5F00;&#x59CB;&#x9009;&#x53D6;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">121</span>]: arr[[-<span class="hljs-number">3</span>, -<span class="hljs-number">5</span>, -<span class="hljs-number">7</span>]]
+Out[<span class="hljs-number">121</span>]: 
+array([[ <span class="hljs-number">5.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">5.</span>],
+       [ <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>],
+       [ <span class="hljs-number">1.</span>,  <span class="hljs-number">1.</span>,  <span class="hljs-number">1.</span>,  <span class="hljs-number">1.</span>]])
+</code></pre>
+<p>&#x4E00;&#x6B21;&#x4F20;&#x5165;&#x591A;&#x4E2A;&#x7D22;&#x5F15;&#x6570;&#x7EC4;&#x4F1A;&#x6709;&#x4E00;&#x70B9;&#x7279;&#x522B;&#x3002;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x5BF9;&#x5E94;&#x5404;&#x4E2A;&#x7D22;&#x5F15;&#x5143;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">122</span>]: arr = np.arange(<span class="hljs-number">32</span>).reshape((<span class="hljs-number">8</span>, <span class="hljs-number">4</span>))
+
+In [<span class="hljs-number">123</span>]: arr
+Out[<span class="hljs-number">123</span>]: 
+array([[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],
+       [ <span class="hljs-number">4</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">7</span>],
+       [ <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>],
+       [<span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>],
+       [<span class="hljs-number">16</span>, <span class="hljs-number">17</span>, <span class="hljs-number">18</span>, <span class="hljs-number">19</span>],
+       [<span class="hljs-number">20</span>, <span class="hljs-number">21</span>, <span class="hljs-number">22</span>, <span class="hljs-number">23</span>],
+       [<span class="hljs-number">24</span>, <span class="hljs-number">25</span>, <span class="hljs-number">26</span>, <span class="hljs-number">27</span>],
+       [<span class="hljs-number">28</span>, <span class="hljs-number">29</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>]])
+
+In [<span class="hljs-number">124</span>]: arr[[<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]]
+Out[<span class="hljs-number">124</span>]: array([ <span class="hljs-number">4</span>, <span class="hljs-number">23</span>, <span class="hljs-number">29</span>, <span class="hljs-number">10</span>])
+</code></pre>
+<p>&#x9644;&#x5F55;A&#x4E2D;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;reshape&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6700;&#x7EC8;&#x9009;&#x51FA;&#x7684;&#x662F;&#x5143;&#x7D20;(1,0)&#x3001;(5,3)&#x3001;(7,1)&#x548C;(2,2)&#x3002;&#x65E0;&#x8BBA;&#x6570;&#x7EC4;&#x662F;&#x591A;&#x5C11;&#x7EF4;&#x7684;&#xFF0C;&#x82B1;&#x5F0F;&#x7D22;&#x5F15;&#x603B;&#x662F;&#x4E00;&#x7EF4;&#x7684;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x82B1;&#x5F0F;&#x7D22;&#x5F15;&#x7684;&#x884C;&#x4E3A;&#x53EF;&#x80FD;&#x4F1A;&#x8DDF;&#x67D0;&#x4E9B;&#x7528;&#x6237;&#x7684;&#x9884;&#x671F;&#x4E0D;&#x4E00;&#x6837;&#xFF08;&#x5305;&#x62EC;&#x6211;&#x5728;&#x5185;&#xFF09;&#xFF0C;&#x9009;&#x53D6;&#x77E9;&#x9635;&#x7684;&#x884C;&#x5217;&#x5B50;&#x96C6;&#x5E94;&#x8BE5;&#x662F;&#x77E9;&#x5F62;&#x533A;&#x57DF;&#x7684;&#x5F62;&#x5F0F;&#x624D;&#x5BF9;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x5F97;&#x5230;&#x8BE5;&#x7ED3;&#x679C;&#x7684;&#x4E00;&#x4E2A;&#x529E;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">125</span>]: arr[[<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>]][:, [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]]
+Out[<span class="hljs-number">125</span>]: 
+array([[ <span class="hljs-number">4</span>,  <span class="hljs-number">7</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>],
+       [<span class="hljs-number">20</span>, <span class="hljs-number">23</span>, <span class="hljs-number">21</span>, <span class="hljs-number">22</span>],
+       [<span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">29</span>, <span class="hljs-number">30</span>],
+       [ <span class="hljs-number">8</span>, <span class="hljs-number">11</span>,  <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]])
+</code></pre>
+<p>&#x8BB0;&#x4F4F;&#xFF0C;&#x82B1;&#x5F0F;&#x7D22;&#x5F15;&#x8DDF;&#x5207;&#x7247;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x5B83;&#x603B;&#x662F;&#x5C06;&#x6570;&#x636E;&#x590D;&#x5236;&#x5230;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x3002;</p>
+<h2 id="&#x6570;&#x7EC4;&#x8F6C;&#x7F6E;&#x548C;&#x8F74;&#x5BF9;&#x6362;">&#x6570;&#x7EC4;&#x8F6C;&#x7F6E;&#x548C;&#x8F74;&#x5BF9;&#x6362;</h2>
+<p>&#x8F6C;&#x7F6E;&#x662F;&#x91CD;&#x5851;&#x7684;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x5F62;&#x5F0F;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6E90;&#x6570;&#x636E;&#x7684;&#x89C6;&#x56FE;&#xFF08;&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x590D;&#x5236;&#x64CD;&#x4F5C;&#xFF09;&#x3002;&#x6570;&#x7EC4;&#x4E0D;&#x4EC5;&#x6709;transpose&#x65B9;&#x6CD5;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;T&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">126</span>]: arr = np.arange(<span class="hljs-number">15</span>).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">5</span>))
+
+In [<span class="hljs-number">127</span>]: arr
+Out[<span class="hljs-number">127</span>]: 
+array([[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">4</span>],
+       [ <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">7</span>,  <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>],
+       [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>]])
+
+In [<span class="hljs-number">128</span>]: arr.T
+Out[<span class="hljs-number">128</span>]: 
+array([[ <span class="hljs-number">0</span>,  <span class="hljs-number">5</span>, <span class="hljs-number">10</span>],
+       [ <span class="hljs-number">1</span>,  <span class="hljs-number">6</span>, <span class="hljs-number">11</span>],
+       [ <span class="hljs-number">2</span>,  <span class="hljs-number">7</span>, <span class="hljs-number">12</span>],
+       [ <span class="hljs-number">3</span>,  <span class="hljs-number">8</span>, <span class="hljs-number">13</span>],
+       [ <span class="hljs-number">4</span>,  <span class="hljs-number">9</span>, <span class="hljs-number">14</span>]])
+</code></pre>
+<p>&#x5728;&#x8FDB;&#x884C;&#x77E9;&#x9635;&#x8BA1;&#x7B97;&#x65F6;&#xFF0C;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x7528;&#x5230;&#x8BE5;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x5229;&#x7528;np.dot&#x8BA1;&#x7B97;&#x77E9;&#x9635;&#x5185;&#x79EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">129</span>]: arr = np.random.randn(<span class="hljs-number">6</span>, <span class="hljs-number">3</span>)
+
+In [<span class="hljs-number">130</span>]: arr
+Out[<span class="hljs-number">130</span>]: 
+array([[-<span class="hljs-number">0.8608</span>,  <span class="hljs-number">0.5601</span>, -<span class="hljs-number">1.2659</span>],
+       [ <span class="hljs-number">0.1198</span>, -<span class="hljs-number">1.0635</span>,  <span class="hljs-number">0.3329</span>],
+       [-<span class="hljs-number">2.3594</span>, -<span class="hljs-number">0.1995</span>, -<span class="hljs-number">1.542</span> ],
+       [-<span class="hljs-number">0.9707</span>, -<span class="hljs-number">1.307</span> ,  <span class="hljs-number">0.2863</span>],
+       [ <span class="hljs-number">0.378</span> , -<span class="hljs-number">0.7539</span>,  <span class="hljs-number">0.3313</span>],
+       [ <span class="hljs-number">1.3497</span>,  <span class="hljs-number">0.0699</span>,  <span class="hljs-number">0.2467</span>]])
+
+In [<span class="hljs-number">131</span>]: np.dot(arr.T, arr)
+Out[<span class="hljs-number">131</span>]:
+array([[ <span class="hljs-number">9.2291</span>,  <span class="hljs-number">0.9394</span>,  <span class="hljs-number">4.948</span> ],
+       [ <span class="hljs-number">0.9394</span>,  <span class="hljs-number">3.7662</span>, -<span class="hljs-number">1.3622</span>],
+       [ <span class="hljs-number">4.948</span> , -<span class="hljs-number">1.3622</span>,  <span class="hljs-number">4.3437</span>]])
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x9AD8;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;transpose&#x9700;&#x8981;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7531;&#x8F74;&#x7F16;&#x53F7;&#x7EC4;&#x6210;&#x7684;&#x5143;&#x7EC4;&#x624D;&#x80FD;&#x5BF9;&#x8FD9;&#x4E9B;&#x8F74;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;&#xFF08;&#x6BD4;&#x8F83;&#x8D39;&#x8111;&#x5B50;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">132</span>]: arr = np.arange(<span class="hljs-number">16</span>).reshape((<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>))
+
+In [<span class="hljs-number">133</span>]: arr
+Out[<span class="hljs-number">133</span>]: 
+array([[[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],
+        [ <span class="hljs-number">4</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">7</span>]],
+       [[ <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>],
+        [<span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>]]])
+
+In [<span class="hljs-number">134</span>]: arr.transpose((<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>))
+Out[<span class="hljs-number">134</span>]: 
+array([[[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],
+        [ <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>]],
+       [[ <span class="hljs-number">4</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">7</span>],
+        [<span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>]]])
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8F74;&#x88AB;&#x6362;&#x6210;&#x4E86;&#x7B2C;&#x4E8C;&#x4E2A;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x8F74;&#x88AB;&#x6362;&#x6210;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8F74;&#x4E0D;&#x53D8;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x7684;&#x8F6C;&#x7F6E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;.T&#xFF0C;&#x5B83;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8FDB;&#x884C;&#x8F74;&#x5BF9;&#x6362;&#x800C;&#x5DF2;&#x3002;ndarray&#x8FD8;&#x6709;&#x4E00;&#x4E2A;swapaxes&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x63A5;&#x53D7;&#x4E00;&#x5BF9;&#x8F74;&#x7F16;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">135</span>]: arr
+Out[<span class="hljs-number">135</span>]: 
+array([[[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],
+        [ <span class="hljs-number">4</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">7</span>]],
+       [[ <span class="hljs-number">8</span>,  <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>],
+        [<span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>]]])
+
+In [<span class="hljs-number">136</span>]: arr.swapaxes(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+Out[<span class="hljs-number">136</span>]: 
+array([[[ <span class="hljs-number">0</span>,  <span class="hljs-number">4</span>],
+        [ <span class="hljs-number">1</span>,  <span class="hljs-number">5</span>],
+        [ <span class="hljs-number">2</span>,  <span class="hljs-number">6</span>],
+        [ <span class="hljs-number">3</span>,  <span class="hljs-number">7</span>]],
+       [[ <span class="hljs-number">8</span>, <span class="hljs-number">12</span>],
+        [ <span class="hljs-number">9</span>, <span class="hljs-number">13</span>],
+        [<span class="hljs-number">10</span>, <span class="hljs-number">14</span>],
+        [<span class="hljs-number">11</span>, <span class="hljs-number">15</span>]]])
+</code></pre>
+<p>swapaxes&#x4E5F;&#x662F;&#x8FD4;&#x56DE;&#x6E90;&#x6570;&#x636E;&#x7684;&#x89C6;&#x56FE;&#xFF08;&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x590D;&#x5236;&#x64CD;&#x4F5C;&#xFF09;&#x3002;</p>
+<h1 id="42-&#x901A;&#x7528;&#x51FD;&#x6570;&#xFF1A;&#x5FEB;&#x901F;&#x7684;&#x5143;&#x7D20;&#x7EA7;&#x6570;&#x7EC4;&#x51FD;&#x6570;">4.2 &#x901A;&#x7528;&#x51FD;&#x6570;&#xFF1A;&#x5FEB;&#x901F;&#x7684;&#x5143;&#x7D20;&#x7EA7;&#x6570;&#x7EC4;&#x51FD;&#x6570;</h1>
+<p>&#x901A;&#x7528;&#x51FD;&#x6570;&#xFF08;&#x5373;ufunc&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x5BF9;ndarray&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6267;&#x884C;&#x5143;&#x7D20;&#x7EA7;&#x8FD0;&#x7B97;&#x7684;&#x51FD;&#x6570;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x770B;&#x505A;&#x7B80;&#x5355;&#x51FD;&#x6570;&#xFF08;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6807;&#x91CF;&#x503C;&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6807;&#x91CF;&#x503C;&#xFF09;&#x7684;&#x77E2;&#x91CF;&#x5316;&#x5305;&#x88C5;&#x5668;&#x3002;</p>
+<p>&#x8BB8;&#x591A;ufunc&#x90FD;&#x662F;&#x7B80;&#x5355;&#x7684;&#x5143;&#x7D20;&#x7EA7;&#x53D8;&#x4F53;&#xFF0C;&#x5982;sqrt&#x548C;exp&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">137</span>]: arr = np.arange(<span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">138</span>]: arr
+Out[<span class="hljs-number">138</span>]: array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+
+In [<span class="hljs-number">139</span>]: np.sqrt(arr)
+Out[<span class="hljs-number">139</span>]: 
+array([ <span class="hljs-number">0.</span>    ,  <span class="hljs-number">1.</span>    ,  <span class="hljs-number">1.4142</span>,  <span class="hljs-number">1.7321</span>,  <span class="hljs-number">2.</span>    ,  <span class="hljs-number">2.2361</span>,  <span class="hljs-number">2.4495</span>,
+        <span class="hljs-number">2.6458</span>,  <span class="hljs-number">2.8284</span>,  <span class="hljs-number">3.</span>    ])
+
+In [<span class="hljs-number">140</span>]: np.exp(arr)
+Out[<span class="hljs-number">140</span>]: 
+array([    <span class="hljs-number">1.</span>    ,     <span class="hljs-number">2.7183</span>,     <span class="hljs-number">7.3891</span>,    <span class="hljs-number">20.0855</span>,    <span class="hljs-number">54.5982</span>,
+         <span class="hljs-number">148.4132</span>,   <span class="hljs-number">403.4288</span>,  <span class="hljs-number">1096.6332</span>,  <span class="hljs-number">2980.958</span> ,  <span class="hljs-number">8103.0839</span>])
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x4E00;&#x5143;&#xFF08;unary&#xFF09;ufunc&#x3002;&#x53E6;&#x5916;&#x4E00;&#x4E9B;&#xFF08;&#x5982;add&#x6216;maximum&#xFF09;&#x63A5;&#x53D7;2&#x4E2A;&#x6570;&#x7EC4;&#xFF08;&#x56E0;&#x6B64;&#x4E5F;&#x53EB;&#x4E8C;&#x5143;&#xFF08;binary&#xFF09;ufunc&#xFF09;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">141</span>]: x = np.random.randn(<span class="hljs-number">8</span>)
+
+In [<span class="hljs-number">142</span>]: y = np.random.randn(<span class="hljs-number">8</span>)
+
+In [<span class="hljs-number">143</span>]: x
+Out[<span class="hljs-number">143</span>]: 
+array([-<span class="hljs-number">0.0119</span>,  <span class="hljs-number">1.0048</span>,  <span class="hljs-number">1.3272</span>, -<span class="hljs-number">0.9193</span>, -<span class="hljs-number">1.5491</span>,  <span class="hljs-number">0.0222</span>,  <span class="hljs-number">0.7584</span>,
+       -<span class="hljs-number">0.6605</span>])
+
+In [<span class="hljs-number">144</span>]: y
+Out[<span class="hljs-number">144</span>]: 
+array([ <span class="hljs-number">0.8626</span>, -<span class="hljs-number">0.01</span>  ,  <span class="hljs-number">0.05</span>  ,  <span class="hljs-number">0.6702</span>,  <span class="hljs-number">0.853</span> , -<span class="hljs-number">0.9559</span>, -<span class="hljs-number">0.0235</span>,
+       -<span class="hljs-number">2.3042</span>])
+
+In [<span class="hljs-number">145</span>]: np.maximum(x, y)
+Out[<span class="hljs-number">145</span>]: 
+array([ <span class="hljs-number">0.8626</span>,  <span class="hljs-number">1.0048</span>,  <span class="hljs-number">1.3272</span>,  <span class="hljs-number">0.6702</span>,  <span class="hljs-number">0.853</span> ,  <span class="hljs-number">0.0222</span>,  <span class="hljs-number">0.7584</span>,   
+       -<span class="hljs-number">0.6605</span>])
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#xFF0C;numpy.maximum&#x8BA1;&#x7B97;&#x4E86;x&#x548C;y&#x4E2D;&#x5143;&#x7D20;&#x7EA7;&#x522B;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x5E76;&#x4E0D;&#x5E38;&#x89C1;&#xFF0C;&#x4F46;&#x6709;&#x4E9B;ufunc&#x7684;&#x786E;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x6570;&#x7EC4;&#x3002;modf&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5B83;&#x662F;Python&#x5185;&#x7F6E;&#x51FD;&#x6570;divmod&#x7684;&#x77E2;&#x91CF;&#x5316;&#x7248;&#x672C;&#xFF0C;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;&#x6D6E;&#x70B9;&#x6570;&#x6570;&#x7EC4;&#x7684;&#x5C0F;&#x6570;&#x548C;&#x6574;&#x6570;&#x90E8;&#x5206;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">146</span>]: arr = np.random.randn(<span class="hljs-number">7</span>) * <span class="hljs-number">5</span>
+
+In [<span class="hljs-number">147</span>]: arr
+Out[<span class="hljs-number">147</span>]: array([-<span class="hljs-number">3.2623</span>, -<span class="hljs-number">6.0915</span>, -<span class="hljs-number">6.663</span> ,  <span class="hljs-number">5.3731</span>,  <span class="hljs-number">3.6182</span>,  <span class="hljs-number">3.45</span>  ,  <span class="hljs-number">5.0077</span>])
+
+In [<span class="hljs-number">148</span>]: remainder, whole_part = np.modf(arr)
+
+In [<span class="hljs-number">149</span>]: remainder
+Out[<span class="hljs-number">149</span>]: array([-<span class="hljs-number">0.2623</span>, -<span class="hljs-number">0.0915</span>, -<span class="hljs-number">0.663</span> ,  <span class="hljs-number">0.3731</span>,
+<span class="hljs-number">0.6182</span>,  <span class="hljs-number">0.45</span>  ,  <span class="hljs-number">0.0077</span>])
+
+In [<span class="hljs-number">150</span>]: whole_part
+Out[<span class="hljs-number">150</span>]: array([-<span class="hljs-number">3.</span>, -<span class="hljs-number">6.</span>, -<span class="hljs-number">6.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">3.</span>,  <span class="hljs-number">5.</span>])
+</code></pre>
+<p>Ufuncs&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;out&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x5728;&#x6570;&#x7EC4;&#x539F;&#x5730;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">151</span>]: arr
+Out[<span class="hljs-number">151</span>]: array([-<span class="hljs-number">3.2623</span>, -<span class="hljs-number">6.0915</span>, -<span class="hljs-number">6.663</span> ,  <span class="hljs-number">5.3731</span>,  <span class="hljs-number">3.6182</span>,  <span class="hljs-number">3.45</span>  ,  <span class="hljs-number">5.0077</span>])
+
+In [<span class="hljs-number">152</span>]: np.sqrt(arr)
+Out[<span class="hljs-number">152</span>]: array([    nan,     nan,     nan,  <span class="hljs-number">2.318</span> ,  <span class="hljs-number">1.9022</span>,  <span class="hljs-number">1.8574</span>,  <span class="hljs-number">2.2378</span>])
+
+In [<span class="hljs-number">153</span>]: np.sqrt(arr, arr)
+Out[<span class="hljs-number">153</span>]: array([    nan,     nan,     nan,  <span class="hljs-number">2.318</span> ,  <span class="hljs-number">1.9022</span>,  <span class="hljs-number">1.8574</span>,  <span class="hljs-number">2.2378</span>])
+
+In [<span class="hljs-number">154</span>]: arr
+Out[<span class="hljs-number">154</span>]: array([    nan,     nan,     nan,  <span class="hljs-number">2.318</span> ,  <span class="hljs-number">1.9022</span>,  <span class="hljs-number">1.8574</span>,  <span class="hljs-number">2.2378</span>])
+</code></pre>
+<p>&#x8868;4-3&#x548C;&#x8868;4-4&#x5206;&#x522B;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x4E00;&#x5143;&#x548C;&#x4E8C;&#x5143;ufunc&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-1d494e73b61c7ced.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-2be79faf68ab6ff8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-4e38d02a66481530.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-eff1e61e5464159f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-236dba83b6a420cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="43-&#x5229;&#x7528;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5904;&#x7406;">4.3 &#x5229;&#x7528;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5904;&#x7406;</h1>
+<p>NumPy&#x6570;&#x7EC4;&#x4F7F;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x8BB8;&#x591A;&#x79CD;&#x6570;&#x636E;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x8868;&#x8FF0;&#x4E3A;&#x7B80;&#x6D01;&#x7684;&#x6570;&#x7EC4;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;&#x5426;&#x5219;&#x9700;&#x8981;&#x7F16;&#x5199;&#x5FAA;&#x73AF;&#xFF09;&#x3002;&#x7528;&#x6570;&#x7EC4;&#x8868;&#x8FBE;&#x5F0F;&#x4EE3;&#x66FF;&#x5FAA;&#x73AF;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4E3A;&#x77E2;&#x91CF;&#x5316;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x77E2;&#x91CF;&#x5316;&#x6570;&#x7EC4;&#x8FD0;&#x7B97;&#x8981;&#x6BD4;&#x7B49;&#x4EF7;&#x7684;&#x7EAF;Python&#x65B9;&#x5F0F;&#x5FEB;&#x4E0A;&#x4E00;&#x4E24;&#x4E2A;&#x6570;&#x91CF;&#x7EA7;&#xFF08;&#x751A;&#x81F3;&#x66F4;&#x591A;&#xFF09;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5404;&#x79CD;&#x6570;&#x503C;&#x8BA1;&#x7B97;&#x3002;&#x5728;&#x540E;&#x9762;&#x5185;&#x5BB9;&#x4E2D;&#xFF08;&#x89C1;&#x9644;&#x5F55;A&#xFF09;&#x6211;&#x5C06;&#x4ECB;&#x7ECD;&#x5E7F;&#x64AD;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x9488;&#x5BF9;&#x77E2;&#x91CF;&#x5316;&#x8BA1;&#x7B97;&#x7684;&#x5F3A;&#x5927;&#x624B;&#x6BB5;&#x3002;</p>
+<p>&#x4F5C;&#x4E3A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5728;&#x4E00;&#x7EC4;&#x503C;&#xFF08;&#x7F51;&#x683C;&#x578B;&#xFF09;&#x4E0A;&#x8BA1;&#x7B97;&#x51FD;&#x6570;<code>sqrt(x^2+y^2)</code>&#x3002;np.meshgrid&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x4E24;&#x4E2A;&#x4E8C;&#x7EF4;&#x77E9;&#x9635;&#xFF08;&#x5BF9;&#x5E94;&#x4E8E;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x7684;(x,y)&#x5BF9;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">155</span>]: points = np.arange(-<span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0.01</span>) <span class="hljs-comment"># 1000 equally spaced points</span>
+
+In [<span class="hljs-number">156</span>]: xs, ys = np.meshgrid(points, points)
+In [<span class="hljs-number">157</span>]: ys
+Out[<span class="hljs-number">157</span>]: 
+array([[-<span class="hljs-number">5.</span>  , -<span class="hljs-number">5.</span>  , -<span class="hljs-number">5.</span>  , ..., -<span class="hljs-number">5.</span>  , -<span class="hljs-number">5.</span>  , -<span class="hljs-number">5.</span>  ],
+       [-<span class="hljs-number">4.99</span>, -<span class="hljs-number">4.99</span>, -<span class="hljs-number">4.99</span>, ..., -<span class="hljs-number">4.99</span>, -<span class="hljs-number">4.99</span>, -<span class="hljs-number">4.99</span>],
+       [-<span class="hljs-number">4.98</span>, -<span class="hljs-number">4.98</span>, -<span class="hljs-number">4.98</span>, ..., -<span class="hljs-number">4.98</span>, -<span class="hljs-number">4.98</span>, -<span class="hljs-number">4.98</span>],
+       ..., 
+       [ <span class="hljs-number">4.97</span>,  <span class="hljs-number">4.97</span>,  <span class="hljs-number">4.97</span>, ...,  <span class="hljs-number">4.97</span>,  <span class="hljs-number">4.97</span>,  <span class="hljs-number">4.97</span>],
+       [ <span class="hljs-number">4.98</span>,  <span class="hljs-number">4.98</span>,  <span class="hljs-number">4.98</span>, ...,  <span class="hljs-number">4.98</span>,  <span class="hljs-number">4.98</span>,  <span class="hljs-number">4.98</span>],
+       [ <span class="hljs-number">4.99</span>,  <span class="hljs-number">4.99</span>,  <span class="hljs-number">4.99</span>, ...,  <span class="hljs-number">4.99</span>,  <span class="hljs-number">4.99</span>,  <span class="hljs-number">4.99</span>]])
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x5BF9;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x6C42;&#x503C;&#x8FD0;&#x7B97;&#x5C31;&#x597D;&#x529E;&#x4E86;&#xFF0C;&#x628A;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x5F53;&#x505A;&#x4E24;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#x90A3;&#x6837;&#x7F16;&#x5199;&#x8868;&#x8FBE;&#x5F0F;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">158</span>]: z = np.sqrt(xs ** <span class="hljs-number">2</span> + ys ** <span class="hljs-number">2</span>)
+
+In [<span class="hljs-number">159</span>]: z
+Out[<span class="hljs-number">159</span>]: 
+array([[ <span class="hljs-number">7.0711</span>,  <span class="hljs-number">7.064</span> ,  <span class="hljs-number">7.0569</span>, ...,  <span class="hljs-number">7.0499</span>,  <span class="hljs-number">7.0569</span>,  <span class="hljs-number">7.064</span> ],
+       [ <span class="hljs-number">7.064</span> ,  <span class="hljs-number">7.0569</span>,  <span class="hljs-number">7.0499</span>, ...,  <span class="hljs-number">7.0428</span>,  <span class="hljs-number">7.0499</span>,  <span class="hljs-number">7.0569</span>],
+       [ <span class="hljs-number">7.0569</span>,  <span class="hljs-number">7.0499</span>,  <span class="hljs-number">7.0428</span>, ...,  <span class="hljs-number">7.0357</span>,  <span class="hljs-number">7.0428</span>, <span class="hljs-number">7.0499</span>],
+       ..., 
+       [ <span class="hljs-number">7.0499</span>,  <span class="hljs-number">7.0428</span>,  <span class="hljs-number">7.0357</span>, ...,  <span class="hljs-number">7.0286</span>,  <span class="hljs-number">7.0357</span>,  <span class="hljs-number">7.0428</span>],
+       [ <span class="hljs-number">7.0569</span>,  <span class="hljs-number">7.0499</span>,  <span class="hljs-number">7.0428</span>, ...,  <span class="hljs-number">7.0357</span>,  <span class="hljs-number">7.0428</span>,  <span class="hljs-number">7.0499</span>],
+       [ <span class="hljs-number">7.064</span> ,  <span class="hljs-number">7.0569</span>,  <span class="hljs-number">7.0499</span>, ...,  <span class="hljs-number">7.0428</span>,  <span class="hljs-number">7.0499</span>,  <span class="hljs-number">7.0569</span>]])
+</code></pre>
+<p>&#x4F5C;&#x4E3A;&#x7B2C;9&#x7AE0;&#x7684;&#x5148;&#x5BFC;&#xFF0C;&#x6211;&#x7528;matplotlib&#x521B;&#x5EFA;&#x4E86;&#x8FD9;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x53EF;&#x89C6;&#x5316;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">160</span>]: <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+
+In [<span class="hljs-number">161</span>]: plt.imshow(z, cmap=plt.cm.gray); plt.colorbar()
+Out[<span class="hljs-number">161</span>]: &lt;matplotlib.colorbar.Colorbar at <span class="hljs-number">0x7f715e3fa630</span>&gt;
+
+In [<span class="hljs-number">162</span>]: plt.title(<span class="hljs-string">&quot;Image plot of $\sqrt{x^2 + y^2}$ for a grid of values&quot;</span>)
+Out[<span class="hljs-number">162</span>]: &lt;matplotlib.text.Text at <span class="hljs-number">0x7f715d2de748</span>&gt;
+</code></pre>
+<p>&#x89C1;&#x56FE;4-3&#x3002;&#x8FD9;&#x5F20;&#x56FE;&#x662F;&#x7528;matplotlib&#x7684;imshow&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-3b22000d4cd38650.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;4-3 &#x6839;&#x636E;&#x7F51;&#x683C;&#x5BF9;&#x51FD;&#x6570;&#x6C42;&#x503C;&#x7684;&#x7ED3;&#x679C;"></p>
+<h2 id="&#x5C06;&#x6761;&#x4EF6;&#x903B;&#x8F91;&#x8868;&#x8FF0;&#x4E3A;&#x6570;&#x7EC4;&#x8FD0;&#x7B97;">&#x5C06;&#x6761;&#x4EF6;&#x903B;&#x8F91;&#x8868;&#x8FF0;&#x4E3A;&#x6570;&#x7EC4;&#x8FD0;&#x7B97;</h2>
+<p>numpy.where&#x51FD;&#x6570;&#x662F;&#x4E09;&#x5143;&#x8868;&#x8FBE;&#x5F0F;x if condition else y&#x7684;&#x77E2;&#x91CF;&#x5316;&#x7248;&#x672C;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x6570;&#x7EC4;&#x548C;&#x4E24;&#x4E2A;&#x503C;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">165</span>]: xarr = np.array([<span class="hljs-number">1.1</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">1.3</span>, <span class="hljs-number">1.4</span>, <span class="hljs-number">1.5</span>])
+
+In [<span class="hljs-number">166</span>]: yarr = np.array([<span class="hljs-number">2.1</span>, <span class="hljs-number">2.2</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">2.5</span>])
+
+In [<span class="hljs-number">167</span>]: cond = np.array([<span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">True</span>, <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>])
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x6839;&#x636E;cond&#x4E2D;&#x7684;&#x503C;&#x9009;&#x53D6;xarr&#x548C;yarr&#x7684;&#x503C;&#xFF1A;&#x5F53;cond&#x4E2D;&#x7684;&#x503C;&#x4E3A;True&#x65F6;&#xFF0C;&#x9009;&#x53D6;xarr&#x7684;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x4ECE;yarr&#x4E2D;&#x9009;&#x53D6;&#x3002;&#x5217;&#x8868;&#x63A8;&#x5BFC;&#x5F0F;&#x7684;&#x5199;&#x6CD5;&#x5E94;&#x8BE5;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">168</span>]: result = [(x <span class="hljs-keyword">if</span> c <span class="hljs-keyword">else</span> y)
+   .....:           <span class="hljs-keyword">for</span> x, y, c <span class="hljs-keyword">in</span> zip(xarr, yarr, cond)]
+
+In [<span class="hljs-number">169</span>]: result
+Out[<span class="hljs-number">169</span>]: [<span class="hljs-number">1.1000000000000001</span>, <span class="hljs-number">2.2000000000000002</span>, <span class="hljs-number">1.3</span>, <span class="hljs-number">1.3999999999999999</span>, <span class="hljs-number">2.5</span>]
+</code></pre>
+<p>&#x8FD9;&#x6709;&#x51E0;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x7B2C;&#x4E00;&#xFF0C;&#x5B83;&#x5BF9;&#x5927;&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;&#x901F;&#x5EA6;&#x4E0D;&#x662F;&#x5F88;&#x5FEB;&#xFF08;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x90FD;&#x662F;&#x7531;&#x7EAF;Python&#x5B8C;&#x6210;&#x7684;&#xFF09;&#x3002;&#x7B2C;&#x4E8C;&#xFF0C;&#x65E0;&#x6CD5;&#x7528;&#x4E8E;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x3002;&#x82E5;&#x4F7F;&#x7528;np.where&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x529F;&#x80FD;&#x5199;&#x5F97;&#x975E;&#x5E38;&#x7B80;&#x6D01;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">170</span>]: result = np.where(cond, xarr, yarr)
+
+In [<span class="hljs-number">171</span>]: result
+Out[<span class="hljs-number">171</span>]: array([ <span class="hljs-number">1.1</span>,  <span class="hljs-number">2.2</span>,  <span class="hljs-number">1.3</span>,  <span class="hljs-number">1.4</span>,  <span class="hljs-number">2.5</span>])
+</code></pre>
+<p>np.where&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x548C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E0D;&#x5FC5;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x53EF;&#x4EE5;&#x662F;&#x6807;&#x91CF;&#x503C;&#x3002;&#x5728;&#x6570;&#x636E;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;where&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x6839;&#x636E;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x800C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x7531;&#x968F;&#x673A;&#x6570;&#x636E;&#x7EC4;&#x6210;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x4F60;&#x5E0C;&#x671B;&#x5C06;&#x6240;&#x6709;&#x6B63;&#x503C;&#x66FF;&#x6362;&#x4E3A;2&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x8D1F;&#x503C;&#x66FF;&#x6362;&#x4E3A;&#xFF0D;2&#x3002;&#x82E5;&#x5229;&#x7528;np.where&#xFF0C;&#x5219;&#x4F1A;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">172</span>]: arr = np.random.randn(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>)
+
+In [<span class="hljs-number">173</span>]: arr
+Out[<span class="hljs-number">173</span>]: 
+array([[-<span class="hljs-number">0.5031</span>, -<span class="hljs-number">0.6223</span>, -<span class="hljs-number">0.9212</span>, -<span class="hljs-number">0.7262</span>],
+       [ <span class="hljs-number">0.2229</span>,  <span class="hljs-number">0.0513</span>, -<span class="hljs-number">1.1577</span>,  <span class="hljs-number">0.8167</span>],
+       [ <span class="hljs-number">0.4336</span>,  <span class="hljs-number">1.0107</span>,  <span class="hljs-number">1.8249</span>, -<span class="hljs-number">0.9975</span>],
+       [ <span class="hljs-number">0.8506</span>, -<span class="hljs-number">0.1316</span>,  <span class="hljs-number">0.9124</span>,  <span class="hljs-number">0.1882</span>]])
+
+In [<span class="hljs-number">174</span>]: arr &gt; <span class="hljs-number">0</span>
+Out[<span class="hljs-number">174</span>]: 
+array([[<span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>],
+       [ <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>],
+       [ <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>],
+       [ <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>]], dtype=bool)
+
+In [<span class="hljs-number">175</span>]: np.where(arr &gt; <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, -<span class="hljs-number">2</span>)
+Out[<span class="hljs-number">175</span>]: 
+array([[-<span class="hljs-number">2</span>, -<span class="hljs-number">2</span>, -<span class="hljs-number">2</span>, -<span class="hljs-number">2</span>],
+       [ <span class="hljs-number">2</span>,  <span class="hljs-number">2</span>, -<span class="hljs-number">2</span>,  <span class="hljs-number">2</span>],
+       [ <span class="hljs-number">2</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">2</span>, -<span class="hljs-number">2</span>],
+       [ <span class="hljs-number">2</span>, -<span class="hljs-number">2</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">2</span>]])
+</code></pre>
+<p>&#x4F7F;&#x7528;np.where&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x6807;&#x91CF;&#x548C;&#x6570;&#x7EC4;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x53EF;&#x7528;&#x5E38;&#x6570;2&#x66FF;&#x6362;arr&#x4E2D;&#x6240;&#x6709;&#x6B63;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">176</span>]: np.where(arr &gt; <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, arr) <span class="hljs-comment"># set only positive values to 2</span>
+Out[<span class="hljs-number">176</span>]: 
+array([[-<span class="hljs-number">0.5031</span>, -<span class="hljs-number">0.6223</span>, -<span class="hljs-number">0.9212</span>, -<span class="hljs-number">0.7262</span>],
+       [ <span class="hljs-number">2.</span>    ,  <span class="hljs-number">2.</span>    , -<span class="hljs-number">1.1577</span>,  <span class="hljs-number">2.</span>    ],
+       [ <span class="hljs-number">2.</span>    ,  <span class="hljs-number">2.</span>    ,  <span class="hljs-number">2.</span>    , -<span class="hljs-number">0.9975</span>],
+       [ <span class="hljs-number">2.</span>    , -<span class="hljs-number">0.1316</span>,  <span class="hljs-number">2.</span>    ,  <span class="hljs-number">2.</span>    ]])
+</code></pre>
+<p>&#x4F20;&#x9012;&#x7ED9;where&#x7684;&#x6570;&#x7EC4;&#x5927;&#x5C0F;&#x53EF;&#x4EE5;&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x662F;&#x6807;&#x91CF;&#x503C;&#x3002;</p>
+<h2 id="&#x6570;&#x5B66;&#x548C;&#x7EDF;&#x8BA1;&#x65B9;&#x6CD5;">&#x6570;&#x5B66;&#x548C;&#x7EDF;&#x8BA1;&#x65B9;&#x6CD5;</h2>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6570;&#x7EC4;&#x4E0A;&#x7684;&#x4E00;&#x7EC4;&#x6570;&#x5B66;&#x51FD;&#x6570;&#x5BF9;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#x6216;&#x67D0;&#x4E2A;&#x8F74;&#x5411;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#x8BA1;&#x7B97;&#x3002;sum&#x3001;mean&#x4EE5;&#x53CA;&#x6807;&#x51C6;&#x5DEE;std&#x7B49;&#x805A;&#x5408;&#x8BA1;&#x7B97;&#xFF08;aggregation&#xFF0C;&#x901A;&#x5E38;&#x53EB;&#x505A;&#x7EA6;&#x7B80;&#xFF08;reduction&#xFF09;&#xFF09;&#x65E2;&#x53EF;&#x4EE5;&#x5F53;&#x505A;&#x6570;&#x7EC4;&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5F53;&#x505A;&#x9876;&#x7EA7;NumPy&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E9B;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x968F;&#x673A;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x505A;&#x4E86;&#x805A;&#x7C7B;&#x7EDF;&#x8BA1;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">177</span>]: arr = np.random.randn(<span class="hljs-number">5</span>, <span class="hljs-number">4</span>)
+
+In [<span class="hljs-number">178</span>]: arr
+Out[<span class="hljs-number">178</span>]: 
+array([[ <span class="hljs-number">2.1695</span>, -<span class="hljs-number">0.1149</span>,  <span class="hljs-number">2.0037</span>,  <span class="hljs-number">0.0296</span>],
+       [ <span class="hljs-number">0.7953</span>,  <span class="hljs-number">0.1181</span>, -<span class="hljs-number">0.7485</span>,  <span class="hljs-number">0.585</span> ],
+       [ <span class="hljs-number">0.1527</span>, -<span class="hljs-number">1.5657</span>, -<span class="hljs-number">0.5625</span>, -<span class="hljs-number">0.0327</span>],
+       [-<span class="hljs-number">0.929</span> , -<span class="hljs-number">0.4826</span>, -<span class="hljs-number">0.0363</span>,  <span class="hljs-number">1.0954</span>],
+       [ <span class="hljs-number">0.9809</span>, -<span class="hljs-number">0.5895</span>,  <span class="hljs-number">1.5817</span>, -<span class="hljs-number">0.5287</span>]])
+
+In [<span class="hljs-number">179</span>]: arr.mean()
+Out[<span class="hljs-number">179</span>]: <span class="hljs-number">0.19607051119998253</span>
+
+In [<span class="hljs-number">180</span>]: np.mean(arr)
+Out[<span class="hljs-number">180</span>]: <span class="hljs-number">0.19607051119998253</span>
+
+In [<span class="hljs-number">181</span>]: arr.sum()
+Out[<span class="hljs-number">181</span>]: <span class="hljs-number">3.9214102239996507</span>
+</code></pre>
+<p>mean&#x548C;sum&#x8FD9;&#x7C7B;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;axis&#x9009;&#x9879;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x8BE5;&#x8F74;&#x5411;&#x4E0A;&#x7684;&#x7EDF;&#x8BA1;&#x503C;&#xFF0C;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5C11;&#x4E00;&#x7EF4;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">182</span>]: arr.mean(axis=<span class="hljs-number">1</span>)
+Out[<span class="hljs-number">182</span>]: array([ <span class="hljs-number">1.022</span> ,  <span class="hljs-number">0.1875</span>, -<span class="hljs-number">0.502</span> , -<span class="hljs-number">0.0881</span>,  <span class="hljs-number">0.3611</span>])
+
+In [<span class="hljs-number">183</span>]: arr.sum(axis=<span class="hljs-number">0</span>)
+Out[<span class="hljs-number">183</span>]: array([ <span class="hljs-number">3.1693</span>, -<span class="hljs-number">2.6345</span>,  <span class="hljs-number">2.2381</span>,  <span class="hljs-number">1.1486</span>])
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#xFF0C;arr.mean(1)&#x662F;&#x201C;&#x8BA1;&#x7B97;&#x884C;&#x7684;&#x5E73;&#x5747;&#x503C;&#x201D;&#xFF0C;arr.sum(0)&#x662F;&#x201C;&#x8BA1;&#x7B97;&#x6BCF;&#x5217;&#x7684;&#x548C;&#x201D;&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x5982;cumsum&#x548C;cumprod&#x4E4B;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x5219;&#x4E0D;&#x805A;&#x5408;&#xFF0C;&#x800C;&#x662F;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x7531;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">184</span>]: arr = np.array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>])
+
+In [<span class="hljs-number">185</span>]: arr.cumsum()
+Out[<span class="hljs-number">185</span>]: array([ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">6</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">21</span>, <span class="hljs-number">28</span>])
+</code></pre>
+<p>&#x5728;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x7D2F;&#x52A0;&#x51FD;&#x6570;&#xFF08;&#x5982;cumsum&#xFF09;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x540C;&#x6837;&#x5927;&#x5C0F;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x6839;&#x636E;&#x6BCF;&#x4E2A;&#x4F4E;&#x7EF4;&#x7684;&#x5207;&#x7247;&#x6CBF;&#x7740;&#x6807;&#x8BB0;&#x8F74;&#x8BA1;&#x7B97;&#x90E8;&#x5206;&#x805A;&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">186</span>]: arr = np.array([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], [<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]])
+
+In [<span class="hljs-number">187</span>]: arr
+Out[<span class="hljs-number">187</span>]: 
+array([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>],
+       [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
+       [<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]])
+
+In [<span class="hljs-number">188</span>]: arr.cumsum(axis=<span class="hljs-number">0</span>)
+Out[<span class="hljs-number">188</span>]: 
+array([[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>],
+       [ <span class="hljs-number">3</span>,  <span class="hljs-number">5</span>,  <span class="hljs-number">7</span>],
+       [ <span class="hljs-number">9</span>, <span class="hljs-number">12</span>, <span class="hljs-number">15</span>]])
+
+In [<span class="hljs-number">189</span>]: arr.cumprod(axis=<span class="hljs-number">1</span>)
+Out[<span class="hljs-number">189</span>]: 
+array([[  <span class="hljs-number">0</span>,   <span class="hljs-number">0</span>,   <span class="hljs-number">0</span>],
+       [  <span class="hljs-number">3</span>,  <span class="hljs-number">12</span>,  <span class="hljs-number">60</span>],
+       [  <span class="hljs-number">6</span>,  <span class="hljs-number">42</span>, <span class="hljs-number">336</span>]])
+</code></pre>
+<p>&#x8868;4-5&#x5217;&#x51FA;&#x4E86;&#x5168;&#x90E8;&#x7684;&#x57FA;&#x672C;&#x6570;&#x7EC4;&#x7EDF;&#x8BA1;&#x65B9;&#x6CD5;&#x3002;&#x540E;&#x7EED;&#x7AE0;&#x8282;&#x4E2D;&#x6709;&#x5F88;&#x591A;&#x4F8B;&#x5B50;&#x90FD;&#x4F1A;&#x7528;&#x5230;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-a6c6df3ca8e0b98e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-866fcde885b1d357.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="&#x7528;&#x4E8E;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;">&#x7528;&#x4E8E;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;</h2>
+<p>&#x5728;&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#x4F1A;&#x88AB;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;1&#xFF08;True&#xFF09;&#x548C;0&#xFF08;False&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;sum&#x7ECF;&#x5E38;&#x88AB;&#x7528;&#x6765;&#x5BF9;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x4E2D;&#x7684;True&#x503C;&#x8BA1;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">190</span>]: arr = np.random.randn(<span class="hljs-number">100</span>)
+
+In [<span class="hljs-number">191</span>]: (arr &gt; <span class="hljs-number">0</span>).sum() <span class="hljs-comment"># Number of positive values</span>
+Out[<span class="hljs-number">191</span>]: <span class="hljs-number">42</span>
+</code></pre>
+<p>&#x53E6;&#x5916;&#x8FD8;&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;any&#x548C;all&#xFF0C;&#x5B83;&#x4EEC;&#x5BF9;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;any&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;True&#xFF0C;&#x800C;all&#x5219;&#x68C0;&#x67E5;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x503C;&#x662F;&#x5426;&#x90FD;&#x662F;True&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">192</span>]: bools = np.array([<span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>])
+
+In [<span class="hljs-number">193</span>]: bools.any()
+Out[<span class="hljs-number">193</span>]: <span class="hljs-keyword">True</span>
+
+In [<span class="hljs-number">194</span>]: bools.all()
+Out[<span class="hljs-number">194</span>]: <span class="hljs-keyword">False</span>
+</code></pre>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x4E5F;&#x80FD;&#x7528;&#x4E8E;&#x975E;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x6240;&#x6709;&#x975E;0&#x5143;&#x7D20;&#x5C06;&#x4F1A;&#x88AB;&#x5F53;&#x505A;True&#x3002;</p>
+<h2 id="&#x6392;&#x5E8F;">&#x6392;&#x5E8F;</h2>
+<p>&#x8DDF;Python&#x5185;&#x7F6E;&#x7684;&#x5217;&#x8868;&#x7C7B;&#x578B;&#x4E00;&#x6837;&#xFF0C;NumPy&#x6570;&#x7EC4;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;sort&#x65B9;&#x6CD5;&#x5C31;&#x5730;&#x6392;&#x5E8F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">195</span>]: arr = np.random.randn(<span class="hljs-number">6</span>)
+
+In [<span class="hljs-number">196</span>]: arr
+Out[<span class="hljs-number">196</span>]: array([ <span class="hljs-number">0.6095</span>, -<span class="hljs-number">0.4938</span>,  <span class="hljs-number">1.24</span>  , -<span class="hljs-number">0.1357</span>,  <span class="hljs-number">1.43</span>  , -<span class="hljs-number">0.8469</span>])
+
+In [<span class="hljs-number">197</span>]: arr.sort()
+
+In [<span class="hljs-number">198</span>]: arr
+Out[<span class="hljs-number">198</span>]: array([-<span class="hljs-number">0.8469</span>, -<span class="hljs-number">0.4938</span>, -<span class="hljs-number">0.1357</span>,  <span class="hljs-number">0.6095</span>,  <span class="hljs-number">1.24</span>  ,  <span class="hljs-number">1.43</span>  ])
+</code></pre>
+<p>&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x8F74;&#x5411;&#x4E0A;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x53EA;&#x9700;&#x5C06;&#x8F74;&#x7F16;&#x53F7;&#x4F20;&#x7ED9;sort&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">199</span>]: arr = np.random.randn(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>)
+
+In [<span class="hljs-number">200</span>]: arr
+Out[<span class="hljs-number">200</span>]: 
+array([[ <span class="hljs-number">0.6033</span>,  <span class="hljs-number">1.2636</span>, -<span class="hljs-number">0.2555</span>],
+       [-<span class="hljs-number">0.4457</span>,  <span class="hljs-number">0.4684</span>, -<span class="hljs-number">0.9616</span>],
+       [-<span class="hljs-number">1.8245</span>,  <span class="hljs-number">0.6254</span>,  <span class="hljs-number">1.0229</span>],
+       [ <span class="hljs-number">1.1074</span>,  <span class="hljs-number">0.0909</span>, -<span class="hljs-number">0.3501</span>],
+       [ <span class="hljs-number">0.218</span> , -<span class="hljs-number">0.8948</span>, -<span class="hljs-number">1.7415</span>]])
+
+In [<span class="hljs-number">201</span>]: arr.sort(<span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">202</span>]: arr
+Out[<span class="hljs-number">202</span>]: 
+array([[-<span class="hljs-number">0.2555</span>,  <span class="hljs-number">0.6033</span>,  <span class="hljs-number">1.2636</span>],
+       [-<span class="hljs-number">0.9616</span>, -<span class="hljs-number">0.4457</span>,  <span class="hljs-number">0.4684</span>],
+       [-<span class="hljs-number">1.8245</span>,  <span class="hljs-number">0.6254</span>,  <span class="hljs-number">1.0229</span>],
+       [-<span class="hljs-number">0.3501</span>,  <span class="hljs-number">0.0909</span>,  <span class="hljs-number">1.1074</span>],
+       [-<span class="hljs-number">1.7415</span>, -<span class="hljs-number">0.8948</span>,  <span class="hljs-number">0.218</span> ]])
+</code></pre>
+<p>&#x9876;&#x7EA7;&#x65B9;&#x6CD5;np.sort&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x5DF2;&#x6392;&#x5E8F;&#x526F;&#x672C;&#xFF0C;&#x800C;&#x5C31;&#x5730;&#x6392;&#x5E8F;&#x5219;&#x4F1A;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x3002;&#x8BA1;&#x7B97;&#x6570;&#x7EC4;&#x5206;&#x4F4D;&#x6570;&#x6700;&#x7B80;&#x5355;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x53D6;&#x7279;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">203</span>]: large_arr = np.random.randn(<span class="hljs-number">1000</span>)
+
+In [<span class="hljs-number">204</span>]: large_arr.sort()
+
+In [<span class="hljs-number">205</span>]: large_arr[int(<span class="hljs-number">0.05</span> * len(large_arr))] <span class="hljs-comment"># 5% quantile</span>
+Out[<span class="hljs-number">205</span>]: -<span class="hljs-number">1.5311513550102103</span>
+</code></pre>
+<p>&#x66F4;&#x591A;&#x5173;&#x4E8E;NumPy&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x8BF8;&#x5982;&#x95F4;&#x63A5;&#x6392;&#x5E8F;&#x4E4B;&#x7C7B;&#x7684;&#x9AD8;&#x7EA7;&#x6280;&#x672F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x9644;&#x5F55;A&#x3002;&#x5728;pandas&#x4E2D;&#x8FD8;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x8DDF;&#x6392;&#x5E8F;&#x6709;&#x5173;&#x7684;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#xFF08;&#x6BD4;&#x5982;&#x6839;&#x636E;&#x4E00;&#x5217;&#x6216;&#x591A;&#x5217;&#x5BF9;&#x8868;&#x683C;&#x578B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF09;&#x3002;</p>
+<h2 id="&#x552F;&#x4E00;&#x5316;&#x4EE5;&#x53CA;&#x5176;&#x5B83;&#x7684;&#x96C6;&#x5408;&#x903B;&#x8F91;">&#x552F;&#x4E00;&#x5316;&#x4EE5;&#x53CA;&#x5176;&#x5B83;&#x7684;&#x96C6;&#x5408;&#x903B;&#x8F91;</h2>
+<p>NumPy&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x9488;&#x5BF9;&#x4E00;&#x7EF4;ndarray&#x7684;&#x57FA;&#x672C;&#x96C6;&#x5408;&#x8FD0;&#x7B97;&#x3002;&#x6700;&#x5E38;&#x7528;&#x7684;&#x53EF;&#x80FD;&#x8981;&#x6570;np.unique&#x4E86;&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x627E;&#x51FA;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x552F;&#x4E00;&#x503C;&#x5E76;&#x8FD4;&#x56DE;&#x5DF2;&#x6392;&#x5E8F;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">206</span>]: names = np.array([<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>, <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>])
+
+In [<span class="hljs-number">207</span>]: np.unique(names)
+Out[<span class="hljs-number">207</span>]: 
+array([<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>],
+      dtype=<span class="hljs-string">&apos;&lt;U4&apos;</span>)
+
+In [<span class="hljs-number">208</span>]: ints = np.array([<span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>])
+
+In [<span class="hljs-number">209</span>]: np.unique(ints)
+Out[<span class="hljs-number">209</span>]: array([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])
+</code></pre>
+<p>&#x62FF;&#x8DDF;np.unique&#x7B49;&#x4EF7;&#x7684;&#x7EAF;Python&#x4EE3;&#x7801;&#x6765;&#x5BF9;&#x6BD4;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">210</span>]: sorted(set(names))
+Out[<span class="hljs-number">210</span>]: [<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Joe&apos;</span>, <span class="hljs-string">&apos;Will&apos;</span>]
+</code></pre>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;np.in1d&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x503C;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6210;&#x5458;&#x8D44;&#x683C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">211</span>]: values = np.array([<span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>])
+
+In [<span class="hljs-number">212</span>]: np.in1d(values, [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>])
+Out[<span class="hljs-number">212</span>]: array([ <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>], dtype=bool)
+</code></pre>
+<p>NumPy&#x4E2D;&#x7684;&#x96C6;&#x5408;&#x51FD;&#x6570;&#x8BF7;&#x53C2;&#x89C1;&#x8868;4-6&#x3002;
+<img src="http://upload-images.jianshu.io/upload_images/7178691-80e85ae6b9c89ada.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="44-&#x7528;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x6587;&#x4EF6;&#x8F93;&#x5165;&#x8F93;&#x51FA;">4.4 &#x7528;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x6587;&#x4EF6;&#x8F93;&#x5165;&#x8F93;&#x51FA;</h1>
+<p>NumPy&#x80FD;&#x591F;&#x8BFB;&#x5199;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6587;&#x672C;&#x6570;&#x636E;&#x6216;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x53EA;&#x8BA8;&#x8BBA;NumPy&#x7684;&#x5185;&#x7F6E;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x66F4;&#x591A;&#x7684;&#x7528;&#x6237;&#x4F1A;&#x4F7F;&#x7528;pandas&#x6216;&#x5176;&#x5B83;&#x5DE5;&#x5177;&#x52A0;&#x8F7D;&#x6587;&#x672C;&#x6216;&#x8868;&#x683C;&#x6570;&#x636E;&#xFF08;&#x89C1;&#x7B2C;6&#x7AE0;&#xFF09;&#x3002;</p>
+<p>np.save&#x548C;np.load&#x662F;&#x8BFB;&#x5199;&#x78C1;&#x76D8;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x7EC4;&#x662F;&#x4EE5;&#x672A;&#x538B;&#x7F29;&#x7684;&#x539F;&#x59CB;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x4FDD;&#x5B58;&#x5728;&#x6269;&#x5C55;&#x540D;&#x4E3A;.npy&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">213</span>]: arr = np.arange(<span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">214</span>]: np.save(<span class="hljs-string">&apos;some_array&apos;</span>, arr)
+</code></pre>
+<p>&#x5982;&#x679C;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x672B;&#x5C3E;&#x6CA1;&#x6709;&#x6269;&#x5C55;&#x540D;.npy&#xFF0C;&#x5219;&#x8BE5;&#x6269;&#x5C55;&#x540D;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x52A0;&#x4E0A;&#x3002;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;np.load&#x8BFB;&#x53D6;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">215</span>]: np.load(<span class="hljs-string">&apos;some_array.npy&apos;</span>)
+Out[<span class="hljs-number">215</span>]: array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x901A;&#x8FC7;np.savez&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A;&#x6570;&#x7EC4;&#x4FDD;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x672A;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5C06;&#x6570;&#x7EC4;&#x4EE5;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x5165;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">216</span>]: np.savez(<span class="hljs-string">&apos;array_archive.npz&apos;</span>, a=arr, b=arr)
+</code></pre>
+<p>&#x52A0;&#x8F7D;.npz&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x4F60;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x5B57;&#x5178;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x4F1A;&#x5BF9;&#x5404;&#x4E2A;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">217</span>]: arch = np.load(<span class="hljs-string">&apos;array_archive.npz&apos;</span>)
+
+In [<span class="hljs-number">218</span>]: arch[<span class="hljs-string">&apos;b&apos;</span>]
+Out[<span class="hljs-number">218</span>]: array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x5C06;&#x6570;&#x636E;&#x538B;&#x7F29;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;numpy.savez_compressed&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">219</span>]: np.savez_compressed(<span class="hljs-string">&apos;arrays_compressed.npz&apos;</span>, a=arr, b=arr)
+</code></pre>
+<h1 id="45-&#x7EBF;&#x6027;&#x4EE3;&#x6570;">4.5 &#x7EBF;&#x6027;&#x4EE3;&#x6570;</h1>
+<p>&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#xFF08;&#x5982;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#x3001;&#x77E9;&#x9635;&#x5206;&#x89E3;&#x3001;&#x884C;&#x5217;&#x5F0F;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x65B9;&#x9635;&#x6570;&#x5B66;&#x7B49;&#xFF09;&#x662F;&#x4EFB;&#x4F55;&#x6570;&#x7EC4;&#x5E93;&#x7684;&#x91CD;&#x8981;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#x3002;&#x4E0D;&#x50CF;&#x67D0;&#x4E9B;&#x8BED;&#x8A00;&#xFF08;&#x5982;MATLAB&#xFF09;&#xFF0C;&#x901A;&#x8FC7;*&#x5BF9;&#x4E24;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x76F8;&#x4E58;&#x5F97;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7EA7;&#x7684;&#x79EF;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x70B9;&#x79EF;&#x3002;&#x56E0;&#x6B64;&#xFF0C;NumPy&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#x7684;dot&#x51FD;&#x6570;&#xFF08;&#x65E2;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#x4E5F;&#x662F;numpy&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">223</span>]: x = np.array([[<span class="hljs-number">1.</span>, <span class="hljs-number">2.</span>, <span class="hljs-number">3.</span>], [<span class="hljs-number">4.</span>, <span class="hljs-number">5.</span>, <span class="hljs-number">6.</span>]])
+
+In [<span class="hljs-number">224</span>]: y = np.array([[<span class="hljs-number">6.</span>, <span class="hljs-number">23.</span>], [-<span class="hljs-number">1</span>, <span class="hljs-number">7</span>], [<span class="hljs-number">8</span>, <span class="hljs-number">9</span>]])
+
+In [<span class="hljs-number">225</span>]: x
+Out[<span class="hljs-number">225</span>]: 
+array([[ <span class="hljs-number">1.</span>,  <span class="hljs-number">2.</span>,  <span class="hljs-number">3.</span>],
+       [ <span class="hljs-number">4.</span>,  <span class="hljs-number">5.</span>,  <span class="hljs-number">6.</span>]])
+
+In [<span class="hljs-number">226</span>]: y
+Out[<span class="hljs-number">226</span>]: 
+array([[  <span class="hljs-number">6.</span>,  <span class="hljs-number">23.</span>],
+       [ -<span class="hljs-number">1.</span>,   <span class="hljs-number">7.</span>],
+       [  <span class="hljs-number">8.</span>,   <span class="hljs-number">9.</span>]])
+
+In [<span class="hljs-number">227</span>]: x.dot(y)
+Out[<span class="hljs-number">227</span>]: 
+array([[  <span class="hljs-number">28.</span>,   <span class="hljs-number">64.</span>],
+       [  <span class="hljs-number">67.</span>,  <span class="hljs-number">181.</span>]])
+</code></pre>
+<p>x.dot(y)&#x7B49;&#x4EF7;&#x4E8E;np.dot(x, y)&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">228</span>]: np.dot(x, y)
+Out[<span class="hljs-number">228</span>]: 
+array([[  <span class="hljs-number">28.</span>,   <span class="hljs-number">64.</span>],
+       [  <span class="hljs-number">67.</span>,  <span class="hljs-number">181.</span>]])
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x8DDF;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x5408;&#x9002;&#x7684;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x77E9;&#x9635;&#x70B9;&#x79EF;&#x8FD0;&#x7B97;&#x4E4B;&#x540E;&#x5C06;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">229</span>]: np.dot(x, np.ones(<span class="hljs-number">3</span>))
+Out[<span class="hljs-number">229</span>]: array([  <span class="hljs-number">6.</span>,  <span class="hljs-number">15.</span>])
+</code></pre>
+<p>@&#x7B26;&#xFF08;&#x7C7B;&#x4F3C;Python 3.5&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x4E2D;&#x7F00;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x8FDB;&#x884C;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">230</span>]: x @ np.ones(<span class="hljs-number">3</span>)
+Out[<span class="hljs-number">230</span>]: array([  <span class="hljs-number">6.</span>,  <span class="hljs-number">15.</span>])
+</code></pre>
+<p>numpy.linalg&#x4E2D;&#x6709;&#x4E00;&#x7EC4;&#x6807;&#x51C6;&#x7684;&#x77E9;&#x9635;&#x5206;&#x89E3;&#x8FD0;&#x7B97;&#x4EE5;&#x53CA;&#x8BF8;&#x5982;&#x6C42;&#x9006;&#x548C;&#x884C;&#x5217;&#x5F0F;&#x4E4B;&#x7C7B;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x5B83;&#x4EEC;&#x8DDF;MATLAB&#x548C;R&#x7B49;&#x8BED;&#x8A00;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x76F8;&#x540C;&#x7684;&#x884C;&#x4E1A;&#x6807;&#x51C6;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x5E93;&#xFF0C;&#x5982;BLAS&#x3001;LAPACK&#x3001;Intel MKL&#xFF08;Math Kernel Library&#xFF0C;&#x53EF;&#x80FD;&#x6709;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x7684;NumPy&#x7248;&#x672C;&#xFF09;&#x7B49;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">231</span>]: <span class="hljs-keyword">from</span> numpy.linalg <span class="hljs-keyword">import</span> inv, qr
+
+In [<span class="hljs-number">232</span>]: X = np.random.randn(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>)
+
+In [<span class="hljs-number">233</span>]: mat = X.T.dot(X)
+
+In [<span class="hljs-number">234</span>]: inv(mat)
+Out[<span class="hljs-number">234</span>]: 
+array([[  <span class="hljs-number">933.1189</span>,   <span class="hljs-number">871.8258</span>, -<span class="hljs-number">1417.6902</span>, -<span class="hljs-number">1460.4005</span>,  <span class="hljs-number">1782.1391</span>],
+       [  <span class="hljs-number">871.8258</span>,   <span class="hljs-number">815.3929</span>, -<span class="hljs-number">1325.9965</span>, -<span class="hljs-number">1365.9242</span>,  <span class="hljs-number">1666.9347</span>],
+       [-<span class="hljs-number">1417.6902</span>, -<span class="hljs-number">1325.9965</span>,  <span class="hljs-number">2158.4424</span>,  <span class="hljs-number">2222.0191</span>, -<span class="hljs-number">2711.6822</span>],
+       [-<span class="hljs-number">1460.4005</span>, -<span class="hljs-number">1365.9242</span>,  <span class="hljs-number">2222.0191</span>,  <span class="hljs-number">2289.0575</span>, -<span class="hljs-number">2793.422</span> ],
+       [ <span class="hljs-number">1782.1391</span>,  <span class="hljs-number">1666.9347</span>, -<span class="hljs-number">2711.6822</span>, -<span class="hljs-number">2793.422</span> ,  <span class="hljs-number">3409.5128</span>]])
+
+In [<span class="hljs-number">235</span>]: mat.dot(inv(mat))
+Out[<span class="hljs-number">235</span>]: 
+array([[ <span class="hljs-number">1.</span>,  <span class="hljs-number">0.</span>, -<span class="hljs-number">0.</span>, -<span class="hljs-number">0.</span>, -<span class="hljs-number">0.</span>],
+       [-<span class="hljs-number">0.</span>,  <span class="hljs-number">1.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+       [ <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">1.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>],
+       [-<span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">1.</span>, -<span class="hljs-number">0.</span>],
+       [-<span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">0.</span>,  <span class="hljs-number">1.</span>]])
+
+In [<span class="hljs-number">236</span>]: q, r = qr(mat)
+
+In [<span class="hljs-number">237</span>]: r
+Out[<span class="hljs-number">237</span>]: 
+array([[-<span class="hljs-number">1.6914</span>,  <span class="hljs-number">4.38</span>  ,  <span class="hljs-number">0.1757</span>,  <span class="hljs-number">0.4075</span>, -<span class="hljs-number">0.7838</span>],
+       [ <span class="hljs-number">0.</span>    , -<span class="hljs-number">2.6436</span>,  <span class="hljs-number">0.1939</span>, -<span class="hljs-number">3.072</span> , -<span class="hljs-number">1.0702</span>],
+       [ <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    , -<span class="hljs-number">0.8138</span>,  <span class="hljs-number">1.5414</span>,  <span class="hljs-number">0.6155</span>],
+       [ <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    , -<span class="hljs-number">2.6445</span>, -<span class="hljs-number">2.1669</span>],
+       [ <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.</span>    ,  <span class="hljs-number">0.0002</span>]])
+</code></pre>
+<p>&#x8868;&#x8FBE;&#x5F0F;X.T.dot(X)&#x8BA1;&#x7B97;X&#x548C;&#x5B83;&#x7684;&#x8F6C;&#x7F6E;X.T&#x7684;&#x70B9;&#x79EF;&#x3002;</p>
+<p>&#x8868;4-7&#x4E2D;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x6700;&#x5E38;&#x7528;&#x7684;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x51FD;&#x6570;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-dcdb66e49e5f70ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="46-&#x4F2A;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;">4.6 &#x4F2A;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;</h1>
+<p>numpy.random&#x6A21;&#x5757;&#x5BF9;Python&#x5185;&#x7F6E;&#x7684;random&#x8FDB;&#x884C;&#x4E86;&#x8865;&#x5145;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x7528;&#x4E8E;&#x9AD8;&#x6548;&#x751F;&#x6210;&#x591A;&#x79CD;&#x6982;&#x7387;&#x5206;&#x5E03;&#x7684;&#x6837;&#x672C;&#x503C;&#x7684;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;normal&#x6765;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;4&#xD7;4&#x6837;&#x672C;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">238</span>]: samples = np.random.normal(size=(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>))
+
+In [<span class="hljs-number">239</span>]: samples
+Out[<span class="hljs-number">239</span>]: 
+array([[ <span class="hljs-number">0.5732</span>,  <span class="hljs-number">0.1933</span>,  <span class="hljs-number">0.4429</span>,  <span class="hljs-number">1.2796</span>],
+       [ <span class="hljs-number">0.575</span> ,  <span class="hljs-number">0.4339</span>, -<span class="hljs-number">0.7658</span>, -<span class="hljs-number">1.237</span> ],
+       [-<span class="hljs-number">0.5367</span>,  <span class="hljs-number">1.8545</span>, -<span class="hljs-number">0.92</span>  , -<span class="hljs-number">0.1082</span>],
+       [ <span class="hljs-number">0.1525</span>,  <span class="hljs-number">0.9435</span>, -<span class="hljs-number">1.0953</span>, -<span class="hljs-number">0.144</span> ]])
+</code></pre>
+<p>&#x800C;Python&#x5185;&#x7F6E;&#x7684;random&#x6A21;&#x5757;&#x5219;&#x53EA;&#x80FD;&#x4E00;&#x6B21;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x503C;&#x3002;&#x4ECE;&#x4E0B;&#x9762;&#x7684;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x6837;&#x672C;&#x503C;&#xFF0C;numpy.random&#x5FEB;&#x4E86;&#x4E0D;&#x6B62;&#x4E00;&#x4E2A;&#x6570;&#x91CF;&#x7EA7;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">240</span>]: <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> normalvariate
+
+In [<span class="hljs-number">241</span>]: N = <span class="hljs-number">1000000</span>
+
+In [<span class="hljs-number">242</span>]: %timeit samples = [normalvariate(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(N)]
+<span class="hljs-number">1.77</span> s +- <span class="hljs-number">126</span> ms per loop (mean +- std. dev. of <span class="hljs-number">7</span> runs, <span class="hljs-number">1</span> loop each)
+
+In [<span class="hljs-number">243</span>]: %timeit np.random.normal(size=N)
+<span class="hljs-number">61.7</span> ms +- <span class="hljs-number">1.32</span> ms per loop (mean +- std. dev. of <span class="hljs-number">7</span> runs, <span class="hljs-number">10</span> loops each)
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8BF4;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x4F2A;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x7B97;&#x6CD5;&#x57FA;&#x4E8E;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;&#x79CD;&#x5B50;&#xFF0C;&#x5728;&#x786E;&#x5B9A;&#x6027;&#x7684;&#x6761;&#x4EF6;&#x4E0B;&#x751F;&#x6210;&#x7684;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;NumPy&#x7684;np.random.seed&#x66F4;&#x6539;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x79CD;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">244</span>]: np.random.seed(<span class="hljs-number">1234</span>)
+</code></pre>
+<p>numpy.random&#x7684;&#x6570;&#x636E;&#x751F;&#x6210;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x4E86;&#x5168;&#x5C40;&#x7684;&#x968F;&#x673A;&#x79CD;&#x5B50;&#x3002;&#x8981;&#x907F;&#x514D;&#x5168;&#x5C40;&#x72B6;&#x6001;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;numpy.random.RandomState&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0E;&#x5176;&#x5B83;&#x9694;&#x79BB;&#x7684;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">245</span>]: rng = np.random.RandomState(<span class="hljs-number">1234</span>)
+
+In [<span class="hljs-number">246</span>]: rng.randn(<span class="hljs-number">10</span>)
+Out[<span class="hljs-number">246</span>]: 
+array([ <span class="hljs-number">0.4714</span>, -<span class="hljs-number">1.191</span> ,  <span class="hljs-number">1.4327</span>, -<span class="hljs-number">0.3127</span>, -<span class="hljs-number">0.7206</span>,  <span class="hljs-number">0.8872</span>,  <span class="hljs-number">0.8596</span>,
+       -<span class="hljs-number">0.6365</span>,  <span class="hljs-number">0.0157</span>, -<span class="hljs-number">2.2427</span>])
+</code></pre>
+<p>&#x8868;4-8&#x5217;&#x51FA;&#x4E86;numpy.random&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x5C06;&#x7ED9;&#x51FA;&#x4E00;&#x4E9B;&#x5229;&#x7528;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x4E00;&#x6B21;&#x6027;&#x751F;&#x6210;&#x5927;&#x91CF;&#x6837;&#x672C;&#x503C;&#x7684;&#x8303;&#x4F8B;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-97ba09c96dab93a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-6ed04fae3d1178e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="47-&#x793A;&#x4F8B;&#xFF1A;&#x968F;&#x673A;&#x6F2B;&#x6B65;">4.7 &#x793A;&#x4F8B;&#xFF1A;&#x968F;&#x673A;&#x6F2B;&#x6B65;</h1>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x6A21;&#x62DF;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x6765;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x8FD0;&#x7528;&#x6570;&#x7EC4;&#x8FD0;&#x7B97;&#x3002;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x6B65;&#x957F;1&#x548C;&#xFF0D;1&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x76F8;&#x7B49;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x7684;random&#x6A21;&#x5757;&#x4EE5;&#x7EAF;Python&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;1000&#x6B65;&#x7684;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">247</span>]: <span class="hljs-keyword">import</span> random
+   .....: position = <span class="hljs-number">0</span>
+   .....: walk = [position]
+   .....: steps = <span class="hljs-number">1000</span>
+   .....: <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(steps):
+   .....:     step = <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> random.randint(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>) <span class="hljs-keyword">else</span> -<span class="hljs-number">1</span>
+   .....:     position += step
+   .....:     walk.append(position)
+   .....:
+</code></pre>
+<p>&#x56FE;4-4&#x662F;&#x6839;&#x636E;&#x524D;100&#x4E2A;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x503C;&#x751F;&#x6210;&#x7684;&#x6298;&#x7EBF;&#x56FE;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">249</span>]: plt.plot(walk[:<span class="hljs-number">100</span>])
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-0833621694f6dda0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;4-4 &#x7B80;&#x5355;&#x7684;&#x968F;&#x673A;&#x6F2B;&#x6B65;"></p>
+<p>&#x4E0D;&#x96BE;&#x770B;&#x51FA;&#xFF0C;&#x8FD9;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x4E2D;&#x5404;&#x6B65;&#x7684;&#x7D2F;&#x8BA1;&#x548C;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x8FD0;&#x7B97;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x7528;np.random&#x6A21;&#x5757;&#x4E00;&#x6B21;&#x6027;&#x968F;&#x673A;&#x4EA7;&#x751F;1000&#x4E2A;&#x201C;&#x63B7;&#x786C;&#x5E01;&#x201D;&#x7ED3;&#x679C;&#xFF08;&#x5373;&#x4E24;&#x4E2A;&#x6570;&#x4E2D;&#x4EFB;&#x9009;&#x4E00;&#x4E2A;&#xFF09;&#xFF0C;&#x5C06;&#x5176;&#x5206;&#x522B;&#x8BBE;&#x7F6E;&#x4E3A;1&#x6216;&#xFF0D;1&#xFF0C;&#x7136;&#x540E;&#x8BA1;&#x7B97;&#x7D2F;&#x8BA1;&#x548C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">251</span>]: nsteps = <span class="hljs-number">1000</span>
+
+In [<span class="hljs-number">252</span>]: draws = np.random.randint(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, size=nsteps)
+
+In [<span class="hljs-number">253</span>]: steps = np.where(draws &gt; <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">254</span>]: walk = steps.cumsum()
+</code></pre>
+<p>&#x6709;&#x4E86;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6CBF;&#x7740;&#x6F2B;&#x6B65;&#x8DEF;&#x5F84;&#x505A;&#x4E00;&#x4E9B;&#x7EDF;&#x8BA1;&#x5DE5;&#x4F5C;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x6C42;&#x53D6;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">255</span>]: walk.min()
+Out[<span class="hljs-number">255</span>]: -<span class="hljs-number">3</span>
+
+In [<span class="hljs-number">256</span>]: walk.max()
+Out[<span class="hljs-number">256</span>]: <span class="hljs-number">31</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x70B9;&#x7684;&#x7EDF;&#x8BA1;&#x4EFB;&#x52A1;&#x2014;&#x2014;&#x9996;&#x6B21;&#x7A7F;&#x8D8A;&#x65F6;&#x95F4;&#xFF0C;&#x5373;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x8FC7;&#x7A0B;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x5230;&#x8FBE;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x503C;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x77E5;&#x9053;&#x672C;&#x6B21;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x9700;&#x8981;&#x591A;&#x4E45;&#x624D;&#x80FD;&#x8DDD;&#x79BB;&#x521D;&#x59CB;0&#x70B9;&#x81F3;&#x5C11;10&#x6B65;&#x8FDC;&#xFF08;&#x4EFB;&#x4E00;&#x65B9;&#x5411;&#x5747;&#x53EF;&#xFF09;&#x3002;np.abs(walk)&gt;=10&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x7684;&#x662F;&#x8DDD;&#x79BB;&#x662F;&#x5426;&#x8FBE;&#x5230;&#x6216;&#x8D85;&#x8FC7;10&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x77E5;&#x9053;&#x7684;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;10&#x6216;&#xFF0D;10&#x7684;&#x7D22;&#x5F15;&#x3002;&#x53EF;&#x4EE5;&#x7528;argmax&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x8BE5;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x503C;&#x7684;&#x7D22;&#x5F15;&#xFF08;True&#x5C31;&#x662F;&#x6700;&#x5927;&#x503C;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">257</span>]: (np.abs(walk) &gt;= <span class="hljs-number">10</span>).argmax()
+Out[<span class="hljs-number">257</span>]: <span class="hljs-number">37</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;argmax&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x9AD8;&#x6548;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x90FD;&#x4F1A;&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x5B8C;&#x5168;&#x626B;&#x63CF;&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x53EA;&#x8981;&#x53D1;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;True&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x5C31;&#x77E5;&#x9053;&#x5B83;&#x662F;&#x4E2A;&#x6700;&#x5927;&#x503C;&#x4E86;&#x3002;</p>
+<h2 id="&#x4E00;&#x6B21;&#x6A21;&#x62DF;&#x591A;&#x4E2A;&#x968F;&#x673A;&#x6F2B;&#x6B65;">&#x4E00;&#x6B21;&#x6A21;&#x62DF;&#x591A;&#x4E2A;&#x968F;&#x673A;&#x6F2B;&#x6B65;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x6A21;&#x62DF;&#x591A;&#x4E2A;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x8FC7;&#x7A0B;&#xFF08;&#x6BD4;&#x5982;5000&#x4E2A;&#xFF09;&#xFF0C;&#x53EA;&#x9700;&#x5BF9;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x505A;&#x4E00;&#x70B9;&#x70B9;&#x4FEE;&#x6539;&#x5373;&#x53EF;&#x751F;&#x6210;&#x6240;&#x6709;&#x7684;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x8FC7;&#x7A0B;&#x3002;&#x53EA;&#x8981;&#x7ED9;numpy.random&#x7684;&#x51FD;&#x6570;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x4E8C;&#x5143;&#x5143;&#x7EC4;&#x5C31;&#x53EF;&#x4EE5;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x7B97;5000&#x4E2A;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x8FC7;&#x7A0B;&#xFF08;&#x4E00;&#x884C;&#x4E00;&#x4E2A;&#xFF09;&#x7684;&#x7D2F;&#x8BA1;&#x548C;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">258</span>]: nwalks = <span class="hljs-number">5000</span>
+
+In [<span class="hljs-number">259</span>]: nsteps = <span class="hljs-number">1000</span>
+
+In [<span class="hljs-number">260</span>]: draws = np.random.randint(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, size=(nwalks, nsteps)) <span class="hljs-comment"># 0 or 1</span>
+
+In [<span class="hljs-number">261</span>]: steps = np.where(draws &gt; <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">262</span>]: walks = steps.cumsum(<span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">263</span>]: walks
+Out[<span class="hljs-number">263</span>]: 
+array([[  <span class="hljs-number">1</span>,   <span class="hljs-number">0</span>,   <span class="hljs-number">1</span>, ...,   <span class="hljs-number">8</span>,   <span class="hljs-number">7</span>,   <span class="hljs-number">8</span>],
+       [  <span class="hljs-number">1</span>,   <span class="hljs-number">0</span>,  -<span class="hljs-number">1</span>, ...,  <span class="hljs-number">34</span>,  <span class="hljs-number">33</span>,  <span class="hljs-number">32</span>],
+       [  <span class="hljs-number">1</span>,   <span class="hljs-number">0</span>,  -<span class="hljs-number">1</span>, ...,   <span class="hljs-number">4</span>,   <span class="hljs-number">5</span>,   <span class="hljs-number">4</span>],
+       ..., 
+       [  <span class="hljs-number">1</span>,   <span class="hljs-number">2</span>,   <span class="hljs-number">1</span>, ...,  <span class="hljs-number">24</span>,  <span class="hljs-number">25</span>,  <span class="hljs-number">26</span>],
+       [  <span class="hljs-number">1</span>,   <span class="hljs-number">2</span>,   <span class="hljs-number">3</span>, ...,  <span class="hljs-number">14</span>,  <span class="hljs-number">13</span>,  <span class="hljs-number">14</span>],
+       [ -<span class="hljs-number">1</span>,  -<span class="hljs-number">2</span>,  -<span class="hljs-number">3</span>, ..., -<span class="hljs-number">24</span>, -<span class="hljs-number">23</span>, -<span class="hljs-number">22</span>]])
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x8BA1;&#x7B97;&#x6240;&#x6709;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#x8FC7;&#x7A0B;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">264</span>]: walks.max()
+Out[<span class="hljs-number">264</span>]: <span class="hljs-number">138</span>
+
+In [<span class="hljs-number">265</span>]: walks.min()
+Out[<span class="hljs-number">265</span>]: -<span class="hljs-number">133</span>
+</code></pre>
+<p>&#x5F97;&#x5230;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x8BA1;&#x7B97;30&#x6216;&#xFF0D;30&#x7684;&#x6700;&#x5C0F;&#x7A7F;&#x8D8A;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x91CC;&#x7A0D;&#x5FAE;&#x590D;&#x6742;&#x4E9B;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x662F;5000&#x4E2A;&#x8FC7;&#x7A0B;&#x90FD;&#x5230;&#x8FBE;&#x4E86;30&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;any&#x65B9;&#x6CD5;&#x6765;&#x5BF9;&#x6B64;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">266</span>]: hits30 = (np.abs(walks) &gt;= <span class="hljs-number">30</span>).any(<span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">267</span>]: hits30
+Out[<span class="hljs-number">267</span>]: array([<span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, ..., <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>], dtype=bool)
+
+In [<span class="hljs-number">268</span>]: hits30.sum() <span class="hljs-comment"># Number that hit 30 or -30</span>
+Out[<span class="hljs-number">268</span>]: <span class="hljs-number">3410</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x5E03;&#x5C14;&#x578B;&#x6570;&#x7EC4;&#x9009;&#x51FA;&#x90A3;&#x4E9B;&#x7A7F;&#x8D8A;&#x4E86;30&#xFF08;&#x7EDD;&#x5BF9;&#x503C;&#xFF09;&#x7684;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#xFF08;&#x884C;&#xFF09;&#xFF0C;&#x5E76;&#x8C03;&#x7528;argmax&#x5728;&#x8F74;1&#x4E0A;&#x83B7;&#x53D6;&#x7A7F;&#x8D8A;&#x65F6;&#x95F4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">269</span>]: crossing_times = (np.abs(walks[hits30]) &gt;= <span class="hljs-number">30</span>).argmax(<span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">270</span>]: crossing_times.mean()
+Out[<span class="hljs-number">270</span>]: <span class="hljs-number">498.88973607038122</span>
+</code></pre>
+<p>&#x8BF7;&#x5C1D;&#x8BD5;&#x7528;&#x5176;&#x4ED6;&#x5206;&#x5E03;&#x65B9;&#x5F0F;&#x5F97;&#x5230;&#x6F2B;&#x6B65;&#x6570;&#x636E;&#x3002;&#x53EA;&#x9700;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x51FD;&#x6570;&#x5373;&#x53EF;&#xFF0C;&#x5982;normal&#x7528;&#x4E8E;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">271</span>]: steps = np.random.normal(loc=<span class="hljs-number">0</span>, scale=<span class="hljs-number">0.25</span>,
+   .....:                          size=(nwalks, nsteps))
+</code></pre>
+<h1 id="48-&#x7ED3;&#x8BBA;">4.8 &#x7ED3;&#x8BBA;</h1>
+<p>&#x867D;&#x7136;&#x672C;&#x4E66;&#x5269;&#x4E0B;&#x7684;&#x7AE0;&#x8282;&#x5927;&#x90E8;&#x5206;&#x662F;&#x7528;pandas&#x89C4;&#x6574;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4F1A;&#x7528;&#x5230;&#x76F8;&#x4F3C;&#x7684;&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x8BA1;&#x7B97;&#x3002;&#x5728;&#x9644;&#x5F55;A&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x6DF1;&#x5165;&#x6316;&#x6398;NumPy&#x7684;&#x7279;&#x70B9;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x5B66;&#x4E60;&#x6570;&#x7EC4;&#x7684;&#x6280;&#x5DE7;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../内容/第03章Python的数据结构、函数和文件.html" class="navigation navigation-prev " aria-label="Previous page: 第03章Python的数据结构、函数和文件"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../内容/第05章pandas入门.html" class="navigation navigation-next " aria-label="Next page: 第05章pandas入门"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

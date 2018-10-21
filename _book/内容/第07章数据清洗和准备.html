@@ -1,0 +1,1483 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第07章数据清洗和准备 | README</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../内容/第08章数据规整：聚合、合并和重塑.html" />
+    
+    
+    <link rel="prev" href="../内容/第06章数据加载、存储与文件格式.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="7"
+        data-chapter-title="第07章数据清洗和准备"
+        data-filepath="内容/第07章数据清洗和准备.md"
+        data-basepath=".."
+        data-revision="Sun Oct 21 2018 22:59:25 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        序言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="内容/第01章准备工作.html">
+            
+                
+                    <a href="../内容/第01章准备工作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第01章准备工作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+            
+                
+                    <a href="../内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第02章Python语法基础，IPython和JupyterNotebooks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="内容/第03章Python的数据结构、函数和文件.html">
+            
+                
+                    <a href="../内容/第03章Python的数据结构、函数和文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第03章Python的数据结构、函数和文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="内容/第04章NumPy基础：数组和矢量计算.html">
+            
+                
+                    <a href="../内容/第04章NumPy基础：数组和矢量计算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第04章NumPy基础：数组和矢量计算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="内容/第05章pandas入门.html">
+            
+                
+                    <a href="../内容/第05章pandas入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第05章pandas入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="内容/第06章数据加载、存储与文件格式.html">
+            
+                
+                    <a href="../内容/第06章数据加载、存储与文件格式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第06章数据加载、存储与文件格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7" data-path="内容/第07章数据清洗和准备.html">
+            
+                
+                    <a href="../内容/第07章数据清洗和准备.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第07章数据清洗和准备
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="内容/第08章数据规整：聚合、合并和重塑.html">
+            
+                
+                    <a href="../内容/第08章数据规整：聚合、合并和重塑.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第08章数据规整：聚合、合并和重塑
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="内容/第09章绘图和可视化.html">
+            
+                
+                    <a href="../内容/第09章绘图和可视化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        第09章绘图和可视化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="内容/第10章数据聚合与分组运算.html">
+            
+                
+                    <a href="../内容/第10章数据聚合与分组运算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        第10章数据聚合与分组运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="内容/第11章时间序列.html">
+            
+                
+                    <a href="../内容/第11章时间序列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        第11章时间序列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="内容/第12章pandas高级应用.html">
+            
+                
+                    <a href="../内容/第12章pandas高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        第12章pandas高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="内容/第13章Python建模库介绍.html">
+            
+                
+                    <a href="../内容/第13章Python建模库介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        第13章Python建模库介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="内容/第14章数据分析案例.html">
+            
+                
+                    <a href="../内容/第14章数据分析案例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        第14章数据分析案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="内容/附录ANumPy高级应用.html">
+            
+                
+                    <a href="../内容/附录ANumPy高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        附录ANumPy高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="内容/附录B更多关于IPython的内容（完）.html">
+            
+                
+                    <a href="../内容/附录B更多关于IPython的内容（完）.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        附录B更多关于IPython的内容（完）
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >README</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p>&#x5728;&#x6570;&#x636E;&#x5206;&#x6790;&#x548C;&#x5EFA;&#x6A21;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x76F8;&#x5F53;&#x591A;&#x7684;&#x65F6;&#x95F4;&#x8981;&#x7528;&#x5728;&#x6570;&#x636E;&#x51C6;&#x5907;&#x4E0A;&#xFF1A;&#x52A0;&#x8F7D;&#x3001;&#x6E05;&#x7406;&#x3001;&#x8F6C;&#x6362;&#x4EE5;&#x53CA;&#x91CD;&#x5851;&#x3002;&#x8FD9;&#x4E9B;&#x5DE5;&#x4F5C;&#x4F1A;&#x5360;&#x5230;&#x5206;&#x6790;&#x5E08;&#x65F6;&#x95F4;&#x7684;80%&#x6216;&#x66F4;&#x591A;&#x3002;&#x6709;&#x65F6;&#xFF0C;&#x5B58;&#x50A8;&#x5728;&#x6587;&#x4EF6;&#x548C;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#x4E0D;&#x9002;&#x5408;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;&#x3002;&#x8BB8;&#x591A;&#x7814;&#x7A76;&#x8005;&#x90FD;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x901A;&#x7528;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF08;&#x5982;Python&#x3001;Perl&#x3001;R&#x6216;Java&#xFF09;&#x6216;UNIX&#x6587;&#x672C;&#x5904;&#x7406;&#x5DE5;&#x5177;&#xFF08;&#x5982;sed&#x6216;awk&#xFF09;&#x5BF9;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x4E13;&#x95E8;&#x5904;&#x7406;&#x3002;&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;pandas&#x548C;&#x5185;&#x7F6E;&#x7684;Python&#x6807;&#x51C6;&#x5E93;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7EC4;&#x9AD8;&#x7EA7;&#x7684;&#x3001;&#x7075;&#x6D3B;&#x7684;&#x3001;&#x5FEB;&#x901F;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x8F7B;&#x677E;&#x5730;&#x5C06;&#x6570;&#x636E;&#x89C4;&#x6574;&#x4E3A;&#x60F3;&#x8981;&#x7684;&#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x53D1;&#x73B0;&#x4E86;&#x4E00;&#x79CD;&#x672C;&#x4E66;&#x6216;pandas&#x5E93;&#x4E2D;&#x6CA1;&#x6709;&#x7684;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#xFF0C;&#x8BF7;&#x5728;&#x90AE;&#x4EF6;&#x5217;&#x8868;&#x6216;GitHub&#x7F51;&#x7AD9;&#x4E0A;&#x63D0;&#x51FA;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;pandas&#x7684;&#x8BB8;&#x591A;&#x8BBE;&#x8BA1;&#x548C;&#x5B9E;&#x73B0;&#x90FD;&#x662F;&#x7531;&#x771F;&#x5B9E;&#x5E94;&#x7528;&#x7684;&#x9700;&#x6C42;&#x6240;&#x9A71;&#x52A8;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x8BA8;&#x8BBA;&#x5904;&#x7406;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x3001;&#x91CD;&#x590D;&#x6570;&#x636E;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x548C;&#x5176;&#x5B83;&#x5206;&#x6790;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x4E0B;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x4F1A;&#x5173;&#x6CE8;&#x4E8E;&#x7528;&#x591A;&#x79CD;&#x65B9;&#x6CD5;&#x5408;&#x5E76;&#x3001;&#x91CD;&#x5851;&#x6570;&#x636E;&#x96C6;&#x3002;</p>
+<h1 id="71-&#x5904;&#x7406;&#x7F3A;&#x5931;&#x6570;&#x636E;">7.1 &#x5904;&#x7406;&#x7F3A;&#x5931;&#x6570;&#x636E;</h1>
+<p>&#x5728;&#x8BB8;&#x591A;&#x6570;&#x636E;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x662F;&#x7ECF;&#x5E38;&#x53D1;&#x751F;&#x7684;&#x3002;pandas&#x7684;&#x76EE;&#x6807;&#x4E4B;&#x4E00;&#x5C31;&#x662F;&#x5C3D;&#x91CF;&#x8F7B;&#x677E;&#x5730;&#x5904;&#x7406;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x3002;&#x4F8B;&#x5982;&#xFF0C;pandas&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x63CF;&#x8FF0;&#x6027;&#x7EDF;&#x8BA1;&#x9ED8;&#x8BA4;&#x90FD;&#x4E0D;&#x5305;&#x62EC;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x7F3A;&#x5931;&#x6570;&#x636E;&#x5728;pandas&#x4E2D;&#x5448;&#x73B0;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x4E9B;&#x4E0D;&#x5B8C;&#x7F8E;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x529F;&#x80FD;&#x6B63;&#x5E38;&#x3002;&#x5BF9;&#x4E8E;&#x6570;&#x503C;&#x6570;&#x636E;&#xFF0C;pandas&#x4F7F;&#x7528;&#x6D6E;&#x70B9;&#x503C;NaN&#xFF08;Not a Number&#xFF09;&#x8868;&#x793A;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x3002;&#x6211;&#x4EEC;&#x79F0;&#x5176;&#x4E3A;&#x54E8;&#x5175;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x68C0;&#x6D4B;&#x51FA;&#x6765;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">10</span>]: string_data = pd.Series([<span class="hljs-string">&apos;aardvark&apos;</span>, <span class="hljs-string">&apos;artichoke&apos;</span>, np.nan, <span class="hljs-string">&apos;avocado&apos;</span>])
+
+In [<span class="hljs-number">11</span>]: string_data
+Out[<span class="hljs-number">11</span>]:
+<span class="hljs-number">0</span>     aardvark
+<span class="hljs-number">1</span>    artichoke
+<span class="hljs-number">2</span>          NaN
+<span class="hljs-number">3</span>      avocado
+dtype: object
+
+In [<span class="hljs-number">12</span>]: string_data.isnull()
+Out[<span class="hljs-number">12</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">1</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">2</span>     <span class="hljs-keyword">True</span>
+<span class="hljs-number">3</span>    <span class="hljs-keyword">False</span>
+dtype: bool
+</code></pre>
+<p>&#x5728;pandas&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x4E86;R&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x60EF;&#x7528;&#x6CD5;&#xFF0C;&#x5373;&#x5C06;&#x7F3A;&#x5931;&#x503C;&#x8868;&#x793A;&#x4E3A;NA&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x4E0D;&#x53EF;&#x7528;not available&#x3002;&#x5728;&#x7EDF;&#x8BA1;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;NA&#x6570;&#x636E;&#x53EF;&#x80FD;&#x662F;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6570;&#x636E;&#x6216;&#x8005;&#x867D;&#x7136;&#x5B58;&#x5728;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x89C2;&#x5BDF;&#x5230;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x4E2D;&#x53D1;&#x751F;&#x4E86;&#x95EE;&#x9898;&#xFF09;&#x3002;&#x5F53;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6E05;&#x6D17;&#x4EE5;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x65F6;&#xFF0C;&#x6700;&#x597D;&#x76F4;&#x63A5;&#x5BF9;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x4EE5;&#x5224;&#x65AD;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x7684;&#x95EE;&#x9898;&#x6216;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7684;&#x504F;&#x5DEE;&#x3002;</p>
+<p>Python&#x5185;&#x7F6E;&#x7684;None&#x503C;&#x5728;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;NA&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">13</span>]: string_data[<span class="hljs-number">0</span>] = <span class="hljs-keyword">None</span>
+
+In [<span class="hljs-number">14</span>]: string_data.isnull()
+Out[<span class="hljs-number">14</span>]: 
+<span class="hljs-number">0</span>     <span class="hljs-keyword">True</span>
+<span class="hljs-number">1</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">2</span>     <span class="hljs-keyword">True</span>
+<span class="hljs-number">3</span>    <span class="hljs-keyword">False</span>
+dtype: bool
+</code></pre>
+<p>pandas&#x9879;&#x76EE;&#x4E2D;&#x8FD8;&#x5728;&#x4E0D;&#x65AD;&#x4F18;&#x5316;&#x5185;&#x90E8;&#x7EC6;&#x8282;&#x4EE5;&#x66F4;&#x597D;&#x5904;&#x7406;&#x7F3A;&#x5931;&#x6570;&#x636E;&#xFF0C;&#x50CF;&#x7528;&#x6237;API&#x529F;&#x80FD;&#xFF0C;&#x4F8B;&#x5982;pandas.isnull&#xFF0C;&#x53BB;&#x9664;&#x4E86;&#x8BB8;&#x591A;&#x607C;&#x4EBA;&#x7684;&#x7EC6;&#x8282;&#x3002;&#x8868;7-1&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x5173;&#x4E8E;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x5904;&#x7406;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-1a0f73e5bb26ea21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;7-1 NA&#x5904;&#x7406;&#x65B9;&#x6CD5;"></p>
+<h2 id="&#x6EE4;&#x9664;&#x7F3A;&#x5931;&#x6570;&#x636E;">&#x6EE4;&#x9664;&#x7F3A;&#x5931;&#x6570;&#x636E;</h2>
+<p>&#x8FC7;&#x6EE4;&#x6389;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x7684;&#x529E;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#x79CD;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;pandas.isnull&#x6216;&#x5E03;&#x5C14;&#x7D22;&#x5F15;&#x7684;&#x624B;&#x5DE5;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;dropna&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x5B9E;&#x7528;&#x4E00;&#x4E9B;&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;Series&#xFF0C;dropna&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4EC5;&#x542B;&#x975E;&#x7A7A;&#x6570;&#x636E;&#x548C;&#x7D22;&#x5F15;&#x503C;&#x7684;Series&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">15</span>]: <span class="hljs-keyword">from</span> numpy <span class="hljs-keyword">import</span> nan <span class="hljs-keyword">as</span> NA
+
+In [<span class="hljs-number">16</span>]: data = pd.Series([<span class="hljs-number">1</span>, NA, <span class="hljs-number">3.5</span>, NA, <span class="hljs-number">7</span>])
+
+In [<span class="hljs-number">17</span>]: data.dropna()
+Out[<span class="hljs-number">17</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">2</span>    <span class="hljs-number">3.5</span>
+<span class="hljs-number">4</span>    <span class="hljs-number">7.0</span>
+dtype: float64
+</code></pre>
+<p>&#x8FD9;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">18</span>]: data[data.notnull()]
+Out[<span class="hljs-number">18</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">2</span>    <span class="hljs-number">3.5</span>
+<span class="hljs-number">4</span>    <span class="hljs-number">7.0</span>
+dtype: float64
+</code></pre>
+<p>&#x800C;&#x5BF9;&#x4E8E;DataFrame&#x5BF9;&#x8C61;&#xFF0C;&#x4E8B;&#x60C5;&#x5C31;&#x6709;&#x70B9;&#x590D;&#x6742;&#x4E86;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x4E22;&#x5F03;&#x5168;NA&#x6216;&#x542B;&#x6709;NA&#x7684;&#x884C;&#x6216;&#x5217;&#x3002;dropna&#x9ED8;&#x8BA4;&#x4E22;&#x5F03;&#x4EFB;&#x4F55;&#x542B;&#x6709;&#x7F3A;&#x5931;&#x503C;&#x7684;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">19</span>]: data = pd.DataFrame([[<span class="hljs-number">1.</span>, <span class="hljs-number">6.5</span>, <span class="hljs-number">3.</span>], [<span class="hljs-number">1.</span>, NA, NA],
+   ....:                      [NA, NA, NA], [NA, <span class="hljs-number">6.5</span>, <span class="hljs-number">3.</span>]])
+
+In [<span class="hljs-number">20</span>]: cleaned = data.dropna()
+
+In [<span class="hljs-number">21</span>]: data
+Out[<span class="hljs-number">21</span>]: 
+     <span class="hljs-number">0</span>    <span class="hljs-number">1</span>    <span class="hljs-number">2</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span>
+<span class="hljs-number">1</span>  <span class="hljs-number">1.0</span>  NaN  NaN
+<span class="hljs-number">2</span>  NaN  NaN  NaN
+<span class="hljs-number">3</span>  NaN  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span>
+
+In [<span class="hljs-number">22</span>]: cleaned
+Out[<span class="hljs-number">22</span>]: 
+     <span class="hljs-number">0</span>    <span class="hljs-number">1</span>    <span class="hljs-number">2</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span>
+</code></pre>
+<p>&#x4F20;&#x5165;how=&apos;all&apos;&#x5C06;&#x53EA;&#x4E22;&#x5F03;&#x5168;&#x4E3A;NA&#x7684;&#x90A3;&#x4E9B;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">23</span>]: data.dropna(how=<span class="hljs-string">&apos;all&apos;</span>)
+Out[<span class="hljs-number">23</span>]: 
+     <span class="hljs-number">0</span>    <span class="hljs-number">1</span>    <span class="hljs-number">2</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span>
+<span class="hljs-number">1</span>  <span class="hljs-number">1.0</span>  NaN  NaN
+<span class="hljs-number">3</span>  NaN  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span>
+</code></pre>
+<p>&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E22;&#x5F03;&#x5217;&#xFF0C;&#x53EA;&#x9700;&#x4F20;&#x5165;axis=1&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">24</span>]: data[<span class="hljs-number">4</span>] = NA
+
+In [<span class="hljs-number">25</span>]: data
+Out[<span class="hljs-number">25</span>]: 
+     <span class="hljs-number">0</span>    <span class="hljs-number">1</span>    <span class="hljs-number">2</span>   <span class="hljs-number">4</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span> NaN
+<span class="hljs-number">1</span>  <span class="hljs-number">1.0</span>  NaN  NaN NaN
+<span class="hljs-number">2</span>  NaN  NaN  NaN NaN
+<span class="hljs-number">3</span>  NaN  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span> NaN
+
+In [<span class="hljs-number">26</span>]: data.dropna(axis=<span class="hljs-number">1</span>, how=<span class="hljs-string">&apos;all&apos;</span>)
+Out[<span class="hljs-number">26</span>]: 
+     <span class="hljs-number">0</span>    <span class="hljs-number">1</span>    <span class="hljs-number">2</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span>
+<span class="hljs-number">1</span>  <span class="hljs-number">1.0</span>  NaN  NaN
+<span class="hljs-number">2</span>  NaN  NaN  NaN
+<span class="hljs-number">3</span>  NaN  <span class="hljs-number">6.5</span>  <span class="hljs-number">3.0</span>
+</code></pre>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x6EE4;&#x9664;DataFrame&#x884C;&#x7684;&#x95EE;&#x9898;&#x6D89;&#x53CA;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x3002;&#x5047;&#x8BBE;&#x4F60;&#x53EA;&#x60F3;&#x7559;&#x4E0B;&#x4E00;&#x90E8;&#x5206;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;thresh&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#x6B64;&#x76EE;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">27</span>]: df = pd.DataFrame(np.random.randn(<span class="hljs-number">7</span>, <span class="hljs-number">3</span>))
+
+In [<span class="hljs-number">28</span>]: df.iloc[:<span class="hljs-number">4</span>, <span class="hljs-number">1</span>] = NA
+
+In [<span class="hljs-number">29</span>]: df.iloc[:<span class="hljs-number">2</span>, <span class="hljs-number">2</span>] = NA
+
+In [<span class="hljs-number">30</span>]: df
+Out[<span class="hljs-number">30</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">0</span> -<span class="hljs-number">0.204708</span>       NaN       NaN
+<span class="hljs-number">1</span> -<span class="hljs-number">0.555730</span>       NaN       NaN
+<span class="hljs-number">2</span>  <span class="hljs-number">0.092908</span>       NaN  <span class="hljs-number">0.769023</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">1.246435</span>       NaN -<span class="hljs-number">1.296221</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">0.274992</span>  <span class="hljs-number">0.228913</span>  <span class="hljs-number">1.352917</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.886429</span> -<span class="hljs-number">2.001637</span> -<span class="hljs-number">0.371843</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">1.669025</span> -<span class="hljs-number">0.438570</span> -<span class="hljs-number">0.539741</span>
+
+In [<span class="hljs-number">31</span>]: df.dropna()
+Out[<span class="hljs-number">31</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">0.274992</span>  <span class="hljs-number">0.228913</span>  <span class="hljs-number">1.352917</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.886429</span> -<span class="hljs-number">2.001637</span> -<span class="hljs-number">0.371843</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">1.669025</span> -<span class="hljs-number">0.438570</span> -<span class="hljs-number">0.539741</span>
+
+In [<span class="hljs-number">32</span>]: df.dropna(thresh=<span class="hljs-number">2</span>)
+Out[<span class="hljs-number">32</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.092908</span>       NaN  <span class="hljs-number">0.769023</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">1.246435</span>       NaN -<span class="hljs-number">1.296221</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">0.274992</span>  <span class="hljs-number">0.228913</span>  <span class="hljs-number">1.352917</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.886429</span> -<span class="hljs-number">2.001637</span> -<span class="hljs-number">0.371843</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">1.669025</span> -<span class="hljs-number">0.438570</span> -<span class="hljs-number">0.539741</span>
+</code></pre>
+<h2 id="&#x586B;&#x5145;&#x7F3A;&#x5931;&#x6570;&#x636E;">&#x586B;&#x5145;&#x7F3A;&#x5931;&#x6570;&#x636E;</h2>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x4E0D;&#x60F3;&#x6EE4;&#x9664;&#x7F3A;&#x5931;&#x6570;&#x636E;&#xFF08;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x4E22;&#x5F03;&#x8DDF;&#x5B83;&#x6709;&#x5173;&#x7684;&#x5176;&#x4ED6;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x800C;&#x662F;&#x5E0C;&#x671B;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x586B;&#x8865;&#x90A3;&#x4E9B;&#x201C;&#x7A7A;&#x6D1E;&#x201D;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x800C;&#x8A00;&#xFF0C;fillna&#x65B9;&#x6CD5;&#x662F;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x51FD;&#x6570;&#x3002;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5E38;&#x6570;&#x8C03;&#x7528;fillna&#x5C31;&#x4F1A;&#x5C06;&#x7F3A;&#x5931;&#x503C;&#x66FF;&#x6362;&#x4E3A;&#x90A3;&#x4E2A;&#x5E38;&#x6570;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">33</span>]: df.fillna(<span class="hljs-number">0</span>)
+Out[<span class="hljs-number">33</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">0</span> -<span class="hljs-number">0.204708</span>  <span class="hljs-number">0.000000</span>  <span class="hljs-number">0.000000</span>
+<span class="hljs-number">1</span> -<span class="hljs-number">0.555730</span>  <span class="hljs-number">0.000000</span>  <span class="hljs-number">0.000000</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.092908</span>  <span class="hljs-number">0.000000</span>  <span class="hljs-number">0.769023</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">1.246435</span>  <span class="hljs-number">0.000000</span> -<span class="hljs-number">1.296221</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">0.274992</span>  <span class="hljs-number">0.228913</span>  <span class="hljs-number">1.352917</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.886429</span> -<span class="hljs-number">2.001637</span> -<span class="hljs-number">0.371843</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">1.669025</span> -<span class="hljs-number">0.438570</span> -<span class="hljs-number">0.539741</span>
+</code></pre>
+<p>&#x82E5;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x8C03;&#x7528;fillna&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x5217;&#x586B;&#x5145;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">34</span>]: df.fillna({<span class="hljs-number">1</span>: <span class="hljs-number">0.5</span>, <span class="hljs-number">2</span>: <span class="hljs-number">0</span>})
+Out[<span class="hljs-number">34</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">0</span> -<span class="hljs-number">0.204708</span>  <span class="hljs-number">0.500000</span>  <span class="hljs-number">0.000000</span>
+<span class="hljs-number">1</span> -<span class="hljs-number">0.555730</span>  <span class="hljs-number">0.500000</span>  <span class="hljs-number">0.000000</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.092908</span>  <span class="hljs-number">0.500000</span>  <span class="hljs-number">0.769023</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">1.246435</span>  <span class="hljs-number">0.500000</span> -<span class="hljs-number">1.296221</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">0.274992</span>  <span class="hljs-number">0.228913</span>  <span class="hljs-number">1.352917</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.886429</span> -<span class="hljs-number">2.001637</span> -<span class="hljs-number">0.371843</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">1.669025</span> -<span class="hljs-number">0.438570</span> -<span class="hljs-number">0.539741</span>
+</code></pre>
+<p>fillna&#x9ED8;&#x8BA4;&#x4F1A;&#x8FD4;&#x56DE;&#x65B0;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x73B0;&#x6709;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5C31;&#x5730;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">35</span>]: _ = df.fillna(<span class="hljs-number">0</span>, inplace=<span class="hljs-keyword">True</span>)
+
+In [<span class="hljs-number">36</span>]: df
+Out[<span class="hljs-number">36</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">0</span> -<span class="hljs-number">0.204708</span>  <span class="hljs-number">0.000000</span>  <span class="hljs-number">0.000000</span>
+<span class="hljs-number">1</span> -<span class="hljs-number">0.555730</span>  <span class="hljs-number">0.000000</span>  <span class="hljs-number">0.000000</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.092908</span>  <span class="hljs-number">0.000000</span>  <span class="hljs-number">0.769023</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">1.246435</span>  <span class="hljs-number">0.000000</span> -<span class="hljs-number">1.296221</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">0.274992</span>  <span class="hljs-number">0.228913</span>  <span class="hljs-number">1.352917</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.886429</span> -<span class="hljs-number">2.001637</span> -<span class="hljs-number">0.371843</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">1.669025</span> -<span class="hljs-number">0.438570</span> -<span class="hljs-number">0.539741</span>
+</code></pre>
+<p>&#x5BF9;reindexing&#x6709;&#x6548;&#x7684;&#x90A3;&#x4E9B;&#x63D2;&#x503C;&#x65B9;&#x6CD5;&#x4E5F;&#x53EF;&#x7528;&#x4E8E;fillna&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">37</span>]: df = pd.DataFrame(np.random.randn(<span class="hljs-number">6</span>, <span class="hljs-number">3</span>))
+
+In [<span class="hljs-number">38</span>]: df.iloc[<span class="hljs-number">2</span>:, <span class="hljs-number">1</span>] = NA
+
+In [<span class="hljs-number">39</span>]: df.iloc[<span class="hljs-number">4</span>:, <span class="hljs-number">2</span>] = NA
+
+In [<span class="hljs-number">40</span>]: df
+Out[<span class="hljs-number">40</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">0.476985</span>  <span class="hljs-number">3.248944</span> -<span class="hljs-number">1.021228</span>
+<span class="hljs-number">1</span> -<span class="hljs-number">0.577087</span>  <span class="hljs-number">0.124121</span>  <span class="hljs-number">0.302614</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.523772</span>       NaN  <span class="hljs-number">1.343810</span>
+<span class="hljs-number">3</span> -<span class="hljs-number">0.713544</span>       NaN -<span class="hljs-number">2.370232</span>
+<span class="hljs-number">4</span> -<span class="hljs-number">1.860761</span>       NaN       NaN
+<span class="hljs-number">5</span> -<span class="hljs-number">1.265934</span>       NaN       NaN
+
+In [<span class="hljs-number">41</span>]: df.fillna(method=<span class="hljs-string">&apos;ffill&apos;</span>)
+Out[<span class="hljs-number">41</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">0.476985</span>  <span class="hljs-number">3.248944</span> -<span class="hljs-number">1.021228</span>
+<span class="hljs-number">1</span> -<span class="hljs-number">0.577087</span>  <span class="hljs-number">0.124121</span>  <span class="hljs-number">0.302614</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.523772</span>  <span class="hljs-number">0.124121</span>  <span class="hljs-number">1.343810</span>
+<span class="hljs-number">3</span> -<span class="hljs-number">0.713544</span>  <span class="hljs-number">0.124121</span> -<span class="hljs-number">2.370232</span>
+<span class="hljs-number">4</span> -<span class="hljs-number">1.860761</span>  <span class="hljs-number">0.124121</span> -<span class="hljs-number">2.370232</span>
+<span class="hljs-number">5</span> -<span class="hljs-number">1.265934</span>  <span class="hljs-number">0.124121</span> -<span class="hljs-number">2.370232</span>
+
+In [<span class="hljs-number">42</span>]: df.fillna(method=<span class="hljs-string">&apos;ffill&apos;</span>, limit=<span class="hljs-number">2</span>)
+Out[<span class="hljs-number">42</span>]: 
+          <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">0.476985</span>  <span class="hljs-number">3.248944</span> -<span class="hljs-number">1.021228</span>
+<span class="hljs-number">1</span> -<span class="hljs-number">0.577087</span>  <span class="hljs-number">0.124121</span>  <span class="hljs-number">0.302614</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.523772</span>  <span class="hljs-number">0.124121</span>  <span class="hljs-number">1.343810</span>
+<span class="hljs-number">3</span> -<span class="hljs-number">0.713544</span>  <span class="hljs-number">0.124121</span> -<span class="hljs-number">2.370232</span>
+<span class="hljs-number">4</span> -<span class="hljs-number">1.860761</span>       NaN -<span class="hljs-number">2.370232</span>
+<span class="hljs-number">5</span> -<span class="hljs-number">1.265934</span>       NaN -<span class="hljs-number">2.370232</span>
+</code></pre>
+<p>&#x53EA;&#x8981;&#x6709;&#x4E9B;&#x521B;&#x65B0;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;fillna&#x5B9E;&#x73B0;&#x8BB8;&#x591A;&#x522B;&#x7684;&#x529F;&#x80FD;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x5165;Series&#x7684;&#x5E73;&#x5747;&#x503C;&#x6216;&#x4E2D;&#x4F4D;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">43</span>]: data = pd.Series([<span class="hljs-number">1.</span>, NA, <span class="hljs-number">3.5</span>, NA, <span class="hljs-number">7</span>])
+
+In [<span class="hljs-number">44</span>]: data.fillna(data.mean())
+Out[<span class="hljs-number">44</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-number">1.000000</span>
+<span class="hljs-number">1</span>    <span class="hljs-number">3.833333</span>
+<span class="hljs-number">2</span>    <span class="hljs-number">3.500000</span>
+<span class="hljs-number">3</span>    <span class="hljs-number">3.833333</span>
+<span class="hljs-number">4</span>    <span class="hljs-number">7.000000</span>
+dtype: float64
+</code></pre>
+<p>&#x8868;7-2&#x5217;&#x51FA;&#x4E86;fillna&#x7684;&#x53C2;&#x8003;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-0bf235386a64c3b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-4edd39e68f4dc530.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="fillna&#x51FD;&#x6570;&#x53C2;&#x6570;"></p>
+<h1 id="72-&#x6570;&#x636E;&#x8F6C;&#x6362;">7.2 &#x6570;&#x636E;&#x8F6C;&#x6362;</h1>
+<p>&#x672C;&#x7AE0;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x4ECB;&#x7ECD;&#x7684;&#x90FD;&#x662F;&#x6570;&#x636E;&#x7684;&#x91CD;&#x6392;&#x3002;&#x53E6;&#x4E00;&#x7C7B;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x5219;&#x662F;&#x8FC7;&#x6EE4;&#x3001;&#x6E05;&#x7406;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7684;&#x8F6C;&#x6362;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h2 id="&#x79FB;&#x9664;&#x91CD;&#x590D;&#x6570;&#x636E;">&#x79FB;&#x9664;&#x91CD;&#x590D;&#x6570;&#x636E;</h2>
+<p>DataFrame&#x4E2D;&#x51FA;&#x73B0;&#x91CD;&#x590D;&#x884C;&#x6709;&#x591A;&#x79CD;&#x539F;&#x56E0;&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">45</span>]: data = pd.DataFrame({<span class="hljs-string">&apos;k1&apos;</span>: [<span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>] * <span class="hljs-number">3</span> + [<span class="hljs-string">&apos;two&apos;</span>],
+   ....:                      <span class="hljs-string">&apos;k2&apos;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>]})
+
+In [<span class="hljs-number">46</span>]: data
+Out[<span class="hljs-number">46</span>]: 
+    k1  k2
+<span class="hljs-number">0</span>  one   <span class="hljs-number">1</span>
+<span class="hljs-number">1</span>  two   <span class="hljs-number">1</span>
+<span class="hljs-number">2</span>  one   <span class="hljs-number">2</span>
+<span class="hljs-number">3</span>  two   <span class="hljs-number">3</span>
+<span class="hljs-number">4</span>  one   <span class="hljs-number">3</span>
+<span class="hljs-number">5</span>  two   <span class="hljs-number">4</span>
+<span class="hljs-number">6</span>  two   <span class="hljs-number">4</span>
+</code></pre>
+<p>DataFrame&#x7684;duplicated&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x578B;Series&#xFF0C;&#x8868;&#x793A;&#x5404;&#x884C;&#x662F;&#x5426;&#x662F;&#x91CD;&#x590D;&#x884C;&#xFF08;&#x524D;&#x9762;&#x51FA;&#x73B0;&#x8FC7;&#x7684;&#x884C;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">47</span>]: data.duplicated()
+Out[<span class="hljs-number">47</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">1</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">2</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">3</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">4</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">5</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">6</span>     <span class="hljs-keyword">True</span>
+dtype: bool
+</code></pre>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x4E0E;&#x6B64;&#x76F8;&#x5173;&#x7684;drop_duplicates&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;DataFrame&#xFF0C;&#x91CD;&#x590D;&#x7684;&#x6570;&#x7EC4;&#x4F1A;&#x6807;&#x4E3A;False&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">48</span>]: data.drop_duplicates()
+Out[<span class="hljs-number">48</span>]: 
+    k1  k2
+<span class="hljs-number">0</span>  one   <span class="hljs-number">1</span>
+<span class="hljs-number">1</span>  two   <span class="hljs-number">1</span>
+<span class="hljs-number">2</span>  one   <span class="hljs-number">2</span>
+<span class="hljs-number">3</span>  two   <span class="hljs-number">3</span>
+<span class="hljs-number">4</span>  one   <span class="hljs-number">3</span>
+<span class="hljs-number">5</span>  two   <span class="hljs-number">4</span>
+</code></pre>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x9ED8;&#x8BA4;&#x4F1A;&#x5224;&#x65AD;&#x5168;&#x90E8;&#x5217;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x90E8;&#x5206;&#x5217;&#x8FDB;&#x884C;&#x91CD;&#x590D;&#x9879;&#x5224;&#x65AD;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x8FD8;&#x6709;&#x4E00;&#x5217;&#x503C;&#xFF0C;&#x4E14;&#x53EA;&#x5E0C;&#x671B;&#x6839;&#x636E;k1&#x5217;&#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">49</span>]: data[<span class="hljs-string">&apos;v1&apos;</span>] = range(<span class="hljs-number">7</span>)
+
+In [<span class="hljs-number">50</span>]: data.drop_duplicates([<span class="hljs-string">&apos;k1&apos;</span>])
+Out[<span class="hljs-number">50</span>]: 
+    k1  k2  v1
+<span class="hljs-number">0</span>  one   <span class="hljs-number">1</span>   <span class="hljs-number">0</span>
+<span class="hljs-number">1</span>  two   <span class="hljs-number">1</span>   <span class="hljs-number">1</span>
+</code></pre>
+<p>duplicated&#x548C;drop_duplicates&#x9ED8;&#x8BA4;&#x4FDD;&#x7559;&#x7684;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x51FA;&#x73B0;&#x7684;&#x503C;&#x7EC4;&#x5408;&#x3002;&#x4F20;&#x5165;keep=&apos;last&apos;&#x5219;&#x4FDD;&#x7559;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">51</span>]: data.drop_duplicates([<span class="hljs-string">&apos;k1&apos;</span>, <span class="hljs-string">&apos;k2&apos;</span>], keep=<span class="hljs-string">&apos;last&apos;</span>)
+Out[<span class="hljs-number">51</span>]: 
+    k1  k2  v1
+<span class="hljs-number">0</span>  one   <span class="hljs-number">1</span>   <span class="hljs-number">0</span>
+<span class="hljs-number">1</span>  two   <span class="hljs-number">1</span>   <span class="hljs-number">1</span>
+<span class="hljs-number">2</span>  one   <span class="hljs-number">2</span>   <span class="hljs-number">2</span>
+<span class="hljs-number">3</span>  two   <span class="hljs-number">3</span>   <span class="hljs-number">3</span>
+<span class="hljs-number">4</span>  one   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>
+<span class="hljs-number">6</span>  two   <span class="hljs-number">4</span>   <span class="hljs-number">6</span>
+</code></pre>
+<h2 id="&#x5229;&#x7528;&#x51FD;&#x6570;&#x6216;&#x6620;&#x5C04;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8F6C;&#x6362;">&#x5229;&#x7528;&#x51FD;&#x6570;&#x6216;&#x6620;&#x5C04;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8F6C;&#x6362;</h2>
+<p>&#x5BF9;&#x4E8E;&#x8BB8;&#x591A;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x6839;&#x636E;&#x6570;&#x7EC4;&#x3001;Series&#x6216;DataFrame&#x5217;&#x4E2D;&#x7684;&#x503C;&#x6765;&#x5B9E;&#x73B0;&#x8F6C;&#x6362;&#x5DE5;&#x4F5C;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x7EC4;&#x6709;&#x5173;&#x8089;&#x7C7B;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">52</span>]: data = pd.DataFrame({<span class="hljs-string">&apos;food&apos;</span>: [<span class="hljs-string">&apos;bacon&apos;</span>, <span class="hljs-string">&apos;pulled pork&apos;</span>, <span class="hljs-string">&apos;bacon&apos;</span>,
+   ....:                               <span class="hljs-string">&apos;Pastrami&apos;</span>, <span class="hljs-string">&apos;corned beef&apos;</span>, <span class="hljs-string">&apos;Bacon&apos;</span>,
+   ....:                               <span class="hljs-string">&apos;pastrami&apos;</span>, <span class="hljs-string">&apos;honey ham&apos;</span>, <span class="hljs-string">&apos;nova lox&apos;</span>],
+   ....:                      <span class="hljs-string">&apos;ounces&apos;</span>: [<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">12</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7.5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]})
+
+In [<span class="hljs-number">53</span>]: data
+Out[<span class="hljs-number">53</span>]: 
+          food  ounces
+<span class="hljs-number">0</span>        bacon     <span class="hljs-number">4.0</span>
+<span class="hljs-number">1</span>  pulled pork     <span class="hljs-number">3.0</span>
+<span class="hljs-number">2</span>        bacon    <span class="hljs-number">12.0</span>
+<span class="hljs-number">3</span>     Pastrami     <span class="hljs-number">6.0</span>
+<span class="hljs-number">4</span>  corned beef     <span class="hljs-number">7.5</span>
+<span class="hljs-number">5</span>        Bacon     <span class="hljs-number">8.0</span>
+<span class="hljs-number">6</span>     pastrami     <span class="hljs-number">3.0</span>
+<span class="hljs-number">7</span>    honey ham     <span class="hljs-number">5.0</span>
+<span class="hljs-number">8</span>     nova lox     <span class="hljs-number">6.0</span>
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x60F3;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x5217;&#x8868;&#x793A;&#x8BE5;&#x8089;&#x7C7B;&#x98DF;&#x7269;&#x6765;&#x6E90;&#x7684;&#x52A8;&#x7269;&#x7C7B;&#x578B;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x8089;&#x7C7B;&#x5230;&#x52A8;&#x7269;&#x7684;&#x6620;&#x5C04;&#xFF1A;</p>
+<pre><code class="lang-python">meat_to_animal = {
+  <span class="hljs-string">&apos;bacon&apos;</span>: <span class="hljs-string">&apos;pig&apos;</span>,
+  <span class="hljs-string">&apos;pulled pork&apos;</span>: <span class="hljs-string">&apos;pig&apos;</span>,
+  <span class="hljs-string">&apos;pastrami&apos;</span>: <span class="hljs-string">&apos;cow&apos;</span>,
+  <span class="hljs-string">&apos;corned beef&apos;</span>: <span class="hljs-string">&apos;cow&apos;</span>,
+  <span class="hljs-string">&apos;honey ham&apos;</span>: <span class="hljs-string">&apos;pig&apos;</span>,
+  <span class="hljs-string">&apos;nova lox&apos;</span>: <span class="hljs-string">&apos;salmon&apos;</span>
+}
+</code></pre>
+<p>Series&#x7684;map&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6216;&#x542B;&#x6709;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x7684;&#x5B57;&#x5178;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;&#xFF0C;&#x5373;&#x6709;&#x4E9B;&#x8089;&#x7C7B;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x4E86;&#xFF0C;&#x800C;&#x53E6;&#x4E00;&#x4E9B;&#x5219;&#x6CA1;&#x6709;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x4F7F;&#x7528;Series&#x7684;str.lower&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5404;&#x4E2A;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">55</span>]: lowercased = data[<span class="hljs-string">&apos;food&apos;</span>].str.lower()
+
+In [<span class="hljs-number">56</span>]: lowercased
+Out[<span class="hljs-number">56</span>]: 
+<span class="hljs-number">0</span>          bacon
+<span class="hljs-number">1</span>    pulled pork
+<span class="hljs-number">2</span>          bacon
+<span class="hljs-number">3</span>       pastrami
+<span class="hljs-number">4</span>    corned beef
+<span class="hljs-number">5</span>          bacon
+<span class="hljs-number">6</span>       pastrami
+<span class="hljs-number">7</span>      honey ham
+<span class="hljs-number">8</span>       nova lox
+Name: food, dtype: object
+
+In [<span class="hljs-number">57</span>]: data[<span class="hljs-string">&apos;animal&apos;</span>] = lowercased.map(meat_to_animal)
+
+In [<span class="hljs-number">58</span>]: data
+Out[<span class="hljs-number">58</span>]: 
+          food  ounces  animal
+<span class="hljs-number">0</span>        bacon     <span class="hljs-number">4.0</span>     pig
+<span class="hljs-number">1</span>  pulled pork     <span class="hljs-number">3.0</span>     pig
+<span class="hljs-number">2</span>        bacon    <span class="hljs-number">12.0</span>     pig
+<span class="hljs-number">3</span>     Pastrami     <span class="hljs-number">6.0</span>     cow
+<span class="hljs-number">4</span>  corned beef     <span class="hljs-number">7.5</span>     cow
+<span class="hljs-number">5</span>        Bacon     <span class="hljs-number">8.0</span>     pig
+<span class="hljs-number">6</span>     pastrami     <span class="hljs-number">3.0</span>     cow
+<span class="hljs-number">7</span>    honey ham     <span class="hljs-number">5.0</span>     pig
+<span class="hljs-number">8</span>     nova lox     <span class="hljs-number">6.0</span>  salmon
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x5B8C;&#x6210;&#x5168;&#x90E8;&#x8FD9;&#x4E9B;&#x5DE5;&#x4F5C;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">59</span>]: data[<span class="hljs-string">&apos;food&apos;</span>].map(<span class="hljs-keyword">lambda</span> x: meat_to_animal[x.lower()])
+Out[<span class="hljs-number">59</span>]: 
+<span class="hljs-number">0</span>       pig
+<span class="hljs-number">1</span>       pig
+<span class="hljs-number">2</span>       pig
+<span class="hljs-number">3</span>       cow
+<span class="hljs-number">4</span>       cow
+<span class="hljs-number">5</span>       pig
+<span class="hljs-number">6</span>       cow
+<span class="hljs-number">7</span>       pig
+<span class="hljs-number">8</span>    salmon
+Name: food, dtype: object
+</code></pre>
+<p>&#x4F7F;&#x7528;map&#x662F;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x5143;&#x7D20;&#x7EA7;&#x8F6C;&#x6362;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x7684;&#x4FBF;&#x6377;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="&#x66FF;&#x6362;&#x503C;">&#x66FF;&#x6362;&#x503C;</h2>
+<p>&#x5229;&#x7528;fillna&#x65B9;&#x6CD5;&#x586B;&#x5145;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x503C;&#x66FF;&#x6362;&#x7684;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x3002;&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#xFF0C;map&#x53EF;&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x5B50;&#x96C6;&#xFF0C;&#x800C;replace&#x5219;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x8BE5;&#x529F;&#x80FD;&#x7684;&#x66F4;&#x7B80;&#x5355;&#x3001;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;Series&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">60</span>]: data = pd.Series([<span class="hljs-number">1.</span>, -<span class="hljs-number">999.</span>, <span class="hljs-number">2.</span>, -<span class="hljs-number">999.</span>, -<span class="hljs-number">1000.</span>, <span class="hljs-number">3.</span>])
+
+In [<span class="hljs-number">61</span>]: data
+Out[<span class="hljs-number">61</span>]: 
+<span class="hljs-number">0</span>       <span class="hljs-number">1.0</span>
+<span class="hljs-number">1</span>    -<span class="hljs-number">999.0</span>
+<span class="hljs-number">2</span>       <span class="hljs-number">2.0</span>
+<span class="hljs-number">3</span>    -<span class="hljs-number">999.0</span>
+<span class="hljs-number">4</span>   -<span class="hljs-number">1000.0</span>
+<span class="hljs-number">5</span>       <span class="hljs-number">3.0</span>
+</code></pre>
+<p>-999&#x8FD9;&#x4E2A;&#x503C;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x7684;&#x6807;&#x8BB0;&#x503C;&#x3002;&#x8981;&#x5C06;&#x5176;&#x66FF;&#x6362;&#x4E3A;pandas&#x80FD;&#x591F;&#x7406;&#x89E3;&#x7684;NA&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;replace&#x6765;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Series&#xFF08;&#x9664;&#x975E;&#x4F20;&#x5165;inplace=True&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">62</span>]: data.replace(-<span class="hljs-number">999</span>, np.nan)
+Out[<span class="hljs-number">62</span>]: 
+<span class="hljs-number">0</span>       <span class="hljs-number">1.0</span>
+<span class="hljs-number">1</span>       NaN
+<span class="hljs-number">2</span>       <span class="hljs-number">2.0</span>
+<span class="hljs-number">3</span>       NaN
+<span class="hljs-number">4</span>   -<span class="hljs-number">1000.0</span>
+<span class="hljs-number">5</span>       <span class="hljs-number">3.0</span>
+dtype: float64
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x4E00;&#x6B21;&#x6027;&#x66FF;&#x6362;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x7531;&#x5F85;&#x66FF;&#x6362;&#x503C;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x66FF;&#x6362;&#x503C;&#xFF1A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">63</span>]: data.replace([-<span class="hljs-number">999</span>, -<span class="hljs-number">1000</span>], np.nan)
+Out[<span class="hljs-number">63</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">1</span>    NaN
+<span class="hljs-number">2</span>    <span class="hljs-number">2.0</span>
+<span class="hljs-number">3</span>    NaN
+<span class="hljs-number">4</span>    NaN
+<span class="hljs-number">5</span>    <span class="hljs-number">3.0</span>
+dtype: float64
+</code></pre>
+<p>&#x8981;&#x8BA9;&#x6BCF;&#x4E2A;&#x503C;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x66FF;&#x6362;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x66FF;&#x6362;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">64</span>]: data.replace([-<span class="hljs-number">999</span>, -<span class="hljs-number">1000</span>], [np.nan, <span class="hljs-number">0</span>])
+Out[<span class="hljs-number">64</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">1</span>    NaN
+<span class="hljs-number">2</span>    <span class="hljs-number">2.0</span>
+<span class="hljs-number">3</span>    NaN
+<span class="hljs-number">4</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">5</span>    <span class="hljs-number">3.0</span>
+dtype: float64
+</code></pre>
+<p>&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5B57;&#x5178;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">65</span>]: data.replace({-<span class="hljs-number">999</span>: np.nan, -<span class="hljs-number">1000</span>: <span class="hljs-number">0</span>})
+Out[<span class="hljs-number">65</span>]: 
+<span class="hljs-number">0</span>    <span class="hljs-number">1.0</span>
+<span class="hljs-number">1</span>    NaN
+<span class="hljs-number">2</span>    <span class="hljs-number">2.0</span>
+<span class="hljs-number">3</span>    NaN
+<span class="hljs-number">4</span>    <span class="hljs-number">0.0</span>
+<span class="hljs-number">5</span>    <span class="hljs-number">3.0</span>
+dtype: float64
+</code></pre>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;data.replace&#x65B9;&#x6CD5;&#x4E0E;data.str.replace&#x4E0D;&#x540C;&#xFF0C;&#x540E;&#x8005;&#x505A;&#x7684;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5143;&#x7D20;&#x7EA7;&#x66FF;&#x6362;&#x3002;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x5B66;&#x4E60;Series&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<h2 id="&#x91CD;&#x547D;&#x540D;&#x8F74;&#x7D22;&#x5F15;">&#x91CD;&#x547D;&#x540D;&#x8F74;&#x7D22;&#x5F15;</h2>
+<p>&#x8DDF;Series&#x4E2D;&#x7684;&#x503C;&#x4E00;&#x6837;&#xFF0C;&#x8F74;&#x6807;&#x7B7E;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x6216;&#x6620;&#x5C04;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4E0D;&#x540C;&#x6807;&#x7B7E;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x8F74;&#x8FD8;&#x53EF;&#x4EE5;&#x88AB;&#x5C31;&#x5730;&#x4FEE;&#x6539;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">66</span>]: data = pd.DataFrame(np.arange(<span class="hljs-number">12</span>).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)),
+   ....:                     index=[<span class="hljs-string">&apos;Ohio&apos;</span>, <span class="hljs-string">&apos;Colorado&apos;</span>, <span class="hljs-string">&apos;New York&apos;</span>],
+   ....:                     columns=[<span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>, <span class="hljs-string">&apos;four&apos;</span>])
+</code></pre>
+<p>&#x8DDF;Series&#x4E00;&#x6837;&#xFF0C;&#x8F74;&#x7D22;&#x5F15;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;map&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">67</span>]: transform = <span class="hljs-keyword">lambda</span> x: x[:<span class="hljs-number">4</span>].upper()
+
+In [<span class="hljs-number">68</span>]: data.index.map(transform)
+Out[<span class="hljs-number">68</span>]: Index([<span class="hljs-string">&apos;OHIO&apos;</span>, <span class="hljs-string">&apos;COLO&apos;</span>, <span class="hljs-string">&apos;NEW &apos;</span>], dtype=<span class="hljs-string">&apos;object&apos;</span>)
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8D4B;&#x503C;&#x7ED9;index&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;DataFrame&#x8FDB;&#x884C;&#x5C31;&#x5730;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">69</span>]: data.index = data.index.map(transform)
+
+In [<span class="hljs-number">70</span>]: data
+Out[<span class="hljs-number">70</span>]:
+one  two  three  four
+OHIO    <span class="hljs-number">0</span>    <span class="hljs-number">1</span>      <span class="hljs-number">2</span>     <span class="hljs-number">3</span>
+COLO    <span class="hljs-number">4</span>    <span class="hljs-number">5</span>      <span class="hljs-number">6</span>     <span class="hljs-number">7</span>
+NEW     <span class="hljs-number">8</span>    <span class="hljs-number">9</span>     <span class="hljs-number">10</span>    <span class="hljs-number">11</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x96C6;&#x7684;&#x8F6C;&#x6362;&#x7248;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x4FEE;&#x6539;&#x539F;&#x59CB;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x6BD4;&#x8F83;&#x5B9E;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F;rename&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">71</span>]: data.rename(index=str.title, columns=str.upper)
+Out[<span class="hljs-number">71</span>]: 
+      ONE  TWO  THREE  FOUR
+Ohio    <span class="hljs-number">0</span>    <span class="hljs-number">1</span>      <span class="hljs-number">2</span>     <span class="hljs-number">3</span>
+Colo    <span class="hljs-number">4</span>    <span class="hljs-number">5</span>      <span class="hljs-number">6</span>     <span class="hljs-number">7</span>
+New     <span class="hljs-number">8</span>    <span class="hljs-number">9</span>     <span class="hljs-number">10</span>    <span class="hljs-number">11</span>
+</code></pre>
+<p>&#x7279;&#x522B;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#xFF0C;rename&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x5B57;&#x5178;&#x578B;&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x5BF9;&#x90E8;&#x5206;&#x8F74;&#x6807;&#x7B7E;&#x7684;&#x66F4;&#x65B0;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">72</span>]: data.rename(index={<span class="hljs-string">&apos;OHIO&apos;</span>: <span class="hljs-string">&apos;INDIANA&apos;</span>},
+   ....:             columns={<span class="hljs-string">&apos;three&apos;</span>: <span class="hljs-string">&apos;peekaboo&apos;</span>})
+Out[<span class="hljs-number">72</span>]:
+one  two  peekaboo  four
+INDIANA    <span class="hljs-number">0</span>    <span class="hljs-number">1</span>         <span class="hljs-number">2</span>     <span class="hljs-number">3</span>
+COLO       <span class="hljs-number">4</span>    <span class="hljs-number">5</span>         <span class="hljs-number">6</span>     <span class="hljs-number">7</span>
+NEW        <span class="hljs-number">8</span>    <span class="hljs-number">9</span>        <span class="hljs-number">10</span>    <span class="hljs-number">11</span>
+</code></pre>
+<p>rename&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x590D;&#x5236;DataFrame&#x5E76;&#x5BF9;&#x5176;&#x7D22;&#x5F15;&#x548C;&#x5217;&#x6807;&#x7B7E;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x3002;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x5C31;&#x5730;&#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4F20;&#x5165;inplace=True&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">73</span>]: data.rename(index={<span class="hljs-string">&apos;OHIO&apos;</span>: <span class="hljs-string">&apos;INDIANA&apos;</span>}, inplace=<span class="hljs-keyword">True</span>)
+
+In [<span class="hljs-number">74</span>]: data
+Out[<span class="hljs-number">74</span>]: 
+         one  two  three  four
+INDIANA    <span class="hljs-number">0</span>    <span class="hljs-number">1</span>      <span class="hljs-number">2</span>     <span class="hljs-number">3</span>
+COLO       <span class="hljs-number">4</span>    <span class="hljs-number">5</span>      <span class="hljs-number">6</span>     <span class="hljs-number">7</span>
+NEW        <span class="hljs-number">8</span>    <span class="hljs-number">9</span>     <span class="hljs-number">10</span>    <span class="hljs-number">11</span>
+</code></pre>
+<h2 id="&#x79BB;&#x6563;&#x5316;&#x548C;&#x9762;&#x5143;&#x5212;&#x5206;">&#x79BB;&#x6563;&#x5316;&#x548C;&#x9762;&#x5143;&#x5212;&#x5206;</h2>
+<p>&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x5206;&#x6790;&#xFF0C;&#x8FDE;&#x7EED;&#x6570;&#x636E;&#x5E38;&#x5E38;&#x88AB;&#x79BB;&#x6563;&#x5316;&#x6216;&#x62C6;&#x5206;&#x4E3A;&#x201C;&#x9762;&#x5143;&#x201D;&#xFF08;bin&#xFF09;&#x3002;&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x7EC4;&#x4EBA;&#x5458;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4F60;&#x5E0C;&#x671B;&#x5C06;&#x5B83;&#x4EEC;&#x5212;&#x5206;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x5E74;&#x9F84;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">75</span>]: ages = [<span class="hljs-number">20</span>, <span class="hljs-number">22</span>, <span class="hljs-number">25</span>, <span class="hljs-number">27</span>, <span class="hljs-number">21</span>, <span class="hljs-number">23</span>, <span class="hljs-number">37</span>, <span class="hljs-number">31</span>, <span class="hljs-number">61</span>, <span class="hljs-number">45</span>, <span class="hljs-number">41</span>, <span class="hljs-number">32</span>]
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5212;&#x5206;&#x4E3A;&#x201C;18&#x5230;25&#x201D;&#x3001;&#x201C;26&#x5230;35&#x201D;&#x3001;&#x201C;35&#x5230;60&#x201D;&#x4EE5;&#x53CA;&#x201C;60&#x4EE5;&#x4E0A;&#x201D;&#x51E0;&#x4E2A;&#x9762;&#x5143;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x8BE5;&#x529F;&#x80FD;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;pandas&#x7684;cut&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">76</span>]: bins = [<span class="hljs-number">18</span>, <span class="hljs-number">25</span>, <span class="hljs-number">35</span>, <span class="hljs-number">60</span>, <span class="hljs-number">100</span>]
+
+In [<span class="hljs-number">77</span>]: cats = pd.cut(ages, bins)
+
+In [<span class="hljs-number">78</span>]: cats
+Out[<span class="hljs-number">78</span>]: 
+[(<span class="hljs-number">18</span>, <span class="hljs-number">25</span>], (<span class="hljs-number">18</span>, <span class="hljs-number">25</span>], (<span class="hljs-number">18</span>, <span class="hljs-number">25</span>], (<span class="hljs-number">25</span>, <span class="hljs-number">35</span>], (<span class="hljs-number">18</span>, <span class="hljs-number">25</span>], ..., (<span class="hljs-number">25</span>, <span class="hljs-number">35</span>], (<span class="hljs-number">60</span>, <span class="hljs-number">100</span>], (<span class="hljs-number">35</span>,<span class="hljs-number">60</span>], (<span class="hljs-number">35</span>, <span class="hljs-number">60</span>], (<span class="hljs-number">25</span>, <span class="hljs-number">35</span>]]
+Length: <span class="hljs-number">12</span>
+Categories (<span class="hljs-number">4</span>, interval[int64]): [(<span class="hljs-number">18</span>, <span class="hljs-number">25</span>] &lt; (<span class="hljs-number">25</span>, <span class="hljs-number">35</span>] &lt; (<span class="hljs-number">35</span>, <span class="hljs-number">60</span>] &lt; (<span class="hljs-number">60</span>, <span class="hljs-number">100</span>]]
+</code></pre>
+<p>pandas&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;Categorical&#x5BF9;&#x8C61;&#x3002;&#x7ED3;&#x679C;&#x5C55;&#x793A;&#x4E86;pandas.cut&#x5212;&#x5206;&#x7684;&#x9762;&#x5143;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x770B;&#x505A;&#x4E00;&#x7EC4;&#x8868;&#x793A;&#x9762;&#x5143;&#x540D;&#x79F0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5B83;&#x7684;&#x5E95;&#x5C42;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x4E0D;&#x540C;&#x5206;&#x7C7B;&#x540D;&#x79F0;&#x7684;&#x7C7B;&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;codes&#x5C5E;&#x6027;&#x4E2D;&#x7684;&#x5E74;&#x9F84;&#x6570;&#x636E;&#x7684;&#x6807;&#x7B7E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">79</span>]: cats.codes
+Out[<span class="hljs-number">79</span>]: array([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>], dtype=int8)
+
+In [<span class="hljs-number">80</span>]: cats.categories
+Out[<span class="hljs-number">80</span>]: 
+IntervalIndex([(<span class="hljs-number">18</span>, <span class="hljs-number">25</span>], (<span class="hljs-number">25</span>, <span class="hljs-number">35</span>], (<span class="hljs-number">35</span>, <span class="hljs-number">60</span>], (<span class="hljs-number">60</span>, <span class="hljs-number">100</span>]]
+              closed=<span class="hljs-string">&apos;right&apos;</span>,
+              dtype=<span class="hljs-string">&apos;interval[int64]&apos;</span>)
+
+In [<span class="hljs-number">81</span>]: pd.value_counts(cats)
+Out[<span class="hljs-number">81</span>]: 
+(<span class="hljs-number">18</span>, <span class="hljs-number">25</span>]     <span class="hljs-number">5</span>
+(<span class="hljs-number">35</span>, <span class="hljs-number">60</span>]     <span class="hljs-number">3</span>
+(<span class="hljs-number">25</span>, <span class="hljs-number">35</span>]     <span class="hljs-number">3</span>
+(<span class="hljs-number">60</span>, <span class="hljs-number">100</span>]    <span class="hljs-number">1</span>
+dtype: int64
+</code></pre>
+<p>pd.value_counts(cats)&#x662F;pandas.cut&#x7ED3;&#x679C;&#x7684;&#x9762;&#x5143;&#x8BA1;&#x6570;&#x3002;</p>
+<p>&#x8DDF;&#x201C;&#x533A;&#x95F4;&#x201D;&#x7684;&#x6570;&#x5B66;&#x7B26;&#x53F7;&#x4E00;&#x6837;&#xFF0C;&#x5706;&#x62EC;&#x53F7;&#x8868;&#x793A;&#x5F00;&#x7AEF;&#xFF0C;&#x800C;&#x65B9;&#x62EC;&#x53F7;&#x5219;&#x8868;&#x793A;&#x95ED;&#x7AEF;&#xFF08;&#x5305;&#x62EC;&#xFF09;&#x3002;&#x54EA;&#x8FB9;&#x662F;&#x95ED;&#x7AEF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;right=False&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">82</span>]: pd.cut(ages, [<span class="hljs-number">18</span>, <span class="hljs-number">26</span>, <span class="hljs-number">36</span>, <span class="hljs-number">61</span>, <span class="hljs-number">100</span>], right=<span class="hljs-keyword">False</span>)
+Out[<span class="hljs-number">82</span>]: 
+[[<span class="hljs-number">18</span>, <span class="hljs-number">26</span>), [<span class="hljs-number">18</span>, <span class="hljs-number">26</span>), [<span class="hljs-number">18</span>, <span class="hljs-number">26</span>), [<span class="hljs-number">26</span>, <span class="hljs-number">36</span>), [<span class="hljs-number">18</span>, <span class="hljs-number">26</span>), ..., [<span class="hljs-number">26</span>, <span class="hljs-number">36</span>), [<span class="hljs-number">61</span>, <span class="hljs-number">100</span>), [<span class="hljs-number">36</span>,
+ <span class="hljs-number">61</span>), [<span class="hljs-number">36</span>, <span class="hljs-number">61</span>), [<span class="hljs-number">26</span>, <span class="hljs-number">36</span>)]
+Length: <span class="hljs-number">12</span>
+Categories (<span class="hljs-number">4</span>, interval[int64]): [[<span class="hljs-number">18</span>, <span class="hljs-number">26</span>) &lt; [<span class="hljs-number">26</span>, <span class="hljs-number">36</span>) &lt; [<span class="hljs-number">36</span>, <span class="hljs-number">61</span>) &lt; [<span class="hljs-number">61</span>, <span class="hljs-number">100</span>)]
+</code></pre>
+<p>&#x4F60;&#x53EF; &#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x6216;&#x6570;&#x7EC4;&#x5230;labels&#xFF0C;&#x8BBE;&#x7F6E;&#x81EA;&#x5DF1;&#x7684;&#x9762;&#x5143;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">83</span>]: group_names = [<span class="hljs-string">&apos;Youth&apos;</span>, <span class="hljs-string">&apos;YoungAdult&apos;</span>, <span class="hljs-string">&apos;MiddleAged&apos;</span>, <span class="hljs-string">&apos;Senior&apos;</span>]
+
+In [<span class="hljs-number">84</span>]: pd.cut(ages, bins, labels=group_names)
+Out[<span class="hljs-number">84</span>]: 
+[Youth, Youth, Youth, YoungAdult, Youth, ..., YoungAdult, Senior, MiddleAged, Mid
+dleAged, YoungAdult]
+Length: <span class="hljs-number">12</span>
+Categories (<span class="hljs-number">4</span>, object): [Youth &lt; YoungAdult &lt; MiddleAged &lt; Senior]
+</code></pre>
+<p>&#x5982;&#x679C;&#x5411;cut&#x4F20;&#x5165;&#x7684;&#x662F;&#x9762;&#x5143;&#x7684;&#x6570;&#x91CF;&#x800C;&#x4E0D;&#x662F;&#x786E;&#x5207;&#x7684;&#x9762;&#x5143;&#x8FB9;&#x754C;&#xFF0C;&#x5219;&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x6570;&#x636E;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;&#x8BA1;&#x7B97;&#x7B49;&#x957F;&#x9762;&#x5143;&#x3002;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E00;&#x4E9B;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;&#x6570;&#x636E;&#x5206;&#x6210;&#x56DB;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">85</span>]: data = np.random.rand(<span class="hljs-number">20</span>)
+
+In [<span class="hljs-number">86</span>]: pd.cut(data, <span class="hljs-number">4</span>, precision=<span class="hljs-number">2</span>)
+Out[<span class="hljs-number">86</span>]: 
+[(<span class="hljs-number">0.34</span>, <span class="hljs-number">0.55</span>], (<span class="hljs-number">0.34</span>, <span class="hljs-number">0.55</span>], (<span class="hljs-number">0.76</span>, <span class="hljs-number">0.97</span>], (<span class="hljs-number">0.76</span>, <span class="hljs-number">0.97</span>], (<span class="hljs-number">0.34</span>, <span class="hljs-number">0.55</span>], ..., (<span class="hljs-number">0.34</span>
+, <span class="hljs-number">0.55</span>], (<span class="hljs-number">0.34</span>, <span class="hljs-number">0.55</span>], (<span class="hljs-number">0.55</span>, <span class="hljs-number">0.76</span>], (<span class="hljs-number">0.34</span>, <span class="hljs-number">0.55</span>], (<span class="hljs-number">0.12</span>, <span class="hljs-number">0.34</span>]]
+Length: <span class="hljs-number">20</span>
+Categories (<span class="hljs-number">4</span>, interval[float64]): [(<span class="hljs-number">0.12</span>, <span class="hljs-number">0.34</span>] &lt; (<span class="hljs-number">0.34</span>, <span class="hljs-number">0.55</span>] &lt; (<span class="hljs-number">0.55</span>, <span class="hljs-number">0.76</span>] &lt; 
+(<span class="hljs-number">0.76</span>, <span class="hljs-number">0.97</span>]]
+</code></pre>
+<p>&#x9009;&#x9879;precision=2&#xFF0C;&#x9650;&#x5B9A;&#x5C0F;&#x6570;&#x53EA;&#x6709;&#x4E24;&#x4F4D;&#x3002;</p>
+<p>qcut&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#x4E8E;cut&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6837;&#x672C;&#x5206;&#x4F4D;&#x6570;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x9762;&#x5143;&#x5212;&#x5206;&#x3002;&#x6839;&#x636E;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x60C5;&#x51B5;&#xFF0C;cut&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x4F7F;&#x5404;&#x4E2A;&#x9762;&#x5143;&#x4E2D;&#x542B;&#x6709;&#x76F8;&#x540C;&#x6570;&#x91CF;&#x7684;&#x6570;&#x636E;&#x70B9;&#x3002;&#x800C;qcut&#x7531;&#x4E8E;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x6837;&#x672C;&#x5206;&#x4F4D;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5927;&#x5C0F;&#x57FA;&#x672C;&#x76F8;&#x7B49;&#x7684;&#x9762;&#x5143;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">87</span>]: data = np.random.randn(<span class="hljs-number">1000</span>)  <span class="hljs-comment"># Normally distributed</span>
+
+In [<span class="hljs-number">88</span>]: cats = pd.qcut(data, <span class="hljs-number">4</span>)  <span class="hljs-comment"># Cut into quartiles</span>
+
+In [<span class="hljs-number">89</span>]: cats
+Out[<span class="hljs-number">89</span>]: 
+[(-<span class="hljs-number">0.0265</span>, <span class="hljs-number">0.62</span>], (<span class="hljs-number">0.62</span>, <span class="hljs-number">3.928</span>], (-<span class="hljs-number">0.68</span>, -<span class="hljs-number">0.0265</span>], (<span class="hljs-number">0.62</span>, <span class="hljs-number">3.928</span>], (-<span class="hljs-number">0.0265</span>, <span class="hljs-number">0.62</span>]
+, ..., (-<span class="hljs-number">0.68</span>, -<span class="hljs-number">0.0265</span>], (-<span class="hljs-number">0.68</span>, -<span class="hljs-number">0.0265</span>], (-<span class="hljs-number">2.95</span>, -<span class="hljs-number">0.68</span>], (<span class="hljs-number">0.62</span>, <span class="hljs-number">3.928</span>], (-<span class="hljs-number">0.68</span>,
+ -<span class="hljs-number">0.0265</span>]]
+Length: <span class="hljs-number">1000</span>
+Categories (<span class="hljs-number">4</span>, interval[float64]): [(-<span class="hljs-number">2.95</span>, -<span class="hljs-number">0.68</span>] &lt; (-<span class="hljs-number">0.68</span>, -<span class="hljs-number">0.0265</span>] &lt; (-<span class="hljs-number">0.0265</span>,
+ <span class="hljs-number">0.62</span>] &lt;
+                                    (<span class="hljs-number">0.62</span>, <span class="hljs-number">3.928</span>]]
+
+In [<span class="hljs-number">90</span>]: pd.value_counts(cats)
+Out[<span class="hljs-number">90</span>]:
+(<span class="hljs-number">0.62</span>, <span class="hljs-number">3.928</span>]       <span class="hljs-number">250</span>
+(-<span class="hljs-number">0.0265</span>, <span class="hljs-number">0.62</span>]     <span class="hljs-number">250</span>
+(-<span class="hljs-number">0.68</span>, -<span class="hljs-number">0.0265</span>]    <span class="hljs-number">250</span>
+(-<span class="hljs-number">2.95</span>, -<span class="hljs-number">0.68</span>]      <span class="hljs-number">250</span>
+dtype: int64
+</code></pre>
+<p>&#x4E0E;cut&#x7C7B;&#x4F3C;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5206;&#x4F4D;&#x6570;&#xFF08;0&#x5230;1&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x5305;&#x542B;&#x7AEF;&#x70B9;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">91</span>]: pd.qcut(data, [<span class="hljs-number">0</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.9</span>, <span class="hljs-number">1.</span>])
+Out[<span class="hljs-number">91</span>]: 
+[(-<span class="hljs-number">0.0265</span>, <span class="hljs-number">1.286</span>], (-<span class="hljs-number">0.0265</span>, <span class="hljs-number">1.286</span>], (-<span class="hljs-number">1.187</span>, -<span class="hljs-number">0.0265</span>], (-<span class="hljs-number">0.0265</span>, <span class="hljs-number">1.286</span>], (-<span class="hljs-number">0.026</span>
+<span class="hljs-number">5</span>, <span class="hljs-number">1.286</span>], ..., (-<span class="hljs-number">1.187</span>, -<span class="hljs-number">0.0265</span>], (-<span class="hljs-number">1.187</span>, -<span class="hljs-number">0.0265</span>], (-<span class="hljs-number">2.95</span>, -<span class="hljs-number">1.187</span>], (-<span class="hljs-number">0.0265</span>, 
+<span class="hljs-number">1.286</span>], (-<span class="hljs-number">1.187</span>, -<span class="hljs-number">0.0265</span>]]
+Length: <span class="hljs-number">1000</span>
+Categories (<span class="hljs-number">4</span>, interval[float64]): [(-<span class="hljs-number">2.95</span>, -<span class="hljs-number">1.187</span>] &lt; (-<span class="hljs-number">1.187</span>, -<span class="hljs-number">0.0265</span>] &lt; (-<span class="hljs-number">0.026</span>
+<span class="hljs-number">5</span>, <span class="hljs-number">1.286</span>] &lt;
+                                    (<span class="hljs-number">1.286</span>, <span class="hljs-number">3.928</span>]]
+</code></pre>
+<p>&#x672C;&#x7AE0;&#x7A0D;&#x540E;&#x5728;&#x8BB2;&#x89E3;&#x805A;&#x5408;&#x548C;&#x5206;&#x7EC4;&#x8FD0;&#x7B97;&#x65F6;&#x4F1A;&#x518D;&#x6B21;&#x7528;&#x5230;cut&#x548C;qcut&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E24;&#x4E2A;&#x79BB;&#x6563;&#x5316;&#x51FD;&#x6570;&#x5BF9;&#x5206;&#x4F4D;&#x548C;&#x5206;&#x7EC4;&#x5206;&#x6790;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x3002;</p>
+<h2 id="&#x68C0;&#x6D4B;&#x548C;&#x8FC7;&#x6EE4;&#x5F02;&#x5E38;&#x503C;">&#x68C0;&#x6D4B;&#x548C;&#x8FC7;&#x6EE4;&#x5F02;&#x5E38;&#x503C;</h2>
+<p>&#x8FC7;&#x6EE4;&#x6216;&#x53D8;&#x6362;&#x5F02;&#x5E38;&#x503C;&#xFF08;outlier&#xFF09;&#x5728;&#x5F88;&#x5927;&#x7A0B;&#x5EA6;&#x4E0A;&#x5C31;&#x662F;&#x8FD0;&#x7528;&#x6570;&#x7EC4;&#x8FD0;&#x7B97;&#x3002;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x6570;&#x636E;&#x7684;DataFrame&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">92</span>]: data = pd.DataFrame(np.random.randn(<span class="hljs-number">1000</span>, <span class="hljs-number">4</span>))
+
+In [<span class="hljs-number">93</span>]: data.describe()
+Out[<span class="hljs-number">93</span>]: 
+                 <span class="hljs-number">0</span>            <span class="hljs-number">1</span>            <span class="hljs-number">2</span>            <span class="hljs-number">3</span>
+count  <span class="hljs-number">1000.000000</span>  <span class="hljs-number">1000.000000</span>  <span class="hljs-number">1000.000000</span>  <span class="hljs-number">1000.000000</span>
+mean      <span class="hljs-number">0.049091</span>     <span class="hljs-number">0.026112</span>    -<span class="hljs-number">0.002544</span>    -<span class="hljs-number">0.051827</span>
+std       <span class="hljs-number">0.996947</span>     <span class="hljs-number">1.007458</span>     <span class="hljs-number">0.995232</span>     <span class="hljs-number">0.998311</span>
+min      -<span class="hljs-number">3.645860</span>    -<span class="hljs-number">3.184377</span>    -<span class="hljs-number">3.745356</span>    -<span class="hljs-number">3.428254</span>
+<span class="hljs-number">25</span>%      -<span class="hljs-number">0.599807</span>    -<span class="hljs-number">0.612162</span>    -<span class="hljs-number">0.687373</span>    -<span class="hljs-number">0.747478</span>
+<span class="hljs-number">50</span>%       <span class="hljs-number">0.047101</span>    -<span class="hljs-number">0.013609</span>    -<span class="hljs-number">0.022158</span>    -<span class="hljs-number">0.088274</span>
+<span class="hljs-number">75</span>%       <span class="hljs-number">0.756646</span>     <span class="hljs-number">0.695298</span>     <span class="hljs-number">0.699046</span>     <span class="hljs-number">0.623331</span>
+max       <span class="hljs-number">2.653656</span>     <span class="hljs-number">3.525865</span>     <span class="hljs-number">2.735527</span>     <span class="hljs-number">3.366626</span>
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x60F3;&#x8981;&#x627E;&#x51FA;&#x67D0;&#x5217;&#x4E2D;&#x7EDD;&#x5BF9;&#x503C;&#x5927;&#x5C0F;&#x8D85;&#x8FC7;3&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">94</span>]: col = data[<span class="hljs-number">2</span>]
+
+In [<span class="hljs-number">95</span>]: col[np.abs(col) &gt; <span class="hljs-number">3</span>]
+Out[<span class="hljs-number">95</span>]: 
+<span class="hljs-number">41</span>    -<span class="hljs-number">3.399312</span>
+<span class="hljs-number">136</span>   -<span class="hljs-number">3.745356</span>
+Name: <span class="hljs-number">2</span>, dtype: float64
+</code></pre>
+<p>&#x8981;&#x9009;&#x51FA;&#x5168;&#x90E8;&#x542B;&#x6709;&#x201C;&#x8D85;&#x8FC7;3&#x6216;&#xFF0D;3&#x7684;&#x503C;&#x201D;&#x7684;&#x884C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x5E03;&#x5C14;&#x578B;DataFrame&#x4E2D;&#x4F7F;&#x7528;any&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">96</span>]: data[(np.abs(data) &gt; <span class="hljs-number">3</span>).any(<span class="hljs-number">1</span>)]
+Out[<span class="hljs-number">96</span>]: 
+            <span class="hljs-number">0</span>         <span class="hljs-number">1</span>         <span class="hljs-number">2</span>         <span class="hljs-number">3</span>
+<span class="hljs-number">41</span>   <span class="hljs-number">0.457246</span> -<span class="hljs-number">0.025907</span> -<span class="hljs-number">3.399312</span> -<span class="hljs-number">0.974657</span>
+<span class="hljs-number">60</span>   <span class="hljs-number">1.951312</span>  <span class="hljs-number">3.260383</span>  <span class="hljs-number">0.963301</span>  <span class="hljs-number">1.201206</span>
+<span class="hljs-number">136</span>  <span class="hljs-number">0.508391</span> -<span class="hljs-number">0.196713</span> -<span class="hljs-number">3.745356</span> -<span class="hljs-number">1.520113</span>
+<span class="hljs-number">235</span> -<span class="hljs-number">0.242459</span> -<span class="hljs-number">3.056990</span>  <span class="hljs-number">1.918403</span> -<span class="hljs-number">0.578828</span>
+<span class="hljs-number">258</span>  <span class="hljs-number">0.682841</span>  <span class="hljs-number">0.326045</span>  <span class="hljs-number">0.425384</span> -<span class="hljs-number">3.428254</span>
+<span class="hljs-number">322</span>  <span class="hljs-number">1.179227</span> -<span class="hljs-number">3.184377</span>  <span class="hljs-number">1.369891</span> -<span class="hljs-number">1.074833</span>
+<span class="hljs-number">544</span> -<span class="hljs-number">3.548824</span>  <span class="hljs-number">1.553205</span> -<span class="hljs-number">2.186301</span>  <span class="hljs-number">1.277104</span>
+<span class="hljs-number">635</span> -<span class="hljs-number">0.578093</span>  <span class="hljs-number">0.193299</span>  <span class="hljs-number">1.397822</span>  <span class="hljs-number">3.366626</span>
+<span class="hljs-number">782</span> -<span class="hljs-number">0.207434</span>  <span class="hljs-number">3.525865</span>  <span class="hljs-number">0.283070</span>  <span class="hljs-number">0.544635</span>
+<span class="hljs-number">803</span> -<span class="hljs-number">3.645860</span>  <span class="hljs-number">0.255475</span> -<span class="hljs-number">0.549574</span> -<span class="hljs-number">1.907459</span>
+</code></pre>
+<p>&#x6839;&#x636E;&#x8FD9;&#x4E9B;&#x6761;&#x4EF6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x503C;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5C06;&#x503C;&#x9650;&#x5236;&#x5728;&#x533A;&#x95F4;&#xFF0D;3&#x5230;3&#x4EE5;&#x5185;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">97</span>]: data[np.abs(data) &gt; <span class="hljs-number">3</span>] = np.sign(data) * <span class="hljs-number">3</span>
+
+In [<span class="hljs-number">98</span>]: data.describe()
+Out[<span class="hljs-number">98</span>]: 
+                 <span class="hljs-number">0</span>            <span class="hljs-number">1</span>            <span class="hljs-number">2</span>            <span class="hljs-number">3</span>
+count  <span class="hljs-number">1000.000000</span>  <span class="hljs-number">1000.000000</span>  <span class="hljs-number">1000.000000</span>  <span class="hljs-number">1000.000000</span>
+mean      <span class="hljs-number">0.050286</span>     <span class="hljs-number">0.025567</span>    -<span class="hljs-number">0.001399</span>    -<span class="hljs-number">0.051765</span>
+std       <span class="hljs-number">0.992920</span>     <span class="hljs-number">1.004214</span>     <span class="hljs-number">0.991414</span>     <span class="hljs-number">0.995761</span>
+min      -<span class="hljs-number">3.000000</span>    -<span class="hljs-number">3.000000</span>    -<span class="hljs-number">3.000000</span>    -<span class="hljs-number">3.000000</span>
+<span class="hljs-number">25</span>%      -<span class="hljs-number">0.599807</span>    -<span class="hljs-number">0.612162</span>    -<span class="hljs-number">0.687373</span>    -<span class="hljs-number">0.747478</span>
+<span class="hljs-number">50</span>%       <span class="hljs-number">0.047101</span>    -<span class="hljs-number">0.013609</span>    -<span class="hljs-number">0.022158</span>    -<span class="hljs-number">0.088274</span>
+<span class="hljs-number">75</span>%       <span class="hljs-number">0.756646</span>     <span class="hljs-number">0.695298</span>     <span class="hljs-number">0.699046</span>     <span class="hljs-number">0.623331</span>
+max       <span class="hljs-number">2.653656</span>     <span class="hljs-number">3.000000</span>     <span class="hljs-number">2.735527</span>     <span class="hljs-number">3.000000</span>
+</code></pre>
+<p>&#x6839;&#x636E;&#x6570;&#x636E;&#x7684;&#x503C;&#x662F;&#x6B63;&#x8FD8;&#x662F;&#x8D1F;&#xFF0C;np.sign(data)&#x53EF;&#x4EE5;&#x751F;&#x6210;1&#x548C;-1&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">99</span>]: np.sign(data).head()
+Out[<span class="hljs-number">99</span>]: 
+     <span class="hljs-number">0</span>    <span class="hljs-number">1</span>    <span class="hljs-number">2</span>    <span class="hljs-number">3</span>
+<span class="hljs-number">0</span> -<span class="hljs-number">1.0</span>  <span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span>  <span class="hljs-number">1.0</span>
+<span class="hljs-number">1</span>  <span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span>  <span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">1.0</span>  <span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span>
+<span class="hljs-number">3</span> -<span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span>  <span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span>
+<span class="hljs-number">4</span> -<span class="hljs-number">1.0</span>  <span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span> -<span class="hljs-number">1.0</span>
+</code></pre>
+<h2 id="&#x6392;&#x5217;&#x548C;&#x968F;&#x673A;&#x91C7;&#x6837;">&#x6392;&#x5217;&#x548C;&#x968F;&#x673A;&#x91C7;&#x6837;</h2>
+<p>&#x5229;&#x7528;numpy.random.permutation&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5B9E;&#x73B0;&#x5BF9;Series&#x6216;DataFrame&#x7684;&#x5217;&#x7684;&#x6392;&#x5217;&#x5DE5;&#x4F5C;&#xFF08;permuting&#xFF0C;&#x968F;&#x673A;&#x91CD;&#x6392;&#x5E8F;&#xFF09;&#x3002;&#x901A;&#x8FC7;&#x9700;&#x8981;&#x6392;&#x5217;&#x7684;&#x8F74;&#x7684;&#x957F;&#x5EA6;&#x8C03;&#x7528;permutation&#xFF0C;&#x53EF;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x65B0;&#x987A;&#x5E8F;&#x7684;&#x6574;&#x6570;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">100</span>]: df = pd.DataFrame(np.arange(<span class="hljs-number">5</span> * <span class="hljs-number">4</span>).reshape((<span class="hljs-number">5</span>, <span class="hljs-number">4</span>)))
+
+In [<span class="hljs-number">101</span>]: sampler = np.random.permutation(<span class="hljs-number">5</span>)
+
+In [<span class="hljs-number">102</span>]: sampler
+Out[<span class="hljs-number">102</span>]: array([<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>])
+</code></pre>
+<p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x57FA;&#x4E8E;iloc&#x7684;&#x7D22;&#x5F15;&#x64CD;&#x4F5C;&#x6216;take&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#x8BE5;&#x6570;&#x7EC4;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">103</span>]: df
+Out[<span class="hljs-number">103</span>]: 
+    <span class="hljs-number">0</span>   <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>
+<span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>
+<span class="hljs-number">1</span>   <span class="hljs-number">4</span>   <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>
+<span class="hljs-number">2</span>   <span class="hljs-number">8</span>   <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">12</span>  <span class="hljs-number">13</span>  <span class="hljs-number">14</span>  <span class="hljs-number">15</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">16</span>  <span class="hljs-number">17</span>  <span class="hljs-number">18</span>  <span class="hljs-number">19</span>
+
+In [<span class="hljs-number">104</span>]: df.take(sampler)
+Out[<span class="hljs-number">104</span>]: 
+    <span class="hljs-number">0</span>   <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">12</span>  <span class="hljs-number">13</span>  <span class="hljs-number">14</span>  <span class="hljs-number">15</span>
+<span class="hljs-number">1</span>   <span class="hljs-number">4</span>   <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">16</span>  <span class="hljs-number">17</span>  <span class="hljs-number">18</span>  <span class="hljs-number">19</span>
+<span class="hljs-number">2</span>   <span class="hljs-number">8</span>   <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>
+<span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x7528;&#x66FF;&#x6362;&#x7684;&#x65B9;&#x5F0F;&#x9009;&#x53D6;&#x968F;&#x673A;&#x5B50;&#x96C6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;Series&#x548C;DataFrame&#x4E0A;&#x4F7F;&#x7528;sample&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">105</span>]: df.sample(n=<span class="hljs-number">3</span>)
+Out[<span class="hljs-number">105</span>]: 
+    <span class="hljs-number">0</span>   <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">12</span>  <span class="hljs-number">13</span>  <span class="hljs-number">14</span>  <span class="hljs-number">15</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">16</span>  <span class="hljs-number">17</span>  <span class="hljs-number">18</span>  <span class="hljs-number">19</span>
+<span class="hljs-number">2</span>   <span class="hljs-number">8</span>   <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>
+</code></pre>
+<p>&#x8981;&#x901A;&#x8FC7;&#x66FF;&#x6362;&#x7684;&#x65B9;&#x5F0F;&#x4EA7;&#x751F;&#x6837;&#x672C;&#xFF08;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x9009;&#x62E9;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x9012;replace=True&#x5230;sample&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">106</span>]: choices = pd.Series([<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">4</span>])
+
+In [<span class="hljs-number">107</span>]: draws = choices.sample(n=<span class="hljs-number">10</span>, replace=<span class="hljs-keyword">True</span>)
+
+In [<span class="hljs-number">108</span>]: draws
+Out[<span class="hljs-number">108</span>]: 
+<span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+<span class="hljs-number">1</span>    <span class="hljs-number">7</span>
+<span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+<span class="hljs-number">2</span>   -<span class="hljs-number">1</span>
+<span class="hljs-number">0</span>    <span class="hljs-number">5</span>
+<span class="hljs-number">3</span>    <span class="hljs-number">6</span>
+<span class="hljs-number">1</span>    <span class="hljs-number">7</span>
+<span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+<span class="hljs-number">0</span>    <span class="hljs-number">5</span>
+<span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+dtype: int64
+</code></pre>
+<h2 id="&#x8BA1;&#x7B97;&#x6307;&#x6807;&#x54D1;&#x53D8;&#x91CF;">&#x8BA1;&#x7B97;&#x6307;&#x6807;/&#x54D1;&#x53D8;&#x91CF;</h2>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x5E38;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x5EFA;&#x6A21;&#x6216;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x8F6C;&#x6362;&#x65B9;&#x5F0F;&#x662F;&#xFF1A;&#x5C06;&#x5206;&#x7C7B;&#x53D8;&#x91CF;&#xFF08;categorical variable&#xFF09;&#x8F6C;&#x6362;&#x4E3A;&#x201C;&#x54D1;&#x53D8;&#x91CF;&#x201D;&#x6216;&#x201C;&#x6307;&#x6807;&#x77E9;&#x9635;&#x201D;&#x3002;</p>
+<p>&#x5982;&#x679C;DataFrame&#x7684;&#x67D0;&#x4E00;&#x5217;&#x4E2D;&#x542B;&#x6709;k&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x6D3E;&#x751F;&#x51FA;&#x4E00;&#x4E2A;k&#x5217;&#x77E9;&#x9635;&#x6216;DataFrame&#xFF08;&#x5176;&#x503C;&#x5168;&#x4E3A;1&#x548C;0&#xFF09;&#x3002;pandas&#x6709;&#x4E00;&#x4E2A;get_dummies&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8BE5;&#x529F;&#x80FD;&#xFF08;&#x5176;&#x5B9E;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x505A;&#x4E00;&#x4E2A;&#x4E5F;&#x4E0D;&#x96BE;&#xFF09;&#x3002;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x4E2A;DataFrame&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">109</span>]: df = pd.DataFrame({<span class="hljs-string">&apos;key&apos;</span>: [<span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>],
+   .....:                    <span class="hljs-string">&apos;data1&apos;</span>: range(<span class="hljs-number">6</span>)})
+
+In [<span class="hljs-number">110</span>]: pd.get_dummies(df[<span class="hljs-string">&apos;key&apos;</span>])
+Out[<span class="hljs-number">110</span>]: 
+   a  b  c
+<span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
+<span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
+</code></pre>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x7ED9;&#x6307;&#x6807;DataFrame&#x7684;&#x5217;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x524D;&#x7F00;&#xFF0C;&#x4EE5;&#x4FBF;&#x80FD;&#x591F;&#x8DDF;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x3002;get_dummies&#x7684;prefix&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8BE5;&#x529F;&#x80FD;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">111</span>]: dummies = pd.get_dummies(df[<span class="hljs-string">&apos;key&apos;</span>], prefix=<span class="hljs-string">&apos;key&apos;</span>)
+
+In [<span class="hljs-number">112</span>]: df_with_dummy = df[[<span class="hljs-string">&apos;data1&apos;</span>]].join(dummies)
+
+In [<span class="hljs-number">113</span>]: df_with_dummy
+Out[<span class="hljs-number">113</span>]: 
+   data1  key_a  key_b  key_c
+<span class="hljs-number">0</span>      <span class="hljs-number">0</span>      <span class="hljs-number">0</span>      <span class="hljs-number">1</span>      <span class="hljs-number">0</span>
+<span class="hljs-number">1</span>      <span class="hljs-number">1</span>      <span class="hljs-number">0</span>      <span class="hljs-number">1</span>      <span class="hljs-number">0</span>
+<span class="hljs-number">2</span>      <span class="hljs-number">2</span>      <span class="hljs-number">1</span>      <span class="hljs-number">0</span>      <span class="hljs-number">0</span>
+<span class="hljs-number">3</span>      <span class="hljs-number">3</span>      <span class="hljs-number">0</span>      <span class="hljs-number">0</span>      <span class="hljs-number">1</span>
+<span class="hljs-number">4</span>      <span class="hljs-number">4</span>      <span class="hljs-number">1</span>      <span class="hljs-number">0</span>      <span class="hljs-number">0</span>
+<span class="hljs-number">5</span>      <span class="hljs-number">5</span>      <span class="hljs-number">0</span>      <span class="hljs-number">1</span>      <span class="hljs-number">0</span>
+</code></pre>
+<p>&#x5982;&#x679C;DataFrame&#x4E2D;&#x7684;&#x67D0;&#x884C;&#x540C;&#x5C5E;&#x4E8E;&#x591A;&#x4E2A;&#x5206;&#x7C7B;&#xFF0C;&#x5219;&#x4E8B;&#x60C5;&#x5C31;&#x4F1A;&#x6709;&#x70B9;&#x590D;&#x6742;&#x3002;&#x770B;&#x4E00;&#x4E0B;MovieLens 1M&#x6570;&#x636E;&#x96C6;&#xFF0C;14&#x7AE0;&#x4F1A;&#x66F4;&#x6DF1;&#x5165;&#x5730;&#x7814;&#x7A76;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-python">In [114]: mnames = [&apos;movie_id&apos;, &apos;title&apos;, &apos;genres&apos;]
+
+In [115]: movies = pd.read_table(&apos;datasets/movielens/movies.dat&apos;, sep=&apos;::&apos;,
+   .....:                        header=None, names=mnames)
+
+In [116]: movies[:10]
+Out[116]: 
+   movie_id                               title                        genres
+0         1                    Toy Story (1995)   Animation|Children&apos;s|Comedy
+1         2                      Jumanji (1995)  Adventure|Children&apos;s|Fantasy
+2         3             Grumpier Old Men (1995)                Comedy|Romance
+3         4            Waiting to Exhale (1995)                  Comedy|Drama
+4         5  Father of the Bride Part II (1995)                        Comedy
+5         6                         Heat (1995)         Action|Crime|Thriller
+6         7                      Sabrina (1995)                Comedy|Romance
+7         8                 Tom and Huck (1995)          Adventure|Children&apos;s
+8         9                 Sudden Death (1995)
+Action
+9        10                    GoldenEye (1995)     Action|Adventure|Thriller
+</code></pre>
+<p>&#x8981;&#x4E3A;&#x6BCF;&#x4E2A;genre&#x6DFB;&#x52A0;&#x6307;&#x6807;&#x53D8;&#x91CF;&#x5C31;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x89C4;&#x6574;&#x64CD;&#x4F5C;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x4ECE;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x62BD;&#x53D6;&#x51FA;&#x4E0D;&#x540C;&#x7684;genre&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">117</span>]: all_genres = []
+
+In [<span class="hljs-number">118</span>]: <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> movies.genres:
+   .....:     all_genres.extend(x.split(<span class="hljs-string">&apos;|&apos;</span>))
+
+In [<span class="hljs-number">119</span>]: genres = pd.unique(all_genres)
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6709;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">120</span>]: genres
+Out[<span class="hljs-number">120</span>]: 
+array([<span class="hljs-string">&apos;Animation&apos;</span>, <span class="hljs-string">&quot;Children&apos;s&quot;</span>, <span class="hljs-string">&apos;Comedy&apos;</span>, <span class="hljs-string">&apos;Adventure&apos;</span>, <span class="hljs-string">&apos;Fantasy&apos;</span>,
+       <span class="hljs-string">&apos;Romance&apos;</span>, <span class="hljs-string">&apos;Drama&apos;</span>, <span class="hljs-string">&apos;Action&apos;</span>, <span class="hljs-string">&apos;Crime&apos;</span>, <span class="hljs-string">&apos;Thriller&apos;</span>,<span class="hljs-string">&apos;Horror&apos;</span>,
+       <span class="hljs-string">&apos;Sci-Fi&apos;</span>, <span class="hljs-string">&apos;Documentary&apos;</span>, <span class="hljs-string">&apos;War&apos;</span>, <span class="hljs-string">&apos;Musical&apos;</span>, <span class="hljs-string">&apos;Mystery&apos;</span>, <span class="hljs-string">&apos;Film-Noir&apos;</span>,
+       <span class="hljs-string">&apos;Western&apos;</span>], dtype=object)
+</code></pre>
+<p>&#x6784;&#x5EFA;&#x6307;&#x6807;DataFrame&#x7684;&#x65B9;&#x6CD5;&#x4E4B;&#x4E00;&#x662F;&#x4ECE;&#x4E00;&#x4E2A;&#x5168;&#x96F6;DataFrame&#x5F00;&#x59CB;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">121</span>]: zero_matrix = np.zeros((len(movies), len(genres)))
+
+In [<span class="hljs-number">122</span>]: dummies = pd.DataFrame(zero_matrix, columns=genres)
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x8FED;&#x4EE3;&#x6BCF;&#x4E00;&#x90E8;&#x7535;&#x5F71;&#xFF0C;&#x5E76;&#x5C06;dummies&#x5404;&#x884C;&#x7684;&#x6761;&#x76EE;&#x8BBE;&#x4E3A;1&#x3002;&#x8981;&#x8FD9;&#x4E48;&#x505A;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;dummies.columns&#x6765;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x5217;&#x7D22;&#x5F15;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">123</span>]: gen = movies.genres[<span class="hljs-number">0</span>]
+
+In [<span class="hljs-number">124</span>]: gen.split(<span class="hljs-string">&apos;|&apos;</span>)
+Out[<span class="hljs-number">124</span>]: [<span class="hljs-string">&apos;Animation&apos;</span>, <span class="hljs-string">&quot;Children&apos;s&quot;</span>, <span class="hljs-string">&apos;Comedy&apos;</span>]
+
+In [<span class="hljs-number">125</span>]: dummies.columns.get_indexer(gen.split(<span class="hljs-string">&apos;|&apos;</span>))
+Out[<span class="hljs-number">125</span>]: array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6839;&#x636E;&#x7D22;&#x5F15;&#xFF0C;&#x4F7F;&#x7528;.iloc&#x8BBE;&#x5B9A;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">126</span>]: <span class="hljs-keyword">for</span> i, gen <span class="hljs-keyword">in</span> enumerate(movies.genres):
+   .....:     indices = dummies.columns.get_indexer(gen.split(<span class="hljs-string">&apos;|&apos;</span>))
+   .....:     dummies.iloc[i, indices] = <span class="hljs-number">1</span>
+   .....:
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x548C;&#x4EE5;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x518D;&#x5C06;&#x5176;&#x4E0E;movies&#x5408;&#x5E76;&#x8D77;&#x6765;&#xFF1A;</p>
+<pre><code class="lang-python">In [127]: movies_windic = movies.join(dummies.add_prefix(&apos;Genre_&apos;))
+
+In [128]: movies_windic.iloc[0]
+Out[128]: 
+movie_id                                       1
+title                           Toy Story (1995)
+genres               Animation|Children&apos;s|Comedy
+Genre_Animation                                1
+Genre_Children&apos;s                               1
+Genre_Comedy                                   1
+Genre_Adventure                                0
+Genre_Fantasy                                  0
+Genre_Romance                                  0
+Genre_Drama                                    0
+                                ...             
+Genre_Crime                                    0
+Genre_Thriller                                 0
+Genre_Horror                                   0
+Genre_Sci-Fi                                   0
+Genre_Documentary                              0
+Genre_War                                      0
+Genre_Musical                                  0
+Genre_Mystery                                  0
+Genre_Film-Noir                                0
+Genre_Western                                  0
+Name: 0, Length: 21, dtype: object
+</code></pre>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x5BF9;&#x4E8E;&#x5F88;&#x5927;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6784;&#x5EFA;&#x591A;&#x6210;&#x5458;&#x6307;&#x6807;&#x53D8;&#x91CF;&#x5C31;&#x4F1A;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x6162;&#x3002;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x66F4;&#x4F4E;&#x7EA7;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x5176;&#x5199;&#x5165;NumPy&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x7ED3;&#x679C;&#x5305;&#x88C5;&#x5728;DataFrame&#x4E2D;&#x3002;</p>
+</blockquote>
+<p>&#x4E00;&#x4E2A;&#x5BF9;&#x7EDF;&#x8BA1;&#x5E94;&#x7528;&#x6709;&#x7528;&#x7684;&#x79D8;&#x8BC0;&#x662F;&#xFF1A;&#x7ED3;&#x5408;get_dummies&#x548C;&#x8BF8;&#x5982;cut&#x4E4B;&#x7C7B;&#x7684;&#x79BB;&#x6563;&#x5316;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">129</span>]: np.random.seed(<span class="hljs-number">12345</span>)
+
+In [<span class="hljs-number">130</span>]: values = np.random.rand(<span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">131</span>]: values
+Out[<span class="hljs-number">131</span>]: 
+array([ <span class="hljs-number">0.9296</span>,  <span class="hljs-number">0.3164</span>,  <span class="hljs-number">0.1839</span>,  <span class="hljs-number">0.2046</span>,  <span class="hljs-number">0.5677</span>,  <span class="hljs-number">0.5955</span>,  <span class="hljs-number">0.9645</span>,
+        <span class="hljs-number">0.6532</span>,  <span class="hljs-number">0.7489</span>,  <span class="hljs-number">0.6536</span>])
+
+In [<span class="hljs-number">132</span>]: bins = [<span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.4</span>, <span class="hljs-number">0.6</span>, <span class="hljs-number">0.8</span>, <span class="hljs-number">1</span>]
+
+In [<span class="hljs-number">133</span>]: pd.get_dummies(pd.cut(values, bins))
+Out[<span class="hljs-number">133</span>]: 
+   (<span class="hljs-number">0.0</span>, <span class="hljs-number">0.2</span>]  (<span class="hljs-number">0.2</span>, <span class="hljs-number">0.4</span>]  (<span class="hljs-number">0.4</span>, <span class="hljs-number">0.6</span>]  (<span class="hljs-number">0.6</span>, <span class="hljs-number">0.8</span>]  (<span class="hljs-number">0.8</span>, <span class="hljs-number">1.0</span>]
+<span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>
+<span class="hljs-number">1</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>
+<span class="hljs-number">2</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>
+<span class="hljs-number">3</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>
+<span class="hljs-number">4</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>
+<span class="hljs-number">5</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>
+<span class="hljs-number">6</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>
+<span class="hljs-number">7</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>
+<span class="hljs-number">8</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>
+<span class="hljs-number">9</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">0</span>           <span class="hljs-number">1</span>           <span class="hljs-number">0</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x7528;numpy.random.seed&#xFF0C;&#x4F7F;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5177;&#x6709;&#x786E;&#x5B9A;&#x6027;&#x3002;&#x672C;&#x4E66;&#x540E;&#x9762;&#x4F1A;&#x4ECB;&#x7ECD;pandas.get_dummies&#x3002;</p>
+<h1 id="73-&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;">7.3 &#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;</h1>
+<p>Python&#x80FD;&#x591F;&#x6210;&#x4E3A;&#x6D41;&#x884C;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x8BED;&#x8A00;&#xFF0C;&#x90E8;&#x5206;&#x539F;&#x56E0;&#x662F;&#x5176;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x6587;&#x672C;&#x5904;&#x7406;&#x529F;&#x80FD;&#x3002;&#x5927;&#x90E8;&#x5206;&#x6587;&#x672C;&#x8FD0;&#x7B97;&#x90FD;&#x76F4;&#x63A5;&#x505A;&#x6210;&#x4E86;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x7F6E;&#x65B9;&#x6CD5;&#x3002;&#x5BF9;&#x4E8E;&#x66F4;&#x4E3A;&#x590D;&#x6742;&#x7684;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x548C;&#x6587;&#x672C;&#x64CD;&#x4F5C;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x7528;&#x5230;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;pandas&#x5BF9;&#x6B64;&#x8FDB;&#x884C;&#x4E86;&#x52A0;&#x5F3A;&#xFF0C;&#x5B83;&#x4F7F;&#x4F60;&#x80FD;&#x591F;&#x5BF9;&#x6574;&#x7EC4;&#x6570;&#x636E;&#x5E94;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x800C;&#x4E14;&#x80FD;&#x5904;&#x7406;&#x70E6;&#x4EBA;&#x7684;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;</h2>
+<p>&#x5BF9;&#x4E8E;&#x8BB8;&#x591A;&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;&#x548C;&#x811A;&#x672C;&#x5E94;&#x7528;&#xFF0C;&#x5185;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#x5DF2;&#x7ECF;&#x80FD;&#x591F;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x4EE5;&#x7528;split&#x62C6;&#x5206;&#x6210;&#x6570;&#x6BB5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">134</span>]: val = <span class="hljs-string">&apos;a,b,  guido&apos;</span>
+In [<span class="hljs-number">135</span>]: val.split(<span class="hljs-string">&apos;,&apos;</span>)
+Out[<span class="hljs-number">135</span>]: [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;  guido&apos;</span>]
+</code></pre>
+<p>split&#x5E38;&#x5E38;&#x4E0E;strip&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x53BB;&#x9664;&#x7A7A;&#x767D;&#x7B26;&#xFF08;&#x5305;&#x62EC;&#x6362;&#x884C;&#x7B26;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">136</span>]: pieces = [x.strip() <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> val.split(<span class="hljs-string">&apos;,&apos;</span>)]
+
+In [<span class="hljs-number">137</span>]: pieces
+Out[<span class="hljs-number">137</span>]: [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;guido&apos;</span>]
+</code></pre>
+<p>&#x5229;&#x7528;&#x52A0;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x4EE5;&#x53CC;&#x5192;&#x53F7;&#x5206;&#x9694;&#x7B26;&#x7684;&#x5F62;&#x5F0F;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">138</span>]: first, second, third = pieces
+
+In [<span class="hljs-number">139</span>]: first + <span class="hljs-string">&apos;::&apos;</span> + second + <span class="hljs-string">&apos;::&apos;</span> + third
+Out[<span class="hljs-number">139</span>]: <span class="hljs-string">&apos;a::b::guido&apos;</span>
+</code></pre>
+<p>&#x4F46;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x5B9E;&#x7528;&#x3002;&#x4E00;&#x79CD;&#x66F4;&#x5FEB;&#x66F4;&#x7B26;&#x5408;Python&#x98CE;&#x683C;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#xFF0C;&#x5411;&#x5B57;&#x7B26;&#x4E32;&quot;::&quot;&#x7684;join&#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x6216;&#x5143;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">140</span>]: <span class="hljs-string">&apos;::&apos;</span>.join(pieces)
+Out[<span class="hljs-number">140</span>]: <span class="hljs-string">&apos;a::b::guido&apos;</span>
+</code></pre>
+<p>&#x5176;&#x5B83;&#x65B9;&#x6CD5;&#x5173;&#x6CE8;&#x7684;&#x662F;&#x5B50;&#x4E32;&#x5B9A;&#x4F4D;&#x3002;&#x68C0;&#x6D4B;&#x5B50;&#x4E32;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;&#x662F;&#x5229;&#x7528;Python&#x7684;in&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;index&#x548C;find&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">141</span>]: <span class="hljs-string">&apos;guido&apos;</span> <span class="hljs-keyword">in</span> val
+Out[<span class="hljs-number">141</span>]: <span class="hljs-keyword">True</span>
+
+In [<span class="hljs-number">142</span>]: val.index(<span class="hljs-string">&apos;,&apos;</span>)
+Out[<span class="hljs-number">142</span>]: <span class="hljs-number">1</span>
+
+In [<span class="hljs-number">143</span>]: val.find(<span class="hljs-string">&apos;:&apos;</span>)
+Out[<span class="hljs-number">143</span>]: -<span class="hljs-number">1</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;find&#x548C;index&#x7684;&#x533A;&#x522B;&#xFF1A;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;index&#x5C06;&#x4F1A;&#x5F15;&#x53D1;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x8FD4;&#x56DE;&#xFF0D;1&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [144]: val.index(&apos;:&apos;)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+&lt;ipython-input-144-280f8b2856ce&gt; in &lt;module&gt;()
+----&gt; 1 val.index(&apos;:&apos;)
+ValueError: substring not found
+</code></pre>
+<p>&#x4E0E;&#x6B64;&#x76F8;&#x5173;&#xFF0C;count&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5B50;&#x4E32;&#x7684;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">145</span>]: val.count(<span class="hljs-string">&apos;,&apos;</span>)
+Out[<span class="hljs-number">145</span>]: <span class="hljs-number">2</span>
+</code></pre>
+<p>replace&#x7528;&#x4E8E;&#x5C06;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x66FF;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x6A21;&#x5F0F;&#x3002;&#x901A;&#x8FC7;&#x4F20;&#x5165;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B83;&#x4E5F;&#x5E38;&#x5E38;&#x7528;&#x4E8E;&#x5220;&#x9664;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">146</span>]: val.replace(<span class="hljs-string">&apos;,&apos;</span>, <span class="hljs-string">&apos;::&apos;</span>)
+Out[<span class="hljs-number">146</span>]: <span class="hljs-string">&apos;a::b::  guido&apos;</span>
+
+In [<span class="hljs-number">147</span>]: val.replace(<span class="hljs-string">&apos;,&apos;</span>, <span class="hljs-string">&apos;&apos;</span>)
+Out[<span class="hljs-number">147</span>]: <span class="hljs-string">&apos;ab  guido&apos;</span>
+</code></pre>
+<p>&#x8868;7-3&#x5217;&#x51FA;&#x4E86;Python&#x5185;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x8FD0;&#x7B97;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x80FD;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B9E;&#x73B0;&#xFF08;&#x9A6C;&#x4E0A;&#x5C31;&#x4F1A;&#x770B;&#x5230;&#xFF09;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-087fe67bf6db0701.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-d1f0d4ed3e895016.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>casefold      &#x5C06;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;&#xFF0C;&#x5E76;&#x5C06;&#x4EFB;&#x4F55;&#x7279;&#x5B9A;&#x533A;&#x57DF;&#x7684;&#x53D8;&#x91CF;&#x5B57;&#x7B26;&#x7EC4;&#x5408;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x53EF;&#x6BD4;&#x8F83;&#x5F62;&#x5F0F;&#x3002;</p>
+<h2 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x7075;&#x6D3B;&#x7684;&#x5728;&#x6587;&#x672C;&#x4E2D;&#x641C;&#x7D22;&#x6216;&#x5339;&#x914D;&#xFF08;&#x901A;&#x5E38;&#x6BD4;&#x524D;&#x8005;&#x590D;&#x6742;&#xFF09;&#x5B57;&#x7B26;&#x4E32;&#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E38;&#x79F0;&#x4F5C;regex&#xFF0C;&#x662F;&#x6839;&#x636E;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;Python&#x5185;&#x7F6E;&#x7684;re&#x6A21;&#x5757;&#x8D1F;&#x8D23;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x5E94;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x6211;&#x5C06;&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;&#x5176;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7F16;&#x5199;&#x6280;&#x5DE7;&#x53EF;&#x4EE5;&#x81EA;&#x6210;&#x4E00;&#x7AE0;&#xFF0C;&#x8D85;&#x51FA;&#x4E86;&#x672C;&#x4E66;&#x7684;&#x8303;&#x56F4;&#x3002;&#x4ECE;&#x7F51;&#x4E0A;&#x548C;&#x5176;&#x5B83;&#x4E66;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x8BB8;&#x591A;&#x975E;&#x5E38;&#x4E0D;&#x9519;&#x7684;&#x6559;&#x7A0B;&#x548C;&#x53C2;&#x8003;&#x8D44;&#x6599;&#x3002;</p>
+</blockquote>
+<p>re&#x6A21;&#x5757;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x5927;&#x7C7B;&#xFF1A;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x3001;&#x66FF;&#x6362;&#x4EE5;&#x53CA;&#x62C6;&#x5206;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x662F;&#x76F8;&#x8F85;&#x76F8;&#x6210;&#x7684;&#x3002;&#x4E00;&#x4E2A;regex&#x63CF;&#x8FF0;&#x4E86;&#x9700;&#x8981;&#x5728;&#x6587;&#x672C;&#x4E2D;&#x5B9A;&#x4F4D;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5F0F;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8BB8;&#x591A;&#x76EE;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;&#x5047;&#x8BBE;&#x6211;&#x60F3;&#x8981;&#x62C6;&#x5206;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5206;&#x9694;&#x7B26;&#x4E3A;&#x6570;&#x91CF;&#x4E0D;&#x5B9A;&#x7684;&#x4E00;&#x7EC4;&#x7A7A;&#x767D;&#x7B26;&#xFF08;&#x5236;&#x8868;&#x7B26;&#x3001;&#x7A7A;&#x683C;&#x3001;&#x6362;&#x884C;&#x7B26;&#x7B49;&#xFF09;&#x3002;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7A7A;&#x767D;&#x7B26;&#x7684;regex&#x662F;\s+&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">148</span>]: <span class="hljs-keyword">import</span> re
+
+In [<span class="hljs-number">149</span>]: text = <span class="hljs-string">&quot;foo    bar\t baz  \tqux&quot;</span>
+
+In [<span class="hljs-number">150</span>]: re.split(<span class="hljs-string">&apos;\s+&apos;</span>, text)
+Out[<span class="hljs-number">150</span>]: [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>, <span class="hljs-string">&apos;qux&apos;</span>]
+</code></pre>
+<p>&#x8C03;&#x7528;re.split(&apos;\s+&apos;,text)&#x65F6;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F1A;&#x5148;&#x88AB;&#x7F16;&#x8BD1;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;text&#x4E0A;&#x8C03;&#x7528;&#x5176;split&#x65B9;&#x6CD5;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;re.compile&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;regex&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x91CD;&#x7528;&#x7684;regex&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">151</span>]: regex = re.compile(<span class="hljs-string">&apos;\s+&apos;</span>)
+
+In [<span class="hljs-number">152</span>]: regex.split(text)
+Out[<span class="hljs-number">152</span>]: [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>, <span class="hljs-string">&apos;qux&apos;</span>]
+</code></pre>
+<p>&#x5982;&#x679C;&#x53EA;&#x5E0C;&#x671B;&#x5F97;&#x5230;&#x5339;&#x914D;regex&#x7684;&#x6240;&#x6709;&#x6A21;&#x5F0F;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;findall&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">153</span>]: regex.findall(text)
+Out[<span class="hljs-number">153</span>]: [<span class="hljs-string">&apos;    &apos;</span>, <span class="hljs-string">&apos;\t &apos;</span>, <span class="hljs-string">&apos;  \t&apos;</span>]
+</code></pre>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x5982;&#x679C;&#x60F3;&#x907F;&#x514D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x8F6C;&#x4E49;&#xFF08;\&#xFF09;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#x5982;r&apos;C:\x&apos;&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x5176;&#x7B49;&#x4EF7;&#x5F0F;&apos;C:\x&apos;&#xFF09;&#x3002;</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x6253;&#x7B97;&#x5BF9;&#x8BB8;&#x591A;&#x5B57;&#x7B26;&#x4E32;&#x5E94;&#x7528;&#x540C;&#x4E00;&#x6761;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x901A;&#x8FC7;re.compile&#x521B;&#x5EFA;regex&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x6837;&#x5C06;&#x53EF;&#x4EE5;&#x8282;&#x7701;&#x5927;&#x91CF;&#x7684;CPU&#x65F6;&#x95F4;&#x3002;</p>
+<p>match&#x548C;search&#x8DDF;findall&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#x3002;findall&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5339;&#x914D;&#x9879;&#xFF0C;&#x800C;search&#x5219;&#x53EA;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x9879;&#x3002;match&#x66F4;&#x52A0;&#x4E25;&#x683C;&#xFF0C;&#x5B83;&#x53EA;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9996;&#x90E8;&#x3002;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x5C0F;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x6BB5;&#x6587;&#x672C;&#x4EE5;&#x53CA;&#x4E00;&#x6761;&#x80FD;&#x591F;&#x8BC6;&#x522B;&#x5927;&#x90E8;&#x5206;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">text = <span class="hljs-string">&quot;&quot;&quot;Dave dave@google.com
+Steve steve@gmail.com
+Rob rob@gmail.com
+Ryan ryan@yahoo.com
+&quot;&quot;&quot;</span>
+pattern = <span class="hljs-string">r&apos;[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}&apos;</span>
+
+<span class="hljs-comment"># re.IGNORECASE makes the regex case-insensitive</span>
+regex = re.compile(pattern, flags=re.IGNORECASE)
+</code></pre>
+<p>&#x5BF9;text&#x4F7F;&#x7528;findall&#x5C06;&#x5F97;&#x5230;&#x4E00;&#x7EC4;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">155</span>]: regex.findall(text)
+Out[<span class="hljs-number">155</span>]: 
+[<span class="hljs-string">&apos;dave@google.com&apos;</span>,
+ <span class="hljs-string">&apos;steve@gmail.com&apos;</span>,
+ <span class="hljs-string">&apos;rob@gmail.com&apos;</span>,
+ <span class="hljs-string">&apos;ryan@yahoo.com&apos;</span>]
+</code></pre>
+<p>search&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6587;&#x672C;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#xFF08;&#x4EE5;&#x7279;&#x6B8A;&#x7684;&#x5339;&#x914D;&#x9879;&#x5BF9;&#x8C61;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;regex&#xFF0C;&#x5339;&#x914D;&#x9879;&#x5BF9;&#x8C61;&#x53EA;&#x80FD;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x6A21;&#x5F0F;&#x5728;&#x539F;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x8D77;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">156</span>]: m = regex.search(text)
+
+In [<span class="hljs-number">157</span>]: m
+Out[<span class="hljs-number">157</span>]: &lt;_sre.SRE_Match object; span=(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>), match=<span class="hljs-string">&apos;dave@google.com&apos;</span>&gt;
+
+In [<span class="hljs-number">158</span>]: text[m.start():m.end()]
+Out[<span class="hljs-number">158</span>]: <span class="hljs-string">&apos;dave@google.com&apos;</span>
+</code></pre>
+<p>regex.match&#x5219;&#x5C06;&#x8FD4;&#x56DE;None&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EA;&#x5339;&#x914D;&#x51FA;&#x73B0;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x5934;&#x7684;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">159</span>]: print(regex.match(text))
+<span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x76F8;&#x5173;&#x7684;&#xFF0C;sub&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5C06;&#x5339;&#x914D;&#x5230;&#x7684;&#x6A21;&#x5F0F;&#x66FF;&#x6362;&#x4E3A;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x6240;&#x5F97;&#x5230;&#x7684;&#x65B0;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">160</span>]: print(regex.sub(<span class="hljs-string">&apos;REDACTED&apos;</span>, text))
+Dave REDACTED
+Steve REDACTED
+Rob REDACTED
+Ryan REDACTED
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x4E0D;&#x4EC5;&#x60F3;&#x8981;&#x627E;&#x51FA;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#xFF0C;&#x8FD8;&#x60F3;&#x5C06;&#x5404;&#x4E2A;&#x5730;&#x5740;&#x5206;&#x6210;3&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x7528;&#x6237;&#x540D;&#x3001;&#x57DF;&#x540D;&#x4EE5;&#x53CA;&#x57DF;&#x540E;&#x7F00;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x6B64;&#x529F;&#x80FD;&#xFF0C;&#x53EA;&#x9700;&#x5C06;&#x5F85;&#x5206;&#x6BB5;&#x7684;&#x6A21;&#x5F0F;&#x7684;&#x5404;&#x90E8;&#x5206;&#x7528;&#x5706;&#x62EC;&#x53F7;&#x5305;&#x8D77;&#x6765;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">161</span>]: pattern = <span class="hljs-string">r&apos;([A-Z0-9._%+-]+)@([A-Z0-9.-]+)\.([A-Z]{2,4})&apos;</span>
+
+In [<span class="hljs-number">162</span>]: regex = re.compile(pattern, flags=re.IGNORECASE)
+</code></pre>
+<p>&#x7531;&#x8FD9;&#x79CD;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6240;&#x4EA7;&#x751F;&#x7684;&#x5339;&#x914D;&#x9879;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;groups&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7531;&#x6A21;&#x5F0F;&#x5404;&#x6BB5;&#x7EC4;&#x6210;&#x7684;&#x5143;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">163</span>]: m = regex.match(<span class="hljs-string">&apos;wesm@bright.net&apos;</span>)
+
+In [<span class="hljs-number">164</span>]: m.groups()
+Out[<span class="hljs-number">164</span>]: (<span class="hljs-string">&apos;wesm&apos;</span>, <span class="hljs-string">&apos;bright&apos;</span>, <span class="hljs-string">&apos;net&apos;</span>)
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x5E26;&#x6709;&#x5206;&#x7EC4;&#x529F;&#x80FD;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;findall&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">165</span>]: regex.findall(text)
+Out[<span class="hljs-number">165</span>]:
+[(<span class="hljs-string">&apos;dave&apos;</span>, <span class="hljs-string">&apos;google&apos;</span>, <span class="hljs-string">&apos;com&apos;</span>),
+ (<span class="hljs-string">&apos;steve&apos;</span>, <span class="hljs-string">&apos;gmail&apos;</span>, <span class="hljs-string">&apos;com&apos;</span>),
+ (<span class="hljs-string">&apos;rob&apos;</span>, <span class="hljs-string">&apos;gmail&apos;</span>, <span class="hljs-string">&apos;com&apos;</span>),
+ (<span class="hljs-string">&apos;ryan&apos;</span>, <span class="hljs-string">&apos;yahoo&apos;</span>, <span class="hljs-string">&apos;com&apos;</span>)]
+</code></pre>
+<p>sub&#x8FD8;&#x80FD;&#x901A;&#x8FC7;&#x8BF8;&#x5982;\1&#x3001;\2&#x4E4B;&#x7C7B;&#x7684;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x8BBF;&#x95EE;&#x5404;&#x5339;&#x914D;&#x9879;&#x4E2D;&#x7684;&#x5206;&#x7EC4;&#x3002;&#x7B26;&#x53F7;\1&#x5BF9;&#x5E94;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x7EC4;&#xFF0C;\2&#x5BF9;&#x5E94;&#x7B2C;&#x4E8C;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x7EC4;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">166</span>]: print(regex.sub(<span class="hljs-string">r&apos;Username: \1, Domain: \2, Suffix: \3&apos;</span>, text))
+Dave Username: dave, Domain: google, Suffix: com
+Steve Username: steve, Domain: gmail, Suffix: com
+Rob Username: rob, Domain: gmail, Suffix: com
+Ryan Username: ryan, Domain: yahoo, Suffix: com
+</code></pre>
+<p>Python&#x4E2D;&#x8FD8;&#x6709;&#x8BB8;&#x591A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4F46;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x8D85;&#x51FA;&#x4E86;&#x672C;&#x4E66;&#x7684;&#x8303;&#x56F4;&#x3002;&#x8868;7-4&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x8981;&#x6982;&#x62EC;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-efbb80a793759fc0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="pandas&#x7684;&#x77E2;&#x91CF;&#x5316;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;">pandas&#x7684;&#x77E2;&#x91CF;&#x5316;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</h2>
+<p>&#x6E05;&#x7406;&#x5F85;&#x5206;&#x6790;&#x7684;&#x6563;&#x4E71;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5E38;&#x5E38;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#x89C4;&#x6574;&#x5316;&#x5DE5;&#x4F5C;&#x3002;&#x66F4;&#x4E3A;&#x590D;&#x6742;&#x7684;&#x60C5;&#x51B5;&#x662F;&#xFF0C;&#x542B;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5217;&#x6709;&#x65F6;&#x8FD8;&#x542B;&#x6709;&#x7F3A;&#x5931;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">167</span>]: data = {<span class="hljs-string">&apos;Dave&apos;</span>: <span class="hljs-string">&apos;dave@google.com&apos;</span>, <span class="hljs-string">&apos;Steve&apos;</span>: <span class="hljs-string">&apos;steve@gmail.com&apos;</span>,
+   .....:         <span class="hljs-string">&apos;Rob&apos;</span>: <span class="hljs-string">&apos;rob@gmail.com&apos;</span>, <span class="hljs-string">&apos;Wes&apos;</span>: np.nan}
+
+In [<span class="hljs-number">168</span>]: data = pd.Series(data)
+
+In [<span class="hljs-number">169</span>]: data
+Out[<span class="hljs-number">169</span>]: 
+Dave     dave@google.com
+Rob        rob@gmail.com
+Steve    steve@gmail.com
+Wes                  NaN
+dtype: object
+
+In [<span class="hljs-number">170</span>]: data.isnull()
+Out[<span class="hljs-number">170</span>]: 
+Dave     <span class="hljs-keyword">False</span>
+Rob      <span class="hljs-keyword">False</span>
+Steve    <span class="hljs-keyword">False</span>
+Wes       <span class="hljs-keyword">True</span>
+dtype: bool
+</code></pre>
+<p>&#x901A;&#x8FC7;data.map&#xFF0C;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;&#x90FD;&#x80FD;&#x88AB;&#x5E94;&#x7528;&#x4E8E;&#xFF08;&#x4F20;&#x5165;lambda&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#xFF09;&#x5404;&#x4E2A;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x5B58;&#x5728;NA&#xFF08;null&#xFF09;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;Series&#x6709;&#x4E00;&#x4E9B;&#x80FD;&#x591F;&#x8DF3;&#x8FC7;NA&#x503C;&#x7684;&#x9762;&#x5411;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x3002;&#x901A;&#x8FC7;Series&#x7684;str&#x5C5E;&#x6027;&#x5373;&#x53EF;&#x8BBF;&#x95EE;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;str.contains&#x68C0;&#x67E5;&#x5404;&#x4E2A;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x662F;&#x5426;&#x542B;&#x6709;&quot;gmail&quot;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">171</span>]: data.str.contains(<span class="hljs-string">&apos;gmail&apos;</span>)
+Out[<span class="hljs-number">171</span>]: 
+Dave     <span class="hljs-keyword">False</span>
+Rob       <span class="hljs-keyword">True</span>
+Steve     <span class="hljs-keyword">True</span>
+Wes        NaN
+dtype: object
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;&#x4EFB;&#x610F;re&#x9009;&#x9879;&#xFF08;&#x5982;IGNORECASE&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">172</span>]: pattern
+Out[<span class="hljs-number">172</span>]: <span class="hljs-string">&apos;([A-Z0-9._%+-]+)@([A-Z0-9.-]+)\\.([A-Z]{2,4})&apos;</span>
+
+In [<span class="hljs-number">173</span>]: data.str.findall(pattern, flags=re.IGNORECASE)
+Out[<span class="hljs-number">173</span>]: 
+Dave     [(dave, google, com)]
+Rob        [(rob, gmail, com)]
+Steve    [(steve, gmail, com)]
+Wes                        NaN
+dtype: object
+</code></pre>
+<p>&#x6709;&#x4E24;&#x4E2A;&#x529E;&#x6CD5;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x77E2;&#x91CF;&#x5316;&#x7684;&#x5143;&#x7D20;&#x83B7;&#x53D6;&#x64CD;&#x4F5C;&#xFF1A;&#x8981;&#x4E48;&#x4F7F;&#x7528;str.get&#xFF0C;&#x8981;&#x4E48;&#x5728;str&#x5C5E;&#x6027;&#x4E0A;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">174</span>]: matches = data.str.match(pattern, flags=re.IGNORECASE)
+
+In [<span class="hljs-number">175</span>]: matches
+Out[<span class="hljs-number">175</span>]: 
+Dave     <span class="hljs-keyword">True</span>
+Rob      <span class="hljs-keyword">True</span>
+Steve    <span class="hljs-keyword">True</span>
+Wes       NaN
+dtype: object
+</code></pre>
+<p>&#x8981;&#x8BBF;&#x95EE;&#x5D4C;&#x5165;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7D22;&#x5F15;&#x5230;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">176</span>]: matches.str.get(<span class="hljs-number">1</span>)
+Out[<span class="hljs-number">176</span>]: 
+Dave    NaN
+Rob     NaN
+Steve   NaN
+Wes     NaN
+dtype: float64
+
+In [<span class="hljs-number">177</span>]: matches.str[<span class="hljs-number">0</span>]
+Out[<span class="hljs-number">177</span>]: 
+Dave    NaN
+Rob     NaN
+Steve   NaN
+Wes     NaN
+dtype: float64
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x622A;&#x53D6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">178</span>]: data.str[:<span class="hljs-number">5</span>]
+Out[<span class="hljs-number">178</span>]: 
+Dave     dave@
+Rob      rob@g
+Steve    steve
+Wes        NaN
+dtype: object
+</code></pre>
+<p>&#x8868;7-5&#x4ECB;&#x7ECD;&#x4E86;&#x66F4;&#x591A;&#x7684;pandas&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-a634364ed6d5d5c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;7-5 &#x90E8;&#x5206;&#x77E2;&#x91CF;&#x5316;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;"></p>
+<h1 id="74-&#x603B;&#x7ED3;">7.4 &#x603B;&#x7ED3;</h1>
+<p>&#x9AD8;&#x6548;&#x7684;&#x6570;&#x636E;&#x51C6;&#x5907;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5C06;&#x66F4;&#x591A;&#x7684;&#x65F6;&#x95F4;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x5206;&#x6790;&#xFF0C;&#x82B1;&#x8F83;&#x5C11;&#x7684;&#x65F6;&#x95F4;&#x7528;&#x4E8E;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x6781;&#x5927;&#x5730;&#x63D0;&#x9AD8;&#x751F;&#x4EA7;&#x529B;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#x5B66;&#x4E60;&#x4E86;&#x8BB8;&#x591A;&#x5DE5;&#x5177;&#xFF0C;&#x4F46;&#x8986;&#x76D6;&#x5E76;&#x4E0D;&#x5168;&#x9762;&#x3002;&#x4E0B;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5B66;&#x4E60;pandas&#x7684;&#x805A;&#x5408;&#x4E0E;&#x5206;&#x7EC4;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../内容/第06章数据加载、存储与文件格式.html" class="navigation navigation-prev " aria-label="Previous page: 第06章数据加载、存储与文件格式"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../内容/第08章数据规整：聚合、合并和重塑.html" class="navigation navigation-next " aria-label="Next page: 第08章数据规整：聚合、合并和重塑"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

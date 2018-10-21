@@ -1,0 +1,868 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第09章绘图和可视化 | README</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../内容/第10章数据聚合与分组运算.html" />
+    
+    
+    <link rel="prev" href="../内容/第08章数据规整：聚合、合并和重塑.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="9"
+        data-chapter-title="第09章绘图和可视化"
+        data-filepath="内容/第09章绘图和可视化.md"
+        data-basepath=".."
+        data-revision="Sun Oct 21 2018 22:59:25 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        序言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="内容/第01章准备工作.html">
+            
+                
+                    <a href="../内容/第01章准备工作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第01章准备工作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+            
+                
+                    <a href="../内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第02章Python语法基础，IPython和JupyterNotebooks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="内容/第03章Python的数据结构、函数和文件.html">
+            
+                
+                    <a href="../内容/第03章Python的数据结构、函数和文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第03章Python的数据结构、函数和文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="内容/第04章NumPy基础：数组和矢量计算.html">
+            
+                
+                    <a href="../内容/第04章NumPy基础：数组和矢量计算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第04章NumPy基础：数组和矢量计算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="内容/第05章pandas入门.html">
+            
+                
+                    <a href="../内容/第05章pandas入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第05章pandas入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="内容/第06章数据加载、存储与文件格式.html">
+            
+                
+                    <a href="../内容/第06章数据加载、存储与文件格式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第06章数据加载、存储与文件格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="内容/第07章数据清洗和准备.html">
+            
+                
+                    <a href="../内容/第07章数据清洗和准备.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第07章数据清洗和准备
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="内容/第08章数据规整：聚合、合并和重塑.html">
+            
+                
+                    <a href="../内容/第08章数据规整：聚合、合并和重塑.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第08章数据规整：聚合、合并和重塑
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="9" data-path="内容/第09章绘图和可视化.html">
+            
+                
+                    <a href="../内容/第09章绘图和可视化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        第09章绘图和可视化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="内容/第10章数据聚合与分组运算.html">
+            
+                
+                    <a href="../内容/第10章数据聚合与分组运算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        第10章数据聚合与分组运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="内容/第11章时间序列.html">
+            
+                
+                    <a href="../内容/第11章时间序列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        第11章时间序列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="内容/第12章pandas高级应用.html">
+            
+                
+                    <a href="../内容/第12章pandas高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        第12章pandas高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="内容/第13章Python建模库介绍.html">
+            
+                
+                    <a href="../内容/第13章Python建模库介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        第13章Python建模库介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="内容/第14章数据分析案例.html">
+            
+                
+                    <a href="../内容/第14章数据分析案例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        第14章数据分析案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="内容/附录ANumPy高级应用.html">
+            
+                
+                    <a href="../内容/附录ANumPy高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        附录ANumPy高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="内容/附录B更多关于IPython的内容（完）.html">
+            
+                
+                    <a href="../内容/附录B更多关于IPython的内容（完）.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        附录B更多关于IPython的内容（完）
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >README</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p>&#x4FE1;&#x606F;&#x53EF;&#x89C6;&#x5316;&#xFF08;&#x4E5F;&#x53EB;&#x7ED8;&#x56FE;&#xFF09;&#x662F;&#x6570;&#x636E;&#x5206;&#x6790;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5DE5;&#x4F5C;&#x4E4B;&#x4E00;&#x3002;&#x5B83;&#x53EF;&#x80FD;&#x662F;&#x63A2;&#x7D22;&#x8FC7;&#x7A0B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x627E;&#x51FA;&#x5F02;&#x5E38;&#x503C;&#x3001;&#x5FC5;&#x8981;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x3001;&#x5F97;&#x51FA;&#x6709;&#x5173;&#x6A21;&#x578B;&#x7684;idea&#x7B49;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x505A;&#x4E00;&#x4E2A;&#x53EF;&#x4EA4;&#x4E92;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x4E5F;&#x8BB8;&#x662F;&#x5DE5;&#x4F5C;&#x7684;&#x6700;&#x7EC8;&#x76EE;&#x6807;&#x3002;Python&#x6709;&#x8BB8;&#x591A;&#x5E93;&#x8FDB;&#x884C;&#x9759;&#x6001;&#x6216;&#x52A8;&#x6001;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#xFF0C;&#x4F46;&#x6211;&#x8FD9;&#x91CC;&#x91CD;&#x8981;&#x5173;&#x6CE8;&#x4E8E;matplotlib&#xFF08;<a href="http://matplotlib.org/&#xFF09;&#x548C;&#x57FA;&#x4E8E;&#x5B83;&#x7684;&#x5E93;&#x3002;" target="_blank">http://matplotlib.org/&#xFF09;&#x548C;&#x57FA;&#x4E8E;&#x5B83;&#x7684;&#x5E93;&#x3002;</a></p>
+<p>matplotlib&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x51FA;&#x7248;&#x8D28;&#x91CF;&#x56FE;&#x8868;&#x7684;&#x684C;&#x9762;&#x7ED8;&#x56FE;&#x5305;&#xFF08;&#x4E3B;&#x8981;&#x662F;2D&#x65B9;&#x9762;&#xFF09;&#x3002;&#x8BE5;&#x9879;&#x76EE;&#x662F;&#x7531;John Hunter&#x4E8E;2002&#x5E74;&#x542F;&#x52A8;&#x7684;&#xFF0C;&#x5176;&#x76EE;&#x7684;&#x662F;&#x4E3A;Python&#x6784;&#x5EFA;&#x4E00;&#x4E2A;MATLAB&#x5F0F;&#x7684;&#x7ED8;&#x56FE;&#x63A5;&#x53E3;&#x3002;matplotlib&#x548C;IPython&#x793E;&#x533A;&#x8FDB;&#x884C;&#x5408;&#x4F5C;&#xFF0C;&#x7B80;&#x5316;&#x4E86;&#x4ECE;IPython shell&#xFF08;&#x5305;&#x62EC;&#x73B0;&#x5728;&#x7684;Jupyter notebook&#xFF09;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x5F0F;&#x7ED8;&#x56FE;&#x3002;matplotlib&#x652F;&#x6301;&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7684;GUI&#x540E;&#x7AEF;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x80FD;&#x5C06;&#x56FE;&#x7247;&#x5BFC;&#x51FA;&#x4E3A;&#x5404;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x77E2;&#x91CF;&#xFF08;vector&#xFF09;&#x548C;&#x5149;&#x6805;&#xFF08;raster&#xFF09;&#x56FE;&#xFF1A;PDF&#x3001;SVG&#x3001;JPG&#x3001;PNG&#x3001;BMP&#x3001;GIF&#x7B49;&#x3002;&#x9664;&#x4E86;&#x51E0;&#x5F20;&#xFF0C;&#x672C;&#x4E66;&#x4E2D;&#x7684;&#x5927;&#x90E8;&#x5206;&#x56FE;&#x90FD;&#x662F;&#x7528;&#x5B83;&#x751F;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x968F;&#x7740;&#x65F6;&#x95F4;&#x7684;&#x53D1;&#x5C55;&#xFF0C;matplotlib&#x884D;&#x751F;&#x51FA;&#x4E86;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x5DE5;&#x5177;&#x96C6;&#xFF0C;&#x5B83;&#x4EEC;&#x4F7F;&#x7528;matplotlib&#x4F5C;&#x4E3A;&#x5E95;&#x5C42;&#x3002;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;&#x662F;seaborn&#xFF08;<a href="http://seaborn.pydata.org/&#xFF09;&#xFF0C;&#x672C;&#x7AE0;&#x540E;&#x9762;&#x4F1A;&#x5B66;&#x4E60;&#x5B83;&#x3002;" target="_blank">http://seaborn.pydata.org/&#xFF09;&#xFF0C;&#x672C;&#x7AE0;&#x540E;&#x9762;&#x4F1A;&#x5B66;&#x4E60;&#x5B83;&#x3002;</a></p>
+<p>&#x5B66;&#x4E60;&#x672C;&#x7AE0;&#x4EE3;&#x7801;&#x6848;&#x4F8B;&#x7684;&#x6700;&#x7B80;&#x5355;&#x65B9;&#x6CD5;&#x662F;&#x5728;Jupyter notebook&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x5F0F;&#x7ED8;&#x56FE;&#x3002;&#x5728;Jupyter notebook&#x4E2D;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;&#xFF1A;</p>
+<pre><code class="lang-python">%matplotlib notebook
+</code></pre>
+<h1 id="91-matplotlib-api&#x5165;&#x95E8;">9.1 matplotlib API&#x5165;&#x95E8;</h1>
+<p> matplotlib&#x7684;&#x901A;&#x5E38;&#x5F15;&#x5165;&#x7EA6;&#x5B9A;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">11</span>]: <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</code></pre>
+<p>&#x5728;Jupyter&#x4E2D;&#x8FD0;&#x884C;%matplotlib notebook&#xFF08;&#x6216;&#x5728;IPython&#x4E2D;&#x8FD0;&#x884C;%matplotlib&#xFF09;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x56FE;&#x5F62;&#x3002;&#x5982;&#x679C;&#x4E00;&#x5207;&#x8BBE;&#x7F6E;&#x6B63;&#x786E;&#xFF0C;&#x4F1A;&#x770B;&#x5230;&#x56FE;9-1&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">12</span>]: <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+In [<span class="hljs-number">13</span>]: data = np.arange(<span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">14</span>]: data
+Out[<span class="hljs-number">14</span>]: array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>])
+
+In [<span class="hljs-number">15</span>]: plt.plot(data)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-7032e333a6ecdd37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-1 &#x7B80;&#x5355;&#x7684;&#x7EBF;&#x56FE;"></p>
+<p>&#x867D;&#x7136;seaborn&#x8FD9;&#x6837;&#x7684;&#x5E93;&#x548C;pandas&#x7684;&#x5185;&#x7F6E;&#x7ED8;&#x56FE;&#x51FD;&#x6570;&#x80FD;&#x591F;&#x5904;&#x7406;&#x8BB8;&#x591A;&#x666E;&#x901A;&#x7684;&#x7ED8;&#x56FE;&#x4EFB;&#x52A1;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#x7684;&#x8BDD;&#x5C31;&#x5FC5;&#x987B;&#x5B66;&#x4E60;matplotlib API&#x3002;</p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x867D;&#x7136;&#x672C;&#x4E66;&#x6CA1;&#x6709;&#x8BE6;&#x7EC6;&#x5730;&#x8BA8;&#x8BBA;matplotlib&#x7684;&#x5404;&#x79CD;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x8DB3;&#x4EE5;&#x5C06;&#x4F60;&#x5F15;&#x5165;&#x95E8;&#x3002;matplotlib&#x7684;&#x793A;&#x4F8B;&#x5E93;&#x548C;&#x6587;&#x6863;&#x662F;&#x5B66;&#x4E60;&#x9AD8;&#x7EA7;&#x7279;&#x6027;&#x7684;&#x6700;&#x597D;&#x8D44;&#x6E90;&#x3002;</p>
+</blockquote>
+<h2 id="figure&#x548C;subplot">Figure&#x548C;Subplot</h2>
+<p>matplotlib&#x7684;&#x56FE;&#x50CF;&#x90FD;&#x4F4D;&#x4E8E;Figure&#x5BF9;&#x8C61;&#x4E2D;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;plt.figure&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Figure&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">16</span>]: fig = plt.figure()
+</code></pre>
+<p>&#x5982;&#x679C;&#x7528;&#x7684;&#x662F;IPython&#xFF0C;&#x8FD9;&#x65F6;&#x4F1A;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x7A7A;&#x7A97;&#x53E3;&#xFF0C;&#x4F46;&#x5728;Jupyter&#x4E2D;&#xFF0C;&#x5FC5;&#x987B;&#x518D;&#x8F93;&#x5165;&#x66F4;&#x591A;&#x547D;&#x4EE4;&#x624D;&#x80FD;&#x770B;&#x5230;&#x3002;plt.figure&#x6709;&#x4E00;&#x4E9B;&#x9009;&#x9879;&#xFF0C;&#x7279;&#x522B;&#x662F;figsize&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x786E;&#x4FDD;&#x5F53;&#x56FE;&#x7247;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#x65F6;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x7EB5;&#x6A2A;&#x6BD4;&#x3002;</p>
+<p>&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x7A7A;Figure&#x7ED8;&#x56FE;&#x3002;&#x5FC5;&#x987B;&#x7528;add_subplot&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;subplot&#x624D;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">17</span>]: ax1 = fig.add_subplot(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+</code></pre>
+<p>&#x8FD9;&#x6761;&#x4EE3;&#x7801;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF1A;&#x56FE;&#x50CF;&#x5E94;&#x8BE5;&#x662F;2&#xD7;2&#x7684;&#xFF08;&#x5373;&#x6700;&#x591A;4&#x5F20;&#x56FE;&#xFF09;&#xFF0C;&#x4E14;&#x5F53;&#x524D;&#x9009;&#x4E2D;&#x7684;&#x662F;4&#x4E2A;subplot&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#xFF08;&#x7F16;&#x53F7;&#x4ECE;1&#x5F00;&#x59CB;&#xFF09;&#x3002;&#x5982;&#x679C;&#x518D;&#x628A;&#x540E;&#x9762;&#x4E24;&#x4E2A;subplot&#x4E5F;&#x521B;&#x5EFA;&#x51FA;&#x6765;&#xFF0C;&#x6700;&#x7EC8;&#x5F97;&#x5230;&#x7684;&#x56FE;&#x50CF;&#x5982;&#x56FE;9-2&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">18</span>]: ax2 = fig.add_subplot(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+
+In [<span class="hljs-number">19</span>]: ax3 = fig.add_subplot(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-b8cff158e64eae74.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-2 &#x5E26;&#x6709;&#x4E09;&#x4E2A;subplot&#x7684;Figure"></p>
+<blockquote>
+<p>&#x63D0;&#x793A;&#xFF1A;&#x4F7F;&#x7528;Jupyter notebook&#x6709;&#x4E00;&#x70B9;&#x4E0D;&#x540C;&#xFF0C;&#x5373;&#x6BCF;&#x4E2A;&#x5C0F;&#x7A97;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x540E;&#xFF0C;&#x56FE;&#x5F62;&#x4F1A;&#x88AB;&#x91CD;&#x7F6E;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x4E8E;&#x590D;&#x6742;&#x7684;&#x56FE;&#x5F62;&#xFF0C;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x5C06;&#x6240;&#x6709;&#x7684;&#x7ED8;&#x56FE;&#x547D;&#x4EE4;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5C0F;&#x7A97;&#x91CC;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x8FD0;&#x884C;&#x540C;&#x4E00;&#x4E2A;&#x5C0F;&#x7A97;&#x91CC;&#x7684;&#x6240;&#x6709;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-python">fig = plt.figure()
+ax1 = fig.add_subplot(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+ax2 = fig.add_subplot(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+ax3 = fig.add_subplot(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+</code></pre>
+<p>&#x5982;&#x679C;&#x8FD9;&#x65F6;&#x6267;&#x884C;&#x4E00;&#x6761;&#x7ED8;&#x56FE;&#x547D;&#x4EE4;&#xFF08;&#x5982;plt.plot([1.5, 3.5, -2, 1.6])&#xFF09;&#xFF0C;matplotlib&#x5C31;&#x4F1A;&#x5728;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7528;&#x8FC7;&#x7684;subplot&#xFF08;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#xFF09;&#x4E0A;&#x8FDB;&#x884C;&#x7ED8;&#x5236;&#xFF0C;&#x9690;&#x85CF;&#x521B;&#x5EFA;figure&#x548C;subplot&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6267;&#x884C;&#x4E0B;&#x5217;&#x547D;&#x4EE4;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x5F97;&#x5230;&#x5982;&#x56FE;9-3&#x6240;&#x793A;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">20</span>]: plt.plot(np.random.randn(<span class="hljs-number">50</span>).cumsum(), <span class="hljs-string">&apos;k--&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-7bcbd5e56fdbbd92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-3 &#x7ED8;&#x5236;&#x4E00;&#x6B21;&#x4E4B;&#x540E;&#x7684;&#x56FE;&#x50CF;"></p>
+<p>&quot;k--&quot;&#x662F;&#x4E00;&#x4E2A;&#x7EBF;&#x578B;&#x9009;&#x9879;&#xFF0C;&#x7528;&#x4E8E;&#x544A;&#x8BC9;matplotlib&#x7ED8;&#x5236;&#x9ED1;&#x8272;&#x865A;&#x7EBF;&#x56FE;&#x3002;&#x4E0A;&#x9762;&#x90A3;&#x4E9B;&#x7531;fig.add_subplot&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x5BF9;&#x8C61;&#x662F;AxesSubplot&#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5B83;&#x4EEC;&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x5B83;&#x7A7A;&#x7740;&#x7684;&#x683C;&#x5B50;&#x91CC;&#x9762;&#x753B;&#x56FE;&#x4E86;&#xFF0C;&#x5982;&#x56FE;9-4&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">21</span>]: ax1.hist(np.random.randn(<span class="hljs-number">100</span>), bins=<span class="hljs-number">20</span>, color=<span class="hljs-string">&apos;k&apos;</span>, alpha=<span class="hljs-number">0.3</span>)
+
+In [<span class="hljs-number">22</span>]: ax2.scatter(np.arange(<span class="hljs-number">30</span>), np.arange(<span class="hljs-number">30</span>) + <span class="hljs-number">3</span> * np.random.randn(<span class="hljs-number">30</span>))
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-2297bcaf355db24c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-4 &#x7EE7;&#x7EED;&#x7ED8;&#x5236;&#x4E24;&#x6B21;&#x4E4B;&#x540E;&#x7684;&#x56FE;&#x50CF;"></p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;matplotlib&#x7684;&#x6587;&#x6863;&#x4E2D;&#x627E;&#x5230;&#x5404;&#x79CD;&#x56FE;&#x8868;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x5305;&#x542B;subplot&#x7F51;&#x683C;&#x7684;figure&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5E38;&#x89C1;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;matplotlib&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x4E3A;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x6CD5;plt.subplots&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Figure&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x5DF2;&#x521B;&#x5EFA;&#x7684;subplot&#x5BF9;&#x8C61;&#x7684;NumPy&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">24</span>]: fig, axes = plt.subplots(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+In [<span class="hljs-number">25</span>]: axes
+Out[<span class="hljs-number">25</span>]: 
+array([[&lt;matplotlib.axes._subplots.AxesSubplot object at <span class="hljs-number">0x7fb626374048</span>&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at <span class="hljs-number">0x7fb62625db00</span>&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at <span class="hljs-number">0x7fb6262f6c88</span>&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at <span class="hljs-number">0x7fb6261a36a0</span>&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at <span class="hljs-number">0x7fb626181860</span>&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at <span class="hljs-number">0x7fb6260fd4e0</span>&gt;]], dtype
+=object)
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x975E;&#x5E38;&#x5B9E;&#x7528;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x5BF9;axes&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#xFF0C;&#x5C31;&#x597D;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x4E00;&#x6837;&#xFF0C;&#x4F8B;&#x5982;axes[0,1]&#x3002;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;sharex&#x548C;sharey&#x6307;&#x5B9A;subplot&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;X&#x8F74;&#x6216;Y&#x8F74;&#x3002;&#x5728;&#x6BD4;&#x8F83;&#x76F8;&#x540C;&#x8303;&#x56F4;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x5B9E;&#x7528;&#x7684;&#xFF0C;&#x5426;&#x5219;&#xFF0C;matplotlib&#x4F1A;&#x81EA;&#x52A8;&#x7F29;&#x653E;&#x5404;&#x56FE;&#x8868;&#x7684;&#x754C;&#x9650;&#x3002;&#x6709;&#x5173;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#x8868;9-1&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-88bb55faca7d01ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;9-1 pyplot.subplots&#x7684;&#x9009;&#x9879;"></p>
+<h2 id="&#x8C03;&#x6574;subplot&#x5468;&#x56F4;&#x7684;&#x95F4;&#x8DDD;">&#x8C03;&#x6574;subplot&#x5468;&#x56F4;&#x7684;&#x95F4;&#x8DDD;</h2>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;matplotlib&#x4F1A;&#x5728;subplot&#x5916;&#x56F4;&#x7559;&#x4E0B;&#x4E00;&#x5B9A;&#x7684;&#x8FB9;&#x8DDD;&#xFF0C;&#x5E76;&#x5728;subplot&#x4E4B;&#x95F4;&#x7559;&#x4E0B;&#x4E00;&#x5B9A;&#x7684;&#x95F4;&#x8DDD;&#x3002;&#x95F4;&#x8DDD;&#x8DDF;&#x56FE;&#x50CF;&#x7684;&#x9AD8;&#x5EA6;&#x548C;&#x5BBD;&#x5EA6;&#x6709;&#x5173;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8C03;&#x6574;&#x4E86;&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#xFF08;&#x4E0D;&#x7BA1;&#x662F;&#x7F16;&#x7A0B;&#x8FD8;&#x662F;&#x624B;&#x5DE5;&#xFF09;&#xFF0C;&#x95F4;&#x8DDD;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x6574;&#x3002;&#x5229;&#x7528;Figure&#x7684;subplots_adjust&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8F7B;&#x800C;&#x6613;&#x4E3E;&#x5730;&#x4FEE;&#x6539;&#x95F4;&#x8DDD;&#xFF0C;&#x6B64;&#x5916;&#xFF0C;&#x5B83;&#x4E5F;&#x662F;&#x4E2A;&#x9876;&#x7EA7;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">subplots_adjust(left=<span class="hljs-keyword">None</span>, bottom=<span class="hljs-keyword">None</span>, right=<span class="hljs-keyword">None</span>, top=<span class="hljs-keyword">None</span>,
+                wspace=<span class="hljs-keyword">None</span>, hspace=<span class="hljs-keyword">None</span>)
+</code></pre>
+<p>wspace&#x548C;hspace&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x7684;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;subplot&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5176;&#x4E2D;&#x6211;&#x5C06;&#x95F4;&#x8DDD;&#x6536;&#x7F29;&#x5230;&#x4E86;0&#xFF08;&#x5982;&#x56FE;9-5&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">fig, axes = plt.subplots(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, sharex=<span class="hljs-keyword">True</span>, sharey=<span class="hljs-keyword">True</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>):
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>):
+        axes[i, j].hist(np.random.randn(<span class="hljs-number">500</span>), bins=<span class="hljs-number">50</span>, color=<span class="hljs-string">&apos;k&apos;</span>, alpha=<span class="hljs-number">0.5</span>)
+plt.subplots_adjust(wspace=<span class="hljs-number">0</span>, hspace=<span class="hljs-number">0</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-80be7ffc3dec88a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-5 &#x5404;subplot&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x95F4;&#x8DDD;"></p>
+<p>&#x4E0D;&#x96BE;&#x770B;&#x51FA;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x8F74;&#x6807;&#x7B7E;&#x91CD;&#x53E0;&#x4E86;&#x3002;matplotlib&#x4E0D;&#x4F1A;&#x68C0;&#x67E5;&#x6807;&#x7B7E;&#x662F;&#x5426;&#x91CD;&#x53E0;&#xFF0C;&#x6240;&#x4EE5;&#x5BF9;&#x4E8E;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x4F60;&#x53EA;&#x80FD;&#x81EA;&#x5DF1;&#x8BBE;&#x5B9A;&#x523B;&#x5EA6;&#x4F4D;&#x7F6E;&#x548C;&#x523B;&#x5EA6;&#x6807;&#x7B7E;&#x3002;&#x540E;&#x9762;&#x51E0;&#x8282;&#x5C06;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BE5;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 id="&#x989C;&#x8272;&#x3001;&#x6807;&#x8BB0;&#x548C;&#x7EBF;&#x578B;">&#x989C;&#x8272;&#x3001;&#x6807;&#x8BB0;&#x548C;&#x7EBF;&#x578B;</h2>
+<p>matplotlib&#x7684;plot&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x7EC4;X&#x548C;Y&#x5750;&#x6807;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x989C;&#x8272;&#x548C;&#x7EBF;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7F29;&#x5199;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x6839;&#x636E;x&#x548C;y&#x7ED8;&#x5236;&#x7EFF;&#x8272;&#x865A;&#x7EBF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python">ax.plot(x, y, <span class="hljs-string">&apos;g--&apos;</span>)
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x5728;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6307;&#x5B9A;&#x989C;&#x8272;&#x548C;&#x7EBF;&#x578B;&#x7684;&#x65B9;&#x5F0F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x7528;&#x4EE3;&#x7801;&#x7ED8;&#x56FE;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4E0D;&#x60F3;&#x901A;&#x8FC7;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x83B7;&#x5F97;&#x60F3;&#x8981;&#x7684;&#x683C;&#x5F0F;&#x3002;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x66F4;&#x4E3A;&#x660E;&#x786E;&#x7684;&#x65B9;&#x5F0F;&#x4E5F;&#x80FD;&#x5F97;&#x5230;&#x540C;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">ax.plot(x, y, linestyle=<span class="hljs-string">&apos;--&apos;</span>, color=<span class="hljs-string">&apos;g&apos;</span>)
+</code></pre>
+<p>&#x5E38;&#x7528;&#x7684;&#x989C;&#x8272;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x989C;&#x8272;&#x7F29;&#x5199;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x989C;&#x8272;&#x7801;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&apos;#CECECE&apos;&#xFF09;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x67E5;&#x770B;plot&#x7684;&#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;&#x67E5;&#x770B;&#x6240;&#x6709;&#x7EBF;&#x578B;&#x7684;&#x5408;&#x96C6;&#xFF08;&#x5728;IPython&#x548C;Jupyter&#x4E2D;&#x4F7F;&#x7528;plot?&#xFF09;&#x3002;</p>
+<p>&#x7EBF;&#x56FE;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6807;&#x8BB0;&#x5F3A;&#x8C03;&#x6570;&#x636E;&#x70B9;&#x3002;&#x56E0;&#x4E3A;matplotlib&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x8FDE;&#x7EED;&#x7EBF;&#x56FE;&#xFF0C;&#x5728;&#x70B9;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x63D2;&#x503C;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x65F6;&#x53EF;&#x80FD;&#x4E0D;&#x592A;&#x5BB9;&#x6613;&#x770B;&#x51FA;&#x771F;&#x5B9E;&#x6570;&#x636E;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6807;&#x8BB0;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5230;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;&#x4F46;&#x6807;&#x8BB0;&#x7C7B;&#x578B;&#x548C;&#x7EBF;&#x578B;&#x5FC5;&#x987B;&#x653E;&#x5728;&#x989C;&#x8272;&#x540E;&#x9762;&#xFF08;&#x89C1;&#x56FE;9-6&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">30</span>]: <span class="hljs-keyword">from</span> numpy.random <span class="hljs-keyword">import</span> randn
+
+In [<span class="hljs-number">31</span>]: plt.plot(randn(<span class="hljs-number">30</span>).cumsum(), <span class="hljs-string">&apos;ko--&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-404d816f3e1d6621.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-6 &#x5E26;&#x6709;&#x6807;&#x8BB0;&#x7684;&#x7EBF;&#x578B;&#x56FE;&#x793A;&#x4F8B;"></p>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x5199;&#x6210;&#x66F4;&#x4E3A;&#x660E;&#x786E;&#x7684;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">plot(randn(<span class="hljs-number">30</span>).cumsum(), color=<span class="hljs-string">&apos;k&apos;</span>, linestyle=<span class="hljs-string">&apos;dashed&apos;</span>, marker=<span class="hljs-string">&apos;o&apos;</span>)
+</code></pre>
+<p>&#x5728;&#x7EBF;&#x578B;&#x56FE;&#x4E2D;&#xFF0C;&#x975E;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x70B9;&#x9ED8;&#x8BA4;&#x662F;&#x6309;&#x7EBF;&#x6027;&#x65B9;&#x5F0F;&#x63D2;&#x503C;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;drawstyle&#x9009;&#x9879;&#x4FEE;&#x6539;&#xFF08;&#x89C1;&#x56FE;9-7&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">33</span>]: data = np.random.randn(<span class="hljs-number">30</span>).cumsum()
+
+In [<span class="hljs-number">34</span>]: plt.plot(data, <span class="hljs-string">&apos;k--&apos;</span>, label=<span class="hljs-string">&apos;Default&apos;</span>)
+Out[<span class="hljs-number">34</span>]: [&lt;matplotlib.lines.Line2D at <span class="hljs-number">0x7fb624d86160</span>&gt;]
+
+In [<span class="hljs-number">35</span>]: plt.plot(data, <span class="hljs-string">&apos;k-&apos;</span>, drawstyle=<span class="hljs-string">&apos;steps-post&apos;</span>, label=<span class="hljs-string">&apos;steps-post&apos;</span>)
+Out[<span class="hljs-number">35</span>]: [&lt;matplotlib.lines.Line2D at <span class="hljs-number">0x7fb624d869e8</span>&gt;]
+
+In [<span class="hljs-number">36</span>]: plt.legend(loc=<span class="hljs-string">&apos;best&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-3ec7642e1a592f08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-7 &#x4E0D;&#x540C;drawstyle&#x9009;&#x9879;&#x7684;&#x7EBF;&#x578B;&#x56FE;"></p>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x6CE8;&#x610F;&#x5230;&#x8FD0;&#x884C;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x65F6;&#x6709;&#x8F93;&#x51FA;<matplotlib.lines.Line2D at="" ...="">&#x3002;matplotlib&#x4F1A;&#x8FD4;&#x56DE;&#x5F15;&#x7528;&#x4E86;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5927;&#x591A;&#x6570;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x653E;&#x5FC3;&#x5730;&#x5FFD;&#x7565;&#x8FD9;&#x4E9B;&#x8F93;&#x51FA;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4F20;&#x9012;&#x4E86;label&#x53C2;&#x6570;&#x5230;plot&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;plot&#x56FE;&#x4F8B;&#xFF0C;&#x6307;&#x660E;&#x6BCF;&#x6761;&#x4F7F;&#x7528;plt.legend&#x7684;&#x7EBF;&#x3002;</matplotlib.lines.Line2D></p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x4F60;&#x5FC5;&#x987B;&#x8C03;&#x7528;plt.legend&#xFF08;&#x6216;&#x4F7F;&#x7528;ax.legend&#xFF0C;&#x5982;&#x679C;&#x5F15;&#x7528;&#x4E86;&#x8F74;&#x7684;&#x8BDD;&#xFF09;&#x6765;&#x521B;&#x5EFA;&#x56FE;&#x4F8B;&#xFF0C;&#x65E0;&#x8BBA;&#x4F60;&#x7ED8;&#x56FE;&#x65F6;&#x662F;&#x5426;&#x4F20;&#x9012;label&#x6807;&#x7B7E;&#x9009;&#x9879;&#x3002;</p>
+</blockquote>
+<h2 id="&#x523B;&#x5EA6;&#x3001;&#x6807;&#x7B7E;&#x548C;&#x56FE;&#x4F8B;">&#x523B;&#x5EA6;&#x3001;&#x6807;&#x7B7E;&#x548C;&#x56FE;&#x4F8B;</h2>
+<p>&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x7684;&#x56FE;&#x8868;&#x88C5;&#x9970;&#x9879;&#xFF0C;&#x5176;&#x4E3B;&#x8981;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x6709;&#x4E8C;&#xFF1A;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x578B;&#x7684;pyplot&#x63A5;&#x53E3;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;matplotlib.pyplot&#xFF09;&#x4EE5;&#x53CA;&#x66F4;&#x4E3A;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x751F;matplotlib API&#x3002;</p>
+<p>pyplot&#x63A5;&#x53E3;&#x7684;&#x8BBE;&#x8BA1;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x4EA4;&#x4E92;&#x5F0F;&#x4F7F;&#x7528;&#xFF0C;&#x542B;&#x6709;&#x8BF8;&#x5982;xlim&#x3001;xticks&#x548C;xticklabels&#x4E4B;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x63A7;&#x5236;&#x56FE;&#x8868;&#x7684;&#x8303;&#x56F4;&#x3001;&#x523B;&#x5EA6;&#x4F4D;&#x7F6E;&#x3001;&#x523B;&#x5EA6;&#x6807;&#x7B7E;&#x7B49;&#x3002;&#x5176;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x6709;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x8C03;&#x7528;&#x65F6;&#x4E0D;&#x5E26;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x53C2;&#x6570;&#x503C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;plt.xlim()&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;X&#x8F74;&#x7ED8;&#x56FE;&#x8303;&#x56F4;&#xFF09;&#x3002;</li>
+<li>&#x8C03;&#x7528;&#x65F6;&#x5E26;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x503C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;plt.xlim([0,10])&#x4F1A;&#x5C06;X&#x8F74;&#x7684;&#x8303;&#x56F4;&#x8BBE;&#x7F6E;&#x4E3A;0&#x5230;10&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x5BF9;&#x5F53;&#x524D;&#x6216;&#x6700;&#x8FD1;&#x521B;&#x5EFA;&#x7684;AxesSubplot&#x8D77;&#x4F5C;&#x7528;&#x7684;&#x3002;&#x5B83;&#x4EEC;&#x5404;&#x81EA;&#x5BF9;&#x5E94;subplot&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;xlim&#x4E3A;&#x4F8B;&#xFF0C;&#x5C31;&#x662F;ax.get_xlim&#x548C;ax.set_xlim&#x3002;&#x6211;&#x66F4;&#x559C;&#x6B22;&#x4F7F;&#x7528;subplot&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF08;&#x56E0;&#x4E3A;&#x6211;&#x559C;&#x6B22;&#x660E;&#x786E;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x800C;&#x4E14;&#x5728;&#x5904;&#x7406;&#x591A;&#x4E2A;subplot&#x65F6;&#x8FD9;&#x6837;&#x4E5F;&#x66F4;&#x6E05;&#x695A;&#x4E00;&#x4E9B;&#xFF09;&#x3002;&#x5F53;&#x7136;&#x4F60;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x81EA;&#x5DF1;&#x89C9;&#x5F97;&#x65B9;&#x4FBF;&#x7684;&#x90A3;&#x4E2A;&#x3002;</p>
+<h2 id="&#x8BBE;&#x7F6E;&#x6807;&#x9898;&#x3001;&#x8F74;&#x6807;&#x7B7E;&#x3001;&#x523B;&#x5EA6;&#x4EE5;&#x53CA;&#x523B;&#x5EA6;&#x6807;&#x7B7E;">&#x8BBE;&#x7F6E;&#x6807;&#x9898;&#x3001;&#x8F74;&#x6807;&#x7B7E;&#x3001;&#x523B;&#x5EA6;&#x4EE5;&#x53CA;&#x523B;&#x5EA6;&#x6807;&#x7B7E;</h2>
+<p>&#x4E3A;&#x4E86;&#x8BF4;&#x660E;&#x81EA;&#x5B9A;&#x4E49;&#x8F74;&#xFF0C;&#x6211;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x56FE;&#x50CF;&#x5E76;&#x7ED8;&#x5236;&#x4E00;&#x6BB5;&#x968F;&#x673A;&#x6F2B;&#x6B65;&#xFF08;&#x5982;&#x56FE;9-8&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">37</span>]: fig = plt.figure()
+
+In [<span class="hljs-number">38</span>]: ax = fig.add_subplot(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">39</span>]: ax.plot(np.random.randn(<span class="hljs-number">1000</span>).cumsum())
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-caf9300dacb61fa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-8 &#x7528;&#x4E8E;&#x6F14;&#x793A;xticks&#x7684;&#x7B80;&#x5355;&#x7EBF;&#x578B;&#x56FE;&#xFF08;&#x5E26;&#x6709;&#x6807;&#x7B7E;&#xFF09;"></p>
+<p>&#x8981;&#x6539;&#x53D8;x&#x8F74;&#x523B;&#x5EA6;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x4F7F;&#x7528;set_xticks&#x548C;set_xticklabels&#x3002;&#x524D;&#x8005;&#x544A;&#x8BC9;matplotlib&#x8981;&#x5C06;&#x523B;&#x5EA6;&#x653E;&#x5728;&#x6570;&#x636E;&#x8303;&#x56F4;&#x4E2D;&#x7684;&#x54EA;&#x4E9B;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E9B;&#x4F4D;&#x7F6E;&#x4E5F;&#x5C31;&#x662F;&#x523B;&#x5EA6;&#x6807;&#x7B7E;&#x3002;&#x4F46;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;set_xticklabels&#x5C06;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x7684;&#x503C;&#x7528;&#x4F5C;&#x6807;&#x7B7E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">40</span>]: ticks = ax.set_xticks([<span class="hljs-number">0</span>, <span class="hljs-number">250</span>, <span class="hljs-number">500</span>, <span class="hljs-number">750</span>, <span class="hljs-number">1000</span>])
+
+In [<span class="hljs-number">41</span>]: labels = ax.set_xticklabels([<span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>, <span class="hljs-string">&apos;four&apos;</span>, <span class="hljs-string">&apos;five&apos;</span>],
+   ....:                             rotation=<span class="hljs-number">30</span>, fontsize=<span class="hljs-string">&apos;small&apos;</span>)
+</code></pre>
+<p>rotation&#x9009;&#x9879;&#x8BBE;&#x5B9A;x&#x523B;&#x5EA6;&#x6807;&#x7B7E;&#x503E;&#x659C;30&#x5EA6;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x518D;&#x7528;set_xlabel&#x4E3A;X&#x8F74;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x540D;&#x79F0;&#xFF0C;&#x5E76;&#x7528;set_title&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6807;&#x9898;&#xFF08;&#x89C1;&#x56FE;9-9&#x7684;&#x7ED3;&#x679C;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">42</span>]: ax.set_title(<span class="hljs-string">&apos;My first matplotlib plot&apos;</span>)
+Out[<span class="hljs-number">42</span>]: &lt;matplotlib.text.Text at <span class="hljs-number">0x7fb624d055f8</span>&gt;
+
+In [<span class="hljs-number">43</span>]: ax.set_xlabel(<span class="hljs-string">&apos;Stages&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-741f968323bd818f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-9 &#x7528;&#x4E8E;&#x6F14;&#x793A;xticks&#x7684;&#x7B80;&#x5355;&#x7EBF;&#x578B;&#x56FE;"></p>
+<p>Y&#x8F74;&#x7684;&#x4FEE;&#x6539;&#x65B9;&#x5F0F;&#x4E0E;&#x6B64;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x9700;&#x5C06;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x7684;x&#x66FF;&#x6362;&#x4E3A;y&#x5373;&#x53EF;&#x3002;&#x8F74;&#x7684;&#x7C7B;&#x6709;&#x96C6;&#x5408;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x6279;&#x91CF;&#x8BBE;&#x5B9A;&#x7ED8;&#x56FE;&#x9009;&#x9879;&#x3002;&#x524D;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-python">props = {
+    <span class="hljs-string">&apos;title&apos;</span>: <span class="hljs-string">&apos;My first matplotlib plot&apos;</span>,
+    <span class="hljs-string">&apos;xlabel&apos;</span>: <span class="hljs-string">&apos;Stages&apos;</span>
+}
+ax.set(**props)
+</code></pre>
+<h2 id="&#x6DFB;&#x52A0;&#x56FE;&#x4F8B;">&#x6DFB;&#x52A0;&#x56FE;&#x4F8B;</h2>
+<p>&#x56FE;&#x4F8B;&#xFF08;legend&#xFF09;&#x662F;&#x53E6;&#x4E00;&#x79CD;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x56FE;&#x8868;&#x5143;&#x7D20;&#x7684;&#x91CD;&#x8981;&#x5DE5;&#x5177;&#x3002;&#x6DFB;&#x52A0;&#x56FE;&#x4F8B;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x591A;&#x79CD;&#x3002;&#x6700;&#x7B80;&#x5355;&#x7684;&#x662F;&#x5728;&#x6DFB;&#x52A0;subplot&#x7684;&#x65F6;&#x5019;&#x4F20;&#x5165;label&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">44</span>]: <span class="hljs-keyword">from</span> numpy.random <span class="hljs-keyword">import</span> randn
+
+In [<span class="hljs-number">45</span>]: fig = plt.figure(); ax = fig.add_subplot(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">46</span>]: ax.plot(randn(<span class="hljs-number">1000</span>).cumsum(), <span class="hljs-string">&apos;k&apos;</span>, label=<span class="hljs-string">&apos;one&apos;</span>)
+Out[<span class="hljs-number">46</span>]: [&lt;matplotlib.lines.Line2D at <span class="hljs-number">0x7fb624bdf860</span>&gt;]
+
+In [<span class="hljs-number">47</span>]: ax.plot(randn(<span class="hljs-number">1000</span>).cumsum(), <span class="hljs-string">&apos;k--&apos;</span>, label=<span class="hljs-string">&apos;two&apos;</span>)
+Out[<span class="hljs-number">47</span>]: [&lt;matplotlib.lines.Line2D at <span class="hljs-number">0x7fb624be90f0</span>&gt;]
+
+In [<span class="hljs-number">48</span>]: ax.plot(randn(<span class="hljs-number">1000</span>).cumsum(), <span class="hljs-string">&apos;k.&apos;</span>, label=<span class="hljs-string">&apos;three&apos;</span>)
+Out[<span class="hljs-number">48</span>]: [&lt;matplotlib.lines.Line2D at <span class="hljs-number">0x7fb624be9160</span>&gt;]
+</code></pre>
+<p>&#x5728;&#x6B64;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x7528;ax.legend()&#x6216;plt.legend()&#x6765;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x56FE;&#x4F8B;&#xFF08;&#x7ED3;&#x679C;&#x89C1;&#x56FE;9-10&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">49</span>]: ax.legend(loc=<span class="hljs-string">&apos;best&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-651ff89750c0a89b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-10 &#x5E26;&#x6709;&#x4E09;&#x6761;&#x7EBF;&#x4EE5;&#x53CA;&#x56FE;&#x4F8B;&#x7684;&#x7B80;&#x5355;&#x7EBF;&#x578B;&#x56FE;"></p>
+<p>legend&#x65B9;&#x6CD5;&#x6709;&#x51E0;&#x4E2A;&#x5176;&#x5B83;&#x7684;loc&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x9009;&#x9879;&#x3002;&#x8BF7;&#x67E5;&#x770B;&#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x4F7F;&#x7528;ax.legend?&#xFF09;&#x3002;</p>
+<p>loc&#x544A;&#x8BC9;matplotlib&#x8981;&#x5C06;&#x56FE;&#x4F8B;&#x653E;&#x5728;&#x54EA;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x662F;&#x5439;&#x6BDB;&#x6C42;&#x75B5;&#x7684;&#x8BDD;&#xFF0C;&quot;best&quot;&#x662F;&#x4E0D;&#x9519;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x9009;&#x62E9;&#x6700;&#x4E0D;&#x788D;&#x4E8B;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x8981;&#x4ECE;&#x56FE;&#x4F8B;&#x4E2D;&#x53BB;&#x9664;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x4F20;&#x5165;label&#x6216;&#x4F20;&#x5165;label=&apos;<em>nolegend</em>&apos;&#x5373;&#x53EF;&#x3002;&#xFF08;&#x4E2D;&#x6587;&#x7B2C;&#x4E00;&#x7248;&#x8FD9;&#x91CC;&#x628A;best&#x9519;&#x5199;&#x6210;&#x4E86;beat&#xFF09;</p>
+<h2 id="&#x6CE8;&#x89E3;&#x4EE5;&#x53CA;&#x5728;subplot&#x4E0A;&#x7ED8;&#x56FE;">&#x6CE8;&#x89E3;&#x4EE5;&#x53CA;&#x5728;Subplot&#x4E0A;&#x7ED8;&#x56FE;</h2>
+<p>&#x9664;&#x6807;&#x51C6;&#x7684;&#x7ED8;&#x56FE;&#x7C7B;&#x578B;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x8FD8;&#x5E0C;&#x671B;&#x7ED8;&#x5236;&#x4E00;&#x4E9B;&#x5B50;&#x96C6;&#x7684;&#x6CE8;&#x89E3;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x6587;&#x672C;&#x3001;&#x7BAD;&#x5934;&#x6216;&#x5176;&#x4ED6;&#x56FE;&#x5F62;&#x7B49;&#x3002;&#x6CE8;&#x89E3;&#x548C;&#x6587;&#x5B57;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;text&#x3001;arrow&#x548C;annotate&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x3002;text&#x53EF;&#x4EE5;&#x5C06;&#x6587;&#x672C;&#x7ED8;&#x5236;&#x5728;&#x56FE;&#x8868;&#x7684;&#x6307;&#x5B9A;&#x5750;&#x6807;(x,y)&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;&#x4E00;&#x4E9B;&#x81EA;&#x5B9A;&#x4E49;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">ax.text(x, y, <span class="hljs-string">&apos;Hello world!&apos;</span>,
+        family=<span class="hljs-string">&apos;monospace&apos;</span>, fontsize=<span class="hljs-number">10</span>)
+</code></pre>
+<p>&#x6CE8;&#x89E3;&#x4E2D;&#x53EF;&#x4EE5;&#x65E2;&#x542B;&#x6709;&#x6587;&#x672C;&#x4E5F;&#x542B;&#x6709;&#x7BAD;&#x5934;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x6700;&#x8FD1;&#x7684;&#x6807;&#x51C6;&#x666E;&#x5C14;500&#x6307;&#x6570;&#x4EF7;&#x683C;&#xFF08;&#x6765;&#x81EA;Yahoo!Finance&#xFF09;&#x7ED8;&#x5236;&#x4E00;&#x5F20;&#x66F2;&#x7EBF;&#x56FE;&#xFF0C;&#x5E76;&#x6807;&#x51FA;2008&#x5E74;&#x5230;2009&#x5E74;&#x91D1;&#x878D;&#x5371;&#x673A;&#x671F;&#x95F4;&#x7684;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x65E5;&#x671F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;Jupyter notebook&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x7A97;&#x4E2D;&#x8BD5;&#x9A8C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF08;&#x56FE;9-11&#x662F;&#x7ED3;&#x679C;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime
+
+fig = plt.figure()
+ax = fig.add_subplot(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+
+data = pd.read_csv(<span class="hljs-string">&apos;examples/spx.csv&apos;</span>, index_col=<span class="hljs-number">0</span>, parse_dates=<span class="hljs-keyword">True</span>)
+spx = data[<span class="hljs-string">&apos;SPX&apos;</span>]
+
+spx.plot(ax=ax, style=<span class="hljs-string">&apos;k-&apos;</span>)
+
+crisis_data = [
+    (datetime(<span class="hljs-number">2007</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>), <span class="hljs-string">&apos;Peak of bull market&apos;</span>),
+    (datetime(<span class="hljs-number">2008</span>, <span class="hljs-number">3</span>, <span class="hljs-number">12</span>), <span class="hljs-string">&apos;Bear Stearns Fails&apos;</span>),
+    (datetime(<span class="hljs-number">2008</span>, <span class="hljs-number">9</span>, <span class="hljs-number">15</span>), <span class="hljs-string">&apos;Lehman Bankruptcy&apos;</span>)
+]
+
+<span class="hljs-keyword">for</span> date, label <span class="hljs-keyword">in</span> crisis_data:
+    ax.annotate(label, xy=(date, spx.asof(date) + <span class="hljs-number">75</span>),
+                xytext=(date, spx.asof(date) + <span class="hljs-number">225</span>),
+                arrowprops=dict(facecolor=<span class="hljs-string">&apos;black&apos;</span>, headwidth=<span class="hljs-number">4</span>, width=<span class="hljs-number">2</span>,
+                                headlength=<span class="hljs-number">4</span>),
+                horizontalalignment=<span class="hljs-string">&apos;left&apos;</span>, verticalalignment=<span class="hljs-string">&apos;top&apos;</span>)
+
+<span class="hljs-comment"># Zoom in on 2007-2010</span>
+ax.set_xlim([<span class="hljs-string">&apos;1/1/2007&apos;</span>, <span class="hljs-string">&apos;1/1/2011&apos;</span>])
+ax.set_ylim([<span class="hljs-number">600</span>, <span class="hljs-number">1800</span>])
+
+ax.set_title(<span class="hljs-string">&apos;Important dates in the 2008-2009 financial crisis&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-3127eaa51f5e4c2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-11 2008-2009&#x5E74;&#x91D1;&#x878D;&#x5371;&#x673A;&#x671F;&#x95F4;&#x7684;&#x91CD;&#x8981;&#x65E5;&#x671F;"></p>
+<p>&#x8FD9;&#x5F20;&#x56FE;&#x4E2D;&#x6709;&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x70B9;&#x8981;&#x5F3A;&#x8C03;&#xFF1A;ax.annotate&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x6307;&#x5B9A;&#x7684;x&#x548C;y&#x5750;&#x6807;&#x8F74;&#x7ED8;&#x5236;&#x6807;&#x7B7E;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528;set_xlim&#x548C;set_ylim&#x4EBA;&#x5DE5;&#x8BBE;&#x5B9A;&#x8D77;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x8FB9;&#x754C;&#xFF0C;&#x800C;&#x4E0D;&#x4F7F;&#x7528;matplotlib&#x7684;&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x7528;ax.set_title&#x6DFB;&#x52A0;&#x56FE;&#x6807;&#x6807;&#x9898;&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x6709;&#x5173;&#x6CE8;&#x89E3;&#x7684;&#x793A;&#x4F8B;&#xFF0C;&#x8BF7;&#x8BBF;&#x95EE;matplotlib&#x7684;&#x5728;&#x7EBF;&#x793A;&#x4F8B;&#x5E93;&#x3002;</p>
+<p>&#x56FE;&#x5F62;&#x7684;&#x7ED8;&#x5236;&#x8981;&#x9EBB;&#x70E6;&#x4E00;&#x4E9B;&#x3002;matplotlib&#x6709;&#x4E00;&#x4E9B;&#x8868;&#x793A;&#x5E38;&#x89C1;&#x56FE;&#x5F62;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x88AB;&#x79F0;&#x4E3A;&#x5757;&#xFF08;patch&#xFF09;&#x3002;&#x5176;&#x4E2D;&#x6709;&#x4E9B;&#xFF08;&#x5982;Rectangle&#x548C;Circle&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;matplotlib.pyplot&#x4E2D;&#x627E;&#x5230;&#xFF0C;&#x4F46;&#x5B8C;&#x6574;&#x96C6;&#x5408;&#x4F4D;&#x4E8E;matplotlib.patches&#x3002;</p>
+<p>&#x8981;&#x5728;&#x56FE;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x56FE;&#x5F62;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5757;&#x5BF9;&#x8C61;shp&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;ax.add_patch(shp)&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;subplot&#x4E2D;&#xFF08;&#x5982;&#x56FE;9-12&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">fig = plt.figure()
+ax = fig.add_subplot(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+
+rect = plt.Rectangle((<span class="hljs-number">0.2</span>, <span class="hljs-number">0.75</span>), <span class="hljs-number">0.4</span>, <span class="hljs-number">0.15</span>, color=<span class="hljs-string">&apos;k&apos;</span>, alpha=<span class="hljs-number">0.3</span>)
+circ = plt.Circle((<span class="hljs-number">0.7</span>, <span class="hljs-number">0.2</span>), <span class="hljs-number">0.15</span>, color=<span class="hljs-string">&apos;b&apos;</span>, alpha=<span class="hljs-number">0.3</span>)
+pgon = plt.Polygon([[<span class="hljs-number">0.15</span>, <span class="hljs-number">0.15</span>], [<span class="hljs-number">0.35</span>, <span class="hljs-number">0.4</span>], [<span class="hljs-number">0.2</span>, <span class="hljs-number">0.6</span>]],
+                   color=<span class="hljs-string">&apos;g&apos;</span>, alpha=<span class="hljs-number">0.5</span>)
+
+ax.add_patch(rect)
+ax.add_patch(circ)
+ax.add_patch(pgon)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-1f8a3d7a3a02d7d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-12 &#x7531;&#x4E09;&#x4E2A;&#x5757;&#x56FE;&#x5F62;&#x7EC4;&#x6210;&#x7684;&#x56FE;"></p>
+<p>&#x5982;&#x679C;&#x67E5;&#x770B;&#x8BB8;&#x591A;&#x5E38;&#x89C1;&#x56FE;&#x8868;&#x5BF9;&#x8C61;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x4EEC;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x7531;&#x5757;patch&#x7EC4;&#x88C5;&#x800C;&#x6210;&#x7684;&#x3002;</p>
+<h2 id="&#x5C06;&#x56FE;&#x8868;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;">&#x5C06;&#x56FE;&#x8868;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;</h2>
+<p>&#x5229;&#x7528;plt.savefig&#x53EF;&#x4EE5;&#x5C06;&#x5F53;&#x524D;&#x56FE;&#x8868;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x76F8;&#x5F53;&#x4E8E;Figure&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;savefig&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x5C06;&#x56FE;&#x8868;&#x4FDD;&#x5B58;&#x4E3A;SVG&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code class="lang-python">plt.savefig(<span class="hljs-string">&apos;figpath.svg&apos;</span>)
+</code></pre>
+<p>&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x662F;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x63A8;&#x65AD;&#x51FA;&#x6765;&#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x662F;.pdf&#xFF0C;&#x5C31;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;PDF&#x6587;&#x4EF6;&#x3002;&#x6211;&#x5728;&#x53D1;&#x5E03;&#x56FE;&#x7247;&#x65F6;&#x6700;&#x5E38;&#x7528;&#x5230;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x9009;&#x9879;&#x662F;dpi&#xFF08;&#x63A7;&#x5236;&#x201C;&#x6BCF;&#x82F1;&#x5BF8;&#x70B9;&#x6570;&#x201D;&#x5206;&#x8FA8;&#x7387;&#xFF09;&#x548C;bbox_inches&#xFF08;&#x53EF;&#x4EE5;&#x526A;&#x9664;&#x5F53;&#x524D;&#x56FE;&#x8868;&#x5468;&#x56F4;&#x7684;&#x7A7A;&#x767D;&#x90E8;&#x5206;&#xFF09;&#x3002;&#x8981;&#x5F97;&#x5230;&#x4E00;&#x5F20;&#x5E26;&#x6709;&#x6700;&#x5C0F;&#x767D;&#x8FB9;&#x4E14;&#x5206;&#x8FA8;&#x7387;&#x4E3A;400DPI&#x7684;PNG&#x56FE;&#x7247;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#xFF1A;</p>
+<pre><code class="lang-python">plt.savefig(<span class="hljs-string">&apos;figpath.png&apos;</span>, dpi=<span class="hljs-number">400</span>, bbox_inches=<span class="hljs-string">&apos;tight&apos;</span>)
+</code></pre>
+<p>savefig&#x5E76;&#x975E;&#x4E00;&#x5B9A;&#x8981;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x5165;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;BytesIO&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> io <span class="hljs-keyword">import</span> BytesIO
+buffer = BytesIO()
+plt.savefig(buffer)
+plot_data = buffer.getvalue()
+</code></pre>
+<p>&#x8868;9-2&#x5217;&#x51FA;&#x4E86;savefig&#x7684;&#x5176;&#x5B83;&#x9009;&#x9879;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-4bee796bf7262423.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;9-2 Figure.savefig&#x7684;&#x9009;&#x9879;"></p>
+<h2 id="matplotlib&#x914D;&#x7F6E;">matplotlib&#x914D;&#x7F6E;</h2>
+<p>matplotlib&#x81EA;&#x5E26;&#x4E00;&#x4E9B;&#x914D;&#x8272;&#x65B9;&#x6848;&#xFF0C;&#x4EE5;&#x53CA;&#x4E3A;&#x751F;&#x6210;&#x51FA;&#x7248;&#x8D28;&#x91CF;&#x7684;&#x56FE;&#x7247;&#x800C;&#x8BBE;&#x5B9A;&#x7684;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x90FD;&#x80FD;&#x901A;&#x8FC7;&#x4E00;&#x7EC4;&#x5168;&#x5C40;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x3001;subplot&#x8FB9;&#x8DDD;&#x3001;&#x914D;&#x8272;&#x65B9;&#x6848;&#x3001;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x3001;&#x7F51;&#x683C;&#x7C7B;&#x578B;&#x7B49;&#x3002;&#x4E00;&#x79CD;Python&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;rc&#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x5C06;&#x5168;&#x5C40;&#x7684;&#x56FE;&#x50CF;&#x9ED8;&#x8BA4;&#x5927;&#x5C0F;&#x8BBE;&#x7F6E;&#x4E3A;10&#xD7;10&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">plt.rc(<span class="hljs-string">&apos;figure&apos;</span>, figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>))
+</code></pre>
+<p>rc&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5E0C;&#x671B;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&apos;figure&apos;&#x3001;&apos;axes&apos;&#x3001;&apos;xtick&apos;&#x3001;&apos;ytick&apos;&#x3001;&apos;grid&apos;&#x3001;&apos;legend&apos;&#x7B49;&#x3002;&#x5176;&#x540E;&#x53EF;&#x4EE5;&#x8DDF;&#x4E0A;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x3002;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x5C06;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x5199;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF1A;</p>
+<pre><code class="lang-python">font_options = {<span class="hljs-string">&apos;family&apos;</span> : <span class="hljs-string">&apos;monospace&apos;</span>,
+                <span class="hljs-string">&apos;weight&apos;</span> : <span class="hljs-string">&apos;bold&apos;</span>,
+                <span class="hljs-string">&apos;size&apos;</span>   : <span class="hljs-string">&apos;small&apos;</span>}
+plt.rc(<span class="hljs-string">&apos;font&apos;</span>, **font_options)
+</code></pre>
+<p>&#x8981;&#x4E86;&#x89E3;&#x5168;&#x90E8;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x9009;&#x9879;&#xFF0C;&#x8BF7;&#x67E5;&#x9605;matplotlib&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;matplotlibrc&#xFF08;&#x4F4D;&#x4E8E;matplotlib/mpl-data&#x76EE;&#x5F55;&#x4E2D;&#xFF09;&#x3002;&#x5982;&#x679C;&#x5BF9;&#x8BE5;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x653E;&#x5728;&#x4F60;&#x81EA;&#x5DF1;&#x7684;.matplotlibrc&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5219;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;matplotlib&#x65F6;&#x5C31;&#x4F1A;&#x52A0;&#x8F7D;&#x8BE5;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x770B;&#x5230;&#xFF0C;seaborn&#x5305;&#x6709;&#x82E5;&#x5E72;&#x5185;&#x7F6E;&#x7684;&#x7ED8;&#x56FE;&#x4E3B;&#x9898;&#x6216;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;matplotlib&#x7684;&#x5185;&#x90E8;&#x914D;&#x7F6E;&#x3002;</p>
+<h1 id="92-&#x4F7F;&#x7528;pandas&#x548C;seaborn&#x7ED8;&#x56FE;">9.2 &#x4F7F;&#x7528;pandas&#x548C;seaborn&#x7ED8;&#x56FE;</h1>
+<p>matplotlib&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x79CD;&#x6BD4;&#x8F83;&#x4F4E;&#x7EA7;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x8981;&#x7ED8;&#x5236;&#x4E00;&#x5F20;&#x56FE;&#x8868;&#xFF0C;&#x4F60;&#x7EC4;&#x88C5;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7EC4;&#x4EF6;&#x5C31;&#x884C;&#xFF1A;&#x6570;&#x636E;&#x5C55;&#x793A;&#xFF08;&#x5373;&#x56FE;&#x8868;&#x7C7B;&#x578B;&#xFF1A;&#x7EBF;&#x578B;&#x56FE;&#x3001;&#x67F1;&#x72B6;&#x56FE;&#x3001;&#x76D2;&#x5F62;&#x56FE;&#x3001;&#x6563;&#x5E03;&#x56FE;&#x3001;&#x7B49;&#x503C;&#x7EBF;&#x56FE;&#x7B49;&#xFF09;&#x3001;&#x56FE;&#x4F8B;&#x3001;&#x6807;&#x9898;&#x3001;&#x523B;&#x5EA6;&#x6807;&#x7B7E;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x6CE8;&#x89E3;&#x578B;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5728;pandas&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x591A;&#x5217;&#x6570;&#x636E;&#xFF0C;&#x8FD8;&#x6709;&#x884C;&#x548C;&#x5217;&#x6807;&#x7B7E;&#x3002;pandas&#x81EA;&#x8EAB;&#x5C31;&#x6709;&#x5185;&#x7F6E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x7B80;&#x5316;&#x4ECE;DataFrame&#x548C;Series&#x7ED8;&#x5236;&#x56FE;&#x5F62;&#x3002;&#x53E6;&#x4E00;&#x4E2A;&#x5E93;seaborn&#xFF08;<a href="https://seaborn.pydata.org/&#xFF09;&#xFF0C;&#x7531;Michael" target="_blank">https://seaborn.pydata.org/&#xFF09;&#xFF0C;&#x7531;Michael</a> Waskom&#x521B;&#x5EFA;&#x7684;&#x9759;&#x6001;&#x56FE;&#x5F62;&#x5E93;&#x3002;Seaborn&#x7B80;&#x5316;&#x4E86;&#x8BB8;&#x591A;&#x5E38;&#x89C1;&#x53EF;&#x89C6;&#x7C7B;&#x578B;&#x7684;&#x521B;&#x5EFA;&#x3002;</p>
+<blockquote>
+<p>&#x63D0;&#x793A;&#xFF1A;&#x5F15;&#x5165;seaborn&#x4F1A;&#x4FEE;&#x6539;matplotlib&#x9ED8;&#x8BA4;&#x7684;&#x989C;&#x8272;&#x65B9;&#x6848;&#x548C;&#x7ED8;&#x56FE;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x63D0;&#x9AD8;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x7F8E;&#x89C2;&#x5EA6;&#x3002;&#x5373;&#x4F7F;&#x4F60;&#x4E0D;&#x4F7F;&#x7528;seaborn API&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4E5F;&#x4F1A;&#x5F15;&#x5165;seaborn&#xFF0C;&#x4F5C;&#x4E3A;&#x63D0;&#x9AD8;&#x7F8E;&#x89C2;&#x5EA6;&#x548C;&#x7ED8;&#x5236;&#x5E38;&#x89C1;matplotlib&#x56FE;&#x5F62;&#x7684;&#x7B80;&#x5316;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<h2 id="&#x7EBF;&#x578B;&#x56FE;">&#x7EBF;&#x578B;&#x56FE;</h2>
+<p>Series&#x548C;DataFrame&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x5404;&#x7C7B;&#x56FE;&#x8868;&#x7684;plot&#x65B9;&#x6CD5;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x4EEC;&#x6240;&#x751F;&#x6210;&#x7684;&#x662F;&#x7EBF;&#x578B;&#x56FE;&#xFF08;&#x5982;&#x56FE;9-13&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">60</span>]: s = pd.Series(np.random.randn(<span class="hljs-number">10</span>).cumsum(), index=np.arange(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">10</span>))
+
+In [<span class="hljs-number">61</span>]: s.plot()
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-f28e5ab2ac94c7a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-13 &#x7B80;&#x5355;&#x7684;Series&#x56FE;&#x8868;&#x793A;&#x4F8B;"></p>
+<p>&#x8BE5;Series&#x5BF9;&#x8C61;&#x7684;&#x7D22;&#x5F15;&#x4F1A;&#x88AB;&#x4F20;&#x7ED9;matplotlib&#xFF0C;&#x5E76;&#x7528;&#x4EE5;&#x7ED8;&#x5236;X&#x8F74;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;use_index=False&#x7981;&#x7528;&#x8BE5;&#x529F;&#x80FD;&#x3002;X&#x8F74;&#x7684;&#x523B;&#x5EA6;&#x548C;&#x754C;&#x9650;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;xticks&#x548C;xlim&#x9009;&#x9879;&#x8FDB;&#x884C;&#x8C03;&#x8282;&#xFF0C;Y&#x8F74;&#x5C31;&#x7528;yticks&#x548C;ylim&#x3002;plot&#x53C2;&#x6570;&#x7684;&#x5B8C;&#x6574;&#x5217;&#x8868;&#x8BF7;&#x53C2;&#x89C1;&#x8868;9-3&#x3002;&#x6211;&#x53EA;&#x4F1A;&#x8BB2;&#x89E3;&#x5176;&#x4E2D;&#x51E0;&#x4E2A;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x7559;&#x7ED9;&#x8BFB;&#x8005;&#x81EA;&#x5DF1;&#x53BB;&#x7814;&#x7A76;&#x4E86;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-6d9fbf863c09370a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-44e50562aeb5eb49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;9-3 Series.plot&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;"></p>
+<p>pandas&#x7684;&#x5927;&#x90E8;&#x5206;&#x7ED8;&#x56FE;&#x65B9;&#x6CD5;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;ax&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;matplotlib&#x7684;subplot&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4F7F;&#x4F60;&#x80FD;&#x591F;&#x5728;&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x4E2D;&#x66F4;&#x4E3A;&#x7075;&#x6D3B;&#x5730;&#x5904;&#x7406;subplot&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>DataFrame&#x7684;plot&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x4E00;&#x4E2A;subplot&#x4E2D;&#x4E3A;&#x5404;&#x5217;&#x7ED8;&#x5236;&#x4E00;&#x6761;&#x7EBF;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x56FE;&#x4F8B;&#xFF08;&#x5982;&#x56FE;9-14&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">62</span>]: df = pd.DataFrame(np.random.randn(<span class="hljs-number">10</span>, <span class="hljs-number">4</span>).cumsum(<span class="hljs-number">0</span>),
+   ....:                   columns=[<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>, <span class="hljs-string">&apos;D&apos;</span>],
+   ....:                   index=np.arange(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">10</span>))
+
+In [<span class="hljs-number">63</span>]: df.plot()
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-a1234d5e5ee41a40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-14 &#x7B80;&#x5355;&#x7684;DataFrame&#x7ED8;&#x56FE;"></p>
+<p>plot&#x5C5E;&#x6027;&#x5305;&#x542B;&#x4E00;&#x6279;&#x4E0D;&#x540C;&#x7ED8;&#x56FE;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;df.plot()&#x7B49;&#x4EF7;&#x4E8E;df.plot.line()&#x3002;&#x540E;&#x9762;&#x4F1A;&#x5B66;&#x4E60;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;plot&#x7684;&#x5176;&#x4ED6;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x4F1A;&#x88AB;&#x4F20;&#x7ED9;&#x76F8;&#x5E94;&#x7684;matplotlib&#x7ED8;&#x56FE;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x66F4;&#x6DF1;&#x5165;&#x5730;&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x5B66;&#x4E60;&#x66F4;&#x591A;&#x6709;&#x5173;matplotlib API&#x7684;&#x77E5;&#x8BC6;&#x3002;</p>
+</blockquote>
+<p>DataFrame&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x7528;&#x4E8E;&#x5BF9;&#x5217;&#x8FDB;&#x884C;&#x7075;&#x6D3B;&#x5904;&#x7406;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x662F;&#x8981;&#x5C06;&#x6240;&#x6709;&#x5217;&#x90FD;&#x7ED8;&#x5236;&#x5230;&#x4E00;&#x4E2A;subplot&#x4E2D;&#x8FD8;&#x662F;&#x521B;&#x5EFA;&#x5404;&#x81EA;&#x7684;subplot&#x3002;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x8BF7;&#x53C2;&#x89C1;&#x8868;9-4&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-96651ecaa90f1c68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;9-4 &#x4E13;&#x7528;&#x4E8E;DataFrame&#x7684;plot&#x53C2;&#x6570;"></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A; &#x6709;&#x5173;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7684;&#x7ED8;&#x56FE;&#xFF0C;&#x8BF7;&#x89C1;&#x7B2C;11&#x7AE0;&#x3002;</p>
+</blockquote>
+<h2 id="&#x67F1;&#x72B6;&#x56FE;">&#x67F1;&#x72B6;&#x56FE;</h2>
+<p>plot.bar()&#x548C;plot.barh()&#x5206;&#x522B;&#x7ED8;&#x5236;&#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x7684;&#x67F1;&#x72B6;&#x56FE;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;Series&#x548C;DataFrame&#x7684;&#x7D22;&#x5F15;&#x5C06;&#x4F1A;&#x88AB;&#x7528;&#x4F5C;X&#xFF08;bar&#xFF09;&#x6216;Y&#xFF08;barh&#xFF09;&#x523B;&#x5EA6;&#xFF08;&#x5982;&#x56FE;9-15&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">64</span>]: fig, axes = plt.subplots(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">65</span>]: data = pd.Series(np.random.rand(<span class="hljs-number">16</span>), index=list(<span class="hljs-string">&apos;abcdefghijklmnop&apos;</span>))
+
+In [<span class="hljs-number">66</span>]: data.plot.bar(ax=axes[<span class="hljs-number">0</span>], color=<span class="hljs-string">&apos;k&apos;</span>, alpha=<span class="hljs-number">0.7</span>)
+Out[<span class="hljs-number">66</span>]: &lt;matplotlib.axes._subplots.AxesSubplot at <span class="hljs-number">0x7fb62493d470</span>&gt;
+
+In [<span class="hljs-number">67</span>]: data.plot.barh(ax=axes[<span class="hljs-number">1</span>], color=<span class="hljs-string">&apos;k&apos;</span>, alpha=<span class="hljs-number">0.7</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-cd54c7ccfa3f0687.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-15 &#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x7684;&#x67F1;&#x72B6;&#x56FE;"></p>
+<p>color=&apos;k&apos;&#x548C;alpha=0.7&#x8BBE;&#x5B9A;&#x4E86;&#x56FE;&#x5F62;&#x7684;&#x989C;&#x8272;&#x4E3A;&#x9ED1;&#x8272;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x90E8;&#x5206;&#x7684;&#x586B;&#x5145;&#x900F;&#x660E;&#x5EA6;&#x3002;&#x5BF9;&#x4E8E;DataFrame&#xFF0C;&#x67F1;&#x72B6;&#x56FE;&#x4F1A;&#x5C06;&#x6BCF;&#x4E00;&#x884C;&#x7684;&#x503C;&#x5206;&#x4E3A;&#x4E00;&#x7EC4;&#xFF0C;&#x5E76;&#x6392;&#x663E;&#x793A;&#xFF0C;&#x5982;&#x56FE;9-16&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">69</span>]: df = pd.DataFrame(np.random.rand(<span class="hljs-number">6</span>, <span class="hljs-number">4</span>),
+   ....:                   index=[<span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>, <span class="hljs-string">&apos;four&apos;</span>, <span class="hljs-string">&apos;five&apos;</span>, <span class="hljs-string">&apos;six&apos;</span>],
+   ....:                   columns=pd.Index([<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>, <span class="hljs-string">&apos;D&apos;</span>], name=<span class="hljs-string">&apos;Genus&apos;</span>))
+
+In [<span class="hljs-number">70</span>]: df
+Out[<span class="hljs-number">70</span>]: 
+Genus         A         B         C         D
+one    <span class="hljs-number">0.370670</span>  <span class="hljs-number">0.602792</span>  <span class="hljs-number">0.229159</span>  <span class="hljs-number">0.486744</span>
+two    <span class="hljs-number">0.420082</span>  <span class="hljs-number">0.571653</span>  <span class="hljs-number">0.049024</span>  <span class="hljs-number">0.880592</span>
+three  <span class="hljs-number">0.814568</span>  <span class="hljs-number">0.277160</span>  <span class="hljs-number">0.880316</span>  <span class="hljs-number">0.431326</span>
+four   <span class="hljs-number">0.374020</span>  <span class="hljs-number">0.899420</span>  <span class="hljs-number">0.460304</span>  <span class="hljs-number">0.100843</span>
+five   <span class="hljs-number">0.433270</span>  <span class="hljs-number">0.125107</span>  <span class="hljs-number">0.494675</span>  <span class="hljs-number">0.961825</span>
+six    <span class="hljs-number">0.601648</span>  <span class="hljs-number">0.478576</span>  <span class="hljs-number">0.205690</span>  <span class="hljs-number">0.560547</span>
+
+In [<span class="hljs-number">71</span>]: df.plot.bar()
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-bfc141acb37d99b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-16 DataFrame&#x7684;&#x67F1;&#x72B6;&#x56FE;"></p>
+<p>&#x6CE8;&#x610F;&#xFF0C;DataFrame&#x5404;&#x5217;&#x7684;&#x540D;&#x79F0;&quot;Genus&quot;&#x88AB;&#x7528;&#x4F5C;&#x4E86;&#x56FE;&#x4F8B;&#x7684;&#x6807;&#x9898;&#x3002;</p>
+<p>&#x8BBE;&#x7F6E;stacked=True&#x5373;&#x53EF;&#x4E3A;DataFrame&#x751F;&#x6210;&#x5806;&#x79EF;&#x67F1;&#x72B6;&#x56FE;&#xFF0C;&#x8FD9;&#x6837;&#x6BCF;&#x884C;&#x7684;&#x503C;&#x5C31;&#x4F1A;&#x88AB;&#x5806;&#x79EF;&#x5728;&#x4E00;&#x8D77;&#xFF08;&#x5982;&#x56FE;9-17&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">73</span>]: df.plot.barh(stacked=<span class="hljs-keyword">True</span>, alpha=<span class="hljs-number">0.5</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-c19e4246eb897978.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-17 DataFrame&#x7684;&#x5806;&#x79EF;&#x67F1;&#x72B6;&#x56FE;"></p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x67F1;&#x72B6;&#x56FE;&#x6709;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x4E0D;&#x9519;&#x7684;&#x7528;&#x6CD5;&#xFF1A;&#x5229;&#x7528;value_counts&#x56FE;&#x5F62;&#x5316;&#x663E;&#x793A;Series&#x4E2D;&#x5404;&#x503C;&#x7684;&#x51FA;&#x73B0;&#x9891;&#x7387;&#xFF0C;&#x6BD4;&#x5982;s.value_counts().plot.bar()&#x3002;</p>
+</blockquote>
+<p>&#x518D;&#x4EE5;&#x672C;&#x4E66;&#x524D;&#x9762;&#x7528;&#x8FC7;&#x7684;&#x90A3;&#x4E2A;&#x6709;&#x5173;&#x5C0F;&#x8D39;&#x7684;&#x6570;&#x636E;&#x96C6;&#x4E3A;&#x4F8B;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x505A;&#x4E00;&#x5F20;&#x5806;&#x79EF;&#x67F1;&#x72B6;&#x56FE;&#x4EE5;&#x5C55;&#x793A;&#x6BCF;&#x5929;&#x5404;&#x79CD;&#x805A;&#x4F1A;&#x89C4;&#x6A21;&#x7684;&#x6570;&#x636E;&#x70B9;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x3002;&#x6211;&#x7528;read_csv&#x5C06;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x8FDB;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x65E5;&#x671F;&#x548C;&#x805A;&#x4F1A;&#x89C4;&#x6A21;&#x521B;&#x5EFA;&#x4E00;&#x5F20;&#x4EA4;&#x53C9;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">75</span>]: tips = pd.read_csv(<span class="hljs-string">&apos;examples/tips.csv&apos;</span>)
+
+In [<span class="hljs-number">76</span>]: party_counts = pd.crosstab(tips[<span class="hljs-string">&apos;day&apos;</span>], tips[<span class="hljs-string">&apos;size&apos;</span>])
+
+In [<span class="hljs-number">77</span>]: party_counts
+Out[<span class="hljs-number">77</span>]: 
+size  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>
+day                      
+Fri   <span class="hljs-number">1</span>  <span class="hljs-number">16</span>   <span class="hljs-number">1</span>   <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+Sat   <span class="hljs-number">2</span>  <span class="hljs-number">53</span>  <span class="hljs-number">18</span>  <span class="hljs-number">13</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
+Sun   <span class="hljs-number">0</span>  <span class="hljs-number">39</span>  <span class="hljs-number">15</span>  <span class="hljs-number">18</span>  <span class="hljs-number">3</span>  <span class="hljs-number">1</span>
+Thur  <span class="hljs-number">1</span>  <span class="hljs-number">48</span>   <span class="hljs-number">4</span>   <span class="hljs-number">5</span>  <span class="hljs-number">1</span>  <span class="hljs-number">3</span>
+
+<span class="hljs-comment"># Not many 1- and 6-person parties</span>
+In [<span class="hljs-number">78</span>]: party_counts = party_counts.loc[:, <span class="hljs-number">2</span>:<span class="hljs-number">5</span>]
+</code></pre>
+<p>&#x7136;&#x540E;&#x8FDB;&#x884C;&#x89C4;&#x683C;&#x5316;&#xFF0C;&#x4F7F;&#x5F97;&#x5404;&#x884C;&#x7684;&#x548C;&#x4E3A;1&#xFF0C;&#x5E76;&#x751F;&#x6210;&#x56FE;&#x8868;&#xFF08;&#x5982;&#x56FE;9-18&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Normalize to sum to 1</span>
+In [<span class="hljs-number">79</span>]: party_pcts = party_counts.div(party_counts.sum(<span class="hljs-number">1</span>), axis=<span class="hljs-number">0</span>)
+
+In [<span class="hljs-number">80</span>]: party_pcts
+Out[<span class="hljs-number">80</span>]: 
+size         <span class="hljs-number">2</span>         <span class="hljs-number">3</span>         <span class="hljs-number">4</span>         <span class="hljs-number">5</span>
+day                                         
+Fri   <span class="hljs-number">0.888889</span>  <span class="hljs-number">0.055556</span>  <span class="hljs-number">0.055556</span>  <span class="hljs-number">0.000000</span>
+Sat   <span class="hljs-number">0.623529</span>  <span class="hljs-number">0.211765</span>  <span class="hljs-number">0.152941</span>  <span class="hljs-number">0.011765</span>
+Sun   <span class="hljs-number">0.520000</span>  <span class="hljs-number">0.200000</span>  <span class="hljs-number">0.240000</span>  <span class="hljs-number">0.040000</span>
+Thur  <span class="hljs-number">0.827586</span>  <span class="hljs-number">0.068966</span>  <span class="hljs-number">0.086207</span>  <span class="hljs-number">0.017241</span>
+
+In [<span class="hljs-number">81</span>]: party_pcts.plot.bar()
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-2918f67936823834.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-18 &#x6BCF;&#x5929;&#x5404;&#x79CD;&#x805A;&#x4F1A;&#x89C4;&#x6A21;&#x7684;&#x6BD4;&#x4F8B;"></p>
+<p>&#x4E8E;&#x662F;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x805A;&#x4F1A;&#x89C4;&#x6A21;&#x5728;&#x5468;&#x672B;&#x4F1A;&#x53D8;&#x5927;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5728;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x56FE;&#x5F62;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5408;&#x8BA1;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F7F;&#x7528;seaborn&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5DE5;&#x4F5C;&#x91CF;&#x3002;&#x7528;seaborn&#x6765;&#x770B;&#x6BCF;&#x5929;&#x7684;&#x5C0F;&#x8D39;&#x6BD4;&#x4F8B;&#xFF08;&#x56FE;9-19&#x662F;&#x7ED3;&#x679C;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">83</span>]: <span class="hljs-keyword">import</span> seaborn <span class="hljs-keyword">as</span> sns
+
+In [<span class="hljs-number">84</span>]: tips[<span class="hljs-string">&apos;tip_pct&apos;</span>] = tips[<span class="hljs-string">&apos;tip&apos;</span>] / (tips[<span class="hljs-string">&apos;total_bill&apos;</span>] - tips[<span class="hljs-string">&apos;tip&apos;</span>])
+
+In [<span class="hljs-number">85</span>]: tips.head()
+Out[<span class="hljs-number">85</span>]: 
+   total_bill   tip smoker  day    time  size   tip_pct
+<span class="hljs-number">0</span>       <span class="hljs-number">16.99</span>  <span class="hljs-number">1.01</span>     No  Sun  Dinner     <span class="hljs-number">2</span>  <span class="hljs-number">0.063204</span>
+<span class="hljs-number">1</span>       <span class="hljs-number">10.34</span>  <span class="hljs-number">1.66</span>     No  Sun  Dinner     <span class="hljs-number">3</span>  <span class="hljs-number">0.191244</span>
+<span class="hljs-number">2</span>       <span class="hljs-number">21.01</span>  <span class="hljs-number">3.50</span>     No  Sun  Dinner     <span class="hljs-number">3</span>  <span class="hljs-number">0.199886</span>
+<span class="hljs-number">3</span>       <span class="hljs-number">23.68</span>  <span class="hljs-number">3.31</span>     No  Sun  Dinner     <span class="hljs-number">2</span>  <span class="hljs-number">0.162494</span>
+<span class="hljs-number">4</span>       <span class="hljs-number">24.59</span>  <span class="hljs-number">3.61</span>     No  Sun  Dinner     <span class="hljs-number">4</span>  <span class="hljs-number">0.172069</span>
+
+In [<span class="hljs-number">86</span>]: sns.barplot(x=<span class="hljs-string">&apos;tip_pct&apos;</span>, y=<span class="hljs-string">&apos;day&apos;</span>, data=tips, orient=<span class="hljs-string">&apos;h&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-c33e8b3add99904b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-19 &#x5C0F;&#x8D39;&#x7684;&#x6BCF;&#x65E5;&#x6BD4;&#x4F8B;&#xFF0C;&#x5E26;&#x6709;&#x8BEF;&#x5DEE;&#x6761;"></p>
+<p>seaborn&#x7684;&#x7ED8;&#x5236;&#x51FD;&#x6570;&#x4F7F;&#x7528;data&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x662F;pandas&#x7684;DataFrame&#x3002;&#x5176;&#x5B83;&#x7684;&#x53C2;&#x6570;&#x662F;&#x5173;&#x4E8E;&#x5217;&#x7684;&#x540D;&#x5B57;&#x3002;&#x56E0;&#x4E3A;&#x4E00;&#x5929;&#x7684;&#x6BCF;&#x4E2A;&#x503C;&#x6709;&#x591A;&#x6B21;&#x89C2;&#x5BDF;&#xFF0C;&#x67F1;&#x72B6;&#x56FE;&#x7684;&#x503C;&#x662F;tip_pct&#x7684;&#x5E73;&#x5747;&#x503C;&#x3002;&#x7ED8;&#x5236;&#x5728;&#x67F1;&#x72B6;&#x56FE;&#x4E0A;&#x7684;&#x9ED1;&#x7EBF;&#x4EE3;&#x8868;95%&#x7F6E;&#x4FE1;&#x533A;&#x95F4;&#xFF08;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF09;&#x3002;</p>
+<p>seaborn.barplot&#x6709;&#x989C;&#x8272;&#x9009;&#x9879;&#xFF0C;&#x4F7F;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x503C;&#x8BBE;&#x7F6E;&#xFF08;&#x89C1;&#x56FE;9-20&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">88</span>]: sns.barplot(x=<span class="hljs-string">&apos;tip_pct&apos;</span>, y=<span class="hljs-string">&apos;day&apos;</span>, hue=<span class="hljs-string">&apos;time&apos;</span>, data=tips, orient=<span class="hljs-string">&apos;h&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-06abe2f070222115.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-20 &#x6839;&#x636E;&#x5929;&#x548C;&#x65F6;&#x95F4;&#x7684;&#x5C0F;&#x8D39;&#x6BD4;&#x4F8B;"></p>
+<p>&#x6CE8;&#x610F;&#xFF0C;seaborn&#x5DF2;&#x7ECF;&#x81EA;&#x52A8;&#x4FEE;&#x6539;&#x4E86;&#x56FE;&#x5F62;&#x7684;&#x7F8E;&#x89C2;&#x5EA6;&#xFF1A;&#x9ED8;&#x8BA4;&#x8C03;&#x8272;&#x677F;&#xFF0C;&#x56FE;&#x5F62;&#x80CC;&#x666F;&#x548C;&#x7F51;&#x683C;&#x7EBF;&#x7684;&#x989C;&#x8272;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;seaborn.set&#x5728;&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x5F62;&#x5916;&#x89C2;&#x4E4B;&#x95F4;&#x5207;&#x6362;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">90</span>]: sns.set(style=<span class="hljs-string">&quot;whitegrid&quot;</span>)
+</code></pre>
+<h2 id="&#x76F4;&#x65B9;&#x56FE;&#x548C;&#x5BC6;&#x5EA6;&#x56FE;">&#x76F4;&#x65B9;&#x56FE;&#x548C;&#x5BC6;&#x5EA6;&#x56FE;</h2>
+<p>&#x76F4;&#x65B9;&#x56FE;&#xFF08;histogram&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x5BF9;&#x503C;&#x9891;&#x7387;&#x8FDB;&#x884C;&#x79BB;&#x6563;&#x5316;&#x663E;&#x793A;&#x7684;&#x67F1;&#x72B6;&#x56FE;&#x3002;&#x6570;&#x636E;&#x70B9;&#x88AB;&#x62C6;&#x5206;&#x5230;&#x79BB;&#x6563;&#x7684;&#x3001;&#x95F4;&#x9694;&#x5747;&#x5300;&#x7684;&#x9762;&#x5143;&#x4E2D;&#xFF0C;&#x7ED8;&#x5236;&#x7684;&#x662F;&#x5404;&#x9762;&#x5143;&#x4E2D;&#x6570;&#x636E;&#x70B9;&#x7684;&#x6570;&#x91CF;&#x3002;&#x518D;&#x4EE5;&#x524D;&#x9762;&#x90A3;&#x4E2A;&#x5C0F;&#x8D39;&#x6570;&#x636E;&#x4E3A;&#x4F8B;&#xFF0C;&#x901A;&#x8FC7;&#x5728;Series&#x4F7F;&#x7528;plot.hist&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x5F20;&#x201C;&#x5C0F;&#x8D39;&#x5360;&#x6D88;&#x8D39;&#x603B;&#x989D;&#x767E;&#x5206;&#x6BD4;&#x201D;&#x7684;&#x76F4;&#x65B9;&#x56FE;&#xFF08;&#x5982;&#x56FE;9-21&#x6240;&#x793A;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">92</span>]: tips[<span class="hljs-string">&apos;tip_pct&apos;</span>].plot.hist(bins=<span class="hljs-number">50</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-255279376f7649a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-21 &#x5C0F;&#x8D39;&#x767E;&#x5206;&#x6BD4;&#x7684;&#x76F4;&#x65B9;&#x56FE;"></p>
+<p>&#x4E0E;&#x6B64;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x79CD;&#x56FE;&#x8868;&#x7C7B;&#x578B;&#x662F;&#x5BC6;&#x5EA6;&#x56FE;&#xFF0C;&#x5B83;&#x662F;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x201C;&#x53EF;&#x80FD;&#x4F1A;&#x4EA7;&#x751F;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x7684;&#x8FDE;&#x7EED;&#x6982;&#x7387;&#x5206;&#x5E03;&#x7684;&#x4F30;&#x8BA1;&#x201D;&#x800C;&#x4EA7;&#x751F;&#x7684;&#x3002;&#x4E00;&#x822C;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x5C06;&#x8BE5;&#x5206;&#x5E03;&#x8FD1;&#x4F3C;&#x4E3A;&#x4E00;&#x7EC4;&#x6838;&#xFF08;&#x5373;&#x8BF8;&#x5982;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x4E4B;&#x7C7B;&#x7684;&#x8F83;&#x4E3A;&#x7B80;&#x5355;&#x7684;&#x5206;&#x5E03;&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5BC6;&#x5EA6;&#x56FE;&#x4E5F;&#x88AB;&#x79F0;&#x4F5C;KDE&#xFF08;Kernel Density Estimate&#xFF0C;&#x6838;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#xFF09;&#x56FE;&#x3002;&#x4F7F;&#x7528;plot.kde&#x548C;&#x6807;&#x51C6;&#x6DF7;&#x5408;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x4F30;&#x8BA1;&#x5373;&#x53EF;&#x751F;&#x6210;&#x4E00;&#x5F20;&#x5BC6;&#x5EA6;&#x56FE;&#xFF08;&#x89C1;&#x56FE;9-22&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">94</span>]: tips[<span class="hljs-string">&apos;tip_pct&apos;</span>].plot.density()
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-ee929d033159516a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-22  &#x5C0F;&#x8D39;&#x767E;&#x5206;&#x6BD4;&#x7684;&#x5BC6;&#x5EA6;&#x56FE;"></p>
+<p>seaborn&#x7684;distplot&#x65B9;&#x6CD5;&#x7ED8;&#x5236;&#x76F4;&#x65B9;&#x56FE;&#x548C;&#x5BC6;&#x5EA6;&#x56FE;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x753B;&#x51FA;&#x76F4;&#x65B9;&#x56FE;&#x548C;&#x8FDE;&#x7EED;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#x56FE;&#x3002;&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#xFF0C;&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x53CC;&#x5CF0;&#x5206;&#x5E03;&#xFF0C;&#x7531;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6807;&#x51C6;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7EC4;&#x6210;&#xFF08;&#x89C1;&#x56FE;9-23&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">96</span>]: comp1 = np.random.normal(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, size=<span class="hljs-number">200</span>)
+
+In [<span class="hljs-number">97</span>]: comp2 = np.random.normal(<span class="hljs-number">10</span>, <span class="hljs-number">2</span>, size=<span class="hljs-number">200</span>)
+
+In [<span class="hljs-number">98</span>]: values = pd.Series(np.concatenate([comp1, comp2]))
+
+In [<span class="hljs-number">99</span>]: sns.distplot(values, bins=<span class="hljs-number">100</span>, color=<span class="hljs-string">&apos;k&apos;</span>)
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-975f04d750c4efe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-23 &#x6807;&#x51C6;&#x6DF7;&#x5408;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#x7684;&#x6807;&#x51C6;&#x76F4;&#x65B9;&#x56FE;"></p>
+<h2 id="&#x6563;&#x5E03;&#x56FE;&#x6216;&#x70B9;&#x56FE;">&#x6563;&#x5E03;&#x56FE;&#x6216;&#x70B9;&#x56FE;</h2>
+<p>&#x70B9;&#x56FE;&#x6216;&#x6563;&#x5E03;&#x56FE;&#x662F;&#x89C2;&#x5BDF;&#x4E24;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x636E;&#x5E8F;&#x5217;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x7684;&#x6709;&#x6548;&#x624B;&#x6BB5;&#x3002;&#x5728;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x52A0;&#x8F7D;&#x4E86;&#x6765;&#x81EA;statsmodels&#x9879;&#x76EE;&#x7684;macrodata&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x9009;&#x62E9;&#x4E86;&#x51E0;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x8BA1;&#x7B97;&#x5BF9;&#x6570;&#x5DEE;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">100</span>]: macro = pd.read_csv(<span class="hljs-string">&apos;examples/macrodata.csv&apos;</span>)
+
+In [<span class="hljs-number">101</span>]: data = macro[[<span class="hljs-string">&apos;cpi&apos;</span>, <span class="hljs-string">&apos;m1&apos;</span>, <span class="hljs-string">&apos;tbilrate&apos;</span>, <span class="hljs-string">&apos;unemp&apos;</span>]]
+
+In [<span class="hljs-number">102</span>]: trans_data = np.log(data).diff().dropna()
+
+In [<span class="hljs-number">103</span>]: trans_data[-<span class="hljs-number">5</span>:]
+Out[<span class="hljs-number">103</span>]: 
+          cpi        m1  tbilrate     unemp
+<span class="hljs-number">198</span> -<span class="hljs-number">0.007904</span>  <span class="hljs-number">0.045361</span> -<span class="hljs-number">0.396881</span>  <span class="hljs-number">0.105361</span>
+<span class="hljs-number">199</span> -<span class="hljs-number">0.021979</span>  <span class="hljs-number">0.066753</span> -<span class="hljs-number">2.277267</span>  <span class="hljs-number">0.139762</span>
+<span class="hljs-number">200</span>  <span class="hljs-number">0.002340</span>  <span class="hljs-number">0.010286</span>  <span class="hljs-number">0.606136</span>  <span class="hljs-number">0.160343</span>
+<span class="hljs-number">201</span>  <span class="hljs-number">0.008419</span>  <span class="hljs-number">0.037461</span> -<span class="hljs-number">0.200671</span>  <span class="hljs-number">0.127339</span>
+<span class="hljs-number">202</span>  <span class="hljs-number">0.008894</span>  <span class="hljs-number">0.012202</span> -<span class="hljs-number">0.405465</span>  <span class="hljs-number">0.042560</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;seaborn&#x7684;regplot&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E2A;&#x6563;&#x5E03;&#x56FE;&#xFF0C;&#x5E76;&#x52A0;&#x4E0A;&#x4E00;&#x6761;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x7684;&#x7EBF;&#xFF08;&#x89C1;&#x56FE;9-24&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">105</span>]: sns.regplot(<span class="hljs-string">&apos;m1&apos;</span>, <span class="hljs-string">&apos;unemp&apos;</span>, data=trans_data)
+Out[<span class="hljs-number">105</span>]: &lt;matplotlib.axes._subplots.AxesSubplot at <span class="hljs-number">0x7fb613720be0</span>&gt;
+
+In [<span class="hljs-number">106</span>]: plt.title(<span class="hljs-string">&apos;Changes in log %s versus log %s&apos;</span> % (<span class="hljs-string">&apos;m1&apos;</span>, <span class="hljs-string">&apos;unemp&apos;</span>))
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-2133d20739478a80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-24 seaborn&#x7684;&#x56DE;&#x5F52;/&#x6563;&#x5E03;&#x56FE;"></p>
+<p>&#x5728;&#x63A2;&#x7D22;&#x5F0F;&#x6570;&#x636E;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x89C2;&#x5BDF;&#x4E00;&#x7EC4;&#x53D8;&#x91CF;&#x7684;&#x6563;&#x5E03;&#x56FE;&#x662F;&#x5F88;&#x6709;&#x610F;&#x4E49;&#x7684;&#xFF0C;&#x8FD9;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x6563;&#x5E03;&#x56FE;&#x77E9;&#x9635;&#xFF08;scatter plot matrix&#xFF09;&#x3002;&#x7EAF;&#x624B;&#x5DE5;&#x521B;&#x5EFA;&#x8FD9;&#x6837;&#x7684;&#x56FE;&#x8868;&#x5F88;&#x8D39;&#x5DE5;&#x592B;&#xFF0C;&#x6240;&#x4EE5;seaborn&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x4FBF;&#x6377;&#x7684;pairplot&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x652F;&#x6301;&#x5728;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x653E;&#x7F6E;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x76F4;&#x65B9;&#x56FE;&#x6216;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#xFF08;&#x89C1;&#x56FE;9-25&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">107</span>]: sns.pairplot(trans_data, diag_kind=<span class="hljs-string">&apos;kde&apos;</span>, plot_kws={<span class="hljs-string">&apos;alpha&apos;</span>: <span class="hljs-number">0.2</span>})
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-20aa530a44e06f61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-25 statsmodels macro data&#x7684;&#x6563;&#x5E03;&#x56FE;&#x77E9;&#x9635;"></p>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x6CE8;&#x610F;&#x5230;&#x4E86;plot_kws&#x53C2;&#x6570;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x4F20;&#x9012;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x5230;&#x975E;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E0A;&#x7684;&#x56FE;&#x5F62;&#x4F7F;&#x7528;&#x3002;&#x5BF9;&#x4E8E;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x9605;seaborn.pairplot&#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<h2 id="&#x5206;&#x9762;&#x7F51;&#x683C;&#xFF08;facet-grid&#xFF09;&#x548C;&#x7C7B;&#x578B;&#x6570;&#x636E;">&#x5206;&#x9762;&#x7F51;&#x683C;&#xFF08;facet grid&#xFF09;&#x548C;&#x7C7B;&#x578B;&#x6570;&#x636E;</h2>
+<p>&#x8981;&#x662F;&#x6570;&#x636E;&#x96C6;&#x6709;&#x989D;&#x5916;&#x7684;&#x5206;&#x7EC4;&#x7EF4;&#x5EA6;&#x5462;&#xFF1F;&#x6709;&#x591A;&#x4E2A;&#x5206;&#x7C7B;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;&#x5C0F;&#x9762;&#x7F51;&#x683C;&#x3002;seaborn&#x6709;&#x4E00;&#x4E2A;&#x6709;&#x7528;&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;factorplot&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x5236;&#x4F5C;&#x591A;&#x79CD;&#x5206;&#x9762;&#x56FE;&#xFF08;&#x89C1;&#x56FE;9-26&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python"> In [<span class="hljs-number">108</span>]: sns.factorplot(x=<span class="hljs-string">&apos;day&apos;</span>, y=<span class="hljs-string">&apos;tip_pct&apos;</span>, hue=<span class="hljs-string">&apos;time&apos;</span>, col=<span class="hljs-string">&apos;smoker&apos;</span>,
+   .....:                kind=<span class="hljs-string">&apos;bar&apos;</span>, data=tips[tips.tip_pct &lt; <span class="hljs-number">1</span>])
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-737ba19a0cbdd46f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-26 &#x6309;&#x7167;&#x5929;/&#x65F6;&#x95F4;/&#x5438;&#x70DF;&#x8005;&#x7684;&#x5C0F;&#x8D39;&#x767E;&#x5206;&#x6BD4;"></p>
+<p>&#x9664;&#x4E86;&#x5728;&#x5206;&#x9762;&#x4E2D;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x989C;&#x8272;&#x6309;&#x65F6;&#x95F4;&#x5206;&#x7EC4;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9;&#x6BCF;&#x4E2A;&#x65F6;&#x95F4;&#x503C;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x6765;&#x6269;&#x5C55;&#x5206;&#x9762;&#x7F51;&#x683C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">109</span>]: sns.factorplot(x=<span class="hljs-string">&apos;day&apos;</span>, y=<span class="hljs-string">&apos;tip_pct&apos;</span>, row=<span class="hljs-string">&apos;time&apos;</span>,
+   .....:                col=<span class="hljs-string">&apos;smoker&apos;</span>,
+   .....:                kind=<span class="hljs-string">&apos;bar&apos;</span>, data=tips[tips.tip_pct &lt; <span class="hljs-number">1</span>])
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-4e52192441c609f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-27 &#x6309;&#x5929;&#x7684;tip_pct&#xFF0C;&#x901A;&#x8FC7;time/smoker&#x5206;&#x9762;"></p>
+<p>factorplot&#x652F;&#x6301;&#x5176;&#x5B83;&#x7684;&#x7ED8;&#x56FE;&#x7C7B;&#x578B;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x7528;&#x5230;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x76D2;&#x56FE;&#xFF08;&#x5B83;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x4E2D;&#x4F4D;&#x6570;&#xFF0C;&#x56DB;&#x5206;&#x4F4D;&#x6570;&#xFF0C;&#x548C;&#x5F02;&#x5E38;&#x503C;&#xFF09;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x7528;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x7C7B;&#x578B;&#xFF08;&#x89C1;&#x56FE;9-28&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">110</span>]: sns.factorplot(x=<span class="hljs-string">&apos;tip_pct&apos;</span>, y=<span class="hljs-string">&apos;day&apos;</span>, kind=<span class="hljs-string">&apos;box&apos;</span>,
+   .....:                data=tips[tips.tip_pct &lt; <span class="hljs-number">0.5</span>])
+</code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-356fb27a7c658920.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x56FE;9-28 &#x6309;&#x5929;&#x7684;tip_pct&#x7684;&#x76D2;&#x56FE;"></p>
+<p>&#x4F7F;&#x7528;&#x66F4;&#x901A;&#x7528;&#x7684;seaborn.FacetGrid&#x7C7B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x5206;&#x9762;&#x7F51;&#x683C;&#x3002;&#x8BF7;&#x67E5;&#x9605;seaborn&#x7684;&#x6587;&#x6863;&#xFF08;<a href="https://seaborn.pydata.org/&#xFF09;&#x3002;" target="_blank">https://seaborn.pydata.org/&#xFF09;&#x3002;</a></p>
+<h1 id="93-&#x5176;&#x5B83;&#x7684;python&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;">9.3 &#x5176;&#x5B83;&#x7684;Python&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;</h1>
+<p>&#x4E0E;&#x5176;&#x5B83;&#x5F00;&#x6E90;&#x5E93;&#x7C7B;&#x4F3C;&#xFF0C;Python&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#x7684;&#x65B9;&#x5F0F;&#x975E;&#x5E38;&#x591A;&#xFF08;&#x6839;&#x672C;&#x7F57;&#x5217;&#x4E0D;&#x5B8C;&#xFF09;&#x3002;&#x81EA;&#x4ECE;2010&#x5E74;&#xFF0C;&#x8BB8;&#x591A;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;&#x90FD;&#x96C6;&#x4E2D;&#x5728;&#x521B;&#x5EFA;&#x4EA4;&#x4E92;&#x5F0F;&#x56FE;&#x5F62;&#x4EE5;&#x4FBF;&#x5728;Web&#x4E0A;&#x53D1;&#x5E03;&#x3002;&#x5229;&#x7528;&#x5DE5;&#x5177;&#x5982;Boken&#xFF08;<a href="https://bokeh.pydata.org/en/latest/&#xFF09;&#x548C;Plotly&#xFF08;https://github.com/plotly/plotly.py&#xFF09;&#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x52A8;&#x6001;&#x4EA4;&#x4E92;&#x56FE;&#x5F62;&#xFF0C;&#x7528;&#x4E8E;&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x5668;&#x3002;" target="_blank">https://bokeh.pydata.org/en/latest/&#xFF09;&#x548C;Plotly&#xFF08;https://github.com/plotly/plotly.py&#xFF09;&#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x52A8;&#x6001;&#x4EA4;&#x4E92;&#x56FE;&#x5F62;&#xFF0C;&#x7528;&#x4E8E;&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x5668;&#x3002;</a></p>
+<p>&#x5BF9;&#x4E8E;&#x521B;&#x5EFA;&#x7528;&#x4E8E;&#x6253;&#x5370;&#x6216;&#x7F51;&#x9875;&#x7684;&#x9759;&#x6001;&#x56FE;&#x5F62;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;matplotlib&#x548C;&#x9644;&#x52A0;&#x7684;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;pandas&#x548C;seaborn&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x5B83;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x8981;&#x6C42;&#xFF0C;&#x5B66;&#x4E60;&#x5176;&#x5B83;&#x7684;&#x53EF;&#x7528;&#x5DE5;&#x5177;&#x53EF;&#x80FD;&#x662F;&#x6709;&#x7528;&#x7684;&#x3002;&#x6211;&#x9F13;&#x52B1;&#x4F60;&#x63A2;&#x7D22;&#x7ED8;&#x56FE;&#x7684;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5C06;&#x6301;&#x7EED;&#x53D1;&#x5C55;&#x3002;</p>
+<h1 id="94-&#x603B;&#x7ED3;">9.4 &#x603B;&#x7ED3;</h1>
+<p>&#x672C;&#x7AE0;&#x7684;&#x76EE;&#x7684;&#x662F;&#x719F;&#x6089;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;&#x4F7F;&#x7528;pandas&#xFF0C;matplotlib&#xFF0C;&#x548C;seaborn&#x3002;&#x5982;&#x679C;&#x89C6;&#x89C9;&#x663E;&#x793A;&#x6570;&#x636E;&#x5206;&#x6790;&#x7684;&#x7ED3;&#x679C;&#x5BF9;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x6211;&#x9F13;&#x52B1;&#x4F60;&#x5BFB;&#x6C42;&#x66F4;&#x591A;&#x7684;&#x8D44;&#x6E90;&#x6765;&#x4E86;&#x89E3;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6D3B;&#x8DC3;&#x7684;&#x7814;&#x7A76;&#x9886;&#x57DF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x7EBF;&#x548C;&#x7EB8;&#x8D28;&#x7684;&#x5F62;&#x5F0F;&#x5B66;&#x4E60;&#x8BB8;&#x591A;&#x4F18;&#x79C0;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x91CD;&#x70B9;&#x653E;&#x5728;pandas&#x7684;&#x6570;&#x636E;&#x805A;&#x5408;&#x548C;&#x5206;&#x7EC4;&#x64CD;&#x4F5C;&#x4E0A;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../内容/第08章数据规整：聚合、合并和重塑.html" class="navigation navigation-prev " aria-label="Previous page: 第08章数据规整：聚合、合并和重塑"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../内容/第10章数据聚合与分组运算.html" class="navigation navigation-next " aria-label="Next page: 第10章数据聚合与分组运算"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

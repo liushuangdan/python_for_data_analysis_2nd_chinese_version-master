@@ -1,0 +1,1216 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第06章数据加载、存储与文件格式 | README</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../内容/第07章数据清洗和准备.html" />
+    
+    
+    <link rel="prev" href="../内容/第05章pandas入门.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="6"
+        data-chapter-title="第06章数据加载、存储与文件格式"
+        data-filepath="内容/第06章数据加载、存储与文件格式.md"
+        data-basepath=".."
+        data-revision="Sun Oct 21 2018 22:59:25 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        序言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="内容/第01章准备工作.html">
+            
+                
+                    <a href="../内容/第01章准备工作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第01章准备工作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+            
+                
+                    <a href="../内容/第02章Python语法基础，IPython和JupyterNotebooks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第02章Python语法基础，IPython和JupyterNotebooks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="内容/第03章Python的数据结构、函数和文件.html">
+            
+                
+                    <a href="../内容/第03章Python的数据结构、函数和文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第03章Python的数据结构、函数和文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="内容/第04章NumPy基础：数组和矢量计算.html">
+            
+                
+                    <a href="../内容/第04章NumPy基础：数组和矢量计算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第04章NumPy基础：数组和矢量计算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="内容/第05章pandas入门.html">
+            
+                
+                    <a href="../内容/第05章pandas入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第05章pandas入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="6" data-path="内容/第06章数据加载、存储与文件格式.html">
+            
+                
+                    <a href="../内容/第06章数据加载、存储与文件格式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第06章数据加载、存储与文件格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="内容/第07章数据清洗和准备.html">
+            
+                
+                    <a href="../内容/第07章数据清洗和准备.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第07章数据清洗和准备
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="内容/第08章数据规整：聚合、合并和重塑.html">
+            
+                
+                    <a href="../内容/第08章数据规整：聚合、合并和重塑.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第08章数据规整：聚合、合并和重塑
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="内容/第09章绘图和可视化.html">
+            
+                
+                    <a href="../内容/第09章绘图和可视化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        第09章绘图和可视化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="内容/第10章数据聚合与分组运算.html">
+            
+                
+                    <a href="../内容/第10章数据聚合与分组运算.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        第10章数据聚合与分组运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="内容/第11章时间序列.html">
+            
+                
+                    <a href="../内容/第11章时间序列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        第11章时间序列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="内容/第12章pandas高级应用.html">
+            
+                
+                    <a href="../内容/第12章pandas高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        第12章pandas高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="内容/第13章Python建模库介绍.html">
+            
+                
+                    <a href="../内容/第13章Python建模库介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        第13章Python建模库介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="内容/第14章数据分析案例.html">
+            
+                
+                    <a href="../内容/第14章数据分析案例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        第14章数据分析案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="内容/附录ANumPy高级应用.html">
+            
+                
+                    <a href="../内容/附录ANumPy高级应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        附录ANumPy高级应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="内容/附录B更多关于IPython的内容（完）.html">
+            
+                
+                    <a href="../内容/附录B更多关于IPython的内容（完）.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        附录B更多关于IPython的内容（完）
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >README</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p>&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x662F;&#x4F7F;&#x7528;&#x672C;&#x4E66;&#x6240;&#x4ECB;&#x7ECD;&#x7684;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x3002;&#x6211;&#x4F1A;&#x7740;&#x91CD;&#x4ECB;&#x7ECD;pandas&#x7684;&#x6570;&#x636E;&#x8F93;&#x5165;&#x4E0E;&#x8F93;&#x51FA;&#xFF0C;&#x867D;&#x7136;&#x522B;&#x7684;&#x5E93;&#x4E2D;&#x4E5F;&#x6709;&#x4E0D;&#x5C11;&#x4EE5;&#x6B64;&#x4E3A;&#x76EE;&#x7684;&#x7684;&#x5DE5;&#x5177;&#x3002;</p>
+<p>&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x5212;&#x5206;&#x4E3A;&#x51E0;&#x4E2A;&#x5927;&#x7C7B;&#xFF1A;&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x5176;&#x4ED6;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x78C1;&#x76D8;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF0C;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5229;&#x7528;Web API&#x64CD;&#x4F5C;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;&#x3002;</p>
+<h1 id="61-&#x8BFB;&#x5199;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;">6.1 &#x8BFB;&#x5199;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;</h1>
+<p>pandas&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x7528;&#x4E8E;&#x5C06;&#x8868;&#x683C;&#x578B;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x4E3A;DataFrame&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;&#x3002;&#x8868;6-1&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x4E86;&#x603B;&#x7ED3;&#xFF0C;&#x5176;&#x4E2D;read_csv&#x548C;read_table&#x53EF;&#x80FD;&#x4F1A;&#x662F;&#x4F60;&#x4ECA;&#x540E;&#x7528;&#x5F97;&#x6700;&#x591A;&#x7684;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-958f849e6067b19b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x8868;6-1 pandas&#x4E2D;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;"></p>
+<p>&#x6211;&#x5C06;&#x5927;&#x81F4;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x5728;&#x5C06;&#x6587;&#x672C;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;DataFrame&#x65F6;&#x6240;&#x7528;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x6280;&#x672F;&#x3002;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x5212;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x5927;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>&#x7D22;&#x5F15;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5217;&#x5F53;&#x505A;&#x8FD4;&#x56DE;&#x7684;DataFrame&#x5904;&#x7406;&#xFF0C;&#x4EE5;&#x53CA;&#x662F;&#x5426;&#x4ECE;&#x6587;&#x4EF6;&#x3001;&#x7528;&#x6237;&#x83B7;&#x53D6;&#x5217;&#x540D;&#x3002;</li>
+<li>&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#x548C;&#x6570;&#x636E;&#x8F6C;&#x6362;&#xFF1A;&#x5305;&#x62EC;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x503C;&#x7684;&#x8F6C;&#x6362;&#x3001;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7F3A;&#x5931;&#x503C;&#x6807;&#x8BB0;&#x5217;&#x8868;&#x7B49;&#x3002;</li>
+<li>&#x65E5;&#x671F;&#x89E3;&#x6790;&#xFF1A;&#x5305;&#x62EC;&#x7EC4;&#x5408;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x5C06;&#x5206;&#x6563;&#x5728;&#x591A;&#x4E2A;&#x5217;&#x4E2D;&#x7684;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x4FE1;&#x606F;&#x7EC4;&#x5408;&#x6210;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x5355;&#x4E2A;&#x5217;&#x3002;</li>
+<li>&#x8FED;&#x4EE3;&#xFF1A;&#x652F;&#x6301;&#x5BF9;&#x5927;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x9010;&#x5757;&#x8FED;&#x4EE3;&#x3002;</li>
+<li>&#x4E0D;&#x89C4;&#x6574;&#x6570;&#x636E;&#x95EE;&#x9898;&#xFF1A;&#x8DF3;&#x8FC7;&#x4E00;&#x4E9B;&#x884C;&#x3001;&#x9875;&#x811A;&#x3001;&#x6CE8;&#x91CA;&#x6216;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x4E0D;&#x91CD;&#x8981;&#x7684;&#x4E1C;&#x897F;&#xFF08;&#x6BD4;&#x5982;&#x7531;&#x6210;&#x5343;&#x4E0A;&#x4E07;&#x4E2A;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x7684;&#x6570;&#x503C;&#x6570;&#x636E;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x56E0;&#x4E3A;&#x5DE5;&#x4F5C;&#x4E2D;&#x5B9E;&#x9645;&#x78B0;&#x5230;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x5341;&#x5206;&#x6DF7;&#x4E71;&#xFF0C;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x51FD;&#x6570;&#xFF08;&#x5C24;&#x5176;&#x662F;read_csv&#xFF09;&#x7684;&#x9009;&#x9879;&#x9010;&#x6E10;&#x53D8;&#x5F97;&#x590D;&#x6742;&#x8D77;&#x6765;&#x3002;&#x9762;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x611F;&#x5230;&#x5934;&#x75DB;&#x5F88;&#x6B63;&#x5E38;&#xFF08;read_csv&#x6709;&#x8D85;&#x8FC7;50&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#x3002;pandas&#x6587;&#x6863;&#x6709;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x611F;&#x5230;&#x9605;&#x8BFB;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5F88;&#x96BE;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76F8;&#x4F3C;&#x7684;&#x8DB3;&#x591F;&#x591A;&#x7684;&#x4F8B;&#x5B50;&#x627E;&#x5230;&#x6B63;&#x786E;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;pandas.read_csv&#xFF0C;&#x6709;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#x529F;&#x80FD;&#xFF0C;&#x56E0;&#x4E3A;&#x5217;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#x4E0D;&#x5C5E;&#x4E8E;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5217;&#x7684;&#x7C7B;&#x578B;&#x5230;&#x5E95;&#x662F;&#x6570;&#x503C;&#x3001;&#x6574;&#x6570;&#x3001;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x8FD8;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5176;&#x5B83;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x5982;HDF5&#x3001;Feather&#x548C;msgpack&#xFF0C;&#x4F1A;&#x5728;&#x683C;&#x5F0F;&#x4E2D;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x65E5;&#x671F;&#x548C;&#x5176;&#x4ED6;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x9700;&#x8981;&#x591A;&#x82B1;&#x70B9;&#x5DE5;&#x592B;&#x624D;&#x884C;&#x3002;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#xFF08;CSV&#xFF09;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">8</span>]: !cat examples/ex1.csv
+a,b,c,d,message
+<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,hello
+<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,world
+<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,foo
+</code></pre>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x7528;&#x7684;&#x662F;Unix&#x7684;cat shell&#x547D;&#x4EE4;&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x539F;&#x59CB;&#x5185;&#x5BB9;&#x6253;&#x5370;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7528;&#x7684;&#x662F;Windows&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;type&#x8FBE;&#x5230;&#x540C;&#x6837;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+</blockquote>
+<p>&#x7531;&#x4E8E;&#x8BE5;&#x6587;&#x4EF6;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;read_csv&#x5C06;&#x5176;&#x8BFB;&#x5165;&#x4E00;&#x4E2A;DataFrame&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">9</span>]: df = pd.read_csv(<span class="hljs-string">&apos;examples/ex1.csv&apos;</span>)
+
+In [<span class="hljs-number">10</span>]: df
+Out[<span class="hljs-number">10</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;read_table&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x5206;&#x9694;&#x7B26;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">11</span>]: pd.read_table(<span class="hljs-string">&apos;examples/ex1.csv&apos;</span>, sep=<span class="hljs-string">&apos;,&apos;</span>)
+Out[<span class="hljs-number">11</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x6709;&#x6807;&#x9898;&#x884C;&#x3002;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">12</span>]: !cat examples/ex2.csv
+<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,hello
+<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,world
+<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,foo
+</code></pre>
+<p>&#x8BFB;&#x5165;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x529E;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x8BA9;pandas&#x4E3A;&#x5176;&#x5206;&#x914D;&#x9ED8;&#x8BA4;&#x7684;&#x5217;&#x540D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x5217;&#x540D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">13</span>]: pd.read_csv(<span class="hljs-string">&apos;examples/ex2.csv&apos;</span>, header=<span class="hljs-keyword">None</span>)
+Out[<span class="hljs-number">13</span>]: 
+   <span class="hljs-number">0</span>   <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>      <span class="hljs-number">4</span>
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>  hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>  world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>    foo
+
+In [<span class="hljs-number">14</span>]: pd.read_csv(<span class="hljs-string">&apos;examples/ex2.csv&apos;</span>, names=[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;message&apos;</span>])
+Out[<span class="hljs-number">14</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x5E0C;&#x671B;&#x5C06;message&#x5217;&#x505A;&#x6210;DataFrame&#x7684;&#x7D22;&#x5F15;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x660E;&#x786E;&#x8868;&#x793A;&#x8981;&#x5C06;&#x8BE5;&#x5217;&#x653E;&#x5230;&#x7D22;&#x5F15;4&#x7684;&#x4F4D;&#x7F6E;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;index_col&#x53C2;&#x6570;&#x6307;&#x5B9A;&quot;message&quot;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">15</span>]: names = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;message&apos;</span>]
+
+In [<span class="hljs-number">16</span>]: pd.read_csv(<span class="hljs-string">&apos;examples/ex2.csv&apos;</span>, names=names, index_col=<span class="hljs-string">&apos;message&apos;</span>)
+Out[<span class="hljs-number">16</span>]: 
+         a   b   c   d
+message               
+hello    <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>
+world    <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>
+foo      <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x5E0C;&#x671B;&#x5C06;&#x591A;&#x4E2A;&#x5217;&#x505A;&#x6210;&#x4E00;&#x4E2A;&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;&#xFF0C;&#x53EA;&#x9700;&#x4F20;&#x5165;&#x7531;&#x5217;&#x7F16;&#x53F7;&#x6216;&#x5217;&#x540D;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">17</span>]: !cat examples/csv_mindex.csv
+key1,key2,value1,value2
+one,a,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>
+one,b,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>
+one,c,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>
+one,d,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>
+two,a,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>
+two,b,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>
+two,c,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>
+two,d,<span class="hljs-number">15</span>,<span class="hljs-number">16</span>
+
+In [<span class="hljs-number">18</span>]: parsed = pd.read_csv(<span class="hljs-string">&apos;examples/csv_mindex.csv&apos;</span>,
+   ....:                      index_col=[<span class="hljs-string">&apos;key1&apos;</span>, <span class="hljs-string">&apos;key2&apos;</span>])
+
+In [<span class="hljs-number">19</span>]: parsed
+Out[<span class="hljs-number">19</span>]: 
+           value1  value2
+key1 key2                
+one  a          <span class="hljs-number">1</span>       <span class="hljs-number">2</span>
+     b          <span class="hljs-number">3</span>       <span class="hljs-number">4</span>
+     c          <span class="hljs-number">5</span>       <span class="hljs-number">6</span>
+     d          <span class="hljs-number">7</span>       <span class="hljs-number">8</span>
+two  a          <span class="hljs-number">9</span>      <span class="hljs-number">10</span>
+     b         <span class="hljs-number">11</span>      <span class="hljs-number">12</span>
+     c         <span class="hljs-number">13</span>      <span class="hljs-number">14</span>
+     d         <span class="hljs-number">15</span>      <span class="hljs-number">16</span>
+</code></pre>
+<p>&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6709;&#x4E9B;&#x8868;&#x683C;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x7528;&#x56FA;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#x53BB;&#x5206;&#x9694;&#x5B57;&#x6BB5;&#x7684;&#xFF08;&#x6BD4;&#x5982;&#x7A7A;&#x767D;&#x7B26;&#x6216;&#x5176;&#x5B83;&#x6A21;&#x5F0F;&#xFF09;&#x3002;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">20</span>]: list(open(<span class="hljs-string">&apos;examples/ex3.txt&apos;</span>))
+Out[<span class="hljs-number">20</span>]: 
+[<span class="hljs-string">&apos;            A         B         C\n&apos;</span>,
+ <span class="hljs-string">&apos;aaa -0.264438 -1.026059 -0.619500\n&apos;</span>,
+ <span class="hljs-string">&apos;bbb  0.927272  0.302904 -0.032399\n&apos;</span>,
+ <span class="hljs-string">&apos;ccc -0.264273 -0.386314 -0.217601\n&apos;</span>,
+ <span class="hljs-string">&apos;ddd -0.871858 -0.348382  1.100491\n&apos;</span>]
+</code></pre>
+<p>&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x89C4;&#x6574;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x5B57;&#x6BB5;&#x662F;&#x88AB;&#x6570;&#x91CF;&#x4E0D;&#x540C;&#x7684;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x95F4;&#x9694;&#x5F00;&#x7684;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F5C;&#x4E3A;read_table&#x7684;&#x5206;&#x9694;&#x7B26;&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8868;&#x8FBE;&#x4E3A;\s+&#xFF0C;&#x4E8E;&#x662F;&#x6709;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">21</span>]: result = pd.read_table(<span class="hljs-string">&apos;examples/ex3.txt&apos;</span>, sep=<span class="hljs-string">&apos;\s+&apos;</span>)
+
+In [<span class="hljs-number">22</span>]: result
+Out[<span class="hljs-number">22</span>]: 
+            A         B         C
+aaa -<span class="hljs-number">0.264438</span> -<span class="hljs-number">1.026059</span> -<span class="hljs-number">0.619500</span>
+bbb  <span class="hljs-number">0.927272</span>  <span class="hljs-number">0.302904</span> -<span class="hljs-number">0.032399</span>
+ccc -<span class="hljs-number">0.264273</span> -<span class="hljs-number">0.386314</span> -<span class="hljs-number">0.217601</span>
+ddd -<span class="hljs-number">0.871858</span> -<span class="hljs-number">0.348382</span>  <span class="hljs-number">1.100491</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x7531;&#x4E8E;&#x5217;&#x540D;&#x6BD4;&#x6570;&#x636E;&#x884C;&#x7684;&#x6570;&#x91CF;&#x5C11;&#xFF0C;&#x6240;&#x4EE5;read_table&#x63A8;&#x65AD;&#x7B2C;&#x4E00;&#x5217;&#x5E94;&#x8BE5;&#x662F;DataFrame&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x89E3;&#x6790;&#x5668;&#x51FD;&#x6570;&#x8FD8;&#x6709;&#x8BB8;&#x591A;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x4F60;&#x5904;&#x7406;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x5F02;&#x5F62;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF08;&#x8868;6-2&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#xFF09;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;skiprows&#x8DF3;&#x8FC7;&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x3001;&#x7B2C;&#x4E09;&#x884C;&#x548C;&#x7B2C;&#x56DB;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">23</span>]: !cat examples/ex4.csv
+<span class="hljs-comment"># hey!</span>
+a,b,c,d,message
+<span class="hljs-comment"># just wanted to make things more difficult for you</span>
+<span class="hljs-comment"># who reads CSV files with computers, anyway?</span>
+<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,hello
+<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,world
+<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,foo
+In [<span class="hljs-number">24</span>]: pd.read_csv(<span class="hljs-string">&apos;examples/ex4.csv&apos;</span>, skiprows=[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+Out[<span class="hljs-number">24</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x7F3A;&#x5931;&#x503C;&#x5904;&#x7406;&#x662F;&#x6587;&#x4EF6;&#x89E3;&#x6790;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#x3002;&#x7F3A;&#x5931;&#x6570;&#x636E;&#x7ECF;&#x5E38;&#x662F;&#x8981;&#x4E48;&#x6CA1;&#x6709;&#xFF08;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#xFF0C;&#x8981;&#x4E48;&#x7528;&#x67D0;&#x4E2A;&#x6807;&#x8BB0;&#x503C;&#x8868;&#x793A;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;pandas&#x4F1A;&#x7528;&#x4E00;&#x7EC4;&#x7ECF;&#x5E38;&#x51FA;&#x73B0;&#x7684;&#x6807;&#x8BB0;&#x503C;&#x8FDB;&#x884C;&#x8BC6;&#x522B;&#xFF0C;&#x6BD4;&#x5982;NA&#x53CA;NULL&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">25</span>]: !cat examples/ex5.csv
+something,a,b,c,d,message
+one,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,NA
+two,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,,<span class="hljs-number">8</span>,world
+three,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,foo
+In [<span class="hljs-number">26</span>]: result = pd.read_csv(<span class="hljs-string">&apos;examples/ex5.csv&apos;</span>)
+
+In [<span class="hljs-number">27</span>]: result
+Out[<span class="hljs-number">27</span>]: 
+  something  a   b     c   d message
+<span class="hljs-number">0</span>       one  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3.0</span>   <span class="hljs-number">4</span>     NaN
+<span class="hljs-number">1</span>       two  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   NaN   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>     three  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11.0</span>  <span class="hljs-number">12</span>     foo
+
+In [<span class="hljs-number">28</span>]: pd.isnull(result)
+Out[<span class="hljs-number">28</span>]: 
+   something      a      b      c      d  message
+<span class="hljs-number">0</span>      <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>     <span class="hljs-keyword">True</span>
+<span class="hljs-number">1</span>      <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>   <span class="hljs-keyword">True</span>  <span class="hljs-keyword">False</span>    <span class="hljs-keyword">False</span>
+<span class="hljs-number">2</span>      <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>  <span class="hljs-keyword">False</span>    <span class="hljs-keyword">False</span>
+</code></pre>
+<p>na_values&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x6216;&#x96C6;&#x5408;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;&#x7F3A;&#x5931;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">29</span>]: result = pd.read_csv(<span class="hljs-string">&apos;examples/ex5.csv&apos;</span>, na_values=[<span class="hljs-string">&apos;NULL&apos;</span>])
+
+In [<span class="hljs-number">30</span>]: result
+Out[<span class="hljs-number">30</span>]: 
+  something  a   b     c   d message
+<span class="hljs-number">0</span>       one  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3.0</span>   <span class="hljs-number">4</span>     NaN
+<span class="hljs-number">1</span>       two  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   NaN   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>     three  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11.0</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x5B57;&#x5178;&#x7684;&#x5404;&#x5217;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;NA&#x6807;&#x8BB0;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">31</span>]: sentinels = {<span class="hljs-string">&apos;message&apos;</span>: [<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;NA&apos;</span>], <span class="hljs-string">&apos;something&apos;</span>: [<span class="hljs-string">&apos;two&apos;</span>]}
+
+In [<span class="hljs-number">32</span>]: pd.read_csv(<span class="hljs-string">&apos;examples/ex5.csv&apos;</span>, na_values=sentinels)
+Out[<span class="hljs-number">32</span>]:
+something  a   b     c   d message
+<span class="hljs-number">0</span>       one  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3.0</span>   <span class="hljs-number">4</span>     NaN
+<span class="hljs-number">1</span>       NaN  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   NaN   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>     three  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11.0</span>  <span class="hljs-number">12</span>     NaN
+</code></pre>
+<p>&#x8868;6-2&#x5217;&#x51FA;&#x4E86;pandas.read_csv&#x548C;pandas.read_table&#x5E38;&#x7528;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-082daf4a00ed9494.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-f2bcc0a703c7236f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-597327ade3e94c7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="&#x9010;&#x5757;&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x6587;&#x4EF6;">&#x9010;&#x5757;&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x6587;&#x4EF6;</h2>
+<p>&#x5728;&#x5904;&#x7406;&#x5F88;&#x5927;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x6216;&#x627E;&#x51FA;&#x5927;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x96C6;&#x4EE5;&#x4FBF;&#x4E8E;&#x540E;&#x7EED;&#x5904;&#x7406;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x53EA;&#x60F3;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#x6216;&#x9010;&#x5757;&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x3002;</p>
+<p>&#x5728;&#x770B;&#x5927;&#x6587;&#x4EF6;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x8BBE;&#x7F6E;pandas&#x663E;&#x793A;&#x5730;&#x66F4;&#x7D27;&#x4E9B;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">33</span>]: pd.options.display.max_rows = <span class="hljs-number">10</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x6709;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">34</span>]: result = pd.read_csv(<span class="hljs-string">&apos;examples/ex6.csv&apos;</span>)
+
+In [<span class="hljs-number">35</span>]: result
+Out[<span class="hljs-number">35</span>]: 
+           one       two     three      four key
+<span class="hljs-number">0</span>     <span class="hljs-number">0.467976</span> -<span class="hljs-number">0.038649</span> -<span class="hljs-number">0.295344</span> -<span class="hljs-number">1.824726</span>   L
+<span class="hljs-number">1</span>    -<span class="hljs-number">0.358893</span>  <span class="hljs-number">1.404453</span>  <span class="hljs-number">0.704965</span> -<span class="hljs-number">0.200638</span>   B
+<span class="hljs-number">2</span>    -<span class="hljs-number">0.501840</span>  <span class="hljs-number">0.659254</span> -<span class="hljs-number">0.421691</span> -<span class="hljs-number">0.057688</span>   G
+<span class="hljs-number">3</span>     <span class="hljs-number">0.204886</span>  <span class="hljs-number">1.074134</span>  <span class="hljs-number">1.388361</span> -<span class="hljs-number">0.982404</span>   R
+<span class="hljs-number">4</span>     <span class="hljs-number">0.354628</span> -<span class="hljs-number">0.133116</span>  <span class="hljs-number">0.283763</span> -<span class="hljs-number">0.837063</span>   Q
+<span class="hljs-prompt">... </span>       ...       ...       ...       ...  ..
+<span class="hljs-number">9995</span>  <span class="hljs-number">2.311896</span> -<span class="hljs-number">0.417070</span> -<span class="hljs-number">1.409599</span> -<span class="hljs-number">0.515821</span>   L
+<span class="hljs-number">9996</span> -<span class="hljs-number">0.479893</span> -<span class="hljs-number">0.650419</span>  <span class="hljs-number">0.745152</span> -<span class="hljs-number">0.646038</span>   E
+<span class="hljs-number">9997</span>  <span class="hljs-number">0.523331</span>  <span class="hljs-number">0.787112</span>  <span class="hljs-number">0.486066</span>  <span class="hljs-number">1.093156</span>   K
+<span class="hljs-number">9998</span> -<span class="hljs-number">0.362559</span>  <span class="hljs-number">0.598894</span> -<span class="hljs-number">1.843201</span>  <span class="hljs-number">0.887292</span>   G
+<span class="hljs-number">9999</span> -<span class="hljs-number">0.096376</span> -<span class="hljs-number">1.012999</span> -<span class="hljs-number">0.657431</span> -<span class="hljs-number">0.573315</span>   <span class="hljs-number">0</span>
+[<span class="hljs-number">10000</span> rows x <span class="hljs-number">5</span> columns]
+If you want to only read a small
+</code></pre>
+<p>&#x5982;&#x679C;&#x53EA;&#x60F3;&#x8BFB;&#x53D6;&#x51E0;&#x884C;&#xFF08;&#x907F;&#x514D;&#x8BFB;&#x53D6;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#xFF09;&#xFF0C;&#x901A;&#x8FC7;nrows&#x8FDB;&#x884C;&#x6307;&#x5B9A;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">36</span>]: pd.read_csv(<span class="hljs-string">&apos;examples/ex6.csv&apos;</span>, nrows=<span class="hljs-number">5</span>)
+Out[<span class="hljs-number">36</span>]: 
+        one       two     three      four key
+<span class="hljs-number">0</span>  <span class="hljs-number">0.467976</span> -<span class="hljs-number">0.038649</span> -<span class="hljs-number">0.295344</span> -<span class="hljs-number">1.824726</span>   L
+<span class="hljs-number">1</span> -<span class="hljs-number">0.358893</span>  <span class="hljs-number">1.404453</span>  <span class="hljs-number">0.704965</span> -<span class="hljs-number">0.200638</span>   B
+<span class="hljs-number">2</span> -<span class="hljs-number">0.501840</span>  <span class="hljs-number">0.659254</span> -<span class="hljs-number">0.421691</span> -<span class="hljs-number">0.057688</span>   G
+<span class="hljs-number">3</span>  <span class="hljs-number">0.204886</span>  <span class="hljs-number">1.074134</span>  <span class="hljs-number">1.388361</span> -<span class="hljs-number">0.982404</span>   R
+<span class="hljs-number">4</span>  <span class="hljs-number">0.354628</span> -<span class="hljs-number">0.133116</span>  <span class="hljs-number">0.283763</span> -<span class="hljs-number">0.837063</span>   Q
+</code></pre>
+<p>&#x8981;&#x9010;&#x5757;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;chunksize&#xFF08;&#x884C;&#x6570;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">874</span>]: chunker = pd.read_csv(<span class="hljs-string">&apos;ch06/ex6.csv&apos;</span>, chunksize=<span class="hljs-number">1000</span>)
+
+In [<span class="hljs-number">875</span>]: chunker
+Out[<span class="hljs-number">875</span>]: &lt;pandas.io.parsers.TextParser at <span class="hljs-number">0x8398150</span>&gt;
+</code></pre>
+<p>read_csv&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x8FD9;&#x4E2A;TextParser&#x5BF9;&#x8C61;&#x4F7F;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;chunksize&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x9010;&#x5757;&#x8FED;&#x4EE3;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FED;&#x4EE3;&#x5904;&#x7406;ex6.csv&#xFF0C;&#x5C06;&#x503C;&#x8BA1;&#x6570;&#x805A;&#x5408;&#x5230;&quot;key&quot;&#x5217;&#x4E2D;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python">chunker = pd.read_csv(<span class="hljs-string">&apos;examples/ex6.csv&apos;</span>, chunksize=<span class="hljs-number">1000</span>)
+
+tot = pd.Series([])
+<span class="hljs-keyword">for</span> piece <span class="hljs-keyword">in</span> chunker:
+    tot = tot.add(piece[<span class="hljs-string">&apos;key&apos;</span>].value_counts(), fill_value=<span class="hljs-number">0</span>)
+
+tot = tot.sort_values(ascending=<span class="hljs-keyword">False</span>)
+</code></pre>
+<p>&#x7136;&#x540E;&#x6709;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">40</span>]: tot[:<span class="hljs-number">10</span>]
+Out[<span class="hljs-number">40</span>]: 
+E    <span class="hljs-number">368.0</span>
+X    <span class="hljs-number">364.0</span>
+L    <span class="hljs-number">346.0</span>
+O    <span class="hljs-number">343.0</span>
+Q    <span class="hljs-number">340.0</span>
+M    <span class="hljs-number">338.0</span>
+J    <span class="hljs-number">337.0</span>
+F    <span class="hljs-number">335.0</span>
+K    <span class="hljs-number">334.0</span>
+H    <span class="hljs-number">330.0</span>
+dtype: float64
+</code></pre>
+<p>TextParser&#x8FD8;&#x6709;&#x4E00;&#x4E2A;get_chunk&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x4F7F;&#x4F60;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x4EFB;&#x610F;&#x5927;&#x5C0F;&#x7684;&#x5757;&#x3002;</p>
+<h2 id="&#x5C06;&#x6570;&#x636E;&#x5199;&#x51FA;&#x5230;&#x6587;&#x672C;&#x683C;&#x5F0F;">&#x5C06;&#x6570;&#x636E;&#x5199;&#x51FA;&#x5230;&#x6587;&#x672C;&#x683C;&#x5F0F;</h2>
+<p>&#x6570;&#x636E;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x8F93;&#x51FA;&#x4E3A;&#x5206;&#x9694;&#x7B26;&#x683C;&#x5F0F;&#x7684;&#x6587;&#x672C;&#x3002;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x770B;&#x4E4B;&#x524D;&#x8BFB;&#x8FC7;&#x7684;&#x4E00;&#x4E2A;CSV&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">41</span>]: data = pd.read_csv(<span class="hljs-string">&apos;examples/ex5.csv&apos;</span>)
+
+In [<span class="hljs-number">42</span>]: data
+Out[<span class="hljs-number">42</span>]: 
+  something  a   b     c   d message
+<span class="hljs-number">0</span>       one  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3.0</span>   <span class="hljs-number">4</span>     NaN
+<span class="hljs-number">1</span>       two  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   NaN   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>     three  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11.0</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x5229;&#x7528;DataFrame&#x7684;to_csv&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5230;&#x4E00;&#x4E2A;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">43</span>]: data.to_csv(<span class="hljs-string">&apos;examples/out.csv&apos;</span>)
+
+In [<span class="hljs-number">44</span>]: !cat examples/out.csv
+,something,a,b,c,d,message
+<span class="hljs-number">0</span>,one,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3.0</span>,<span class="hljs-number">4</span>,
+<span class="hljs-number">1</span>,two,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,,<span class="hljs-number">8</span>,world
+<span class="hljs-number">2</span>,three,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11.0</span>,<span class="hljs-number">12</span>,foo
+</code></pre>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x5206;&#x9694;&#x7B26;&#xFF08;&#x7531;&#x4E8E;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x5199;&#x51FA;&#x5230;sys.stdout&#xFF0C;&#x6240;&#x4EE5;&#x4EC5;&#x4EC5;&#x662F;&#x6253;&#x5370;&#x51FA;&#x6587;&#x672C;&#x7ED3;&#x679C;&#x800C;&#x5DF2;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">45</span>]: <span class="hljs-keyword">import</span> sys
+
+In [<span class="hljs-number">46</span>]: data.to_csv(sys.stdout, sep=<span class="hljs-string">&apos;|&apos;</span>)
+|something|a|b|c|d|message
+<span class="hljs-number">0</span>|one|<span class="hljs-number">1</span>|<span class="hljs-number">2</span>|<span class="hljs-number">3.0</span>|<span class="hljs-number">4</span>|
+<span class="hljs-number">1</span>|two|<span class="hljs-number">5</span>|<span class="hljs-number">6</span>||<span class="hljs-number">8</span>|world
+<span class="hljs-number">2</span>|three|<span class="hljs-number">9</span>|<span class="hljs-number">10</span>|<span class="hljs-number">11.0</span>|<span class="hljs-number">12</span>|foo
+</code></pre>
+<p>&#x7F3A;&#x5931;&#x503C;&#x5728;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E2D;&#x4F1A;&#x88AB;&#x8868;&#x793A;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5C06;&#x5176;&#x8868;&#x793A;&#x4E3A;&#x522B;&#x7684;&#x6807;&#x8BB0;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">47</span>]: data.to_csv(sys.stdout, na_rep=<span class="hljs-string">&apos;NULL&apos;</span>)
+,something,a,b,c,d,message
+<span class="hljs-number">0</span>,one,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3.0</span>,<span class="hljs-number">4</span>,NULL
+<span class="hljs-number">1</span>,two,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,NULL,<span class="hljs-number">8</span>,world
+<span class="hljs-number">2</span>,three,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11.0</span>,<span class="hljs-number">12</span>,foo
+</code></pre>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x5176;&#x4ED6;&#x9009;&#x9879;&#xFF0C;&#x5219;&#x4F1A;&#x5199;&#x51FA;&#x884C;&#x548C;&#x5217;&#x7684;&#x6807;&#x7B7E;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5B83;&#x4EEC;&#x4E5F;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x7981;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">48</span>]: data.to_csv(sys.stdout, index=<span class="hljs-keyword">False</span>, header=<span class="hljs-keyword">False</span>)
+one,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3.0</span>,<span class="hljs-number">4</span>,
+two,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,,<span class="hljs-number">8</span>,world
+three,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11.0</span>,<span class="hljs-number">12</span>,foo
+</code></pre>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x53EA;&#x5199;&#x51FA;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x5217;&#xFF0C;&#x5E76;&#x4EE5;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5217;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">49</span>]: data.to_csv(sys.stdout, index=<span class="hljs-keyword">False</span>, columns=[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>])
+a,b,c
+<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3.0</span>
+<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,
+<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11.0</span>
+</code></pre>
+<p>Series&#x4E5F;&#x6709;&#x4E00;&#x4E2A;to_csv&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">50</span>]: dates = pd.date_range(<span class="hljs-string">&apos;1/1/2000&apos;</span>, periods=<span class="hljs-number">7</span>)
+
+In [<span class="hljs-number">51</span>]: ts = pd.Series(np.arange(<span class="hljs-number">7</span>), index=dates)
+
+In [<span class="hljs-number">52</span>]: ts.to_csv(<span class="hljs-string">&apos;examples/tseries.csv&apos;</span>)
+
+In [<span class="hljs-number">53</span>]: !cat examples/tseries.csv
+<span class="hljs-number">2000</span>-<span class="hljs-number">01</span>-<span class="hljs-number">01</span>,<span class="hljs-number">0</span>
+<span class="hljs-number">2000</span>-<span class="hljs-number">01</span>-<span class="hljs-number">02</span>,<span class="hljs-number">1</span>
+<span class="hljs-number">2000</span>-<span class="hljs-number">01</span>-<span class="hljs-number">03</span>,<span class="hljs-number">2</span>
+<span class="hljs-number">2000</span>-<span class="hljs-number">01</span>-<span class="hljs-number">04</span>,<span class="hljs-number">3</span>
+<span class="hljs-number">2000</span>-<span class="hljs-number">01</span>-<span class="hljs-number">05</span>,<span class="hljs-number">4</span>
+<span class="hljs-number">2000</span>-<span class="hljs-number">01</span>-<span class="hljs-number">06</span>,<span class="hljs-number">5</span>
+<span class="hljs-number">2000</span>-<span class="hljs-number">01</span>-<span class="hljs-number">07</span>,<span class="hljs-number">6</span>
+</code></pre>
+<h2 id="&#x5904;&#x7406;&#x5206;&#x9694;&#x7B26;&#x683C;&#x5F0F;">&#x5904;&#x7406;&#x5206;&#x9694;&#x7B26;&#x683C;&#x5F0F;</h2>
+<p>&#x5927;&#x90E8;&#x5206;&#x5B58;&#x50A8;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x8868;&#x683C;&#x578B;&#x6570;&#x636E;&#x90FD;&#x80FD;&#x7528;pandas.read_table&#x8FDB;&#x884C;&#x52A0;&#x8F7D;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x6709;&#x65F6;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x624B;&#x5DE5;&#x5904;&#x7406;&#x3002;&#x7531;&#x4E8E;&#x63A5;&#x6536;&#x5230;&#x542B;&#x6709;&#x7578;&#x5F62;&#x884C;&#x7684;&#x6587;&#x4EF6;&#x800C;&#x4F7F;read_table&#x51FA;&#x6BDB;&#x75C5;&#x7684;&#x60C5;&#x51B5;&#x5E76;&#x4E0D;&#x5C11;&#x89C1;&#x3002;&#x4E3A;&#x4E86;&#x8BF4;&#x660E;&#x8FD9;&#x4E9B;&#x57FA;&#x672C;&#x5DE5;&#x5177;&#xFF0C;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;CSV&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">54</span>]: !cat examples/ex7.csv
+<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>
+<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>
+<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x5355;&#x5B57;&#x7B26;&#x5206;&#x9694;&#x7B26;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;Python&#x5185;&#x7F6E;&#x7684;csv&#x6A21;&#x5757;&#x3002;&#x5C06;&#x4EFB;&#x610F;&#x5DF2;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x4F20;&#x7ED9;csv.reader&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+f = open(<span class="hljs-string">&apos;examples/ex7.csv&apos;</span>)
+
+reader = csv.reader(f)
+</code></pre>
+<p>&#x5BF9;&#x8FD9;&#x4E2A;reader&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x5C06;&#x4F1A;&#x4E3A;&#x6BCF;&#x884C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF08;&#x5E76;&#x79FB;&#x9664;&#x4E86;&#x6240;&#x6709;&#x7684;&#x5F15;&#x53F7;&#xFF09;&#xFF1A;&#x5BF9;&#x8FD9;&#x4E2A;reader&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x5C06;&#x4F1A;&#x4E3A;&#x6BCF;&#x884C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF08;&#x5E76;&#x79FB;&#x9664;&#x4E86;&#x6240;&#x6709;&#x7684;&#x5F15;&#x53F7;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">56</span>]: <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> reader:
+   ....:     print(line)
+[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]
+[<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>]
+[<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>]
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x4E3A;&#x4E86;&#x4F7F;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5408;&#x4E4E;&#x8981;&#x6C42;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5BF9;&#x5176;&#x505A;&#x4E00;&#x4E9B;&#x6574;&#x7406;&#x5DE5;&#x4F5C;&#x3002;&#x6211;&#x4EEC;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x6765;&#x505A;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5230;&#x4E00;&#x4E2A;&#x591A;&#x884C;&#x7684;&#x5217;&#x8868;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">57</span>]: <span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;examples/ex7.csv&apos;</span>) <span class="hljs-keyword">as</span> f:
+   ....:     lines = list(csv.reader(f))
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E9B;&#x884C;&#x5206;&#x4E3A;&#x6807;&#x9898;&#x884C;&#x548C;&#x6570;&#x636E;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">58</span>]: header, values = lines[<span class="hljs-number">0</span>], lines[<span class="hljs-number">1</span>:]
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x5B57;&#x5178;&#x6784;&#x9020;&#x5F0F;&#x548C;zip(*values)&#xFF0C;&#x540E;&#x8005;&#x5C06;&#x884C;&#x8F6C;&#x7F6E;&#x4E3A;&#x5217;&#xFF0C;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5217;&#x7684;&#x5B57;&#x5178;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">59</span>]: data_dict = {h: v <span class="hljs-keyword">for</span> h, v <span class="hljs-keyword">in</span> zip(header, zip(*values))}
+
+In [<span class="hljs-number">60</span>]: data_dict
+Out[<span class="hljs-number">60</span>]: {<span class="hljs-string">&apos;a&apos;</span>: (<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;1&apos;</span>), <span class="hljs-string">&apos;b&apos;</span>: (<span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>), <span class="hljs-string">&apos;c&apos;</span>: (<span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>)}
+</code></pre>
+<p>CSV&#x6587;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x6709;&#x5F88;&#x591A;&#x3002;&#x53EA;&#x9700;&#x5B9A;&#x4E49;csv.Dialect&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#x5373;&#x53EF;&#x5B9A;&#x4E49;&#x51FA;&#x65B0;&#x683C;&#x5F0F;&#xFF08;&#x5982;&#x4E13;&#x95E8;&#x7684;&#x5206;&#x9694;&#x7B26;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x5F15;&#x7528;&#x7EA6;&#x5B9A;&#x3001;&#x884C;&#x7ED3;&#x675F;&#x7B26;&#x7B49;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">my_dialect</span><span class="hljs-params">(csv.Dialect)</span>:</span>
+    lineterminator = <span class="hljs-string">&apos;\n&apos;</span>
+    delimiter = <span class="hljs-string">&apos;;&apos;</span>
+    quotechar = <span class="hljs-string">&apos;&quot;&apos;</span>
+    quoting = csv.QUOTE_MINIMAL
+reader = csv.reader(f, dialect=my_dialect)
+</code></pre>
+<p>&#x5404;&#x4E2A;CSV&#x8BED;&#x652F;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#x7ED9;csv.reader&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x5B9A;&#x4E49;&#x5B50;&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-python">reader = csv.reader(f, delimiter=<span class="hljs-string">&apos;|&apos;</span>)
+</code></pre>
+<p>&#x53EF;&#x7528;&#x7684;&#x9009;&#x9879;&#xFF08;csv.Dialect&#x7684;&#x5C5E;&#x6027;&#xFF09;&#x53CA;&#x5176;&#x529F;&#x80FD;&#x5982;&#x8868;6-3&#x6240;&#x793A;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7178691-7a1cee622459072b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x4F7F;&#x7528;&#x590D;&#x6742;&#x5206;&#x9694;&#x7B26;&#x6216;&#x591A;&#x5B57;&#x7B26;&#x5206;&#x9694;&#x7B26;&#x7684;&#x6587;&#x4EF6;&#xFF0C;csv&#x6A21;&#x5757;&#x5C31;&#x65E0;&#x80FD;&#x4E3A;&#x529B;&#x4E86;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x5C31;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x7684;split&#x65B9;&#x6CD5;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;re.split&#x8FDB;&#x884C;&#x884C;&#x62C6;&#x5206;&#x548C;&#x5176;&#x4ED6;&#x6574;&#x7406;&#x5DE5;&#x4F5C;&#x4E86;&#x3002;</p>
+</blockquote>
+<p>&#x8981;&#x624B;&#x5DE5;&#x8F93;&#x51FA;&#x5206;&#x9694;&#x7B26;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;csv.writer&#x3002;&#x5B83;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x5DF2;&#x6253;&#x5F00;&#x4E14;&#x53EF;&#x5199;&#x7684;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#x4EE5;&#x53CA;&#x8DDF;csv.reader&#x76F8;&#x540C;&#x7684;&#x90A3;&#x4E9B;&#x8BED;&#x652F;&#x548C;&#x683C;&#x5F0F;&#x5316;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;mydata.csv&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> f:
+    writer = csv.writer(f, dialect=my_dialect)
+    writer.writerow((<span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>))
+    writer.writerow((<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>))
+    writer.writerow((<span class="hljs-string">&apos;4&apos;</span>, <span class="hljs-string">&apos;5&apos;</span>, <span class="hljs-string">&apos;6&apos;</span>))
+    writer.writerow((<span class="hljs-string">&apos;7&apos;</span>, <span class="hljs-string">&apos;8&apos;</span>, <span class="hljs-string">&apos;9&apos;</span>))
+</code></pre>
+<h2 id="json&#x6570;&#x636E;">JSON&#x6570;&#x636E;</h2>
+<p>JSON&#xFF08;JavaScript Object Notation&#x7684;&#x7B80;&#x79F0;&#xFF09;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x901A;&#x8FC7;HTTP&#x8BF7;&#x6C42;&#x5728;Web&#x6D4F;&#x89C8;&#x5668;&#x548C;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E4B;&#x4E00;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x6BD4;&#x8868;&#x683C;&#x578B;&#x6587;&#x672C;&#x683C;&#x5F0F;&#xFF08;&#x5982;CSV&#xFF09;&#x7075;&#x6D3B;&#x5F97;&#x591A;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python">obj = <span class="hljs-string">&quot;&quot;&quot;
+{&quot;name&quot;: &quot;Wes&quot;,
+ &quot;places_lived&quot;: [&quot;United States&quot;, &quot;Spain&quot;, &quot;Germany&quot;],
+ &quot;pet&quot;: null,
+ &quot;siblings&quot;: [{&quot;name&quot;: &quot;Scott&quot;, &quot;age&quot;: 30, &quot;pets&quot;: [&quot;Zeus&quot;, &quot;Zuko&quot;]},
+              {&quot;name&quot;: &quot;Katie&quot;, &quot;age&quot;: 38,
+               &quot;pets&quot;: [&quot;Sixes&quot;, &quot;Stache&quot;, &quot;Cisco&quot;]}]
+}
+&quot;&quot;&quot;</span>
+</code></pre>
+<p>&#x9664;&#x5176;&#x7A7A;&#x503C;null&#x548C;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x7EC6;&#x5FAE;&#x5DEE;&#x522B;&#xFF08;&#x5982;&#x5217;&#x8868;&#x672B;&#x5C3E;&#x4E0D;&#x5141;&#x8BB8;&#x5B58;&#x5728;&#x591A;&#x4F59;&#x7684;&#x9017;&#x53F7;&#xFF09;&#x4E4B;&#x5916;&#xFF0C;JSON&#x975E;&#x5E38;&#x63A5;&#x8FD1;&#x4E8E;&#x6709;&#x6548;&#x7684;Python&#x4EE3;&#x7801;&#x3002;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x6709;&#x5BF9;&#x8C61;&#xFF08;&#x5B57;&#x5178;&#xFF09;&#x3001;&#x6570;&#x7EC4;&#xFF08;&#x5217;&#x8868;&#xFF09;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x503C;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x4EE5;&#x53CA;null&#x3002;&#x5BF9;&#x8C61;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x952E;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8BB8;&#x591A;Python&#x5E93;&#x90FD;&#x53EF;&#x4EE5;&#x8BFB;&#x5199;JSON&#x6570;&#x636E;&#x3002;&#x6211;&#x5C06;&#x4F7F;&#x7528;json&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x6784;&#x5EFA;&#x4E8E;Python&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684;&#x3002;&#x901A;&#x8FC7;json.loads&#x5373;&#x53EF;&#x5C06;JSON&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;Python&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">62</span>]: <span class="hljs-keyword">import</span> json
+
+In [<span class="hljs-number">63</span>]: result = json.loads(obj)
+
+In [<span class="hljs-number">64</span>]: result
+Out[<span class="hljs-number">64</span>]: 
+{<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Wes&apos;</span>,
+ <span class="hljs-string">&apos;pet&apos;</span>: <span class="hljs-keyword">None</span>,
+ <span class="hljs-string">&apos;places_lived&apos;</span>: [<span class="hljs-string">&apos;United States&apos;</span>, <span class="hljs-string">&apos;Spain&apos;</span>, <span class="hljs-string">&apos;Germany&apos;</span>],
+ <span class="hljs-string">&apos;siblings&apos;</span>: [{<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">30</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Scott&apos;</span>, <span class="hljs-string">&apos;pets&apos;</span>: [<span class="hljs-string">&apos;Zeus&apos;</span>, <span class="hljs-string">&apos;Zuko&apos;</span>]},
+  {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">38</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Katie&apos;</span>, <span class="hljs-string">&apos;pets&apos;</span>: [<span class="hljs-string">&apos;Sixes&apos;</span>, <span class="hljs-string">&apos;Stache&apos;</span>, <span class="hljs-string">&apos;Cisco&apos;</span>]}]}
+</code></pre>
+<p>json.dumps&#x5219;&#x5C06;Python&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;JSON&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">65</span>]: asjson = json.dumps(result)
+</code></pre>
+<p>&#x5982;&#x4F55;&#x5C06;&#xFF08;&#x4E00;&#x4E2A;&#x6216;&#x4E00;&#x7EC4;&#xFF09;JSON&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;DataFrame&#x6216;&#x5176;&#x4ED6;&#x4FBF;&#x4E8E;&#x5206;&#x6790;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5C31;&#x7531;&#x4F60;&#x51B3;&#x5B9A;&#x4E86;&#x3002;&#x6700;&#x7B80;&#x5355;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#xFF1A;&#x5411;DataFrame&#x6784;&#x9020;&#x5668;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x7684;&#x5217;&#x8868;&#xFF08;&#x5C31;&#x662F;&#x539F;&#x5148;&#x7684;JSON&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x5E76;&#x9009;&#x53D6;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x7684;&#x5B50;&#x96C6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">66</span>]: siblings = pd.DataFrame(result[<span class="hljs-string">&apos;siblings&apos;</span>], columns=[<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>])
+
+In [<span class="hljs-number">67</span>]: siblings
+Out[<span class="hljs-number">67</span>]: 
+    name  age
+<span class="hljs-number">0</span>  Scott   <span class="hljs-number">30</span>
+<span class="hljs-number">1</span>  Katie   <span class="hljs-number">38</span>
+</code></pre>
+<p>pandas.read_json&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5C06;&#x7279;&#x522B;&#x683C;&#x5F0F;&#x7684;JSON&#x6570;&#x636E;&#x96C6;&#x8F6C;&#x6362;&#x4E3A;Series&#x6216;DataFrame&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">68</span>]: !cat examples/example.json
+[{<span class="hljs-string">&quot;a&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&quot;b&quot;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&quot;c&quot;</span>: <span class="hljs-number">3</span>},
+ {<span class="hljs-string">&quot;a&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-string">&quot;b&quot;</span>: <span class="hljs-number">5</span>, <span class="hljs-string">&quot;c&quot;</span>: <span class="hljs-number">6</span>},
+ {<span class="hljs-string">&quot;a&quot;</span>: <span class="hljs-number">7</span>, <span class="hljs-string">&quot;b&quot;</span>: <span class="hljs-number">8</span>, <span class="hljs-string">&quot;c&quot;</span>: <span class="hljs-number">9</span>}]
+</code></pre>
+<p>pandas.read_json&#x7684;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#x5047;&#x8BBE;JSON&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x8868;&#x683C;&#x4E2D;&#x7684;&#x4E00;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">69</span>]: data = pd.read_json(<span class="hljs-string">&apos;examples/example.json&apos;</span>)
+
+In [<span class="hljs-number">70</span>]: data
+Out[<span class="hljs-number">70</span>]: 
+   a  b  c
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>
+<span class="hljs-number">1</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span>
+</code></pre>
+<p>&#x7B2C;7&#x7AE0;&#x4E2D;&#x5173;&#x4E8E;USDA Food Database&#x7684;&#x90A3;&#x4E2A;&#x4F8B;&#x5B50;&#x8FDB;&#x4E00;&#x6B65;&#x8BB2;&#x89E3;&#x4E86;JSON&#x6570;&#x636E;&#x7684;&#x8BFB;&#x53D6;&#x548C;&#x5904;&#x7406;&#xFF08;&#x5305;&#x62EC;&#x5D4C;&#x5957;&#x8BB0;&#x5F55;&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5C06;&#x6570;&#x636E;&#x4ECE;pandas&#x8F93;&#x51FA;&#x5230;JSON&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;to_json&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">71</span>]: print(data.to_json())
+{<span class="hljs-string">&quot;a&quot;</span>:{<span class="hljs-string">&quot;0&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;1&quot;</span>:<span class="hljs-number">4</span>,<span class="hljs-string">&quot;2&quot;</span>:<span class="hljs-number">7</span>},<span class="hljs-string">&quot;b&quot;</span>:{<span class="hljs-string">&quot;0&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&quot;1&quot;</span>:<span class="hljs-number">5</span>,<span class="hljs-string">&quot;2&quot;</span>:<span class="hljs-number">8</span>},<span class="hljs-string">&quot;c&quot;</span>:{<span class="hljs-string">&quot;0&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&quot;1&quot;</span>:<span class="hljs-number">6</span>,<span class="hljs-string">&quot;2&quot;</span>:<span class="hljs-number">9</span>}}
+
+In [<span class="hljs-number">72</span>]: print(data.to_json(orient=<span class="hljs-string">&apos;records&apos;</span>))
+[{<span class="hljs-string">&quot;a&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;b&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&quot;c&quot;</span>:<span class="hljs-number">3</span>},{<span class="hljs-string">&quot;a&quot;</span>:<span class="hljs-number">4</span>,<span class="hljs-string">&quot;b&quot;</span>:<span class="hljs-number">5</span>,<span class="hljs-string">&quot;c&quot;</span>:<span class="hljs-number">6</span>},{<span class="hljs-string">&quot;a&quot;</span>:<span class="hljs-number">7</span>,<span class="hljs-string">&quot;b&quot;</span>:<span class="hljs-number">8</span>,<span class="hljs-string">&quot;c&quot;</span>:<span class="hljs-number">9</span>}]
+</code></pre>
+<h2 id="xml&#x548C;html&#xFF1A;web&#x4FE1;&#x606F;&#x6536;&#x96C6;">XML&#x548C;HTML&#xFF1A;Web&#x4FE1;&#x606F;&#x6536;&#x96C6;</h2>
+<p>Python&#x6709;&#x8BB8;&#x591A;&#x53EF;&#x4EE5;&#x8BFB;&#x5199;&#x5E38;&#x89C1;&#x7684;HTML&#x548C;XML&#x683C;&#x5F0F;&#x6570;&#x636E;&#x7684;&#x5E93;&#xFF0C;&#x5305;&#x62EC;lxml&#x3001;Beautiful Soup&#x548C;html5lib&#x3002;lxml&#x7684;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x5FEB;&#xFF0C;&#x4F46;&#x5176;&#x5B83;&#x7684;&#x5E93;&#x5904;&#x7406;&#x6709;&#x8BEF;&#x7684;HTML&#x6216;XML&#x6587;&#x4EF6;&#x66F4;&#x597D;&#x3002;</p>
+<p>pandas&#x6709;&#x4E00;&#x4E2A;&#x5185;&#x7F6E;&#x7684;&#x529F;&#x80FD;&#xFF0C;read_html&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;lxml&#x548C;Beautiful Soup&#x81EA;&#x52A8;&#x5C06;HTML&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8868;&#x683C;&#x89E3;&#x6790;&#x4E3A;DataFrame&#x5BF9;&#x8C61;&#x3002;&#x4E3A;&#x4E86;&#x8FDB;&#x884C;&#x5C55;&#x793A;&#xFF0C;&#x6211;&#x4ECE;&#x7F8E;&#x56FD;&#x8054;&#x90A6;&#x5B58;&#x6B3E;&#x4FDD;&#x9669;&#x516C;&#x53F8;&#x4E0B;&#x8F7D;&#x4E86;&#x4E00;&#x4E2A;HTML&#x6587;&#x4EF6;&#xFF08;pandas&#x6587;&#x6863;&#x4E2D;&#x4E5F;&#x4F7F;&#x7528;&#x8FC7;&#xFF09;&#xFF0C;&#x5B83;&#x8BB0;&#x5F55;&#x4E86;&#x94F6;&#x884C;&#x5012;&#x95ED;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5B89;&#x88C5;read_html&#x7528;&#x5230;&#x7684;&#x5E93;&#xFF1A;</p>
+<pre><code>conda install lxml
+pip install beautifulsoup4 html5lib
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x7528;&#x7684;&#x4E0D;&#x662F;conda&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>pip install lxml</code>&#x3002;</p>
+<p>pandas.read_html&#x6709;&#x4E00;&#x4E9B;&#x9009;&#x9879;&#xFF0C;&#x9ED8;&#x8BA4;&#x6761;&#x4EF6;&#x4E0B;&#xFF0C;&#x5B83;&#x4F1A;&#x641C;&#x7D22;&#x3001;&#x5C1D;&#x8BD5;&#x89E3;&#x6790;<table>&#x6807;&#x7B7E;&#x5185;&#x7684;&#x7684;&#x8868;&#x683C;&#x6570;&#x636E;&#x3002;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7684;DataFrame&#x5BF9;&#x8C61;&#xFF1A;</table></p>
+<pre><code class="lang-python">In [73]: tables = pd.read_html(&apos;examples/fdic_failed_bank_list.html&apos;)
+
+In [74]: len(tables)
+Out[74]: 1
+
+In [75]: failures = tables[0]
+
+In [76]: failures.head()
+Out[76]: 
+                      Bank Name             City  ST   CERT  \
+0                   Allied Bank         Mulberry  AR     91   
+1  The Woodbury Banking Company         Woodbury  GA  11297   
+2        First CornerStone Bank  King of Prussia  PA  35312   
+3            Trust Company Bank          Memphis  TN   9956   
+4    North Milwaukee State Bank        Milwaukee  WI  20364   
+                 Acquiring Institution        Closing Date       Updated Date  
+0                         Today&apos;s Bank  September 23, 2016  November 17, 2016  
+1                          United Bank     August 19, 2016  November 17, 2016  
+2  First-Citizens Bank &amp; Trust Company         May 6, 2016  September 6, 2016  
+3           The Bank of Fayette County      April 29, 2016  September 6, 2016  
+4  First-Citizens Bank &amp; Trust Company      March 11, 2016      June 16, 2016
+</code></pre>
+<p>&#x56E0;&#x4E3A;failures&#x6709;&#x8BB8;&#x591A;&#x5217;&#xFF0C;pandas&#x63D2;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26;\&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x6E05;&#x6D17;&#x548C;&#x5206;&#x6790;&#xFF08;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x4F1A;&#x8FDB;&#x4E00;&#x6B65;&#x8BB2;&#x89E3;&#xFF09;&#xFF0C;&#x6BD4;&#x5982;&#x8BA1;&#x7B97;&#x6309;&#x5E74;&#x4EFD;&#x8BA1;&#x7B97;&#x5012;&#x95ED;&#x7684;&#x94F6;&#x884C;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">77</span>]: close_timestamps = pd.to_datetime(failures[<span class="hljs-string">&apos;Closing Date&apos;</span>])
+
+In [<span class="hljs-number">78</span>]: close_timestamps.dt.year.value_counts()
+Out[<span class="hljs-number">78</span>]: 
+<span class="hljs-number">2010</span>    <span class="hljs-number">157</span>
+<span class="hljs-number">2009</span>    <span class="hljs-number">140</span>
+<span class="hljs-number">2011</span>     <span class="hljs-number">92</span>
+<span class="hljs-number">2012</span>     <span class="hljs-number">51</span>
+<span class="hljs-number">2008</span>     <span class="hljs-number">25</span>
+       ... 
+<span class="hljs-number">2004</span>      <span class="hljs-number">4</span>
+<span class="hljs-number">2001</span>      <span class="hljs-number">4</span>
+<span class="hljs-number">2007</span>      <span class="hljs-number">3</span>
+<span class="hljs-number">2003</span>      <span class="hljs-number">3</span>
+<span class="hljs-number">2000</span>      <span class="hljs-number">2</span>
+Name: Closing Date, Length: <span class="hljs-number">15</span>, dtype: int64
+</code></pre>
+<h2 id="&#x5229;&#x7528;lxmlobjectify&#x89E3;&#x6790;xml">&#x5229;&#x7528;lxml.objectify&#x89E3;&#x6790;XML</h2>
+<p>XML&#xFF08;Extensible Markup Language&#xFF09;&#x662F;&#x53E6;&#x4E00;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x652F;&#x6301;&#x5206;&#x5C42;&#x3001;&#x5D4C;&#x5957;&#x6570;&#x636E;&#x4EE5;&#x53CA;&#x5143;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x3002;&#x672C;&#x4E66;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5B9E;&#x9645;&#x4E0A;&#x6765;&#x81EA;&#x4E8E;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;XML&#x6587;&#x6863;&#x3002;</p>
+<p>&#x524D;&#x9762;&#xFF0C;&#x6211;&#x4ECB;&#x7ECD;&#x4E86;pandas.read_html&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;lxml&#x6216;Beautiful Soup&#x4ECE;HTML&#x89E3;&#x6790;&#x6570;&#x636E;&#x3002;XML&#x548C;HTML&#x7684;&#x7ED3;&#x6784;&#x5F88;&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;XML&#x66F4;&#x4E3A;&#x901A;&#x7528;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4F1A;&#x7528;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6F14;&#x793A;&#x5982;&#x4F55;&#x5229;&#x7528;lxml&#x4ECE;XML&#x683C;&#x5F0F;&#x89E3;&#x6790;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x7EBD;&#x7EA6;&#x5927;&#x90FD;&#x4F1A;&#x8FD0;&#x8F93;&#x7F72;&#x53D1;&#x5E03;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x5173;&#x5176;&#x516C;&#x4EA4;&#x548C;&#x5217;&#x8F66;&#x670D;&#x52A1;&#x7684;&#x6570;&#x636E;&#x8D44;&#x6599;&#xFF08;<a href="http://www.mta.info/developers/download.html&#xFF09;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x770B;&#x770B;&#x5305;&#x542B;&#x5728;&#x4E00;&#x7EC4;XML&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8FD0;&#x884C;&#x60C5;&#x51B5;&#x6570;&#x636E;&#x3002;&#x6BCF;&#x9879;&#x5217;&#x8F66;&#x6216;&#x516C;&#x4EA4;&#x670D;&#x52A1;&#x90FD;&#x6709;&#x5404;&#x81EA;&#x7684;&#x6587;&#x4EF6;&#xFF08;&#x5982;Metro-North" target="_blank">http://www.mta.info/developers/download.html&#xFF09;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x770B;&#x770B;&#x5305;&#x542B;&#x5728;&#x4E00;&#x7EC4;XML&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8FD0;&#x884C;&#x60C5;&#x51B5;&#x6570;&#x636E;&#x3002;&#x6BCF;&#x9879;&#x5217;&#x8F66;&#x6216;&#x516C;&#x4EA4;&#x670D;&#x52A1;&#x90FD;&#x6709;&#x5404;&#x81EA;&#x7684;&#x6587;&#x4EF6;&#xFF08;&#x5982;Metro-North</a> Railroad&#x7684;&#x6587;&#x4EF6;&#x662F;Performance_MNR.xml&#xFF09;&#xFF0C;&#x5176;&#x4E2D;&#x6BCF;&#x6761;XML&#x8BB0;&#x5F55;&#x5C31;&#x662F;&#x4E00;&#x6761;&#x6708;&#x5EA6;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">INDICATOR</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">INDICATOR_SEQ</span>&gt;</span>373889<span class="hljs-tag">&lt;/<span class="hljs-title">INDICATOR_SEQ</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">PARENT_SEQ</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">PARENT_SEQ</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">AGENCY_NAME</span>&gt;</span>Metro-North Railroad<span class="hljs-tag">&lt;/<span class="hljs-title">AGENCY_NAME</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">INDICATOR_NAME</span>&gt;</span>Escalator Availability<span class="hljs-tag">&lt;/<span class="hljs-title">INDICATOR_NAME</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">DESCRIPTION</span>&gt;</span>Percent of the time that escalators are operational
+  systemwide. The availability rate is based on physical observations performed
+  the morning of regular business days only. This is a new indicator the agency
+  began reporting in 2009.<span class="hljs-tag">&lt;/<span class="hljs-title">DESCRIPTION</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">PERIOD_YEAR</span>&gt;</span>2011<span class="hljs-tag">&lt;/<span class="hljs-title">PERIOD_YEAR</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">PERIOD_MONTH</span>&gt;</span>12<span class="hljs-tag">&lt;/<span class="hljs-title">PERIOD_MONTH</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">CATEGORY</span>&gt;</span>Service Indicators<span class="hljs-tag">&lt;/<span class="hljs-title">CATEGORY</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">FREQUENCY</span>&gt;</span>M<span class="hljs-tag">&lt;/<span class="hljs-title">FREQUENCY</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">DESIRED_CHANGE</span>&gt;</span>U<span class="hljs-tag">&lt;/<span class="hljs-title">DESIRED_CHANGE</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">INDICATOR_UNIT</span>&gt;</span>%<span class="hljs-tag">&lt;/<span class="hljs-title">INDICATOR_UNIT</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">DECIMAL_PLACES</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">DECIMAL_PLACES</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">YTD_TARGET</span>&gt;</span>97.00<span class="hljs-tag">&lt;/<span class="hljs-title">YTD_TARGET</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">YTD_ACTUAL</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">YTD_ACTUAL</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">MONTHLY_TARGET</span>&gt;</span>97.00<span class="hljs-tag">&lt;/<span class="hljs-title">MONTHLY_TARGET</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">MONTHLY_ACTUAL</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">MONTHLY_ACTUAL</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">INDICATOR</span>&gt;</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5148;&#x7528;lxml.objectify&#x89E3;&#x6790;&#x8BE5;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;getroot&#x5F97;&#x5230;&#x8BE5;XML&#x6587;&#x4EF6;&#x7684;&#x6839;&#x8282;&#x70B9;&#x7684;&#x5F15;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> lxml <span class="hljs-keyword">import</span> objectify
+
+path = <span class="hljs-string">&apos;datasets/mta_perf/Performance_MNR.xml&apos;</span>
+parsed = objectify.parse(open(path))
+root = parsed.getroot()
+</code></pre>
+<p>root.INDICATOR&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4EA7;&#x751F;&#x5404;&#x4E2A;<INDICATOR>XML&#x5143;&#x7D20;&#x7684;&#x751F;&#x6210;&#x5668;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x6807;&#x8BB0;&#x540D;&#xFF08;&#x5982;YTD_ACTUAL&#xFF09;&#x548C;&#x6570;&#x636E;&#x503C;&#x586B;&#x5145;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF08;&#x6392;&#x9664;&#x51E0;&#x4E2A;&#x6807;&#x8BB0;&#xFF09;&#xFF1A;</INDICATOR></p>
+<pre><code class="lang-python">data = []
+
+skip_fields = [<span class="hljs-string">&apos;PARENT_SEQ&apos;</span>, <span class="hljs-string">&apos;INDICATOR_SEQ&apos;</span>,
+               <span class="hljs-string">&apos;DESIRED_CHANGE&apos;</span>, <span class="hljs-string">&apos;DECIMAL_PLACES&apos;</span>]
+
+<span class="hljs-keyword">for</span> elt <span class="hljs-keyword">in</span> root.INDICATOR:
+    el_data = {}
+    <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> elt.getchildren():
+        <span class="hljs-keyword">if</span> child.tag <span class="hljs-keyword">in</span> skip_fields:
+            <span class="hljs-keyword">continue</span>
+        el_data[child.tag] = child.pyval
+    data.append(el_data)
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5C06;&#x8FD9;&#x7EC4;&#x5B57;&#x5178;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;DataFrame&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">81</span>]: perf = pd.DataFrame(data)
+
+In [<span class="hljs-number">82</span>]: perf.head()
+Out[<span class="hljs-number">82</span>]:
+Empty DataFrame
+Columns: []
+Index: []
+</code></pre>
+<p>XML&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x6BD4;&#x672C;&#x4F8B;&#x590D;&#x6742;&#x5F97;&#x591A;&#x3002;&#x6BCF;&#x4E2A;&#x6807;&#x8BB0;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x5143;&#x6570;&#x636E;&#x3002;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;HTML&#x7684;&#x94FE;&#x63A5;&#x6807;&#x7B7E;&#xFF08;&#x5B83;&#x4E5F;&#x7B97;&#x662F;&#x4E00;&#x6BB5;&#x6709;&#x6548;&#x7684;XML&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> io <span class="hljs-keyword">import</span> StringIO
+tag = <span class="hljs-string">&apos;&lt;a href=&quot;http://www.google.com&quot;&gt;Google&lt;/a&gt;&apos;</span>
+root = objectify.parse(StringIO(tag)).getroot()
+</code></pre>
+<p>&#x73B0;&#x5728;&#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x6807;&#x7B7E;&#x6216;&#x94FE;&#x63A5;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x5B57;&#x6BB5;&#x4E86;&#xFF08;&#x5982;href&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">84</span>]: root
+Out[<span class="hljs-number">84</span>]: &lt;Element a at <span class="hljs-number">0x7f6b15817748</span>&gt;
+
+In [<span class="hljs-number">85</span>]: root.get(<span class="hljs-string">&apos;href&apos;</span>)
+Out[<span class="hljs-number">85</span>]: <span class="hljs-string">&apos;http://www.google.com&apos;</span>
+
+In [<span class="hljs-number">86</span>]: root.text
+Out[<span class="hljs-number">86</span>]: <span class="hljs-string">&apos;Google&apos;</span>
+</code></pre>
+<h1 id="62-&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x683C;&#x5F0F;">6.2 &#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x683C;&#x5F0F;</h1>
+<p>&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x9AD8;&#x6548;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x5B58;&#x50A8;&#x6700;&#x7B80;&#x5355;&#x7684;&#x529E;&#x6CD5;&#x4E4B;&#x4E00;&#x662F;&#x4F7F;&#x7528;Python&#x5185;&#x7F6E;&#x7684;pickle&#x5E8F;&#x5217;&#x5316;&#x3002;pandas&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5C06;&#x6570;&#x636E;&#x4EE5;pickle&#x683C;&#x5F0F;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#x7684;to_pickle&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">87</span>]: frame = pd.read_csv(<span class="hljs-string">&apos;examples/ex1.csv&apos;</span>)
+
+In [<span class="hljs-number">88</span>]: frame
+Out[<span class="hljs-number">88</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+
+In [<span class="hljs-number">89</span>]: frame.to_pickle(<span class="hljs-string">&apos;examples/frame_pickle&apos;</span>)
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;pickle&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#x88AB;pickle&#x5316;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x662F;&#x4F7F;&#x7528;&#x66F4;&#x4E3A;&#x65B9;&#x4FBF;&#x7684;pandas.read_pickle&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">90</span>]: pd.read_pickle(<span class="hljs-string">&apos;examples/frame_pickle&apos;</span>)
+Out[<span class="hljs-number">90</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;pickle&#x4EC5;&#x5EFA;&#x8BAE;&#x7528;&#x4E8E;&#x77ED;&#x671F;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x3002;&#x5176;&#x539F;&#x56E0;&#x662F;&#x5F88;&#x96BE;&#x4FDD;&#x8BC1;&#x8BE5;&#x683C;&#x5F0F;&#x6C38;&#x8FDC;&#x662F;&#x7A33;&#x5B9A;&#x7684;&#xFF1B;&#x4ECA;&#x5929;pickle&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x88AB;&#x540E;&#x7EED;&#x7248;&#x672C;&#x7684;&#x5E93;unpickle&#x51FA;&#x6765;&#x3002;&#x867D;&#x7136;&#x6211;&#x5C3D;&#x529B;&#x4FDD;&#x8BC1;&#x8FD9;&#x79CD;&#x4E8B;&#x60C5;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x5728;pandas&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x4ECA;&#x540E;&#x7684;&#x67D0;&#x4E2A;&#x65F6;&#x5019;&#x8BF4;&#x4E0D;&#x5B9A;&#x8FD8;&#x662F;&#x5F97;&#x201C;&#x6253;&#x7834;&#x201D;&#x8BE5;pickle&#x683C;&#x5F0F;&#x3002;</p>
+</blockquote>
+<p>pandas&#x5185;&#x7F6E;&#x652F;&#x6301;&#x4E24;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;HDF5&#x548C;MessagePack&#x3002;&#x4E0B;&#x4E00;&#x8282;&#xFF0C;&#x6211;&#x4F1A;&#x7ED9;&#x51FA;&#x51E0;&#x4E2A;HDF5&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4F46;&#x6211;&#x5EFA;&#x8BAE;&#x4F60;&#x5C1D;&#x8BD5;&#x4E0B;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF0C;&#x770B;&#x770B;&#x5B83;&#x4EEC;&#x7684;&#x901F;&#x5EA6;&#x4EE5;&#x53CA;&#x662F;&#x5426;&#x9002;&#x5408;&#x4F60;&#x7684;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x3002;pandas&#x6216;NumPy&#x6570;&#x636E;&#x7684;&#x5176;&#x5B83;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x6709;&#xFF1A;</p>
+<ul>
+<li>bcolz&#xFF1A;&#x4E00;&#x79CD;&#x53EF;&#x538B;&#x7F29;&#x7684;&#x5217;&#x5B58;&#x50A8;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#xFF0C;&#x57FA;&#x4E8E;Blosc&#x538B;&#x7F29;&#x5E93;&#x3002;</li>
+<li>Feather&#xFF1A;&#x6211;&#x4E0E;R&#x8BED;&#x8A00;&#x793E;&#x533A;&#x7684;Hadley Wickham&#x8BBE;&#x8BA1;&#x7684;&#x4E00;&#x79CD;&#x8DE8;&#x8BED;&#x8A00;&#x7684;&#x5217;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x3002;Feather&#x4F7F;&#x7528;&#x4E86;Apache Arrow&#x7684;&#x5217;&#x5F0F;&#x5185;&#x5B58;&#x683C;&#x5F0F;&#x3002;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;hdf5&#x683C;&#x5F0F;">&#x4F7F;&#x7528;HDF5&#x683C;&#x5F0F;</h2>
+<p>HDF5&#x662F;&#x4E00;&#x79CD;&#x5B58;&#x50A8;&#x5927;&#x89C4;&#x6A21;&#x79D1;&#x5B66;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x975E;&#x5E38;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x88AB;&#x4F5C;&#x4E3A;C&#x6807;&#x51C6;&#x5E93;&#xFF0C;&#x5E26;&#x6709;&#x8BB8;&#x591A;&#x8BED;&#x8A00;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5982;Java&#x3001;Python&#x548C;MATLAB&#x7B49;&#x3002;HDF5&#x4E2D;&#x7684;HDF&#x6307;&#x7684;&#x662F;&#x5C42;&#x6B21;&#x578B;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF08;hierarchical data format&#xFF09;&#x3002;&#x6BCF;&#x4E2A;HDF5&#x6587;&#x4EF6;&#x90FD;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5F0F;&#x7684;&#x8282;&#x70B9;&#x7ED3;&#x6784;&#xFF0C;&#x5B83;&#x4F7F;&#x4F60;&#x80FD;&#x591F;&#x5B58;&#x50A8;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x5E76;&#x652F;&#x6301;&#x5143;&#x6570;&#x636E;&#x3002;&#x4E0E;&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x683C;&#x5F0F;&#x76F8;&#x6BD4;&#xFF0C;HDF5&#x652F;&#x6301;&#x591A;&#x79CD;&#x538B;&#x7F29;&#x5668;&#x7684;&#x5373;&#x65F6;&#x538B;&#x7F29;&#xFF0C;&#x8FD8;&#x80FD;&#x66F4;&#x9AD8;&#x6548;&#x5730;&#x5B58;&#x50A8;&#x91CD;&#x590D;&#x6A21;&#x5F0F;&#x6570;&#x636E;&#x3002;&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x975E;&#x5E38;&#x5927;&#x7684;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x653E;&#x5165;&#x5185;&#x5B58;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;HDF5&#x5C31;&#x662F;&#x4E0D;&#x9519;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x5730;&#x5206;&#x5757;&#x8BFB;&#x5199;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x7528;PyTables&#x6216;h5py&#x5E93;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;HDF5&#x6587;&#x4EF6;&#xFF0C;pandas&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x4E3A;&#x9AD8;&#x7EA7;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x5B58;&#x50A8;Series&#x548C;DataFrame&#x5BF9;&#x8C61;&#x3002;HDFStore&#x7C7B;&#x53EF;&#x4EE5;&#x50CF;&#x5B57;&#x5178;&#x4E00;&#x6837;&#xFF0C;&#x5904;&#x7406;&#x4F4E;&#x7EA7;&#x7684;&#x7EC6;&#x8282;&#xFF1A;</p>
+<pre><code class="lang-python">In [92]: frame = pd.DataFrame({&apos;a&apos;: np.random.randn(100)})
+
+In [93]: store = pd.HDFStore(&apos;mydata.h5&apos;)
+
+In [94]: store[&apos;obj1&apos;] = frame
+
+In [95]: store[&apos;obj1_col&apos;] = frame[&apos;a&apos;]
+
+In [96]: store
+Out[96]: 
+&lt;class &apos;pandas.io.pytables.HDFStore&apos;&gt;
+File path: mydata.h5
+/obj1                frame        (shape-&gt;[100,1])                               
+
+/obj1_col            series       (shape-&gt;[100])                                 
+
+/obj2                frame_table  (typ-&gt;appendable,nrows-&gt;100,ncols-&gt;1,indexers-&gt;
+[index])
+/obj3                frame_table  (typ-&gt;appendable,nrows-&gt;100,ncols-&gt;1,indexers-&gt;
+[index])
+</code></pre>
+<p>HDF5&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0E;&#x5B57;&#x5178;&#x4E00;&#x6837;&#x7684;API&#x8FDB;&#x884C;&#x83B7;&#x53D6;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">97</span>]: store[<span class="hljs-string">&apos;obj1&apos;</span>]
+Out[<span class="hljs-number">97</span>]: 
+           a
+<span class="hljs-number">0</span>  -<span class="hljs-number">0.204708</span>
+<span class="hljs-number">1</span>   <span class="hljs-number">0.478943</span>
+<span class="hljs-number">2</span>  -<span class="hljs-number">0.519439</span>
+<span class="hljs-number">3</span>  -<span class="hljs-number">0.555730</span>
+<span class="hljs-number">4</span>   <span class="hljs-number">1.965781</span>
+..       ...
+<span class="hljs-number">95</span>  <span class="hljs-number">0.795253</span>
+<span class="hljs-number">96</span>  <span class="hljs-number">0.118110</span>
+<span class="hljs-number">97</span> -<span class="hljs-number">0.748532</span>
+<span class="hljs-number">98</span>  <span class="hljs-number">0.584970</span>
+<span class="hljs-number">99</span>  <span class="hljs-number">0.152677</span>
+[<span class="hljs-number">100</span> rows x <span class="hljs-number">1</span> columns]
+</code></pre>
+<p>HDFStore&#x652F;&#x6301;&#x4E24;&#x79CD;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;&#xFF0C;&apos;fixed&apos;&#x548C;&apos;table&apos;&#x3002;&#x540E;&#x8005;&#x901A;&#x5E38;&#x4F1A;&#x66F4;&#x6162;&#xFF0C;&#x4F46;&#x662F;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x8BED;&#x6CD5;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">98</span>]: store.put(<span class="hljs-string">&apos;obj2&apos;</span>, frame, format=<span class="hljs-string">&apos;table&apos;</span>)
+
+In [<span class="hljs-number">99</span>]: store.select(<span class="hljs-string">&apos;obj2&apos;</span>, where=[<span class="hljs-string">&apos;index &gt;= 10 and index &lt;= 15&apos;</span>])
+Out[<span class="hljs-number">99</span>]: 
+           a
+<span class="hljs-number">10</span>  <span class="hljs-number">1.007189</span>
+<span class="hljs-number">11</span> -<span class="hljs-number">1.296221</span>
+<span class="hljs-number">12</span>  <span class="hljs-number">0.274992</span>
+<span class="hljs-number">13</span>  <span class="hljs-number">0.228913</span>
+<span class="hljs-number">14</span>  <span class="hljs-number">1.352917</span>
+<span class="hljs-number">15</span>  <span class="hljs-number">0.886429</span>
+
+In [<span class="hljs-number">100</span>]: store.close()
+</code></pre>
+<p>put&#x662F;store[&apos;obj2&apos;] = frame&#x65B9;&#x6CD5;&#x7684;&#x663E;&#x793A;&#x7248;&#x672C;&#xFF0C;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x5176;&#x5B83;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x6BD4;&#x5982;&#x683C;&#x5F0F;&#x3002;</p>
+<p>pandas.read_hdf&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5FEB;&#x6377;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">101</span>]: frame.to_hdf(<span class="hljs-string">&apos;mydata.h5&apos;</span>, <span class="hljs-string">&apos;obj3&apos;</span>, format=<span class="hljs-string">&apos;table&apos;</span>)
+
+In [<span class="hljs-number">102</span>]: pd.read_hdf(<span class="hljs-string">&apos;mydata.h5&apos;</span>, <span class="hljs-string">&apos;obj3&apos;</span>, where=[<span class="hljs-string">&apos;index &lt; 5&apos;</span>])
+Out[<span class="hljs-number">102</span>]: 
+          a
+<span class="hljs-number">0</span> -<span class="hljs-number">0.204708</span>
+<span class="hljs-number">1</span>  <span class="hljs-number">0.478943</span>
+<span class="hljs-number">2</span> -<span class="hljs-number">0.519439</span>
+<span class="hljs-number">3</span> -<span class="hljs-number">0.555730</span>
+<span class="hljs-number">4</span>  <span class="hljs-number">1.965781</span>
+</code></pre>
+<blockquote>
+<p>&#x7B14;&#x8BB0;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x8981;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x4F4D;&#x4E8E;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6BD4;&#x5982;Amazon S3&#x6216;HDFS&#xFF0C;&#x4F7F;&#x7528;&#x4E13;&#x95E8;&#x4E3A;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#xFF08;&#x6BD4;&#x5982;Apache Parquet&#xFF09;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x4E5F;&#x8BB8;&#x66F4;&#x52A0;&#x5408;&#x9002;&#x3002;Python&#x7684;Parquet&#x548C;&#x5176;&#x5B83;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x8FD8;&#x5728;&#x4E0D;&#x65AD;&#x7684;&#x53D1;&#x5C55;&#x4E4B;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x672C;&#x4E66;&#x4E2D;&#x6CA1;&#x6709;&#x6D89;&#x53CA;&#x3002;</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x672C;&#x5730;&#x5904;&#x7406;&#x6D77;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x4F60;&#x597D;&#x597D;&#x7814;&#x7A76;&#x4E00;&#x4E0B;PyTables&#x548C;h5py&#xFF0C;&#x770B;&#x770B;&#x5B83;&#x4EEC;&#x80FD;&#x6EE1;&#x8DB3;&#x4F60;&#x7684;&#x54EA;&#x4E9B;&#x9700;&#x6C42;&#x3002;&#x3002;&#x7531;&#x4E8E;&#x8BB8;&#x591A;&#x6570;&#x636E;&#x5206;&#x6790;&#x95EE;&#x9898;&#x90FD;&#x662F;IO&#x5BC6;&#x96C6;&#x578B;&#xFF08;&#x800C;&#x4E0D;&#x662F;CPU&#x5BC6;&#x96C6;&#x578B;&#xFF09;&#xFF0C;&#x5229;&#x7528;HDF5&#x8FD9;&#x6837;&#x7684;&#x5DE5;&#x5177;&#x80FD;&#x663E;&#x8457;&#x63D0;&#x5347;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6548;&#x7387;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;HDF5&#x4E0D;&#x662F;&#x6570;&#x636E;&#x5E93;&#x3002;&#x5B83;&#x6700;&#x9002;&#x5408;&#x7528;&#x4F5C;&#x201C;&#x4E00;&#x6B21;&#x5199;&#x591A;&#x6B21;&#x8BFB;&#x201D;&#x7684;&#x6570;&#x636E;&#x96C6;&#x3002;&#x867D;&#x7136;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x540C;&#x65F6;&#x53D1;&#x751F;&#x591A;&#x4E2A;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x6587;&#x4EF6;&#x5C31;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x7834;&#x574F;&#x3002;</p>
+</blockquote>
+<h2 id="&#x8BFB;&#x53D6;microsoft-excel&#x6587;&#x4EF6;">&#x8BFB;&#x53D6;Microsoft Excel&#x6587;&#x4EF6;</h2>
+<p>pandas&#x7684;ExcelFile&#x7C7B;&#x6216;pandas.read_excel&#x51FD;&#x6570;&#x652F;&#x6301;&#x8BFB;&#x53D6;&#x5B58;&#x50A8;&#x5728;Excel 2003&#xFF08;&#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#xFF09;&#x4E2D;&#x7684;&#x8868;&#x683C;&#x578B;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x5DE5;&#x5177;&#x5206;&#x522B;&#x4F7F;&#x7528;&#x6269;&#x5C55;&#x5305;xlrd&#x548C;openpyxl&#x8BFB;&#x53D6;XLS&#x548C;XLSX&#x6587;&#x4EF6;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;pip&#x6216;conda&#x5B89;&#x88C5;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x8981;&#x4F7F;&#x7528;ExcelFile&#xFF0C;&#x901A;&#x8FC7;&#x4F20;&#x9012;xls&#x6216;xlsx&#x8DEF;&#x5F84;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">104</span>]: xlsx = pd.ExcelFile(<span class="hljs-string">&apos;examples/ex1.xlsx&apos;</span>)
+</code></pre>
+<p>&#x5B58;&#x50A8;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;read_excel&#x8BFB;&#x53D6;&#x5230;DataFrame&#xFF08;&#x539F;&#x4E66;&#x8FD9;&#x91CC;&#x5199;&#x7684;&#x662F;&#x7528;parse&#x89E3;&#x6790;&#xFF0C;&#x4F46;&#x4EE3;&#x7801;&#x4E2D;&#x7528;&#x7684;&#x662F;read_excel&#xFF0C;&#x662F;&#x4E2A;&#x7B14;&#x8BEF;&#xFF1A;&#x53EA;&#x6362;&#x4E86;&#x4EE3;&#x7801;&#xFF0C;&#x6CA1;&#x6709;&#x6539;&#x6587;&#x5B57;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">105</span>]: pd.read_excel(xlsx, <span class="hljs-string">&apos;Sheet1&apos;</span>)
+Out[<span class="hljs-number">105</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x8868;&#x5355;&#xFF0C;&#x521B;&#x5EFA;ExcelFile&#x4F1A;&#x66F4;&#x5FEB;&#xFF0C;&#x4F46;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6587;&#x4EF6;&#x540D;&#x4F20;&#x9012;&#x5230;pandas.read_excel&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">106</span>]: frame = pd.read_excel(<span class="hljs-string">&apos;examples/ex1.xlsx&apos;</span>, <span class="hljs-string">&apos;Sheet1&apos;</span>)
+
+In [<span class="hljs-number">107</span>]: frame
+Out[<span class="hljs-number">107</span>]: 
+   a   b   c   d message
+<span class="hljs-number">0</span>  <span class="hljs-number">1</span>   <span class="hljs-number">2</span>   <span class="hljs-number">3</span>   <span class="hljs-number">4</span>   hello
+<span class="hljs-number">1</span>  <span class="hljs-number">5</span>   <span class="hljs-number">6</span>   <span class="hljs-number">7</span>   <span class="hljs-number">8</span>   world
+<span class="hljs-number">2</span>  <span class="hljs-number">9</span>  <span class="hljs-number">10</span>  <span class="hljs-number">11</span>  <span class="hljs-number">12</span>     foo
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x5C06;pandas&#x6570;&#x636E;&#x5199;&#x5165;&#x4E3A;Excel&#x683C;&#x5F0F;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;ExcelWriter&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;pandas&#x5BF9;&#x8C61;&#x7684;to_excel&#x65B9;&#x6CD5;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;&#x5176;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">108</span>]: writer = pd.ExcelWriter(<span class="hljs-string">&apos;examples/ex2.xlsx&apos;</span>)
+
+In [<span class="hljs-number">109</span>]: frame.to_excel(writer, <span class="hljs-string">&apos;Sheet1&apos;</span>)
+
+In [<span class="hljs-number">110</span>]: writer.save()
+</code></pre>
+<p>&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x4E0D;&#x4F7F;&#x7528;ExcelWriter&#xFF0C;&#x800C;&#x662F;&#x4F20;&#x9012;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x5230;to_excel&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">111</span>]: frame.to_excel(<span class="hljs-string">&apos;examples/ex2.xlsx&apos;</span>)
+</code></pre>
+<h1 id="63-web-apis&#x4EA4;&#x4E92;">6.3 Web APIs&#x4EA4;&#x4E92;</h1>
+<p>&#x8BB8;&#x591A;&#x7F51;&#x7AD9;&#x90FD;&#x6709;&#x4E00;&#x4E9B;&#x901A;&#x8FC7;JSON&#x6216;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x63D0;&#x4F9B;&#x6570;&#x636E;&#x7684;&#x516C;&#x5171;API&#x3002;&#x901A;&#x8FC7;Python&#x8BBF;&#x95EE;&#x8FD9;&#x4E9B;API&#x7684;&#x529E;&#x6CD5;&#x6709;&#x4E0D;&#x5C11;&#x3002;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684;&#x529E;&#x6CD5;&#xFF08;&#x63A8;&#x8350;&#xFF09;&#x662F;requests&#x5305;&#xFF08;<a href="http://docs.python-requests.org&#xFF09;&#x3002;" target="_blank">http://docs.python-requests.org&#xFF09;&#x3002;</a></p>
+<p>&#x4E3A;&#x4E86;&#x641C;&#x7D22;&#x6700;&#x65B0;&#x7684;30&#x4E2A;GitHub&#x4E0A;&#x7684;pandas&#x4E3B;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x4E00;&#x4E2A;HTTP GET&#x8BF7;&#x6C42;&#xFF0C;&#x4F7F;&#x7528;requests&#x6269;&#x5C55;&#x5E93;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">113</span>]: <span class="hljs-keyword">import</span> requests
+
+In [<span class="hljs-number">114</span>]: url = <span class="hljs-string">&apos;https://api.github.com/repos/pandas-dev/pandas/issues&apos;</span>
+
+In [<span class="hljs-number">115</span>]: resp = requests.get(url)
+
+In [<span class="hljs-number">116</span>]: resp
+Out[<span class="hljs-number">116</span>]: &lt;Response [<span class="hljs-number">200</span>]&gt;
+</code></pre>
+<p>&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#x7684;json&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x88AB;&#x89E3;&#x6790;&#x8FC7;&#x7684;JSON&#x5B57;&#x5178;&#xFF0C;&#x52A0;&#x8F7D;&#x5230;&#x4E00;&#x4E2A;Python&#x5BF9;&#x8C61;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">117</span>]: data = resp.json()
+
+In [<span class="hljs-number">118</span>]: data[<span class="hljs-number">0</span>][<span class="hljs-string">&apos;title&apos;</span>]
+Out[<span class="hljs-number">118</span>]: <span class="hljs-string">&apos;Period does not round down for frequencies less that 1 hour&apos;</span>
+</code></pre>
+<p>data&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6240;&#x6709;GitHub&#x4E3B;&#x9898;&#x9875;&#x6570;&#x636E;&#xFF08;&#x4E0D;&#x5305;&#x542B;&#x8BC4;&#x8BBA;&#xFF09;&#x7684;&#x5B57;&#x5178;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#x6570;&#x636E;&#x5230;DataFrame&#xFF0C;&#x5E76;&#x63D0;&#x53D6;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre><code class="lang-python">In [119]: issues = pd.DataFrame(data, columns=[&apos;number&apos;, &apos;title&apos;,
+   .....:                                      &apos;labels&apos;, &apos;state&apos;])
+
+In [120]: issues
+Out[120]:
+    number                                              title  \
+0    17666  Period does not round down for frequencies les...   
+1    17665           DOC: improve docstring of function where   
+2    17664               COMPAT: skip 32-bit test on int repr   
+3    17662                          implement Delegator class
+4    17654  BUG: Fix series rename called with str alterin...   
+..     ...                                                ...   
+25   17603  BUG: Correctly localize naive datetime strings...   
+26   17599                     core.dtypes.generic --&gt; cython   
+27   17596   Merge cdate_range functionality into bdate_range   
+28   17587  Time Grouper bug fix when applied for list gro...   
+29   17583  BUG: fix tz-aware DatetimeIndex + TimedeltaInd...   
+                                               labels state  
+0                                                  []  open  
+1   [{&apos;id&apos;: 134699, &apos;url&apos;: &apos;https://api.github.com...  open  
+2   [{&apos;id&apos;: 563047854, &apos;url&apos;: &apos;https://api.github....  open  
+3                                                  []  open  
+4   [{&apos;id&apos;: 76811, &apos;url&apos;: &apos;https://api.github.com/...  open  
+..                                                ...   ...  
+25  [{&apos;id&apos;: 76811, &apos;url&apos;: &apos;https://api.github.com/...  open  
+26  [{&apos;id&apos;: 49094459, &apos;url&apos;: &apos;https://api.github.c...  open  
+27  [{&apos;id&apos;: 35818298, &apos;url&apos;: &apos;https://api.github.c...  open  
+28  [{&apos;id&apos;: 233160, &apos;url&apos;: &apos;https://api.github.com...  open  
+29  [{&apos;id&apos;: 76811, &apos;url&apos;: &apos;https://api.github.com/...  open  
+[30 rows x 4 columns]
+</code></pre>
+<p>&#x82B1;&#x8D39;&#x4E00;&#x4E9B;&#x7CBE;&#x529B;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E9B;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x5E38;&#x89C1;&#x7684;Web API&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8FD4;&#x56DE;DataFrame&#x5BF9;&#x8C61;&#xFF0C;&#x65B9;&#x4FBF;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<h1 id="64-&#x6570;&#x636E;&#x5E93;&#x4EA4;&#x4E92;">6.4 &#x6570;&#x636E;&#x5E93;&#x4EA4;&#x4E92;</h1>
+<p>&#x5728;&#x5546;&#x4E1A;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x5B58;&#x50A8;&#x5728;&#x6587;&#x672C;&#x6216;Excel&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x57FA;&#x4E8E;SQL&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x5982;SQL Server&#x3001;PostgreSQL&#x548C;MySQL&#x7B49;&#xFF09;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x5E7F;&#x6CDB;&#xFF0C;&#x5176;&#x5B83;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x5E93;&#x4E5F;&#x5F88;&#x6D41;&#x884C;&#x3002;&#x6570;&#x636E;&#x5E93;&#x7684;&#x9009;&#x62E9;&#x901A;&#x5E38;&#x53D6;&#x51B3;&#x4E8E;&#x6027;&#x80FD;&#x3001;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x4EE5;&#x53CA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4F38;&#x7F29;&#x6027;&#x9700;&#x6C42;&#x3002;</p>
+<p>&#x5C06;&#x6570;&#x636E;&#x4ECE;SQL&#x52A0;&#x8F7D;&#x5230;DataFrame&#x7684;&#x8FC7;&#x7A0B;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6B64;&#x5916;pandas&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x80FD;&#x591F;&#x7B80;&#x5316;&#x8BE5;&#x8FC7;&#x7A0B;&#x7684;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x5C06;&#x4F7F;&#x7528;SQLite&#x6570;&#x636E;&#x5E93;&#xFF08;&#x901A;&#x8FC7;Python&#x5185;&#x7F6E;&#x7684;sqlite3&#x9A71;&#x52A8;&#x5668;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">121</span>]: <span class="hljs-keyword">import</span> sqlite3
+
+In [<span class="hljs-number">122</span>]: query = <span class="hljs-string">&quot;&quot;&quot;
+   .....: CREATE TABLE test
+   .....: (a VARCHAR(20), b VARCHAR(20),
+   .....:  c REAL,        d INTEGER
+   .....: );&quot;&quot;&quot;</span>
+
+In [<span class="hljs-number">123</span>]: con = sqlite3.connect(<span class="hljs-string">&apos;mydata.sqlite&apos;</span>)
+
+In [<span class="hljs-number">124</span>]: con.execute(query)
+Out[<span class="hljs-number">124</span>]: &lt;sqlite3.Cursor at <span class="hljs-number">0x7f6b12a50f10</span>&gt;
+
+In [<span class="hljs-number">125</span>]: con.commit()
+</code></pre>
+<p>&#x7136;&#x540E;&#x63D2;&#x5165;&#x51E0;&#x884C;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">126</span>]: data = [(<span class="hljs-string">&apos;Atlanta&apos;</span>, <span class="hljs-string">&apos;Georgia&apos;</span>, <span class="hljs-number">1.25</span>, <span class="hljs-number">6</span>),
+   .....:         (<span class="hljs-string">&apos;Tallahassee&apos;</span>, <span class="hljs-string">&apos;Florida&apos;</span>, <span class="hljs-number">2.6</span>, <span class="hljs-number">3</span>),
+   .....:         (<span class="hljs-string">&apos;Sacramento&apos;</span>, <span class="hljs-string">&apos;California&apos;</span>, <span class="hljs-number">1.7</span>, <span class="hljs-number">5</span>)]
+
+In [<span class="hljs-number">127</span>]: stmt = <span class="hljs-string">&quot;INSERT INTO test VALUES(?, ?, ?, ?)&quot;</span>
+
+In [<span class="hljs-number">128</span>]: con.executemany(stmt, data)
+Out[<span class="hljs-number">128</span>]: &lt;sqlite3.Cursor at <span class="hljs-number">0x7f6b15c66ce0</span>&gt;
+</code></pre>
+<p>&#x4ECE;&#x8868;&#x4E2D;&#x9009;&#x53D6;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5927;&#x90E8;&#x5206;Python SQL&#x9A71;&#x52A8;&#x5668;&#xFF08;PyODBC&#x3001;psycopg2&#x3001;MySQLdb&#x3001;pymssql&#x7B49;&#xFF09;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">130</span>]: cursor = con.execute(<span class="hljs-string">&apos;select * from test&apos;</span>)
+
+In [<span class="hljs-number">131</span>]: rows = cursor.fetchall()
+
+In [<span class="hljs-number">132</span>]: rows
+Out[<span class="hljs-number">132</span>]: 
+[(<span class="hljs-string">&apos;Atlanta&apos;</span>, <span class="hljs-string">&apos;Georgia&apos;</span>, <span class="hljs-number">1.25</span>, <span class="hljs-number">6</span>),
+ (<span class="hljs-string">&apos;Tallahassee&apos;</span>, <span class="hljs-string">&apos;Florida&apos;</span>, <span class="hljs-number">2.6</span>, <span class="hljs-number">3</span>),
+ (<span class="hljs-string">&apos;Sacramento&apos;</span>, <span class="hljs-string">&apos;California&apos;</span>, <span class="hljs-number">1.7</span>, <span class="hljs-number">5</span>)]
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x5143;&#x7EC4;&#x5217;&#x8868;&#x4F20;&#x7ED9;DataFrame&#x6784;&#x9020;&#x5668;&#xFF0C;&#x4F46;&#x8FD8;&#x9700;&#x8981;&#x5217;&#x540D;&#xFF08;&#x4F4D;&#x4E8E;&#x5149;&#x6807;&#x7684;description&#x5C5E;&#x6027;&#x4E2D;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">133</span>]: cursor.description
+Out[<span class="hljs-number">133</span>]: 
+((<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>),
+ (<span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>),
+ (<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>),
+ (<span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>, <span class="hljs-keyword">None</span>))
+
+In [<span class="hljs-number">134</span>]: pd.DataFrame(rows, columns=[x[<span class="hljs-number">0</span>] <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> cursor.description])
+Out[<span class="hljs-number">134</span>]: 
+             a           b     c  d
+<span class="hljs-number">0</span>      Atlanta     Georgia  <span class="hljs-number">1.25</span>  <span class="hljs-number">6</span>
+<span class="hljs-number">1</span>  Tallahassee     Florida  <span class="hljs-number">2.60</span>  <span class="hljs-number">3</span>
+<span class="hljs-number">2</span>   Sacramento  California  <span class="hljs-number">1.70</span>  <span class="hljs-number">5</span>
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x89C4;&#x6574;&#x64CD;&#x4F5C;&#x76F8;&#x5F53;&#x591A;&#xFF0C;&#x4F60;&#x80AF;&#x5B9A;&#x4E0D;&#x60F3;&#x6BCF;&#x67E5;&#x4E00;&#x6B21;&#x6570;&#x636E;&#x5E93;&#x5C31;&#x91CD;&#x5199;&#x4E00;&#x6B21;&#x3002;<a href="http://www.sqlalchemy.org/" target="_blank">SQLAlchemy&#x9879;&#x76EE;</a>&#x662F;&#x4E00;&#x4E2A;&#x6D41;&#x884C;&#x7684;Python SQL&#x5DE5;&#x5177;&#xFF0C;&#x5B83;&#x62BD;&#x8C61;&#x51FA;&#x4E86;SQL&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8BB8;&#x591A;&#x5E38;&#x89C1;&#x5DEE;&#x5F02;&#x3002;pandas&#x6709;&#x4E00;&#x4E2A;read_sql&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x8F7B;&#x677E;&#x7684;&#x4ECE;SQLAlchemy&#x8FDE;&#x63A5;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x7528;SQLAlchemy&#x8FDE;&#x63A5;SQLite&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5E76;&#x4ECE;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;&#x8868;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">135</span>]: <span class="hljs-keyword">import</span> sqlalchemy <span class="hljs-keyword">as</span> sqla
+
+In [<span class="hljs-number">136</span>]: db = sqla.create_engine(<span class="hljs-string">&apos;sqlite:///mydata.sqlite&apos;</span>)
+
+In [<span class="hljs-number">137</span>]: pd.read_sql(<span class="hljs-string">&apos;select * from test&apos;</span>, db)
+Out[<span class="hljs-number">137</span>]: 
+             a           b     c  d
+<span class="hljs-number">0</span>      Atlanta     Georgia  <span class="hljs-number">1.25</span>  <span class="hljs-number">6</span>
+<span class="hljs-number">1</span>  Tallahassee     Florida  <span class="hljs-number">2.60</span>  <span class="hljs-number">3</span>
+<span class="hljs-number">2</span>   Sacramento  California  <span class="hljs-number">1.70</span>  <span class="hljs-number">5</span>
+</code></pre>
+<h1 id="65-&#x603B;&#x7ED3;">6.5 &#x603B;&#x7ED3;</h1>
+<p>&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x901A;&#x5E38;&#x662F;&#x6570;&#x636E;&#x5206;&#x6790;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x3002;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B66;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6DF1;&#x5165;&#x7814;&#x7A76;&#x6570;&#x636E;&#x89C4;&#x6574;&#x3001;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x3001;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5206;&#x6790;&#x548C;&#x5176;&#x5B83;&#x4E3B;&#x9898;&#x3002; </p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../内容/第05章pandas入门.html" class="navigation navigation-prev " aria-label="Previous page: 第05章pandas入门"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../内容/第07章数据清洗和准备.html" class="navigation navigation-next " aria-label="Next page: 第07章数据清洗和准备"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
